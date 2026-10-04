@@ -8,3 +8,4 @@ Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`.
 |---|---|---|---|---|
 | 0 | reference site (`codex/import-oakheart-site-v19`) | not deployed (reference only) | 4.6 (provisional) | Baseline against the new brief |
 | 1 | `329727c` | https://oakheart-7ahhv2yxe-oakheart-lab.vercel.app | 7.85 (conversion gate unverified) | First slice: homepage + free check page |
+| 2 | `a4c79c0` | https://oakheart-lqgepsjzk-oakheart-lab.vercel.app | pending | Form connected to Neon; Round 1 fixes |
