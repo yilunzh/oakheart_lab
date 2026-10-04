@@ -62,6 +62,7 @@ Do not use anything that appears only in the private resume, or in private Linke
 ## Constraints
 - No invented client results, testimonials, logos, scarcity or timelines beyond the 24-hour check.
 - Only publicly available founder information; no past-employer results or metrics.
+- Owner decision: the site does not address the founder’s availability or capacity alongside his current role. Do not add capacity or side-practice statements.
 - No promised rankings or AI recommendations, and no performance guarantee.
 - AI-usage statistics only with a named source and date.
 - Labeled concepts stay labeled.
