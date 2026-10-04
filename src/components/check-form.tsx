@@ -61,7 +61,8 @@ function Field({
 function revealStatus(el: HTMLElement | null) {
   if (!el) return;
   // scroll-margin on the element keeps it clear of the sticky header.
-  el.scrollIntoView({ block: "start", behavior: "smooth" });
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  el.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
   el.focus({ preventScroll: true });
 }
 

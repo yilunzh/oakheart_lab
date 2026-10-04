@@ -48,3 +48,7 @@ The owner connected the existing Neon database (`neon-cinnabar-castle`, also use
 ## 2026-10-04: Availability
 
 The owner decided **not** to publicly address availability or capacity alongside the current Hertz role. Reviewers have raised it as a buyer question; it is a deliberate choice, not an open defect. The site keeps "You work with him directly" and does not add capacity or side-practice statements.
+
+## 2026-10-04: How the free check runs before the runner exists
+
+Until the DataForSEO check runner is built (cutover item 8), the free check is run by Yilun by hand: the same questions on each assistant, repeated, compared against the business's site. The site says exactly that. It does not describe software or a data service that isn't live yet.

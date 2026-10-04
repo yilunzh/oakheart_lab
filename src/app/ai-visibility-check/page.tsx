@@ -5,7 +5,7 @@ import { CheckForm } from "@/components/check-form";
 import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
 import { SampleReport } from "@/components/sample-report";
-import { checkCovers, checkFaq, talkFirst } from "@/content/site";
+import { checkCovers, checkFaq, site, talkFirst } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Free AI Visibility Check",
@@ -25,12 +25,27 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: checkFaq.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": `${site.url}/ai-visibility-check#service`,
+      name: "Free AI Visibility Check",
+      serviceType: "AI search visibility audit",
+      description:
+        "We ask ChatGPT, Gemini, Perplexity, Claude and Google's AI answers the questions your customers ask, then send a plain-language report within 24 hours: whether you're mentioned, what they get wrong, and the three fixes that matter most.",
+      provider: { "@id": `${site.url}/#org` },
+      url: `${site.url}/ai-visibility-check`,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: checkFaq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
 };
 
 export default function CheckPage() {
@@ -78,8 +93,8 @@ export default function CheckPage() {
             />
             <div className="text-[15px] leading-relaxed">
               <p>
-                <span className="font-semibold">Every report is reviewed by Yilun Zhang</span>,
-                Oakheart Lab’s founder, before it’s sent. No sales call unless you ask.
+                <span className="font-semibold">Yilun Zhang runs every check himself</span>,
+                Oakheart Lab’s founder. No sales call unless you ask.
               </p>
               <p className="mt-2 text-sm">
                 <Link href="/#founder" className="underline underline-offset-2 hover:text-accent">
@@ -114,9 +129,9 @@ export default function CheckPage() {
             We write questions the way your customers would ask them, for your type of business and
             location. We run each question several times on each assistant, because answers change
             from one run to the next. The report shows how often you were mentioned and described
-            correctly, with the sources each assistant cited. We collect answers through a
-            third-party data service set to your location, so what one customer sees on their own
-            phone can differ. It is a sample, not a ranking. Any
+            correctly, with the sources each assistant cited. Answers also vary with location and
+            account, so what one customer sees on their own phone can differ. It is a sample, not a
+            ranking. Any
             tool that gives you a single &ldquo;AI rank&rdquo; is overstating what can be measured.
           </>
         }

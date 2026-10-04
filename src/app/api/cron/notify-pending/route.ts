@@ -14,5 +14,6 @@ export async function GET(request: Request) {
     neonStore(process.env.DATABASE_URL),
     resendNotifier(process.env.RESEND_API_KEY, site.email, process.env.NOTIFY_FROM ?? "Oakheart Lab <checks@oakheartlab.com>"),
   );
-  return Response.json(result);
+  // A non-2xx status makes the scheduled caller (GitHub Actions) fail and email the owner.
+  return Response.json(result, { status: result.sent < result.pending ? 500 : 200 });
 }

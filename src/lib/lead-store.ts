@@ -19,7 +19,7 @@ export interface LeadStore {
   insert(lead: StoredLead): Promise<string | null>;
   markNotified(id: string): Promise<void>;
   /**
-   * Atomically claims up to 20 new leads from the last 7 days whose owner notification has not
+   * Atomically claims up to 20 new leads (older than 2 minutes, newer than 7 days) whose owner notification has not
    * been sent (sets notified_at), so overlapping retries can't email the same lead twice.
    */
   claimUnnotified(): Promise<(StoredLead & { id: string })[]>;
@@ -66,7 +66,10 @@ export function neonStore(databaseUrl: string): LeadStore {
         update oakheart.check_requests set notified_at = now()
         where id in (
           select id from oakheart.check_requests
-          where status = 'new' and notified_at is null and created_at > now() - interval '7 days'
+          where status = 'new' and notified_at is null
+            and created_at > now() - interval '7 days'
+            -- leave fresh leads to their own first send, so a retry can't double-send
+            and created_at < now() - interval '2 minutes'
           order by created_at
           limit 20
           for update skip locked

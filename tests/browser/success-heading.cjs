@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- plain Node script run outside the app build */
 // Run against a production build: pnpm build && pnpm start -p 3100, then
 // node tests/browser/success-heading.cjs (needs playwright; set PW_CHROMIUM for a custom browser path).
 // Mocked successful submit at 390px: the confirmation heading must sit below the sticky header.
@@ -11,7 +12,9 @@ const { chromium } = require('playwright');
   await p.selectOption('#businessType',{index:1}); await p.fill('#email','x@example.com');
   await p.click('button[type=submit]'); await p.waitForTimeout(1500);
   const r=await p.evaluate(()=>{const h=document.querySelector('header').getBoundingClientRect().bottom;const t=document.querySelector('[role=status] h2').getBoundingClientRect().top;return {headerBottom:h,headingTop:t,focused:document.activeElement?.getAttribute('role')}});
-  await p.screenshot({path:process.argv[2] ?? "success-heading.png"});
-  console.log(JSON.stringify(r), r.headingTop>=r.headerBottom?'PASS':'FAIL');
+  await p.screenshot({path:process.argv[2] ?? require("node:path").join(require("node:os").tmpdir(), "success-heading.png")});
+  const pass = r.headingTop>=r.headerBottom && r.focused==='status';
+  console.log(JSON.stringify(r), pass?'PASS':'FAIL');
+  process.exitCode = pass ? 0 : 1;
   await b.close();
 })();

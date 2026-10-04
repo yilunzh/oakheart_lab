@@ -213,7 +213,7 @@ export const checkFaq = [
   },
   {
     q: "Who runs the check?",
-    a: "Yilun Zhang, Oakheart Lab’s founder, reviews every report before it’s sent. Software runs the questions so they can be repeated across assistants, but a person writes the findings and fixes.",
+    a: "Yilun Zhang, Oakheart Lab’s founder. He runs the questions on each assistant, checks the answers against your site, and writes the findings and fixes himself.",
   },
   {
     q: "What happens to my information?",

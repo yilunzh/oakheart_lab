@@ -23,7 +23,7 @@ function memoryStore(opts: { fail?: boolean } = {}) {
       if (r) r.notified = true;
     },
     async claimUnnotified() {
-      const pending = rows.filter((r) => !r.notified);
+      const pending = rows.filter((r) => !r.notified && Date.now() - r.at >= 120_000);
       pending.forEach((r) => (r.notified = true));
       return pending;
     },
@@ -181,10 +181,20 @@ describe("notifyPending", () => {
     expect(released).toEqual(["b"]);
   });
 
-  it("never claims the same lead twice across overlapping runs", async () => {
+  it("leaves a lead alone while its first send may still be in flight", async () => {
     const { notifyPending } = await import("@/lib/notify-pending");
     const { store } = memoryStore();
     await handleCheckRequest(req(valid), { ...deps(store), notify: async () => false });
+    let sends = 0;
+    await notifyPending(store, async () => { sends++; return true; });
+    expect(sends).toBe(0);
+  });
+
+  it("never claims the same lead twice across overlapping runs", async () => {
+    const { notifyPending } = await import("@/lib/notify-pending");
+    const { store, rows } = memoryStore();
+    await handleCheckRequest(req(valid), { ...deps(store), notify: async () => false });
+    rows[0].at -= 180_000; // older than the 2-minute grace period
     let sends = 0;
     const notify = async () => { sends++; return true; };
     await Promise.all([notifyPending(store, notify), notifyPending(store, notify)]);

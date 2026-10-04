@@ -35,6 +35,7 @@ const jsonLd = {
       founder: { "@id": `${site.url}/#founder` },
       logo: `${site.url}/icon`,
       sameAs: [site.substack],
+      knowsAbout: ["AI search visibility", "Answer engine optimization", "Online booking conversion", "Customer support automation"],
     },
     {
       "@type": "Person",
@@ -100,7 +101,7 @@ export default function Home() {
       {/* The shift */}
       <Section
         eyebrow="What changed"
-        title="The answer is becoming the storefront."
+        title="AI answers now shape who gets the booking."
         intro="Customers used to compare ten links. Now an assistant often names two or three businesses, and some assistants are starting to book them too."
         tone="surface"
       >
@@ -149,7 +150,7 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="Found, booked, supported. One team, start to finish."
+        title="Found, booked, supported: one project, start to finish."
         intro="We handle the whole path: from what AI says about you, to a confirmed booking, to the questions customers ask afterwards. Nothing gets lost between handoffs."
         tone="surface"
       >
@@ -231,7 +232,7 @@ export default function Home() {
         <ol className="grid gap-6 md:grid-cols-4">
           {steps.map((s, i) => (
             <li key={s.title} className="border-t-2 border-ink pt-5">
-              <p className="font-mono text-xs uppercase tracking-wider text-muted">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted md:min-h-8">
                 Step {i + 1} · {s.time}
               </p>
               <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
@@ -256,7 +257,7 @@ export default function Home() {
       </Section>
 
       {/* FAQ */}
-      <Section id="faq" eyebrow="Questions" title="Straight answers.">
+      <Section id="faq" eyebrow="Questions" title="Common questions.">
         <Faq items={homeFaq} />
       </Section>
 
