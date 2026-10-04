@@ -1,5 +1,0 @@
-# Complete service and optional extensions
-
-Owner direction: complete working website integrated with existing systems; avoid page-count/scope-heavy sales pitch. Optional services added: companion mobile app, AI back-office automation, AI customer support. Home and services share concise offers, each routes to matching contact copy. New inquiry interest enum values persist in existing text column; no schema migration. In-memory handler tests verify each category and reject unknown values alongside prior validation/storage checks.
-
-Independent read-only review found main offer and routing coherent; caught stale scope/exclusions pitch on buyer guide and insights. Those passages replaced with complete delivery, one-price launch, and handover. Creator inspected desktop/mobile offers and app inquiry link. No runtime integrations, apps, AI automation or customer-support agents were deployed: these are agency service offers. Free preview remains website-only; service inquiries make no project commitment. Existing public URL and inquiry protections preserved.

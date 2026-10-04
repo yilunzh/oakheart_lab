@@ -16,3 +16,7 @@ Newest first. Each entry lists the decision, its source, and what it supersedes.
 | D7 | **Proof: the founder's resume and LinkedIn may be used** (https://www.linkedin.com/in/yilun-zhang-7b804510/). | Supersedes "no proprietary metrics copied" for the figures stated on the owner-supplied resume. Present them as the founder's career results, never as employer endorsements or Oakheart client results. **Confirm:** the owner is OK publishing figures from a current employer (Hertz) on a commercial site. |
 
 **Still open:** notification destination for new leads (default: `yilun@oakheartlab.com` via a transactional email service, which needs an API key); scheduling URL for calls; refund window and scope (D3b); API keys for the check runner (OpenAI, Perplexity, Gemini, Anthropic, and SerpAPI or DataForSEO for Google AI Overviews).
+
+## 2026-10-04: Existing site is reference only
+
+The owner directed that the existing site (branch `codex/import-oakheart-site-v19`) is used **only as a reference**. It is evaluated as the Round 0 baseline, and the new site is designed and built from first principles. No code or design system is carried over. An accidental merge of the reference source into `claude/jolly-meitner-altfse` was undone by a follow-up commit; the reference branch is unchanged.

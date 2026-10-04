@@ -1,12 +1,12 @@
 # Oakheart Lab agency website: execution plan
 
 **Status:** Plan v3, 2026-10-04 (owner inputs applied; see `docs/decisions.md`) · **Owner:** Yilun · **Repo:** `yilunzh/oakheart_lab`
-**Reference build:** branch `codex/import-oakheart-site-v19` (Sites version 19 source, review history v1–v11, ops record)
+**Reference only:** branch `codex/import-oakheart-site-v19` (current site source, review history v1–v11, ops record). It is evaluated as a baseline. **The new site is designed and built from first principles; no code or design system is carried over** (owner direction, 2026-10-04).
 **Skills used:** `oakheart:software-delivery-agency`, `oakheart:business-strategy-copilot`, `oakheart:copy-reviewer`, `oakheart:sales-pitch-reviewer`, `oakheart:learning-loop`, and the vendored `seo` plugin (`seo-geo`, `seo-agentic`, `seo-schema`, `seo-technical`, `seo-page`, `seo-local`).
 
 **v2 changes:**
 - The ICP is now consumer-facing, operationally intensive businesses, not motorsport-first. This is the owner's correction.
-- The plan now builds on the codex reference build instead of a greenfield rebuild.
+- The existing site is reference only. The new site is a fresh build (v3).
 - Prior owner decisions recorded in that branch's `AGENTS.md` are reconciled (§3.5).
 
 ---
@@ -20,7 +20,7 @@ The rebuild keeps the design system and engineering, and sharpens **who it's for
 - **Buyer: companies that move atoms, not bits.** These are consumer-facing businesses where a booking or purchase sets real-world work in motion: people, vehicles, equipment, rooms, time slots. Examples: experiences and activities, rentals (vehicles, equipment, boats), service appointments (auto, home, wellness, clinics), stays and hospitality, fitness and classes, moving and storage. The founder's background (Carvana, Rivian, Clutch, Hertz) is exactly this pattern: online decisions that end in physical delivery.
 - **The sharpness comes from the problem, not a niche.** Their customers now ask ChatGPT, Gemini, Perplexity and Google's AI answers "where should I go / who should I book." If the AI can't find, understand or trust the business, it isn't in the answer. If it does send people, a clumsy booking path and slow answers lose them. Operationally intensive businesses get hit hardest, because their offers are complex: availability, eligibility, what's included, policies. AI gets those details wrong, and generic booking widgets handle them badly.
 - **Promise:** **Get found → Get booked → Keep them coming back.** These are the three existing pillars (AEO/SEO, personalized booking and upsell, self-service support), presented as one demand system.
-- **First step:** a **free AI Visibility Check**, followed by the existing free tailored preview for qualified businesses.
+- **First step:** a **free AI Visibility Check**, unlimited and delivered in under 24 hours, followed by a free tailored preview for qualified businesses.
 
 The site also works as the case study. Oakheart's own AI visibility is baselined before launch and tracked afterwards.
 
@@ -30,12 +30,13 @@ The site also works as the case study. Oakheart's own AI visibility is baselined
 
 ## 2. Diagnosis of the current site
 
-These observations come from running the codex reference build locally (v19 source) and capturing pages at 1440px and 390px on 2026-10-04, plus the live page text.
+These observations come from running the reference build locally and capturing every page at 1440px and 390px on 2026-10-04. The formal scored baseline is Round 0 (§8.3).
 
-**Keep:**
-- **Visual system:** editorial serif headlines with an italic green accent, generous whitespace, a restrained palette, and a dark-green CTA band. It reads as premium and calm, and the mobile layout holds up.
-- **Engineering:** an inquiry API with server-side validation, origin and size checks, a honeypot, idempotency, rate limiting and storage-failure handling, all with tests (`scripts/check-inquiries.cjs`). Also a guided `/contact` intake with an editable review step and an honest confirmation, plus the labeled booking-flow concept at `/work/booking-flow`.
-- **Tone and integrity:** "No obligation," simulated steps labeled, no invented results, founder background framed as career context rather than endorsements.
+**What the reference teaches.** These are requirements and lessons for the new build, not code to reuse:
+- **Craft bar:** the current site is visually polished and calm, with a working mobile layout. The new design must match that quality while carrying a much sharper message.
+- **Lead-capture requirements:** the reference's inquiry API set a good bar. The new build must meet it from scratch: server-side validation, origin and size checks, a honeypot, idempotency, rate limiting, honest storage-failure handling, and tests for each.
+- **Intake UX:** keep entered values when the visitor edits or hits an error, use an honest confirmation, and manage focus.
+- **Integrity:** "no obligation," labeled concepts and simulations, and founder background presented as career context rather than endorsements.
 
 **Fix:**
 
@@ -82,7 +83,7 @@ Statistics about AI-assistant usage go on the site only with a named source and 
 
 ### D3. Offer ladder
 
-The ladder is reconciled with the existing approved offer (§3.5). Prices need input from Yilun.
+The ladder is reconciled with the earlier approved offer (§3.5). Prices are not shown on the site (D3a).
 
 | Step | What the buyer gets | Price | Role |
 |---|---|---|---|
@@ -110,9 +111,9 @@ We do not fabricate testimonials, logos or results. That is a critical failure i
 5. **Method transparency:** exactly what we check and how we measure.
 6. Consented, measured case studies replace items 2 and 4 as they arrive.
 
-### 3.5 Reconciling with prior owner decisions (codex branch `AGENTS.md`)
+### 3.5 Reconciling with prior owner decisions (reference branch `AGENTS.md`)
 
-The codex build encodes earlier decisions. This plan changes some of them because of the new ask ("sharper, more conversion-optimized, AI demand thesis"). **Yilun confirms each in Phase 0.**
+The reference build records earlier decisions. This plan changes some of them because of the new ask ("sharper, more conversion-optimized, AI demand thesis"). The 2026-10-04 owner answers are logged in `docs/decisions.md`.
 
 | Prior decision | This plan | Status |
 |---|---|---|
@@ -141,9 +142,9 @@ The codex build encodes earlier decisions. This plan changes some of them becaus
 /for/services             Use case: schedule a service (auto, home, wellness, clinics)
 /how-we-work              Process, preview, ownership, what we need from you
 /proof                    Own visibility tracker, sample report, concepts
-/about                    Founder (existing copy, tightened)
+/about                    Founder story and results
 /guides/*                 Answer-first guides on-site (Substack stays for essays)
-/contact                  Existing guided intake (preview / call / services)
+/contact                  Guided intake (preview / call / optional services)
 /privacy
 ```
 
@@ -153,7 +154,7 @@ Redirect `/services` → `/how-we-work`, `/insights` → `/guides`, and `/work/b
 
 ### 4.2 Homepage section by section
 
-The existing layout primitives are reused: the eyebrow label, serif H1 with italic accent, two-column rows, tinted bands, and the dark CTA band.
+A new visual direction is defined in Phase 2 from the brief. It is not inherited from the reference site. It must make the AI-answer visual and the founder results the strongest elements on the page.
 
 | # | Section | Job | Content direction | CTA |
 |---|---|---|---|---|
@@ -170,8 +171,8 @@ The existing layout primitives are reused: the eyebrow label, serif H1 with ital
 ### 4.3 `/ai-visibility-check` (the most important page)
 
 - **Above the fold:** "Your free AI Visibility Check, in your inbox in under 24 hours." What you get, a sample report preview, "unlimited, no obligation," and the form.
-- **Form:** reuses the existing inquiry API and its protections, adding `interest=ai-visibility-check`. Fields: business name, website, city/region, business type (feeds use-case routing), email. Optional: "a question you wish AI answered correctly about you," and "how did you hear about us" (including ChatGPT / AI assistant).
-- **After submit:** keep the existing honest confirmation pattern and add what happens next and when. Optional: book a call to walk through the result. This needs a scheduling URL; until then, the email fallback already in the build.
+- **Form:** posts to a new lead API that meets the §2 lead-capture requirements. Fields: business name, website, city/region, business type (feeds use-case routing), email. Optional: "a question you wish AI answered correctly about you," and "how did you hear about us" (including ChatGPT / AI assistant).
+- **After submit:** an honest confirmation saying what happens next and when (report within 24 hours), plus an optional call to walk through it. The call needs a scheduling URL; until then, fall back to arranging it by email.
 - **Fulfillment: a semi-automated check runner.** It has to be, to promise unlimited checks in under 24 hours.
   - **Runner (`ops/check-runner/`):** given a business, it generates 10–15 customer-style prompts from the business type and location, then queries each engine's API with web search or grounding enabled: OpenAI, Perplexity Sonar, Gemini with Google Search grounding, Anthropic with web search, and Google AI Overviews via SerpAPI or DataForSEO.
   - **Output:** it records the answers, cited URLs, mentions and competitors, flags likely factual errors against the business's own site, and drafts the report.
@@ -202,15 +203,15 @@ The motorsport research dimensions in `niche.md` become examples on `/for/experi
 ## 5. Conversion system
 
 - **One primary action site-wide:** the AI Visibility Check. The secondary action is a call or the tailored preview. No page has more than two CTA types.
-- **Friction budget:** the check form takes under 60 seconds. The preview keeps its existing guided intake.
-- **Lead routing:** the existing validated inquiry API stores leads. **Gap to close before launch:** no notification or CRM destination is connected (playbook). Add an email notification (Resend, or Gmail via an approved connector) and verify it with a synthetic submission.
+- **Friction budget:** the check form takes under 60 seconds. The preview uses a short guided intake.
+- **Lead routing:** the lead API stores each lead in Postgres (Neon) with a stable ID and deduplication, sends an email notification to the owner, and queues the check runner. Delivery is verified with a synthetic submission before launch.
 - **Speed-to-lead:** auto-confirmation; human acknowledgment within 1 business day; check delivered within the promised window.
 - **Instrumentation** (approval required; D6):
   - `cta_click{location,cta}`, `check_form_start`, `check_form_submit`, `check_form_error{field}`, `preview_request`, `call_booked`, `sample_report_view`, `pricing_view`
-  - The existing source and campaign tags on inquiries are kept
+  - Source and campaign (UTM) tags captured on every lead
   - AI referrer capture: `chatgpt.com`, `perplexity.ai`, `gemini.google.com`, `copilot.microsoft.com`, and `utm_source=chatgpt.com`. Verify current referrer behavior at build time
   - Self-reported "how did you hear about us" on the form
-- **Accessibility:** keep the existing focus management and contrast fixes, and add an axe pass each round. This also determines agent readiness (`seo-agentic`).
+- **Accessibility:** WCAG 2.2 AA, with focus management, contrast and an axe pass each round. This also determines agent readiness (`seo-agentic`).
 
 ---
 
@@ -219,7 +220,7 @@ The motorsport research dimensions in `niche.md` become examples on `/for/experi
 We apply the method to ourselves first. This follows `seo-geo` guidance: GEO is SEO fundamentals applied to AI surfaces. Google's guidance rejects `llms.txt`, chunking tricks and mention-farming as ranking levers.
 
 ### 6.1 Technical and entity
-- The existing app server-renders, so facts are already crawlable as HTML. Keep it that way: no client-only content.
+- Static or server-rendered HTML for all content, so facts are crawlable without JavaScript.
 - **Remove noindex at launch only, with owner approval.** Add a canonical domain, sitemap and `robots.txt` that allows search and AI retrieval crawlers (OAI-SearchBot, ChatGPT-User, PerplexityBot, Googlebot, Bingbot). The training-crawler policy is a separate decision (D6).
 - Schema (via `seo-schema`): `Organization` / `ProfessionalService`, `Person` (founder, `sameAs` LinkedIn and Substack), `Service` per pillar, `FAQPage` only where visible FAQ text matches, `Article` on guides, `BreadcrumbList`.
 - One consistent entity description ("Oakheart Lab helps consumer-facing, operationally intensive businesses get found by AI assistants and turn that demand into bookings") across the site, LinkedIn, Substack, Google Business Profile (if applicable) and directories.
@@ -244,19 +245,25 @@ Substack stays for essays. On-site guides are where AI-citable answers live. Shi
 
 ## 7. Tech stack and engineering
 
-**Start from the codex reference build, not greenfield.** It already has the design system, an SSR Next (vinext) app, a hardened inquiry pipeline with tests, guided intake and accessibility fixes. Rebuilding in Astro would discard tested work for little gain.
+**Fresh build, chosen from first principles.** The site needs to do three things:
+- serve fast, crawlable marketing and guide pages
+- capture leads safely
+- run the check pipeline: background jobs, API calls to AI engines, and report generation
 
-| Concern | Plan |
-|---|---|
-| Codebase | Merge `codex/import-oakheart-site-v19` into the working branch; restructure pages and content in `content/site.ts` and `app/` |
-| UI | Keep the existing tokens and type. Remove unused shadcn components at the end to cut bundle weight |
-| Leads | Keep `app/api/inquiries` and its tests; add the `ai-visibility-check` interest and a notification destination |
-| QA | Run the existing `npm run verify`. Add Playwright screenshots at 390 and 1440 (now proven to work locally in this environment), Lighthouse (3-run median), axe, a link checker and a schema validator |
-| Content | `content/site.ts` plus new guide routes |
+That points to one full-stack framework native to the chosen host.
+
+| Concern | Choice | Why |
+|---|---|---|
+| Framework | **Next.js (App Router, TypeScript)**, static-rendered marketing and guide pages | Native on Vercel. Static HTML for crawlability and speed. Route handlers and cron for leads and the check runner in one codebase |
+| Styling | Tailwind CSS with a small, purpose-built component set (no UI kit dump) | Small bundle; design tokens defined in Phase 2 |
+| Content | MDX for guides; typed content module for pages | Versioned, reviewable, schema components |
+| Data | **Neon Postgres** + Drizzle | Leads, checks and reports; preview branches per deployment |
+| Email | Transactional email (e.g. Resend) | Lead notifications and report delivery |
+| Check runner | Route handler + Vercel Cron/queue → engine APIs | Meets the under-24-hour promise with a human review step |
+| QA | Unit tests for the lead API (validation, idempotency, rate limit, failure); Playwright journeys and screenshots (390/1440); Lighthouse (3-run median); axe; link and schema checks; all in CI | Repeatable evidence for every review round |
 
 **D5. Hosting (decided): Vercel.**
-- **Port:** swap D1 for Neon Postgres behind the existing Drizzle layer, and replace the Sites/Cloudflare runtime bits (`chatgpt-auth`, `sites-vite-plugin`, wrangler) with a standard Next.js build on Vercel.
-- **Verify:** re-run the inquiry checks against Postgres.
+- **Cutover:** the new site deploys to a new Vercel project. The ChatGPT Sites deployment stays live until production cutover.
 - **Preview deployments:** every review round and PR gets a preview URL, with noindex on previews.
 - **Domain:** no DNS change to `oakheartlab.com` until cutover is planned; email DNS records stay untouched; Substack URLs get a redirect plan first.
 
@@ -281,12 +288,12 @@ This follows `copy-reviewer/references/review.md`, the `business-strategy-copilo
 - **Pass:** weighted score ≥ 9.0, no dimension < 8, all gates pass, no open critical or major findings.
 - **Otherwise iterate,** fixing substantive defects before cosmetic ones and rerunning the full review on the complete final version.
 - **Hard stop after Round 5.** The skills default to two cycles; the user explicitly asked for up to five. Report the final score, the remaining defects, and the smallest input that would resolve each.
-- Each round is logged in `docs/reviews/round-N.md`: commit, date, scope, scores, findings, and the closure record. This continues the existing `ops/review-v*.md` history.
+- Each round is logged in `docs/reviews/round-N.md`: commit, date, scope, scores, findings, and the closure record. The reference build's `ops/review-v*.md` history stays on its branch.
 
 ### 8.3 Round plan
 | Round | Artifact | Focus |
 |---|---|---|
-| 0 (baseline) | **The current v19 site, unchanged** | Scores the starting point on the same rubric, so improvement is measured, not asserted |
+| 0 (baseline) | **The reference site, unchanged**, against the new brief | Scores the starting point on the same rubric, so improvement is measured, not asserted |
 | 1 | **Slice:** new hero + "recognize yourself" + system section + check page, mobile and desktop | Positioning clarity, offer pull, AI-answer visual |
 | 2 | All core pages with full content | Argument, proof, objections, IA |
 | 3 | Integrated build on a preview URL | Conversion path, forms, mobile, performance, schema |
@@ -312,13 +319,13 @@ Traffic will be low at launch, so A/B tests won't reach significance (`agency_ch
 
 ## 10. Phased timeline
 
-About 3 weeks to launch-ready, shorter than v1 because the reference build is reused.
+About 4 weeks to launch-ready (fresh build).
 
 | Phase | Days | Work | Skills | Exit evidence |
 |---|---|---|---|---|
-| **0. Decisions and setup** | 1–2 | Confirm §3.5 changes and D3/D5/D6; merge the codex branch; `npm run verify` green; **Round 0 baseline review** | software-delivery-agency | `docs/decisions.md`, round-0 scores |
+| **0. Decisions and setup** | 1–2 | Log decisions; **Round 0 baseline review of the reference site**; scaffold the fresh Next.js app, Vercel project and Neon DB | software-delivery-agency | `docs/decisions.md`, round-0 scores, empty app deployed to preview |
 | **1. Research and baseline** | 2–4 | ICP research: how operationally intensive consumer businesses get discovered, what AI gets wrong about them, buyer language. Competitor AEO agencies. **Own prompt-panel baseline.** One sample check on a public business | deep-research, business-strategy-copilot, seo-geo | `docs/brief.md`, baseline CSV, sample report |
-| **2. Positioning and slice** | 4–6 | Messaging hierarchy, hero options, AI-answer visual; build the slice in the existing app | copy-reviewer, sales-pitch-reviewer | **Round 1** |
+| **2. Positioning and slice** | 4–6 | Messaging hierarchy, hero options, AI-answer visual; design system from scratch; build the slice | copy-reviewer, sales-pitch-reviewer | **Round 1** |
 | **3. Full content** | 6–10 | All pages, 6 guides, the check page and form changes | copy-reviewer, seo-content-brief, seo-page | **Round 2** |
 | **4. Integrate** | 10–14 | Hosting (D5), notifications, schema, sitemap/robots (noindex kept until approved), analytics (if approved), CI | engineering-release, seo-technical, seo-schema, seo-agentic | Preview URL, checks green, **Round 3** |
 | **5. Iterate** | 14–18 | Rounds 4–5 as needed | all reviewers | Pass, or the stop report |
@@ -336,7 +343,7 @@ About 3 weeks to launch-ready, shorter than v1 because the reference build is re
 | AI-visibility claims age quickly or overpromise | Source and date every statistic; no ranking guarantees; re-verify guidance at build time |
 | The free check becomes a time sink | Templated prompt panel, a qualification field, a weekly cap, and later automation |
 | Chasing the review score instead of buyer outcomes | Blind reviewers, a fixed rubric, gates that override averages, a Round 0 baseline, and launch metrics as the real test |
-| The hosting move breaks the tested inquiry pipeline | Rerun `npm run verify` against the new DB adapter, plus a synthetic end-to-end submission on the preview |
+| A fresh build regresses on lead-capture safety the reference already had | The §2 requirements become tests before launch, plus a synthetic end-to-end submission on the preview |
 
 ---
 
