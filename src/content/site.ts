@@ -71,7 +71,7 @@ export const failureModes = [
 
 export const pillars = [
   {
-    key: "Found",
+    key: "Discover",
     title: "Be the business AI can find, understand and cite.",
     points: [
       "Clear, crawlable pages for every offer, with the details customers ask about",
@@ -80,7 +80,7 @@ export const pillars = [
     ],
   },
   {
-    key: "Booked",
+    key: "Book",
     title: "Turn that visit into a confirmed booking.",
     points: [
       "A booking path built around how your customers choose",
@@ -89,7 +89,7 @@ export const pillars = [
     ],
   },
   {
-    key: "Supported",
+    key: "Support",
     title: "Answer customers’ questions instantly, and bring in your team when it matters.",
     points: [
       "Self-service answers grounded in your real policies",
@@ -113,7 +113,7 @@ export const steps = [
   {
     title: "One price, agreed up front",
     time: "You decide",
-    body: "We deliver Found, Booked and Supported as one project, connected to your existing systems. You know the price before we start.",
+    body: "We deliver Discover, Book and Support as one project, connected to your existing systems. You know the price before we start.",
   },
   {
     title: "Ongoing, if you want it",
@@ -133,7 +133,7 @@ export const homeFaq = [
   },
   {
     q: "Don’t Google Maps and reviews still matter more?",
-    a: "For most local bookings today, yes, and we treat them that way. AI assistants draw on the same sources: your website, Google Business Profile, reviews and listings. So the Found work strengthens Maps and search too. AI answers are a fast-growing place where those facts get repeated, and where mistakes cost you quietly.",
+    a: "For most local bookings today, yes, and we treat them that way. AI assistants draw on the same sources: your website, Google Business Profile, reviews and listings. So the Discover work strengthens Maps and search too. AI answers are a fast-growing place where those facts get repeated, and where mistakes cost you quietly.",
   },
   {
     q: "Can you guarantee ChatGPT will recommend us?",

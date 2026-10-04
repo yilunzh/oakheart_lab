@@ -20,10 +20,10 @@ Businesses with complex offers are hurt most, because their availability, eligib
 ## Offer
 1. **Free AI Visibility Check.** We ask leading AI assistants the questions your customers ask, then report where you appear, what they say, what they get wrong, and the top fixes. Unlimited, and delivered in under 24 hours.
 2. **Free tailored preview** for qualified businesses. A tailored homepage and one booking-journey preview, with no obligation.
-3. **Core engagement: Found → Booked → Supported.** A complete website and booking experience integrated with existing systems, with one price agreed before work starts.
-   - **Found:** AI search and SEO (content, structured data, entity consistency, crawlability)
-   - **Booked:** personalized booking and upsell
-   - **Supported:** customer self-service and AI support with handoff to staff
+3. **Core engagement: Discover → Book → Support.** A complete website and booking experience integrated with existing systems, with one price agreed before work starts.
+   - **Discover:** AI search and SEO (content, structured data, entity consistency, crawlability)
+   - **Book:** personalized booking and upsell
+   - **Support:** customer self-service and AI support with handoff to staff
 4. **Ongoing:** visibility monitoring, content, booking improvements and support.
 5. **Optional:** companion mobile app; staff tools and automation.
 

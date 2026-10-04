@@ -150,7 +150,7 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="Found, booked, supported: one project, start to finish."
+        title="Discover, book, support: one project, start to finish."
         intro="We handle the whole path: what AI says about you, the booking itself, and the questions customers ask afterwards. Because we handle all three together, the facts AI repeats, your booking pages and your support answers stay consistent."
         tone="surface"
       >
@@ -186,7 +186,7 @@ export default function Home() {
       </Section>
 
       {/* Founder */}
-      <Section id="founder" eyebrow="Who you'll work with" title="A product leader from businesses that move atoms.">
+      <Section id="founder" eyebrow="Who you'll work with" title="Enterprise-scale demand generation, built for businesses like yours.">
         <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
           <Image
             src="/images/yilun-zhang.jpg"
@@ -198,16 +198,19 @@ export default function Home() {
           />
           <div className="max-w-2xl">
             <blockquote className="text-2xl font-medium leading-snug tracking-tight">
-              &ldquo;If you can marry a seamless digital experience with efficient operations in a
-              single stack, the business becomes untouchable. AI is what makes that possible.&rdquo;
+              &ldquo;In the last nine months I&rsquo;ve watched customers change how they decide.
+              They ask an AI assistant, and the answer shapes the booking before a website ever
+              loads. Large companies have teams adapting to that. Most owner-run businesses
+              don&rsquo;t, and that&rsquo;s who I built Oakheart Lab for.&rdquo;
             </blockquote>
             <p className="mt-5 leading-relaxed text-muted">
-              Yilun Zhang has spent over a decade building digital commerce in automotive, where
-              you&rsquo;re ultimately moving atoms, not bits. He leads digital products for Hertz&rsquo;s global rental business, and
-              previously ran digital products at Clutch, built Rivian&rsquo;s purchase and delivery
-              experience from scratch, and led homepage, search and listings at Carvana. Oakheart
-              Lab brings that experience, and hands-on AI building, to businesses like yours. You
-              work with him directly.
+              Yilun Zhang has spent over a decade leading demand generation and digital
+              transformation for consumer businesses at enterprise scale, where you&rsquo;re
+              ultimately moving atoms, not bits. He leads digital products for Hertz&rsquo;s global
+              rental business, and previously ran digital products at Clutch, built Rivian&rsquo;s
+              purchase and delivery experience from scratch, and led homepage, search and listings
+              at Carvana, the pages where customers decide. Oakheart Lab brings that playbook to
+              businesses like yours. You work with him directly.
             </p>
             <p className="mt-4 text-sm">
               <a href={site.linkedin} className="underline underline-offset-2 hover:text-accent" rel="noopener">
