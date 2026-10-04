@@ -22,8 +22,14 @@ function memoryStore(opts: { fail?: boolean } = {}) {
       const r = rows.find((x) => x.id === id);
       if (r) r.notified = true;
     },
-    async listUnnotified() {
-      return rows.filter((r) => !r.notified);
+    async claimUnnotified() {
+      const pending = rows.filter((r) => !r.notified);
+      pending.forEach((r) => (r.notified = true));
+      return pending;
+    },
+    async releaseClaim(id) {
+      const r = rows.find((x) => x.id === id);
+      if (r) r.notified = undefined;
     },
   };
   return { store, rows };
@@ -158,20 +164,31 @@ describe("POST /api/checks", () => {
 });
 
 describe("notifyPending", () => {
-  it("notifies and marks only leads whose notification succeeds", async () => {
+  it("keeps the claim on success and releases it on failure", async () => {
     const { notifyPending } = await import("@/lib/notify-pending");
-    const marked: string[] = [];
+    const released: string[] = [];
     const leads = ["a", "b"].map((id) => ({ id, requestKey: id, websiteHost: "x.com", businessName: id, website: "https://x.com/", location: "L", businessType: "T", email: `${id}@x.com` }));
     const store = {
       countRecentByIp: async () => 0,
       hasRecentDuplicate: async () => false,
       insert: async () => null,
-      markNotified: async (id: string) => void marked.push(id),
-      listUnnotified: async () => leads,
+      markNotified: async () => {},
+      claimUnnotified: async () => leads,
+      releaseClaim: async (id: string) => void released.push(id),
     };
     const result = await notifyPending(store, async (lead) => lead.businessName === "a");
     expect(result).toEqual({ pending: 2, sent: 1 });
-    expect(marked).toEqual(["a"]);
+    expect(released).toEqual(["b"]);
+  });
+
+  it("never claims the same lead twice across overlapping runs", async () => {
+    const { notifyPending } = await import("@/lib/notify-pending");
+    const { store } = memoryStore();
+    await handleCheckRequest(req(valid), { ...deps(store), notify: async () => false });
+    let sends = 0;
+    const notify = async () => { sends++; return true; };
+    await Promise.all([notifyPending(store, notify), notifyPending(store, notify)]);
+    expect(sends).toBe(1);
   });
 });
 

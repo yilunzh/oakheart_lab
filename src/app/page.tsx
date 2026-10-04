@@ -150,7 +150,7 @@ export default function Home() {
         id="system"
         eyebrow="What we do"
         title="Found, booked, supported. One team, start to finish."
-        intro="We handle the whole path: from what AI says about you, to a confirmed booking, to the questions customers ask afterwards. One team, so nothing gets lost between handoffs."
+        intro="We handle the whole path: from what AI says about you, to a confirmed booking, to the questions customers ask afterwards. Nothing gets lost between handoffs."
         tone="surface"
       >
         <ol className="grid gap-6 md:grid-cols-3">

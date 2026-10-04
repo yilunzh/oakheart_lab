@@ -58,6 +58,13 @@ function Field({
   );
 }
 
+function revealStatus(el: HTMLElement | null) {
+  if (!el) return;
+  // scroll-margin on the element keeps it clear of the sticky header.
+  el.scrollIntoView({ block: "start", behavior: "smooth" });
+  el.focus({ preventScroll: true });
+}
+
 export function CheckForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -91,7 +98,7 @@ export function CheckForm() {
       if (res.status === 201 || res.status === 202) {
         setSentTo(String(data.email ?? ""));
         setStatus(json.status === "duplicate" ? "duplicate" : "sent");
-        requestAnimationFrame(() => statusRef.current?.focus());
+        requestAnimationFrame(() => revealStatus(statusRef.current));
         return;
       } else if (res.status === 429) {
         setStatus("error");
@@ -114,7 +121,7 @@ export function CheckForm() {
       setMessage("We couldn’t reach our server, and nothing was saved. Check your connection and try again, or send the details by email.");
       setFallbackHref(mailtoFor(data));
     }
-    requestAnimationFrame(() => statusRef.current?.focus());
+    requestAnimationFrame(() => revealStatus(statusRef.current));
   }
 
   if (status === "sent" || status === "duplicate") {

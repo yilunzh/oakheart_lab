@@ -15,7 +15,7 @@ export function SampleReport() {
       </div>
       <div className="grid gap-8 p-5 sm:p-6 md:grid-cols-[1fr_1.2fr]">
         <div>
-          <p className="text-sm text-muted">Brackenfold Kayaks · Pine Hollow Lake (invented)</p>
+          <p className="text-sm text-muted">Brackenfold Kayaks · Marrowfield Lake (invented)</p>
           <p className="mt-2 text-lg font-medium">&ldquo;Can a 6-year-old do the sunset kayak tour?&rdquo;</p>
           <dl className="mt-4 space-y-2 text-[15px]">
             {runs.map((r) => (

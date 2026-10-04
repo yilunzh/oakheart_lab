@@ -26,7 +26,7 @@ export function AnswerCard() {
           <span className="font-mono">AI assistant</span>
         </div>
         <p className="mt-4 rounded-xl bg-paper px-4 py-3 text-[15px]">
-          Best kayak tour near Pine Hollow Lake for a family with a 6-year-old?
+          Best kayak tour near Marrowfield Lake for a family with a 6-year-old?
         </p>
         <div className="mt-4 space-y-3 text-[15px] leading-relaxed">
           <p className="text-muted">Here are a couple of good options:</p>
@@ -53,7 +53,7 @@ export function AnswerCard() {
         </div>
       </div>
       <figcaption className="mt-3 text-xs text-muted">
-        Illustrative example: the businesses and lake are invented. Your free check shows what assistants actually say about you.
+        Illustrative example: the businesses and the lake are invented. Your free check shows what assistants actually say about you.
       </figcaption>
     </figure>
   );

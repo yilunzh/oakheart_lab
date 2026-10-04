@@ -1,3 +1,4 @@
+import { after } from "next/server";
 import { handleCheckRequest } from "@/lib/check-handler";
 import { neonStore } from "@/lib/lead-store";
 import { resendNotifier } from "@/lib/notify";
@@ -28,6 +29,9 @@ export async function POST(request: Request) {
     notify,
     hashIp,
     allowedOrigins: allowedOrigins(request),
-    retryPending: store ? () => notifyPending(store, notify) : undefined,
+    // Runs after the response is sent, so the visitor never waits on retries.
+    retryPending: store
+      ? async () => after(() => notifyPending(store, notify).catch(() => {}))
+      : undefined,
   });
 }

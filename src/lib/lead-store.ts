@@ -18,8 +18,13 @@ export interface LeadStore {
   /** Inserts the lead. Returns its id, or null if this request key was already stored. */
   insert(lead: StoredLead): Promise<string | null>;
   markNotified(id: string): Promise<void>;
-  /** New leads from the last 7 days whose owner notification has not been sent. */
-  listUnnotified(): Promise<(StoredLead & { id: string })[]>;
+  /**
+   * Atomically claims up to 20 new leads from the last 7 days whose owner notification has not
+   * been sent (sets notified_at), so overlapping retries can't email the same lead twice.
+   */
+  claimUnnotified(): Promise<(StoredLead & { id: string })[]>;
+  /** Releases a claim when the notification failed, so a later retry picks the lead up again. */
+  releaseClaim(id: string): Promise<void>;
 }
 
 export function neonStore(databaseUrl: string): LeadStore {
@@ -56,14 +61,18 @@ export function neonStore(databaseUrl: string): LeadStore {
     async markNotified(id) {
       await sql`update oakheart.check_requests set notified_at = now() where id = ${id}`;
     },
-    async listUnnotified() {
+    async claimUnnotified() {
       const rows = await sql`
-        select id, request_key, business_name, website, website_host, location, business_type,
-               email, question, heard_from, referrer, utm
-        from oakheart.check_requests
-        where status = 'new' and notified_at is null and created_at > now() - interval '7 days'
-        order by created_at
-        limit 50`;
+        update oakheart.check_requests set notified_at = now()
+        where id in (
+          select id from oakheart.check_requests
+          where status = 'new' and notified_at is null and created_at > now() - interval '7 days'
+          order by created_at
+          limit 20
+          for update skip locked
+        )
+        returning id, request_key, business_name, website, website_host, location, business_type,
+                  email, question, heard_from, referrer, utm`;
       return rows.map((r) => ({
         id: r.id,
         requestKey: r.request_key,
@@ -78,6 +87,9 @@ export function neonStore(databaseUrl: string): LeadStore {
         referrer: r.referrer ?? undefined,
         utm: r.utm ?? undefined,
       }));
+    },
+    async releaseClaim(id) {
+      await sql`update oakheart.check_requests set notified_at = null where id = ${id}`;
     },
   };
 }

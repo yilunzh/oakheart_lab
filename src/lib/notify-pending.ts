@@ -3,13 +3,11 @@ import type { Notifier } from "./notify";
 
 /** Retries owner notifications for stored leads that were never notified. */
 export async function notifyPending(store: LeadStore, notify: Notifier) {
-  const pending = await store.listUnnotified();
+  const claimed = await store.claimUnnotified();
   let sent = 0;
-  for (const lead of pending) {
-    if (await notify(lead)) {
-      await store.markNotified(lead.id);
-      sent++;
-    }
+  for (const lead of claimed) {
+    if (await notify(lead)) sent++;
+    else await store.releaseClaim(lead.id);
   }
-  return { pending: pending.length, sent };
+  return { pending: claimed.length, sent };
 }
