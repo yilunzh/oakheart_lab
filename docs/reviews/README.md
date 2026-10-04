@@ -11,4 +11,4 @@ Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`.
 | 2 | `a4c79c0` | https://oakheart-lqgepsjzk-oakheart-lab.vercel.app | 8.00 (conversion gate failed: no owner notification) | Form connected to Neon; Round 1 fixes |
 | 3 | `9c91fb5` | https://oakheart-hkp3au6qy-oakheart-lab.vercel.app | 8.40 (conversion gate failed at review time; owner email verified right after) | Notification fallback cron, mobile form order, OG/icon, copy fixes |
 | 4 | `f4d913c` | https://oakheart-lab.vercel.app (production at f4d913c) | 8.75 (all gates pass) | Notification logging + test tagging, desktop gap fix, sample report, URL base, copy |
-| 5 | `pending` | pending | pending | Invented example names, hero softened, faster notification retry, closing CTA, polish |
+| 5 | `9677fa9` | https://oakheart-lab.vercel.app (production at 9677fa9) | pending | Invented example names, hero softened, faster notification retry, closing CTA, polish |
