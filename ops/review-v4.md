@@ -1,0 +1,7 @@
+# First-visit rewrite — September 25, 2026
+
+User rejected insider concepts in the previous high-rated copy. Rebuilt core pages around visitor questions: business fit, recognizable problems, plain-language deliverables, relevant founder background, working expectations, and a free review. Reduced homepage length and removed the prominent racing-case section; retained the optional fictional example and broader staff/customer tool capability. Simplified contact, process, navigation, FAQs, and supporting guide language.
+
+Fresh reviewer received only file locations and a first-time booking-business-owner perspective, no project history or previous ratings. Correctly recovered audience, services, trust basis, process, and CTA. Comprehension 9/10; relevance 9; credibility 7; action clarity 9. No target score provided. Credibility limitation is lack of demonstrated agency client results. Price/timing remain undecided by owner; no invented ranges. Applied remaining wording fixes and clarified that availability is agreed before paid work. Do not claim the whole site meets a 9/10 threshold or that editorial ratings prove conversion.
+
+Main QA: desktop and 390px iframe homepage screenshots inspected; mobile document width 373px equals scroll width. Mobile service navigation tested. Form behavior, data access and APIs unchanged. TypeScript and deployment build checked separately. Temporary QA route removed before packaging. Notifications, analytics, recurring operation and live domain remain unchanged.
