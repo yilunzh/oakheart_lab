@@ -47,7 +47,7 @@ The owner connected the existing Neon database (`neon-cinnabar-castle`, also use
 
 ## 2026-10-04: Availability
 
-The owner decided **not** to publicly address availability or capacity alongside the current Hertz role. Reviewers have raised it as a buyer question; it is a deliberate choice, not an open defect. The site keeps "You work with him directly" and does not add capacity or side-practice statements.
+The owner decided **not** to publicly address availability or capacity alongside the current Hertz role. Reviewers have raised it as a buyer question; it is a deliberate choice, not an open defect. The site does not add capacity or side-practice statements. (Update, same day: the "You work with him directly" line was also removed at the owner’s request.)
 
 ## 2026-10-04: How the free check runs before the runner exists
 
