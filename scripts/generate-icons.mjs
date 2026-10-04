@@ -90,7 +90,8 @@ export const ICONS = {
   tours: "A kayak with a paddle on a small wave.",
   rentals: "A rental key on a tag.",
   services: "A wrench crossed with a small house.",
-  classes: "A rolled yoga mat with a small clock.",
+  automotive:
+    "A compact oak green car seen from the front three-quarter view, with a small deep green wrench and a small price tag both resting on top of a single soft green circle behind the car's upper right. Bold and simple.",
   stays: "A small cabin with a pine tree.",
   moving: "A stack of moving boxes with a hand truck dolly.",
   "step-check": "A clipboard with a magnifying glass: the free check.",

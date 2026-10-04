@@ -78,9 +78,9 @@ export const movers = [
 export const customerQuestions = [
   { kind: "Tours & experiences", icon: "tours", q: "Can my 6-year-old do the sunset kayak tour?" },
   { kind: "Rentals", icon: "rentals", q: "Does the pontoon rental include fuel and life jackets?" },
-  { kind: "Home & auto services", icon: "services", q: "Who has a same-day AC repair slot near me?" },
-  { kind: "Classes & wellness", icon: "classes", q: "Is there a beginner class on Saturday morning?" },
-  { kind: "Stays & hospitality", icon: "stays", q: "Which cabins near Asheville allow two dogs?" },
+  { kind: "Car buying & service", icon: "automotive", q: "Which dealer near me has a certified used RAV4 under $25k I can test-drive Saturday?" },
+  { kind: "Home services", icon: "services", q: "Which plumber near me can replace a water heater tomorrow?" },
+  { kind: "Stays & hospitality", icon: "stays", q: "Which lakeside cabins near Asheville take two big dogs, and what’s the pet fee?" },
   { kind: "Moving & storage", icon: "moving", q: "Who can move a one-bedroom this Saturday, and what will it cost?" },
 ];
 

@@ -30,8 +30,8 @@
 | `support` | What we do → Support | Two overlapping chat bubbles, one with a small headset. Instant answers with a human handoff. |
 | `tours` | Question card: Tours & experiences | A kayak with a paddle on a small wave |
 | `rentals` | Question card: Rentals | A pontoon boat, or a rental key on a tag |
-| `services` | Question card: Home & auto services | A wrench crossed with a small house |
-| `classes` | Question card: Classes & wellness | A rolled yoga mat with a small clock |
+| `services` | Question card: Home services | A wrench crossed with a small house |
+| `automotive` | Question card: Car buying & service | A car with a small wrench and price tag (replaced `classes`, 2026-10-04) |
 | `stays` | Question card: Stays & hospitality | A small cabin with a pine tree |
 | `moving` | Question card: Moving & storage | A stack of moving boxes with a dolly |
 | `step-check` | How it works: Step 1 | A clipboard with a magnifier: the free check |

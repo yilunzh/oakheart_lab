@@ -8,7 +8,7 @@ The website is Oakheart Lab's acquisition site. Its job is to turn visitors into
 ## Audience
 Owners and operators of **consumer-facing businesses with high operational intensity**. These are companies that move atoms, not bits: a customer chooses and books or buys online, and fulfillment then depends on coordinating people, physical assets, locations and time.
 
-Examples include experiences and activities, vehicle, equipment and boat rentals, service appointments (auto, home, wellness, clinics), stays and hospitality, fitness and classes, and moving and storage.
+Examples include experiences and activities, vehicle, equipment and boat rentals, car buying and service, service appointments (home, wellness, clinics), stays and hospitality, fitness and classes, and moving and storage.
 
 They are busy and not technical. Many already have a website and a booking system. They are skeptical of agencies and of AI hype.
 

@@ -2,6 +2,22 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-04: "Why it matters" categories
+
+The owner asked for automotive to be its own category, not grouped with home services, and for one existing card to make way for it.
+
+- **Removed: Classes & wellness.** It was the weakest card:
+  - It is the least operationally intense of the six.
+  - Discovery already runs largely through Mindbody and ClassPass.
+  - It is low-ticket.
+  - Its example question was a plain schedule lookup.
+  - Classes stay in the free-check form's business-type list.
+- **Added: Car buying & service**, with the question "Which dealer near me has a certified used RAV4 under $25k I can test-drive Saturday?" It shows the inventory, price and availability details AI gets wrong, and it matches the founder's public background.
+- **Renamed: Home & auto services → Home services**, with the question "Which plumber near me can replace a water heater tomorrow?" This avoids a second auto question.
+- **Stays & hospitality** has a stronger question: "Which lakeside cabins near Asheville take two big dogs, and what's the pet fee?" It now asks about a policy and a fee AI often gets wrong, not just a yes/no pet rule.
+- **New icon:** `automotive` (style B, same prompt, Discover as reference). It took three attempts. The first two read poorly, and variant 3 shows both buying (tag) and service (wrench). The three attempts cost about $0.15. The `classes` icon was removed.
+- **Brief:** the audience examples in `docs/brief.md` now include car buying and service.
+
 ## 2026-10-04: Custom icons (style B, geometric)
 
 The owner chose **style B: geometric, no outlines** from five rendered options: A outlined, B geometric, C monoline, D linocut, E badge tile. The choice was made on fit with the site's restrained type and hairline borders, and on legibility at 40–64 px.

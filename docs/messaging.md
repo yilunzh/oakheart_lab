@@ -30,8 +30,9 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
 2. **Recognize yourself (questions customers actually ask AI):**
    - "Can my 6-year-old do the kayak tour?" (experiences)
    - "Does the boat rental include fuel?" (rentals)
-   - "Who has a same-day AC repair slot?" (services)
-   - "Is there a beginner class on Saturday morning?" (fitness and classes)
+   - "Which dealer near me has a certified used RAV4 under $25k I can test-drive Saturday?" (car buying and service)
+   - "Which plumber near me can replace a water heater tomorrow?" (home services)
+   - "Which lakeside cabins near Asheville take two big dogs, and what's the pet fee?" (stays)
 3. **Three ways it costs you:** AI doesn't mention you; AI mentions you with wrong details; the customer clicks through and the booking flow loses them. Marketplaces then charge 20–30% commission for demand you could have taken directly (category ranges, sourced).
 4. **The system:**
    - **Found:** be the business AI can find, understand and cite.
