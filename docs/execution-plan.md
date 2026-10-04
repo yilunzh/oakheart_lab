@@ -1,6 +1,6 @@
 # Oakheart Lab agency website: execution plan
 
-**Status:** Draft plan v2, 2026-10-04 · **Owner:** Yilun · **Repo:** `yilunzh/oakheart_lab`
+**Status:** Plan v3, 2026-10-04 (owner inputs applied; see `docs/decisions.md`) · **Owner:** Yilun · **Repo:** `yilunzh/oakheart_lab`
 **Reference build:** branch `codex/import-oakheart-site-v19` (Sites version 19 source, review history v1–v11, ops record)
 **Skills used:** `oakheart:software-delivery-agency`, `oakheart:business-strategy-copilot`, `oakheart:copy-reviewer`, `oakheart:sales-pitch-reviewer`, `oakheart:learning-loop`, and the vendored `seo` plugin (`seo-geo`, `seo-agentic`, `seo-schema`, `seo-technical`, `seo-page`, `seo-local`).
 
@@ -86,18 +86,24 @@ The ladder is reconciled with the existing approved offer (§3.5). Prices need i
 
 | Step | What the buyer gets | Price | Role |
 |---|---|---|---|
-| **Free AI Visibility Check** | We ask 10–15 real customer questions on ChatGPT, Gemini, Perplexity and Google AI Overviews. The report shows where you appear, what's cited, factual errors, and the top 3 fixes. Delivered in N business days. Done manually at first, and the site says so. | Free | **Primary CTA** (new) |
+| **Free AI Visibility Check** | We ask 10–15 real customer questions on ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews. The report shows where you appear, what's cited, factual errors, and the top 3 fixes. **Unlimited, delivered in under 24 hours.** | Free | **Primary CTA** (new) |
 | **Free tailored preview** (existing, owner-approved) | A tailored homepage and one booking-journey preview for qualified businesses, with no obligation | Free | Mid-funnel, offered after the check or a call |
-| **Complete website & booking experience** (existing core offer) | Found + Booked delivered as one complete launch: content, schema and entity cleanup, booking flow and upsell, integration with existing systems, instrumentation | One price, `{{PRICE}}` or "from" range | **Core paid offer** |
-| **Ongoing: AI visibility & support** | Monthly visibility monitoring, content, booking improvements, and an AI customer-support assistant (Supported) | `{{PRICE}}`/mo | Retention |
+| **Complete website & booking experience** (existing core offer) | Found + Booked delivered as one complete launch: content, schema and entity cleanup, booking flow and upsell, integration with existing systems, instrumentation | One price agreed before work starts (not shown on site) | **Core paid offer** |
+| **Ongoing: AI visibility & support** | Monthly visibility monitoring, content, booking improvements, and an AI customer-support assistant (Supported) | Agreed monthly fee | Retention |
 | When you need more | Companion mobile app; staff tools & automation | Quoted separately | Optional |
 
-**No performance guarantee and no promised rankings or AI recommendations.** This matches the existing owner decision and `growth-service.md`.
+**Risk reversal (owner decision D3b):** "If you're not happy with our service, we'll give your money back, no questions asked." It sits beside every paid-offer mention and in the FAQ. It is a satisfaction guarantee, not a performance guarantee: we still never promise rankings or AI recommendations (`growth-service.md`). Refund window and scope are to be confirmed and written into the engagement terms before the first paid project; the site makes no claim about them until then.
+
+**No prices on the site (D3a).** The "What does it cost?" FAQ answers: one fixed price agreed before work starts, with the money-back promise.
 
 ### D4. Proof strategy with no client case studies yet
 
 We do not fabricate testimonials, logos or results. That is a critical failure in the rubric. Instead the site uses:
-1. **Founder credibility:** product roles at Carvana, Rivian, Clutch and Hertz, framed as "online decisions that end in physical delivery," with no implied client endorsements. The existing wording in `ops/content-sources.md` is already approved.
+1. **Founder results, mapped to the pillars.** These come from the owner-supplied resume (`docs/brief.md`) and are presented as career results, not employer endorsements or client results:
+   - **Booked:** Hertz, $300M+ incremental revenue from simpler journeys and personalized upselling, plus $100M+ in digital ancillary revenue; Rivian, +$1,500 profit per vehicle from insurance and accessories.
+   - **Supported:** Hertz, 50% lower contact rate, with an AI service agent deflecting 70% of inquiries.
+   - **Found:** Carvana, owned the homepage, search and listings at 20M+ pageviews per month.
+   This is the strongest proof on the site. It goes on the homepage, beside each pillar, and on About.
 2. **A sample AI Visibility report:** a real run on a public business, anonymized or used with permission, clearly labeled as a sample.
 3. **Oakheart's own AI visibility:** baseline and current, with the prompts, dates and engines published.
 4. **The existing booking-flow concept:** already labeled as illustrative.
@@ -133,7 +139,6 @@ The codex build encodes earlier decisions. This plan changes some of them becaus
 /for/experiences          Use case: book an experience (tours, activities, classes, venues)
 /for/rentals              Use case: rent something (vehicles, equipment, boats, gear)
 /for/services             Use case: schedule a service (auto, home, wellness, clinics)
-/pricing                  Offer ladder, what's included, FAQ        (needs D3)
 /how-we-work              Process, preview, ownership, what we need from you
 /proof                    Own visibility tracker, sample report, concepts
 /about                    Founder (existing copy, tightened)
@@ -142,7 +147,7 @@ The codex build encodes earlier decisions. This plan changes some of them becaus
 /privacy
 ```
 
-Navigation: `How it works · Who it's for · Pricing · Guides · About`, with **Get your free AI check** always visible.
+Navigation: `How it works · Who it's for · Results · Guides · About`, with **Get your free AI check** always visible.
 
 Redirect `/services` → `/how-we-work`, `/insights` → `/guides`, and `/work/booking-flow` → `/booked#example`. Remove the dead "Our approach" link.
 
@@ -156,18 +161,22 @@ The existing layout primitives are reused: the eyebrow label, serif H1 with ital
 | 2 | **Recognize yourself** | Make the ICP concrete | 3–4 example strips showing a real customer query → AI answer → what went wrong (missing, wrong price, can't book) | none |
 | 3 | **Why it's harder for you** | Show that we understand operational intensity | Availability, eligibility, options and policies are what AI gets wrong and booking widgets sell badly | none |
 | 4 | **The system: Found → Booked → Supported** | Present the offer as one system | Three columns, each with outcome, mechanism and example deliverables. Links to pillar pages | Inline secondary |
-| 5 | **Proof** | Earn trust | Founder strip ("Carvana, Rivian, Clutch, Hertz: online decisions, physical delivery"), Oakheart's own visibility baseline, sample report thumbnail | See the sample report |
-| 6 | **How it works** | Reduce perceived effort | Free check → free tailored preview → one-price launch → ongoing (optional), with time and commitment at each step | Get your free check |
+| 5 | **Proof** | Earn trust | Founder results strip: $300M+ from simpler journeys and upselling, 70% of inquiries handled by an AI agent, +$1,500 per vehicle from add-ons, 20M+ monthly pageviews owned. Attributed to the roles. Plus Oakheart's own visibility baseline and a sample report | See the sample report |
+| 6 | **How it works** | Reduce perceived effort | Free check (under 24h) → free tailored preview → one-price launch with money-back promise → ongoing (optional) | Get your free check |
 | 7 | **FAQ** | Handle objections and give AI engines citable text | "Isn't this just SEO?", "Can you guarantee ChatGPT recommends us?" (no, and why), "Do I need a new website?", "Do you replace my booking system?", "What does it cost?" | none |
 | 8 | **Final CTA band** | Convert | Restate the check: what you get, how long it takes, no obligation | Primary |
 | — | When you need more | Keep the optional services findable | Compact row (app, staff tools), not three full cards | Text links |
 
 ### 4.3 `/ai-visibility-check` (the most important page)
 
-- **Above the fold:** what you get, a sample report preview, delivery time, "no obligation," and the form.
+- **Above the fold:** "Your free AI Visibility Check, in your inbox in under 24 hours." What you get, a sample report preview, "unlimited, no obligation," and the form.
 - **Form:** reuses the existing inquiry API and its protections, adding `interest=ai-visibility-check`. Fields: business name, website, city/region, business type (feeds use-case routing), email. Optional: "a question you wish AI answered correctly about you," and "how did you hear about us" (including ChatGPT / AI assistant).
 - **After submit:** keep the existing honest confirmation pattern and add what happens next and when. Optional: book a call to walk through the result. This needs a scheduling URL; until then, the email fallback already in the build.
-- **Fulfillment:** a prompt-panel template (§6.3) so each check is consistent.
+- **Fulfillment: a semi-automated check runner.** It has to be, to promise unlimited checks in under 24 hours.
+  - **Runner (`ops/check-runner/`):** given a business, it generates 10–15 customer-style prompts from the business type and location, then queries each engine's API with web search or grounding enabled: OpenAI, Perplexity Sonar, Gemini with Google Search grounding, Anthropic with web search, and Google AI Overviews via SerpAPI or DataForSEO.
+  - **Output:** it records the answers, cited URLs, mentions and competitors, flags likely factual errors against the business's own site, and drafts the report.
+  - **Human review:** Yilun reviews and sends each report. A queue and an alert fire if a check approaches 20 hours.
+  - **Disclosure:** API answers can differ from the consumer apps. The report says which surface was sampled and when.
 
 ### 4.4 Pillar and use-case pages
 
@@ -245,10 +254,11 @@ Substack stays for essays. On-site guides are where AI-citable answers live. Shi
 | QA | Run the existing `npm run verify`. Add Playwright screenshots at 390 and 1440 (now proven to work locally in this environment), Lighthouse (3-run median), axe, a link checker and a schema validator |
 | Content | `content/site.ts` plus new guide routes |
 
-**D5. Hosting** (decision needed). The app currently runs on ChatGPT Sites (Cloudflare Workers + D1).
-- **Option A, recommended: move hosting to Vercel**, swapping D1 for Neon behind the existing Drizzle layer. Claude can then deploy a preview URL for every review round and every PR; both connectors are already working in this session. Cost: port the Cloudflare-specific runtime bits and re-verify the inquiry handler against Postgres.
-- **Option B: stay on Sites.** No runtime changes, but Claude cannot publish there from this environment. Codex or Yilun would deploy each round, which slows the review loop.
-- Either way: no DNS change to `oakheartlab.com` without approval; email DNS records stay untouched; Substack URLs get a redirect plan before any domain cutover.
+**D5. Hosting (decided): Vercel.**
+- **Port:** swap D1 for Neon Postgres behind the existing Drizzle layer, and replace the Sites/Cloudflare runtime bits (`chatgpt-auth`, `sites-vite-plugin`, wrangler) with a standard Next.js build on Vercel.
+- **Verify:** re-run the inquiry checks against Postgres.
+- **Preview deployments:** every review round and PR gets a preview URL, with noindex on previews.
+- **Domain:** no DNS change to `oakheartlab.com` until cutover is planned; email DNS records stay untouched; Substack URLs get a redirect plan first.
 
 ---
 
@@ -330,12 +340,14 @@ About 3 weeks to launch-ready, shorter than v1 because the reference build is re
 
 ---
 
-## 12. Inputs needed from Yilun (Phase 0)
+## 12. Inputs
 
-1. **§3.5 changes:** OK to lead with AI-driven demand, make the free AI Visibility Check the primary CTA (keeping the tailored preview as step 2), and fold AI support into the core system while demoting the app and back-office tools?
-2. **D3 prices:** the core build (one price or a "from" range) and the monthly ongoing tier.
-3. **Check capacity:** how many free checks per week you can deliver, and in how many business days.
-4. **D5 hosting:** move to Vercel + Neon (recommended) or stay on Sites?
-5. **D6 launch gates:** approval scope for indexing, analytics/consent, and the AI training-crawler policy.
-6. **Notifications:** where new leads should go (email address, CRM), and a scheduling URL for calls.
-7. **Proof assets:** LinkedIn URL, headshot, any shareable past-role results, and any business that would allow a named sample report.
+**Answered 2026-10-04** (see `docs/decisions.md`): ICP, no prices on site, money-back promise, unlimited checks in under 24 hours, Vercel, indexing/analytics/crawlers allowed, resume and LinkedIn as proof.
+
+**Still open:**
+1. **§3.5 changes:** proceeding on the defaults (AI-demand lead, check as primary CTA, AI support folded into the system). Say so if you disagree.
+2. **Refund terms:** the window, and which fees the money-back promise covers.
+3. **Hertz figures:** confirm you're OK publishing results from a current employer on the agency site.
+4. **Lead notifications:** destination (default `yilun@oakheartlab.com`) and a transactional-email API key (e.g. Resend); a scheduling URL for calls.
+5. **Check-runner API keys:** OpenAI, Perplexity, Gemini, Anthropic, and SerpAPI or DataForSEO.
+6. **Headshot**, and any business that would allow a named sample report.

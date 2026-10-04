@@ -28,7 +28,7 @@ Any divergence from the brief is a finding under dimension 1.
 | # | Dimension | Weight | What earns a high score |
 |---|---|---:|---|
 | 1 | **Positioning clarity** | 15% | Within 5 seconds a target buyer recognizes themselves, the problem and the promise. The hero is specific to the buyer, not generic. There is one thesis across pages. |
-| 2 | **Offer and buyer relevance** | 15% | Speaks in the buyer's language about their actual decision. The offer ladder, first step, price or price signal, and commitment are clear. Pillars read as one system. |
+| 2 | **Offer and buyer relevance** | 15% | Speaks in the buyer's language about their actual decision. The offer ladder, first step, commitment and risk (e.g. refund terms) are clear even without published prices. Pillars read as one system. |
 | 3 | **Credibility and evidence integrity** | 15% | Claims trace to evidence. Statistics are sourced and dated. Samples and prototypes are labeled. Founder experience is relevant and not inflated. No implied endorsements. |
 | 4 | **Conversion path and friction** | 15% | One primary action that is visible at every decision point. The form asks only what it needs. Errors and confirmation states are clear. Next steps after submit are explicit. Objections are answered near the decision. |
 | 5 | **Copy quality and voice** | 10% | Direct, specific and concrete. No generic agency prose, filler slogans or artificial contrasts. Qualifications sit beside claims. |
