@@ -123,9 +123,29 @@ export default function Home() {
 
       {/* Recognize yourself */}
       <Section
-        eyebrow="Who we help"
-        title="Businesses where a booking sets real work in motion."
-        intro="Tours, rentals, appointments, classes and stays: people, equipment, rooms and time slots have to line up. Those details are exactly what customers ask AI about, and exactly what AI gets wrong."
+        eyebrow="Who it’s for"
+        title="Your business runs on details. AI often gets them wrong."
+        intro={
+          <>
+            <p>
+              If customers book a time, a seat, a room or a piece of equipment, they ask about the
+              specifics first: age limits, what&rsquo;s included, deposits, cancellation, whether
+              there&rsquo;s a slot on Saturday. Those are the answers AI assistants often miss or
+              get wrong.
+            </p>
+            <p className="mt-4 border-l-2 border-accent pl-4 text-base text-ink">
+              44% of experience operators say they&rsquo;ve received inaccurate information from AI
+              tools.{" "}
+              <a
+                href="https://www.getyourguide.press/blog/tettspring2026"
+                className="text-sm text-muted underline underline-offset-2 hover:text-ink"
+                rel="noopener"
+              >
+                GetYourGuide survey of 505 operators, May 2026
+              </a>
+            </p>
+          </>
+        }
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {customerQuestions.map((c) => (
