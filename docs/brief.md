@@ -46,7 +46,7 @@ Approved, from the public About page:
 - Hands-on AI builder who writes publicly about building with AI in operationally complex businesses (Oakheart Lab on Substack).
 
 Also approved:
-- Headshot: `assets/yilun-zhang-headshot.jpg` (owner-supplied for the site)
+- Headshot: `public/images/yilun-zhang.jpg` (owner-supplied for the site)
 - LinkedIn link: https://www.linkedin.com/in/yilun-zhang-7b804510/
 - Contact: yilun@oakheartlab.com
 

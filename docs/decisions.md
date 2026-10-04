@@ -11,7 +11,7 @@ Newest first. Each entry lists the decision, its source, and what it supersedes.
 | D8 | **Lead notifications go to yilun@oakheartlab.com.** | A sending service still needs credentials (e.g. Resend API key, set as a Vercel env var, never committed). |
 | D9 | **Check-runner data provider: DataForSEO.** Its AI Optimization APIs (LLM responses and mentions across ChatGPT, Claude, Gemini, Perplexity) and SERP API (Google AI Overviews) cover all engines through one vendor. | Replaces the separate per-engine API keys in plan §4.3. Credentials are stored as Vercel env vars. Verify current endpoint coverage and pricing at build time. |
 | D7″ | **Founder information: only what is already public.** Verified public source: oakheartlab.com/about. LinkedIn could not be fetched, so LinkedIn-only and resume-only details wait for owner confirmation. | Refines D7′. |
-| D10 | **Headshot supplied:** `assets/yilun-zhang-headshot.jpg`. | |
+| D10 | **Headshot supplied:** `public/images/yilun-zhang.jpg`. | |
 
 **Still open:** sending-service credentials (D8); DataForSEO credentials (D9); any business willing to be the named sample report.
 
