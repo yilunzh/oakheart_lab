@@ -34,28 +34,30 @@ Businesses with complex offers are hurt most, because their availability, eligib
 ## Approved founder facts
 **Rule (owner, 2026-10-04): disclose only information that is already public. No results or metrics from past or current employers.** The founder can discuss industry patterns without attributing numbers to an employer.
 
-The verified public source is the founder's About page, https://www.oakheartlab.com/about (Substack), checked 2026-10-04. LinkedIn could not be fetched (it blocks automated access), so anything that appears only on LinkedIn or the private resume is **not approved** until the owner confirms it is public.
+Verified public sources: the founder's About page, https://www.oakheartlab.com/about (Substack), checked 2026-10-04, and the public LinkedIn profile (export supplied by the owner on 2026-10-04).
 
-Approved, from the public About page:
-- Yilun Zhang, founder. Has "spent the last decade building digital commerce products in automotive — an industry where you're ultimately moving atoms, not bits." That phrase is his own; use it.
-- **Carvana:** joined early; led the team responsible for the homepage, search and product listings.
-- **Rivian:** one of the first product hires on digital commerce; built the end-to-end purchase and delivery experience from scratch.
-- **Clutch.ca:** ran all digital products. (The About page also states a company revenue figure. Per the no-employer-metrics rule, don't use it.)
-- **Hertz:** currently leads digital products across the global rental business, modernizing decades of operational infrastructure.
+Approved public facts, from the About page plus the public LinkedIn profile (owner-supplied export, 2026-10-04):
+- Yilun Zhang, founder, based in Atlanta, GA. Has "spent the last decade building digital commerce products in automotive — an industry where you're ultimately moving atoms, not bits." That phrase is his own; use it.
+- **Hertz:** VP of Product (2025–present), leading digital products for the global rental business across Hertz, Dollar and Thrifty. Previously Senior Director, Product, US Consumer Experience (2023–2025).
+- **Clutch** (Canada's first national online automotive retailer): Head of Product (2022–2023); ran all digital products.
+- **Rivian:** Group Product Manager, Digital Commerce (2019–2021). One of the first product hires on digital commerce; built the end-to-end purchase and delivery experience from scratch.
+- **Carvana:** Product Track Lead, Merchandising (2015–2019). Joined early; led the team responsible for the homepage, search and product listings.
+- **Earlier:** Product Manager at Medivo, a healthcare data analytics startup (2014–2015). University of Toronto.
 - His belief, in his words: "if you can marry a seamless digital experience with efficient operations in a single stack, the business becomes untouchable. AI is what makes that possible."
-- Hands-on AI builder who writes publicly about building with AI in operationally complex businesses (Oakheart Lab on Substack).
+- Hands-on AI builder who writes publicly about building with AI in operationally complex businesses (Oakheart Lab on Substack, e.g. "Stop Tuning the AI").
 
 Also approved:
 - Headshot: `public/images/yilun-zhang.jpg` (owner-supplied for the site)
 - LinkedIn link: https://www.linkedin.com/in/yilun-zhang-7b804510/
 - Contact: yilun@oakheartlab.com
 
-Pending owner confirmation that they are public:
-- "15+ years"
-- Atlanta, GA
-- exact titles
-- Fleetbit co-founder
+**Not approved (not on public sources):**
+- "15+ years" (say "over a decade")
+- Fleetbit
 - "Hitchhiker's Guide to Product Management"
+- any employer metrics, including the Clutch revenue figure on the About page
+
+Do not use anything that appears only in the private resume, or in private LinkedIn views (analytics, job-seeking settings, connections).
 
 ## Constraints
 - No invented client results, testimonials, logos, scarcity or timelines beyond the 24-hour check.
