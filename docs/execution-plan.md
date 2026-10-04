@@ -100,7 +100,7 @@ The ladder is reconciled with the earlier approved offer (§3.5). Prices are not
 ### D4. Proof strategy with no client case studies yet
 
 We do not fabricate testimonials, logos or results. That is a critical failure in the rubric. Instead the site uses:
-1. **Founder background and patterns:** 15+ years building consumer commerce where an online decision ends in physical delivery (Carvana, Rivian, Clutch, Hertz). He speaks to the patterns he has seen across those businesses. **No employer results or metrics are shown (D7′).**
+1. **Founder background and patterns:** a decade building digital commerce where you're "moving atoms, not bits" (Carvana, Rivian, Clutch, Hertz). Only publicly available information is used (D7″). He speaks to the patterns he has seen across those businesses. **No employer results or metrics are shown (D7′).**
 2. **A sample AI Visibility report:** a real run on a public business, anonymized or used with permission, clearly labeled as a sample.
 3. **Oakheart's own AI visibility:** baseline and current, with the prompts, dates and engines published.
 4. **The existing booking-flow concept:** already labeled as illustrative.

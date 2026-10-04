@@ -32,29 +32,34 @@ Businesses with complex offers are hurt most, because their availability, eligib
 **No prices on the site.**
 
 ## Approved founder facts
-Source: the owner-supplied resume and owner direction, 2026-10-04.
+**Rule (owner, 2026-10-04): disclose only information that is already public. No results or metrics from past or current employers.** The founder can discuss industry patterns without attributing numbers to an employer.
 
-**No results or metrics from past or current employers may appear on the site.** That covers revenue, percentages, deflection rates, pageviews and any other figure. Roles and employer names may be used as career background. The founder can speak to **industry patterns** he has seen, without attributing numbers to an employer. For example:
-- simpler journeys and well-timed personalized add-ons are among the biggest conversion and revenue levers in booking businesses
-- AI support can now resolve a large share of routine questions when it is grounded in accurate business information and hands off cleanly
+The verified public source is the founder's About page, https://www.oakheartlab.com/about (Substack), checked 2026-10-04. LinkedIn could not be fetched (it blocks automated access), so anything that appears only on LinkedIn or the private resume is **not approved** until the owner confirms it is public.
 
-Approved facts:
-- Yilun Zhang, founder. Product leader with 15+ years building consumer commerce and mobility experiences where an online decision ends in physical delivery. Based in Atlanta, GA.
-- Roles:
-  - Hertz: leads consumer product
-  - Clutch: Head of Product
-  - Rivian: Group PM, Digital Commerce; built the digital purchase and delivery experience
-  - Carvana: Lead PM, Merchandising; owned the homepage, search and listings experience
-  - Fleetbit: co-founder and COO of a ride-hailing startup
-- Hands-on AI builder (Codex, Claude Code, agent harnesses).
-- Author of the "Hitchhiker's Guide to Product Management."
-- Headshot: `assets/yilun-zhang-headshot.jpg`
-- LinkedIn: https://www.linkedin.com/in/yilun-zhang-7b804510/
+Approved, from the public About page:
+- Yilun Zhang, founder. Has "spent the last decade building digital commerce products in automotive — an industry where you're ultimately moving atoms, not bits." That phrase is his own; use it.
+- **Carvana:** joined early; led the team responsible for the homepage, search and product listings.
+- **Rivian:** one of the first product hires on digital commerce; built the end-to-end purchase and delivery experience from scratch.
+- **Clutch.ca:** ran all digital products. (The About page also states a company revenue figure. Per the no-employer-metrics rule, don't use it.)
+- **Hertz:** currently leads digital products across the global rental business, modernizing decades of operational infrastructure.
+- His belief, in his words: "if you can marry a seamless digital experience with efficient operations in a single stack, the business becomes untouchable. AI is what makes that possible."
+- Hands-on AI builder who writes publicly about building with AI in operationally complex businesses (Oakheart Lab on Substack).
+
+Also approved:
+- Headshot: `assets/yilun-zhang-headshot.jpg` (owner-supplied for the site)
+- LinkedIn link: https://www.linkedin.com/in/yilun-zhang-7b804510/
 - Contact: yilun@oakheartlab.com
+
+Pending owner confirmation that they are public:
+- "15+ years"
+- Atlanta, GA
+- exact titles
+- Fleetbit co-founder
+- "Hitchhiker's Guide to Product Management"
 
 ## Constraints
 - No invented client results, testimonials, logos, scarcity or timelines beyond the 24-hour check.
-- No past-employer results or metrics; employer names only as career background.
+- Only publicly available founder information; no past-employer results or metrics.
 - No promised rankings or AI recommendations, and no performance guarantee.
 - AI-usage statistics only with a named source and date.
 - Labeled concepts stay labeled.
