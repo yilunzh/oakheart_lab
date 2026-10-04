@@ -23,3 +23,13 @@ Screenshots: `e2e-mobile-success.png` and `e2e-desktop-success.png` in the round
   - The endpoint is protected by `CRON_SECRET`: an unauthenticated call returns `401`.
   - Once the key is set, any lead whose instant email failed is emailed on the next run.
 - **Pending:** a real owner-email receipt, after the key is configured.
+
+## Update: owner notification verified (2026-10-04, 15:20 UTC)
+
+- **Configuration:** the owner set `RESEND_API_KEY` and `NOTIFY_FROM` in Vercel (Production and Preview). Production was redeployed from the same commit (`dpl_ANUyjZKnZuZkxH9MTTdtt1KU7b6j`) so the new variables apply.
+- **Test lead** (request `a603c049-…`) to `https://oakheart-lab.vercel.app/api/checks`: `201 {"status":"received"}`.
+- **Database:** `created_at 15:19:57.528Z`, `notified_at 15:19:57.620Z`. The notification succeeded about 90 ms after storage.
+- **Owner inbox (Gmail, read via connector):** "New AI check request: Notification Test (ignore)", from `onboarding@resend.dev` to `yilun@oakheartlab.com`. It arrived in the Inbox at 15:19:57Z, and the body lists business, website, location, type, email and question.
+- **Afterwards:** the test row was marked `status='test'`.
+
+The full path now works end to end: visitor form → deployed API → Neon → owner email. The daily cron retries any lead whose notification fails.
