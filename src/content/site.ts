@@ -37,11 +37,41 @@ export const shiftStats = [
     source: "BrightLocal Local Consumer Review Survey, Feb 2026",
     href: "https://www.brightlocal.com/research/local-consumer-review-survey/",
   },
+];
+
+/** ChatGPT weekly active users as announced by OpenAI (sources: docs/research/adoption-facts.md). */
+export const chatgptWeeklyUsers = [
+  { date: "2023-11-06", label: "Nov 2023", users: 100, note: "Sam Altman, OpenAI DevDay" },
+  { date: "2024-08-29", label: "Aug 2024", users: 200, note: "OpenAI, to Axios" },
+  { date: "2024-12-04", label: "Dec 2024", users: 300, note: "Sam Altman, DealBook" },
+  { date: "2025-02-20", label: "Feb 2025", users: 400, note: "OpenAI COO, to CNBC" },
+  { date: "2025-03-31", label: "Mar 2025", users: 500, note: "OpenAI" },
+  { date: "2025-10-06", label: "Oct 2025", users: 800, note: "Sam Altman, OpenAI DevDay" },
+  { date: "2026-02-27", label: "Feb 2026", users: 900, note: "OpenAI, via TechCrunch" },
+  { date: "2026-08-06", label: "Aug 2026", users: 1000, note: "OpenAI, via TechCrunch" },
+  { date: "2026-09-29", label: "Sep 2026", users: 1200, note: "Sam Altman, OpenAI DevDay" },
+];
+
+export const movers = [
   {
-    figure: "Booking",
-    text: "Google says Search will now book local experiences and services for people, and even call some businesses on their behalf.",
-    source: "Google I/O, May 2026",
+    when: "Oct 2025",
+    text: "Booking.com and Expedia launch apps inside ChatGPT.",
+    href: "https://openai.com/index/introducing-apps-in-chatgpt/",
+  },
+  {
+    when: "Apr 2026",
+    text: "FareHarbor tour operators become bookable inside ChatGPT.",
+    href: "https://marketing.fareharbor.com/blog/chatgpt-fareharbors-newest-distribution-partner/",
+  },
+  {
+    when: "May 2026",
+    text: "Google says Search will book local services for people, and call some businesses on their behalf.",
     href: "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+  },
+  {
+    when: "Jul 2026",
+    text: "Yelp licenses its reviews and business data to OpenAI for ChatGPT answers.",
+    href: "https://www.axios.com/2026/07/23/yelp-reviews-chatgpt-geo-partnership",
   },
 ];
 

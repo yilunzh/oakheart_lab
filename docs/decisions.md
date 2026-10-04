@@ -74,3 +74,11 @@ The owner simplified "How it works" to three steps:
 3. **Optional ongoing support** to keep up as assistants and competitors change.
 
 The free tailored preview is **dropped** as a separate step and offer, and removed from the site copy, the FAQ and the brief.
+
+## 2026-10-04: Urgency in "What changed"
+
+At the owner's request, the section now shows the pace of adoption and that smart companies are already moving:
+- **Chart:** a line chart of ChatGPT weekly active users as announced by OpenAI, 100M (Nov 2023) to 1.2B (Sep 2026), "12× in under three years". Sources are in `docs/research/adoption-facts.md`. The "on track for 700M" projection is excluded.
+- **"Who's already moving":** four dated, sourced examples (Booking.com and Expedia, FareHarbor, Google, Yelp).
+- **Copy:** the intro now says "Smart companies are already sprinting to get ahead of it."
+- **Removed:** the Google "Booking" stat card, since Google now sits in the movers list.

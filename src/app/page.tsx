@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { AdoptionChart } from "@/components/adoption-chart";
 import { AnswerCard } from "@/components/answer-card";
 import { CtaLink } from "@/components/cta-link";
 import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
 import {
+  chatgptWeeklyUsers,
   checkCta,
+  movers,
   talkFirst,
   customerQuestions,
   failureModes,
@@ -101,10 +104,38 @@ export default function Home() {
       <Section
         eyebrow="What changed"
         title="AI answers now shape who gets the booking."
-        intro="Customers used to compare ten links. Now an assistant often names two or three businesses, and some assistants are starting to book them too."
+        intro="Customers used to compare ten links. Now they ask an assistant, which often names just two or three businesses, and the number of people asking is climbing fast. Smart companies are already sprinting to get ahead of it."
         tone="surface"
       >
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
+          <figure className="rounded-2xl border border-line bg-paper p-6 lg:col-span-2">
+            <p className="text-2xl font-semibold tracking-tight">12× in under three years</p>
+            <p className="mt-1 text-muted">ChatGPT weekly active users, as announced by OpenAI</p>
+            <div className="mt-6">
+              <AdoptionChart data={chatgptWeeklyUsers} />
+            </div>
+            <figcaption className="mt-3 text-xs text-muted">
+              Sources: OpenAI announcements reported by TechCrunch, CNBC and Axios, Nov 2023 to Sep 2026.
+            </figcaption>
+          </figure>
+          <div className="rounded-2xl border border-line bg-paper p-6">
+            <p className="text-2xl font-semibold tracking-tight">Who&rsquo;s already moving</p>
+            <ol className="mt-5 space-y-5">
+              {movers.map((m) => (
+                <li key={m.when} className="border-l-2 border-accent pl-4">
+                  <p className="font-mono text-xs uppercase tracking-wider text-muted">{m.when}</p>
+                  <p className="mt-1 leading-snug">
+                    {m.text}{" "}
+                    <a href={m.href} className="text-sm text-muted underline underline-offset-2 hover:text-ink" rel="noopener">
+                      Source
+                    </a>
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
           {shiftStats.map((s) => (
             <figure key={s.figure} className="flex flex-col rounded-2xl border border-line bg-paper p-6">
               <p className="text-4xl font-semibold tracking-tight">{s.figure}</p>
