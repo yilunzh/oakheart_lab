@@ -24,7 +24,7 @@ The rebuild keeps the design system and engineering, and sharpens **who it's for
 
 The site also works as the case study. Oakheart's own AI visibility is baselined before launch and tracked afterwards.
 
-**Quality bar:** each round is scored by a fresh, blind reviewer against a fixed rubric (`docs/review-rubric.md`). We stop when a round reaches ≥ 9.0/10 weighted, with no dimension below 8 and every gate passing. If that hasn't happened, we stop after 5 rounds and report what is still open. A review score shows editorial quality. It does not prove conversion; launch metrics (§9) decide that.
+**Quality bar:** each round is scored by a fresh, blind reviewer against a fixed rubric (`docs/review-rubric.md`). We stop when a round reaches ≥ 9.0/10 weighted, with no dimension below 8 and every gate passing. If that hasn't happened, we stop after 8 rounds and report what is still open. Each major iteration is deployed to Vercel and logged in `docs/reviews/README.md`. A review score shows editorial quality. It does not prove conversion; launch metrics (§9) decide that.
 
 ---
 
@@ -265,7 +265,7 @@ That points to one full-stack framework native to the chosen host.
 
 ---
 
-## 8. Quality loop: review, score, iterate (≥ 9/10 or 5 rounds)
+## 8. Quality loop: review, score, iterate (≥ 9/10 or 8 rounds)
 
 ### 8.1 Protocol
 This follows `copy-reviewer/references/review.md`, the `business-strategy-copilot` review rubric, and `software-delivery-agency/research-design.md`:
@@ -283,7 +283,7 @@ This follows `copy-reviewer/references/review.md`, the `business-strategy-copilo
 ### 8.2 Stop rule
 - **Pass:** weighted score ≥ 9.0, no dimension < 8, all gates pass, no open critical or major findings.
 - **Otherwise iterate,** fixing substantive defects before cosmetic ones and rerunning the full review on the complete final version.
-- **Hard stop after Round 5.** The skills default to two cycles; the user explicitly asked for up to five. Report the final score, the remaining defects, and the smallest input that would resolve each.
+- **Hard stop after Round 8** (owner goal, 2026-10-04; raised from 5). The skills default to two cycles; the owner explicitly asked for more. Report the final score, the remaining defects, and the smallest input that would resolve each.
 - Each round is logged in `docs/reviews/round-N.md`: commit, date, scope, scores, findings, and the closure record. The reference build's `ops/review-v*.md` history stays on its branch.
 
 ### 8.3 Round plan

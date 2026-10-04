@@ -1,0 +1,10 @@
+# Review rounds
+
+Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`. The goal is a weighted total ≥ 9.0 with no dimension below 8 and all gates passing, or 8 rounds (owner goal, 2026-10-04).
+
+**Live site** (always the latest push to the branch): https://oakheart-lab.vercel.app
+
+| Round | Commit | Deployment | Weighted score | Notes |
+|---|---|---|---|---|
+| 0 | reference site (`codex/import-oakheart-site-v19`) | not deployed (reference only) | 4.6 (provisional) | Baseline against the new brief |
+| 1 | `329727c` | https://oakheart-7ahhv2yxe-oakheart-lab.vercel.app | pending | First slice: homepage + free check page |
