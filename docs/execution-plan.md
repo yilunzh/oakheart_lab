@@ -100,11 +100,7 @@ The ladder is reconciled with the earlier approved offer (§3.5). Prices are not
 ### D4. Proof strategy with no client case studies yet
 
 We do not fabricate testimonials, logos or results. That is a critical failure in the rubric. Instead the site uses:
-1. **Founder results, mapped to the pillars.** These come from the owner-supplied resume (`docs/brief.md`) and are presented as career results, not employer endorsements or client results:
-   - **Booked:** Hertz, $300M+ incremental revenue from simpler journeys and personalized upselling, plus $100M+ in digital ancillary revenue; Rivian, +$1,500 profit per vehicle from insurance and accessories.
-   - **Supported:** Hertz, 50% lower contact rate, with an AI service agent deflecting 70% of inquiries.
-   - **Found:** Carvana, owned the homepage, search and listings at 20M+ pageviews per month.
-   This is the strongest proof on the site. It goes on the homepage, beside each pillar, and on About.
+1. **Founder background and patterns:** 15+ years building consumer commerce where an online decision ends in physical delivery (Carvana, Rivian, Clutch, Hertz). He speaks to the patterns he has seen across those businesses. **No employer results or metrics are shown (D7′).**
 2. **A sample AI Visibility report:** a real run on a public business, anonymized or used with permission, clearly labeled as a sample.
 3. **Oakheart's own AI visibility:** baseline and current, with the prompts, dates and engines published.
 4. **The existing booking-flow concept:** already labeled as illustrative.
@@ -162,7 +158,7 @@ A new visual direction is defined in Phase 2 from the brief. It is not inherited
 | 2 | **Recognize yourself** | Make the ICP concrete | 3–4 example strips showing a real customer query → AI answer → what went wrong (missing, wrong price, can't book) | none |
 | 3 | **Why it's harder for you** | Show that we understand operational intensity | Availability, eligibility, options and policies are what AI gets wrong and booking widgets sell badly | none |
 | 4 | **The system: Found → Booked → Supported** | Present the offer as one system | Three columns, each with outcome, mechanism and example deliverables. Links to pillar pages | Inline secondary |
-| 5 | **Proof** | Earn trust | Founder results strip: $300M+ from simpler journeys and upselling, 70% of inquiries handled by an AI agent, +$1,500 per vehicle from add-ons, 20M+ monthly pageviews owned. Attributed to the roles. Plus Oakheart's own visibility baseline and a sample report | See the sample report |
+| 5 | **Proof** | Earn trust | Founder block (headshot, background, the patterns he has seen, with no employer metrics), Oakheart's own visibility baseline, a sample report, and a transparent method | See the sample report |
 | 6 | **How it works** | Reduce perceived effort | Free check (under 24h) → free tailored preview → one-price launch with money-back promise → ongoing (optional) | Get your free check |
 | 7 | **FAQ** | Handle objections and give AI engines citable text | "Isn't this just SEO?", "Can you guarantee ChatGPT recommends us?" (no, and why), "Do I need a new website?", "Do you replace my booking system?", "What does it cost?" | none |
 | 8 | **Final CTA band** | Convert | Restate the check: what you get, how long it takes, no obligation | Primary |
@@ -174,7 +170,7 @@ A new visual direction is defined in Phase 2 from the brief. It is not inherited
 - **Form:** posts to a new lead API that meets the §2 lead-capture requirements. Fields: business name, website, city/region, business type (feeds use-case routing), email. Optional: "a question you wish AI answered correctly about you," and "how did you hear about us" (including ChatGPT / AI assistant).
 - **After submit:** an honest confirmation saying what happens next and when (report within 24 hours), plus an optional call to walk through it. The call needs a scheduling URL; until then, fall back to arranging it by email.
 - **Fulfillment: a semi-automated check runner.** It has to be, to promise unlimited checks in under 24 hours.
-  - **Runner (`ops/check-runner/`):** given a business, it generates 10–15 customer-style prompts from the business type and location, then queries each engine's API with web search or grounding enabled: OpenAI, Perplexity Sonar, Gemini with Google Search grounding, Anthropic with web search, and Google AI Overviews via SerpAPI or DataForSEO.
+  - **Runner (`ops/check-runner/`):** given a business, it generates 10–15 customer-style prompts from the business type and location, then queries the engines through **DataForSEO** (D9): its AI Optimization APIs for ChatGPT, Claude, Gemini and Perplexity, and its SERP API for Google AI Overviews.
   - **Output:** it records the answers, cited URLs, mentions and competitors, flags likely factual errors against the business's own site, and drafts the report.
   - **Human review:** Yilun reviews and sends each report. A queue and an alert fire if a check approaches 20 hours.
   - **Disclosure:** API answers can differ from the consumer apps. The report says which surface was sampled and when.
@@ -353,8 +349,5 @@ About 4 weeks to launch-ready (fresh build).
 
 **Still open:**
 1. **§3.5 changes:** proceeding on the defaults (AI-demand lead, check as primary CTA, AI support folded into the system). Say so if you disagree.
-2. **Refund terms:** the window, and which fees the money-back promise covers.
-3. **Hertz figures:** confirm you're OK publishing results from a current employer on the agency site.
-4. **Lead notifications:** destination (default `yilun@oakheartlab.com`) and a transactional-email API key (e.g. Resend); a scheduling URL for calls.
-5. **Check-runner API keys:** OpenAI, Perplexity, Gemini, Anthropic, and SerpAPI or DataForSEO.
-6. **Headshot**, and any business that would allow a named sample report.
+2. **Credentials:** an email sending service (e.g. Resend) and DataForSEO, set as Vercel env vars.
+3. **Sample report:** any business that would allow a named sample report. Otherwise we use an anonymized one.

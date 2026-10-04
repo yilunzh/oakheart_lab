@@ -27,32 +27,34 @@ Businesses with complex offers are hurt most, because their availability, eligib
 4. **Ongoing:** visibility monitoring, content, booking improvements and support.
 5. **Optional:** companion mobile app; staff tools and automation.
 
-**Risk reversal:** "If you're not happy with our service, we'll give your money back, no questions asked." Do not add a time window or conditions that the owner has not approved.
+**Risk reversal (blanket, owner-approved):** "If you're not happy with our service, we'll give your money back, no questions asked." It applies to all paid work, with no time window or conditions.
 
 **No prices on the site.**
 
 ## Approved founder facts
-Source: the owner-supplied resume, September 2026. Present these as the founder's career results, not employer endorsements or Oakheart client results.
+Source: the owner-supplied resume and owner direction, 2026-10-04.
 
-Yilun Zhang, founder, is a product executive with 15+ years in automotive commerce and mobility, based in Atlanta, GA.
+**No results or metrics from past or current employers may appear on the site.** That covers revenue, percentages, deflection rates, pageviews and any other figure. Roles and employer names may be used as career background. The founder can speak to **industry patterns** he has seen, without attributing numbers to an employer. For example:
+- simpler journeys and well-timed personalized add-ons are among the biggest conversion and revenue levers in booking businesses
+- AI support can now resolve a large share of routine questions when it is grounded in accurate business information and hands off cleanly
 
-- **Hertz, VP Consumer Product (2023–present)**
-  - Led a team of 10 PMs.
-  - $300M+ incremental revenue from improving conversion and revenue per day through simpler customer journeys and personalized upselling.
-  - App revenue grew 60%+ in two years to $1B+ annually.
-  - $100M+ added digital ancillary revenue through merchandising and personalization.
-  - Customer contact rate reduced 50% through AI call transcription and classification, system upgrades, and Hertz's first AI service agent, which deflects 70% of inquiries.
-- **Clutch, Head of Product (2022–2023):** built the product, design and data science teams.
-- **Rivian, Group PM Digital Commerce (2019–2021)**
-  - Built the digital purchase and delivery experience from scratch: financing, trade-in, insurance, registration, delivery.
-  - +$1,500 profit per vehicle through insurance and accessory sales.
-- **Carvana, Lead PM Merchandising (2015–2019):** owned the homepage, search and listings, the three most-visited pages at 20M+ pageviews per month.
-- **Fleetbit, co-founder and COO:** scaled a B2B ride-hailing platform across 12 North American cities.
-- **AI practice:** hands-on builder (Codex, Claude Code, agent harnesses). Wrote the "Hitchhiker's Guide to Product Management," viewed by 50,000+ people.
-- **Links:** LinkedIn https://www.linkedin.com/in/yilun-zhang-7b804510/ · Contact yilun@oakheartlab.com
+Approved facts:
+- Yilun Zhang, founder. Product leader with 15+ years building consumer commerce and mobility experiences where an online decision ends in physical delivery. Based in Atlanta, GA.
+- Roles:
+  - Hertz: leads consumer product
+  - Clutch: Head of Product
+  - Rivian: Group PM, Digital Commerce; built the digital purchase and delivery experience
+  - Carvana: Lead PM, Merchandising; owned the homepage, search and listings experience
+  - Fleetbit: co-founder and COO of a ride-hailing startup
+- Hands-on AI builder (Codex, Claude Code, agent harnesses).
+- Author of the "Hitchhiker's Guide to Product Management."
+- Headshot: `assets/yilun-zhang-headshot.jpg`
+- LinkedIn: https://www.linkedin.com/in/yilun-zhang-7b804510/
+- Contact: yilun@oakheartlab.com
 
 ## Constraints
 - No invented client results, testimonials, logos, scarcity or timelines beyond the 24-hour check.
+- No past-employer results or metrics; employer names only as career background.
 - No promised rankings or AI recommendations, and no performance guarantee.
 - AI-usage statistics only with a named source and date.
 - Labeled concepts stay labeled.

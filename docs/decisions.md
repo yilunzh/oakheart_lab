@@ -2,6 +2,18 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-04: Owner follow-up answers
+
+| # | Decision | Supersedes / notes |
+|---|---|---|
+| D3b′ | **The money-back promise is a blanket statement: generous, all paid work, no window, no conditions** ("given I'm just starting out"). | Closes the open D3b question. Revisit as volume grows. |
+| D7′ | **No results or metrics from past or current employers on the site.** Employer names and roles are career background only. The founder may discuss industry trends and patterns. | **Supersedes D7** (resume figures as proof). Proof now rests on background, method, the sample report, Oakheart's own measured visibility, and later client case studies. |
+| D8 | **Lead notifications go to yilun@oakheartlab.com.** | A sending service still needs credentials (e.g. Resend API key, set as a Vercel env var, never committed). |
+| D9 | **Check-runner data provider: DataForSEO.** Its AI Optimization APIs (LLM responses and mentions across ChatGPT, Claude, Gemini, Perplexity) and SERP API (Google AI Overviews) cover all engines through one vendor. | Replaces the separate per-engine API keys in plan §4.3. Credentials are stored as Vercel env vars. Verify current endpoint coverage and pricing at build time. |
+| D10 | **Headshot supplied:** `assets/yilun-zhang-headshot.jpg`. | |
+
+**Still open:** sending-service credentials (D8); DataForSEO credentials (D9); any business willing to be the named sample report.
+
 ## 2026-10-04: Owner answers to the execution-plan inputs (Yilun, in session)
 
 | # | Decision | Supersedes / notes |
