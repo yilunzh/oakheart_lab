@@ -46,8 +46,8 @@ export function AnswerCard() {
               )}
             </div>
           ))}
-          <div className="rounded-xl border border-dashed border-accent/60 bg-accent-soft/60 p-3">
-            <p className="font-mono text-xs text-accent">Not mentioned</p>
+          <div className="rounded-xl border border-dashed border-highlight bg-highlight-soft p-3">
+            <p className="font-mono text-xs text-highlight-ink">Not mentioned</p>
             <p className="mt-1 font-semibold">Your business</p>
           </div>
         </div>

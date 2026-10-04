@@ -14,8 +14,8 @@ export default async function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#f7f5f0",
-          color: "#16130f",
+          background: "#f5f4ee",
+          color: "#14181a",
           padding: 72,
           fontFamily: "sans-serif",
         }}
@@ -25,11 +25,11 @@ export default async function Image() {
           <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>
             More of your customers are asking AI where to book.
           </div>
-          <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2, color: "#b93d0b" }}>
+          <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2, color: "#1f5c3a" }}>
             Does it get you right?
           </div>
         </div>
-        <div style={{ fontSize: 28, color: "#5b544a", display: "flex" }}>
+        <div style={{ fontSize: 28, color: "#555b55", display: "flex" }}>
           Free AI Visibility Check · report in under 24 hours
         </div>
       </div>

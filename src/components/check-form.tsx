@@ -217,7 +217,7 @@ export function CheckForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"}
-        className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-6 font-semibold text-accent-ink transition-colors hover:bg-[#9c330a] disabled:opacity-70">
+        className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-6 font-semibold text-accent-ink transition-colors hover:bg-accent-hover disabled:opacity-70">
         {status === "sending" ? "Sending…" : "Get my free AI check"}
       </button>
       <p className="text-center text-xs text-muted">

@@ -9,7 +9,7 @@ type Props = {
 
 const styles = {
   primary:
-    "bg-accent text-accent-ink hover:bg-[#9c330a] shadow-sm",
+    "bg-accent text-accent-ink hover:bg-accent-hover shadow-sm",
   secondary:
     "border border-ink/20 text-ink hover:border-ink hover:bg-surface",
   inverse:

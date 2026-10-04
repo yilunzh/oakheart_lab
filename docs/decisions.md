@@ -52,3 +52,7 @@ The owner decided **not** to publicly address availability or capacity alongside
 ## 2026-10-04: How the free check runs before the runner exists
 
 Until the DataForSEO check runner is built (cutover item 8), the free check is run by Yilun by hand: the same questions on each assistant, repeated, compared against the business's site. The site says exactly that. It does not describe software or a data service that isn't live yet.
+
+## 2026-10-04: Brand color
+
+The owner chose **Oak green** (`#1f5c3a` accent, `#f5f4ee` paper, `#13241b` night) from six rendered options, replacing Ember orange. The example AI-answer card's "Not mentioned: Your business" highlight uses **amber** (`#f6c343` border, `#fdeec9` fill, `#7a4f00` text), so it stays distinct from both the brand green and the semantic green "Correct" tag. All text and button pairs meet WCAG AA (white on green 7.9:1; amber text on amber fill 6.2:1). The logo mark, favicon and share image use the new green.
