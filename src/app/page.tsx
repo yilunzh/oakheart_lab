@@ -205,12 +205,9 @@ export default function Home() {
             </blockquote>
             <p className="mt-5 leading-relaxed text-muted">
               Yilun Zhang has spent over a decade leading demand generation and digital
-              transformation for consumer businesses at enterprise scale, where you&rsquo;re
-              ultimately moving atoms, not bits. He leads digital products for Hertz&rsquo;s global
-              rental business, and previously ran digital products at Clutch, built Rivian&rsquo;s
-              purchase and delivery experience from scratch, and led homepage, search and listings
-              at Carvana, the pages where customers decide. Oakheart Lab brings that playbook to
-              businesses like yours. You work with him directly.
+              transformation at enterprise scale. He leads digital products at Hertz, and before
+              that built digital commerce at Clutch, Rivian and Carvana. Oakheart Lab brings that
+              playbook to owner-run businesses, and you work with him directly.
             </p>
             <p className="mt-4 text-sm">
               <a href={site.linkedin} className="underline underline-offset-2 hover:text-accent" rel="noopener">
