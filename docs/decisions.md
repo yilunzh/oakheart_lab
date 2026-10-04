@@ -34,3 +34,7 @@ Newest first. Each entry lists the decision, its source, and what it supersedes.
 ## 2026-10-04: Existing site is reference only
 
 The owner directed that the existing site (branch `codex/import-oakheart-site-v19`) is used **only as a reference**. It is evaluated as the Round 0 baseline, and the new site is designed and built from first principles. No code or design system is carried over. An accidental merge of the reference source into `claude/jolly-meitner-altfse` was undone by a follow-up commit; the reference branch is unchanged.
+
+## 2026-10-04: Database
+
+The owner connected the existing Neon database (`neon-cinnabar-castle`, also used by the ptc-concept project) to the oakheart-lab Vercel project. This site's data lives in its own `oakheart` schema (migration `db/migrations/0001_check_requests.sql`) and never touches the other project's tables. It can move to a dedicated database later without code changes beyond the connection string.
