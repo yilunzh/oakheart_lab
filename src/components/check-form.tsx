@@ -168,7 +168,7 @@ export function CheckForm() {
         <input id="website" name="website" inputMode="url" autoComplete="url" placeholder="yourbusiness.com" required
           aria-invalid={!!errors.website} aria-describedby={describe("website", true)} className={fieldClass} />
       </Field>
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-5">
         <Field id="location" label="City or area you serve" error={errors.location}>
           <input id="location" name="location" autoComplete="address-level2" placeholder="e.g. Lake Tahoe, CA" required
             aria-invalid={!!errors.location} aria-describedby={describe("location")} className={fieldClass} />

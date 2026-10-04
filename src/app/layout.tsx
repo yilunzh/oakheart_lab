@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.name,
+    url: "/",
     title: "Oakheart Lab | Get found by AI. Get booked.",
     description: site.description,
   },

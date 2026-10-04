@@ -17,6 +17,8 @@ export interface LeadStore {
   /** Inserts the lead. Returns its id, or null if this request key was already stored. */
   insert(lead: StoredLead): Promise<string | null>;
   markNotified(id: string): Promise<void>;
+  /** New leads from the last 7 days whose owner notification has not been sent. */
+  listUnnotified(): Promise<(StoredLead & { id: string })[]>;
 }
 
 export function neonStore(databaseUrl: string): LeadStore {
@@ -52,6 +54,29 @@ export function neonStore(databaseUrl: string): LeadStore {
     },
     async markNotified(id) {
       await sql`update oakheart.check_requests set notified_at = now() where id = ${id}`;
+    },
+    async listUnnotified() {
+      const rows = await sql`
+        select id, request_key, business_name, website, website_host, location, business_type,
+               email, question, heard_from, referrer, utm
+        from oakheart.check_requests
+        where status = 'new' and notified_at is null and created_at > now() - interval '7 days'
+        order by created_at
+        limit 50`;
+      return rows.map((r) => ({
+        id: r.id,
+        requestKey: r.request_key,
+        businessName: r.business_name,
+        website: r.website,
+        websiteHost: r.website_host,
+        location: r.location,
+        businessType: r.business_type,
+        email: r.email,
+        question: r.question ?? undefined,
+        heardFrom: r.heard_from ?? undefined,
+        referrer: r.referrer ?? undefined,
+        utm: r.utm ?? undefined,
+      }));
     },
   };
 }

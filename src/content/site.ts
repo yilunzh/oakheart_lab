@@ -133,7 +133,7 @@ export const homeFaq = [
   },
   {
     q: "Don’t Google Maps and reviews still matter more?",
-    a: "For most local bookings today, yes, and we treat them that way. AI assistants draw on the same sources: your website, Google Business Profile, reviews and listings. So the Found work strengthens Maps and search too. AI answers are the fastest-growing place where those facts get repeated, and where mistakes cost you quietly.",
+    a: "For most local bookings today, yes, and we treat them that way. AI assistants draw on the same sources: your website, Google Business Profile, reviews and listings. So the Found work strengthens Maps and search too. AI answers are a fast-growing place where those facts get repeated, and where mistakes cost you quietly.",
   },
   {
     q: "Can you guarantee ChatGPT will recommend us?",
@@ -186,6 +186,11 @@ export const checkCovers = [
     body: "The three changes most likely to improve what AI says about you, in plain language.",
   },
 ];
+
+export const previewRequest = {
+  label: "Ask about a tailored preview",
+  href: "mailto:yilun@oakheartlab.com?subject=Tailored%20preview%20request&body=Business%20name%3A%0AWebsite%3A%0AWhat%20you%27d%20like%20to%20improve%3A",
+};
 
 export const talkFirst = {
   label: "Prefer to talk first? Email Yilun",

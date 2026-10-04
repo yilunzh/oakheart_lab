@@ -22,6 +22,9 @@ function memoryStore(opts: { fail?: boolean } = {}) {
       const r = rows.find((x) => x.id === id);
       if (r) r.notified = true;
     },
+    async listUnnotified() {
+      return rows.filter((r) => !r.notified);
+    },
   };
   return { store, rows };
 }
@@ -151,5 +154,23 @@ describe("POST /api/checks", () => {
     const res = await handleCheckRequest(req(valid), { ...deps(store), notify: async () => false });
     expect(res.status).toBe(201);
     expect(rows[0].notified).toBeUndefined();
+  });
+});
+
+describe("notifyPending", () => {
+  it("notifies and marks only leads whose notification succeeds", async () => {
+    const { notifyPending } = await import("@/lib/notify-pending");
+    const marked: string[] = [];
+    const leads = ["a", "b"].map((id) => ({ id, requestKey: id, websiteHost: "x.com", businessName: id, website: "https://x.com/", location: "L", businessType: "T", email: `${id}@x.com` }));
+    const store = {
+      countRecentByIp: async () => 0,
+      hasRecentDuplicate: async () => false,
+      insert: async () => null,
+      markNotified: async (id: string) => void marked.push(id),
+      listUnnotified: async () => leads,
+    };
+    const result = await notifyPending(store, async (lead) => lead.businessName === "a");
+    expect(result).toEqual({ pending: 2, sent: 1 });
+    expect(marked).toEqual(["a"]);
   });
 });

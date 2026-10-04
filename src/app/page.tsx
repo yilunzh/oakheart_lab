@@ -6,6 +6,7 @@ import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
 import {
   checkCta,
+  previewRequest,
   talkFirst,
   customerQuestions,
   failureModes,
@@ -19,7 +20,6 @@ import {
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  openGraph: { url: "/" },
 };
 
 const jsonLd = {
@@ -34,12 +34,14 @@ const jsonLd = {
       description: site.description,
       founder: { "@id": `${site.url}/#founder` },
       areaServed: "US",
+      logo: `${site.url}/icon`,
     },
     {
       "@type": "Person",
       "@id": `${site.url}/#founder`,
       name: "Yilun Zhang",
       jobTitle: "Founder",
+      image: `${site.url}/images/yilun-zhang.jpg`,
       worksFor: { "@id": `${site.url}/#org` },
       sameAs: [site.linkedin, site.substack],
     },
@@ -69,7 +71,7 @@ export default function Home() {
             For businesses that move atoms, not bits
           </p>
           <h1 className="mt-4 text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
-            Your customers are asking AI where to book.{" "}
+            More of your customers are asking AI where to book.{" "}
             <span className="text-accent">Does it get you right?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
@@ -183,7 +185,7 @@ export default function Home() {
       </Section>
 
       {/* Founder */}
-      <Section id="founder" eyebrow="Who you'll work with" title="An operator's product leader, not a generalist agency.">
+      <Section id="founder" eyebrow="Who you'll work with" title="A product leader from businesses that move atoms.">
         <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
           <Image
             src="/images/yilun-zhang.jpg"
@@ -234,6 +236,11 @@ export default function Home() {
               </p>
               <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.body}</p>
+              {i === 1 && (
+                <a href={previewRequest.href} className="mt-3 inline-block text-sm underline underline-offset-4 hover:text-accent">
+                  {previewRequest.label}
+                </a>
+              )}
             </li>
           ))}
         </ol>
