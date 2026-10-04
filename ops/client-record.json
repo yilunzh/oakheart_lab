@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "client_id": "oakheart-lab-owned-site",
+  "business_name": "Oakheart Lab",
+  "business_type": "Independent digital product agency",
+  "website": "https://www.oakheartlab.com/",
+  "status": "public_concept",
+  "stage": "build",
+  "record_version": 3,
+  "release_id": "oakheart-runtime-v16-4cae31c",
+  "surfaces": [
+    "lead"
+  ],
+  "scope": {
+    "requested_outcome": "Agency acquisition with websites and booking flow as the primary offer; AI-maintainable source",
+    "booking_system_choice": "Illustrative demo only; no real inventory or payments",
+    "included": [
+      "public concept deployment",
+      "D1 inquiry capture",
+      "reusable content",
+      "maintenance playbook"
+    ],
+    "excluded": [
+      "domain migration",
+      "automated outbound",
+      "active recurring operations"
+    ]
+  },
+  "facts": [
+    "User approved website and booking flow as primary offer"
+  ],
+  "sources": [
+    "ops/content-sources.md"
+  ],
+  "access_references": [
+    ".openai/hosting.json"
+  ],
+  "buyer_segments": [
+    "Businesses combining digital demand/booking with operationally intensive service delivery"
+  ],
+  "offers": [
+    "Complete website & booking experience; conversion, SEO and AI-search foundations",
+    "Companion mobile app",
+    "AI back-office automation",
+    "AI customer support",
+    "Customer lifecycle and operational tools",
+    "Free tailored homepage and one booking-journey preview for qualified prospects, no obligation to buy",
+    "Secondary AI workflow conversation"
+  ],
+  "measurement": {
+    "baseline": null,
+    "primary_outcome": "qualified inquiries",
+    "test_status": "not_started",
+    "result": null
+  },
+  "commercial": {
+    "covered_fee": null,
+    "third_party_costs": [],
+    "maximum_test_duration": null,
+    "ownership_terms_reference": null,
+    "support_terms_reference": null
+  },
+  "authorizations": [
+    "Build review site",
+    "Keep Substack and live domain unchanged",
+    "Public access and revised-site publication",
+    "Free tailored homepage and one booking-journey preview for qualified prospects, no obligation to buy"
+  ],
+  "evidence": {
+    "functional_tests": {
+      "status": "verified",
+      "artifact": "ops/verification-2026-09-26.json",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "Bounded local inquiry-handler checks only, not full application or hosted integration coverage."
+    },
+    "lead_errors": {
+      "status": "partial",
+      "artifact": "ops/verification-2026-09-26.json",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "API failure responses tested; current browser error recovery not rerun."
+    },
+    "lead_delivery": {
+      "status": "partial",
+      "artifact": "ops/verification-2026-09-26.json",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "Local persistence tested; no notification/CRM destination or receipt verified."
+    },
+    "journey_tests": {
+      "status": "partial",
+      "artifact": "ops/verification-2026-09-26.json",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "Historical browser observations in review-v11.md; no fresh complete browser journey."
+    },
+    "accessibility": {
+      "status": "partial",
+      "artifact": "ops/review-v11.md",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "Historical mobile/desktop visual observations only; no current comprehensive accessibility test."
+    },
+    "claims": {
+      "status": "partial",
+      "artifact": "ops/content-sources.md",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "Existing review/source notes retained; current full claim audit not rerun."
+    },
+    "performance": {
+      "status": "not_tested",
+      "artifact": "ops/verification-2026-09-26.json",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "No current comparable performance measurements."
+    },
+    "rollback": {
+      "status": "partial",
+      "artifact": "ops/operating-playbook.md",
+      "observed_at": "2026-09-26",
+      "reviewer": "Primary audit execution; see receipt limitations",
+      "release_id": "oakheart-runtime-v16-4cae31c",
+      "limitation": "Saved release known; no rollback/data-restore rehearsal executed."
+    }
+  },
+  "tasks": [
+    "Connect inquiry notifications after destination/access authorization; until then explicitly arrange manual owner review",
+    "Configure analytics only after approval",
+    "Complete hosted/browser checks for operational launch",
+    "Agree pricing, support and data-retention terms before commercial operation",
+    "Activate recurring workflows only after authorization and verified execution"
+  ],
+  "decisions": [
+    "Lead with websites and booking flows",
+    "No invented guarantees or timelines"
+  ],
+  "action_ledger": [],
+  "support": {
+    "owner": "Yilun Zhang",
+    "incidents": []
+  },
+  "economics": {
+    "founder_hours": null,
+    "software_cost": null,
+    "collected_fees": null
+  },
+  "next_action": "Select an authorized inquiry notification destination and response owner/cadence; complete missing operational acceptance evidence.",
+  "page_inventory": [
+    "home",
+    "services",
+    "booking concept",
+    "about",
+    "insights",
+    "contact",
+    "privacy"
+  ],
+  "release_scope": {
+    "kind": "public_concept_with_real_inquiry_storage",
+    "production_booking": false,
+    "readiness": "not_certified_for_unattended_operation",
+    "notes": "Page inventory is separate from operational capability categories. Booking examples are illustrative; lead delivery remains incomplete."
+  },
+  "deployment": {
+    "version": 16,
+    "source_commit": "4cae31c34b72ec0fa10f956c0ac411c7754605d5",
+    "deployment_id": "appgdep_6ab6c7ba53148191b7cbbf2e3d6b607c",
+    "url": "https://oakheart-lab.yilun145104.chatgpt.site",
+    "status": "succeeded",
+    "observed_at": "2026-09-26",
+    "audience": "public",
+    "indexing": "noindex",
+    "custom_domain_migrated": false
+  },
+  "current_direction": {
+    "source": "Owner direction in AI Development, 2026-09-26",
+    "primary": "Develop and integrate software for businesses undergoing digital transformation",
+    "secondary": "Ongoing automation and AI services",
+    "initial_clients": "Vendor-software users without internal IT teams",
+    "site_copy_status": "Existing approved website positioning preserved; no copy rewrite authorized in this maintenance task."
+  }
+}

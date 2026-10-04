@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-26",
+  "scope": "Publish approved AI playbook as article route and feature in Articles",
+  "approved_source": "libfile_c50df4df8f4881918ae2b71b0be433d2 version 12",
+  "approved_sha256": "8531b0f371f8accc60076ae827e5e2fa00f02c1a3e3229b4b09b1d4d5e34ba9f",
+  "route": "/insights/the-bigger-opportunity-for-ai",
+  "checks": {
+    "typescript": "passed",
+    "inquiry_regression": "passed",
+    "copy": "Approved article preserved; only draft header replaced by publication metadata",
+    "responsive_accessibility": "Source review of fluid width, mobile font sizes, native links, headings and focus styles"
+  },
+  "limits": [
+    "No new browser visual check",
+    "No analytics, DNS, indexability or inquiry operation changes"
+  ],
+  "files": {
+    "app/insights/page.tsx": "0c8e6d3ed7b29f4151389173ef0366f35e9e960aa634ab78c0a9cdebd735f648",
+    "app/insights/the-bigger-opportunity-for-ai/page.tsx": "e2faf2d6d418dad1b5c49e52095c7220f188162e5fed11aa308bdae01c3741d4",
+    "content/ai-transformation-playbook.md": "078dfd549d43efbbaae05c5e340fdd12d0bca639387a2fb53e030424a0430407",
+    "app/globals.css": "e315aaf79738b6506972febdc8c510554810a9c247e980ff698be7328b700055"
+  }
+}

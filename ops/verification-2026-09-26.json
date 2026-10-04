@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-26T12:42:13.684Z",
+  "source_commit": "4cae31c34b72ec0fa10f956c0ac411c7754605d5",
+  "application_version": 16,
+  "command": "npm run verify",
+  "runtime": "Node v24.19.0",
+  "result": "passed",
+  "exit_code": 0,
+  "scope": "Real inquiry handler with in-memory SQLite; mocked database accessor. No network or production writes.",
+  "source_hashes": {
+    "app/api/inquiries/route.ts": "e62ea23c43bcdf7c3315520bd3e5dc0ff18e7255c709b4d3e9e2f75685bc255c",
+    "scripts/check-inquiries.cjs": "d75709ac43d9b563794ef1731297a5884f3220d640bf1454ffe8642d7fc8f6ce",
+    "drizzle/0000_dazzling_nightmare.sql": "592733ad934bf1d2cf1386545acd8fc5d25bd7740c9ed31544cb41b858e9c543"
+  },
+  "output": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> site-creator-vinext-starter@0.1.0 verify\n> node scripts/check-inquiries.cjs\n\nPASS: validation, malformed JSON, origin, content type, size, honeypot, persistence, deduplication, rate limit, storage failure.\ninquiry_storage_failure\n",
+  "limitations": [
+    "No fresh browser journey or hosted D1 test",
+    "Sequential deduplication only; no concurrent retry proof",
+    "No notification delivery, analytics, or operational response-time evidence"
+  ],
+  "maintenance_scope": "Documentation, package scripts and project records only; application source unchanged. Not a new production deployment."
+}
