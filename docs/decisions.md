@@ -14,6 +14,12 @@ The owner's reasons:
 
 The headline and the share image (`opengraph-image`) now match; the share image's font is smaller so the longer text fits. It asks a question and makes no promise of recommendations.
 
+**Subhead (same day, owner feedback):** the old subhead had two problems. "Who should I book?" read as if the reader was the one being booked, and the second sentence was a run-on ending in jargon ("booking flow"). The owner chose:
+
+> Customers now ask ChatGPT, Gemini and Google for recommendations before they ever visit your website. We fix what keeps AI from mentioning you or getting your details wrong. And when customers click through, we make booking with you quick and easy, using the booking system you already have.
+
+It does not say "we make sure AI recommends you", per the hard rule against promising AI recommendations.
+
 ## 2026-10-04: "Why it matters" categories
 
 The owner asked for automotive to be its own category, not grouped with home services, and for one existing card to make way for it.

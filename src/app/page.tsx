@@ -78,9 +78,10 @@ export default function Home() {
             <span className="text-accent">Does it recommend you, and get your details right?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            ChatGPT, Gemini and Google now answer &ldquo;who should I book?&rdquo;, often before a
-            customer ever visits your site. We fix what keeps them from finding you and describing you correctly,
-            and make sure the people they send land in a booking flow that works, without replacing the booking system you already use.
+            Customers now ask ChatGPT, Gemini and Google for recommendations before they ever visit
+            your website. We fix what keeps AI from mentioning you or getting your details wrong. And
+            when customers click through, we make booking with you quick and easy, using the booking
+            system you already have.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <CtaLink href={checkCta.href}>{checkCta.label}</CtaLink>
