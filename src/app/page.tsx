@@ -151,7 +151,7 @@ export default function Home() {
         id="system"
         eyebrow="What we do"
         title="Found, booked, supported: one project, start to finish."
-        intro="We handle the whole path: from what AI says about you, to a confirmed booking, to the questions customers ask afterwards. Nothing gets lost between handoffs."
+        intro="We handle the whole path: what AI says about you, the booking itself, and the questions customers ask afterwards. Because we handle all three together, the facts AI repeats, your booking pages and your support answers stay consistent."
         tone="surface"
       >
         <ol className="grid gap-6 md:grid-cols-3">
@@ -226,7 +226,7 @@ export default function Home() {
       <Section
         id="how-it-works"
         eyebrow="How it works"
-        title="Start free. Decide when you've seen the difference."
+        title="Start with a free check. Decide once you've seen what we'd change."
         tone="surface"
       >
         <ol className="grid gap-6 md:grid-cols-4">
@@ -257,7 +257,7 @@ export default function Home() {
       </Section>
 
       {/* FAQ */}
-      <Section id="faq" eyebrow="Questions" title="Common questions.">
+      <Section id="faq" eyebrow="Questions" title="Questions about working with us.">
         <Faq items={homeFaq} />
       </Section>
 

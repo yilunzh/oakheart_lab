@@ -3,7 +3,7 @@ import { handleCheckRequest, type HandlerDeps } from "@/lib/check-handler";
 import type { LeadStore, StoredLead } from "@/lib/lead-store";
 
 function memoryStore(opts: { fail?: boolean } = {}) {
-  const rows: (StoredLead & { id: string; at: number; notified?: boolean })[] = [];
+  const rows: (StoredLead & { id: string; at: number; notified?: boolean; claimedAt?: number })[] = [];
   const store: LeadStore = {
     async countRecentByIp(ipHash) {
       if (opts.fail) throw new Error("db down");
@@ -23,13 +23,15 @@ function memoryStore(opts: { fail?: boolean } = {}) {
       if (r) r.notified = true;
     },
     async claimUnnotified() {
-      const pending = rows.filter((r) => !r.notified && Date.now() - r.at >= 120_000);
-      pending.forEach((r) => (r.notified = true));
+      const pending = rows.filter(
+        (r) => !r.notified && Date.now() - r.at >= 120_000 && (!r.claimedAt || Date.now() - r.claimedAt > 600_000),
+      );
+      pending.forEach((r) => (r.claimedAt = Date.now()));
       return pending;
     },
     async releaseClaim(id) {
       const r = rows.find((x) => x.id === id);
-      if (r) r.notified = undefined;
+      if (r) r.claimedAt = undefined;
     },
   };
   return { store, rows };
@@ -164,21 +166,39 @@ describe("POST /api/checks", () => {
 });
 
 describe("notifyPending", () => {
-  it("keeps the claim on success and releases it on failure", async () => {
+  it("marks notified only after a successful send and releases failed claims", async () => {
     const { notifyPending } = await import("@/lib/notify-pending");
     const released: string[] = [];
+    const marked: string[] = [];
     const leads = ["a", "b"].map((id) => ({ id, requestKey: id, websiteHost: "x.com", businessName: id, website: "https://x.com/", location: "L", businessType: "T", email: `${id}@x.com` }));
     const store = {
       countRecentByIp: async () => 0,
       hasRecentDuplicate: async () => false,
       insert: async () => null,
-      markNotified: async () => {},
+      markNotified: async (id: string) => void marked.push(id),
       claimUnnotified: async () => leads,
       releaseClaim: async (id: string) => void released.push(id),
     };
     const result = await notifyPending(store, async (lead) => lead.businessName === "a");
     expect(result).toEqual({ pending: 2, sent: 1 });
     expect(released).toEqual(["b"]);
+    expect(marked).toEqual(["a"]);
+  });
+
+  it("re-offers a lead whose claim was never released (crash mid-send) after the lease expires", async () => {
+    const { notifyPending } = await import("@/lib/notify-pending");
+    const { store, rows } = memoryStore();
+    await handleCheckRequest(req(valid), { ...deps(store), notify: async () => false });
+    rows[0].at -= 180_000;
+    await store.claimUnnotified(); // simulates a run that crashed before sending
+    let sends = 0;
+    const notify = async () => { sends++; return true; };
+    await notifyPending(store, notify);
+    expect(sends).toBe(0); // lease still held
+    rows[0].claimedAt! -= 700_000; // lease expired
+    await notifyPending(store, notify);
+    expect(sends).toBe(1);
+    expect(rows[0].notified).toBe(true);
   });
 
   it("leaves a lead alone while its first send may still be in flight", async () => {

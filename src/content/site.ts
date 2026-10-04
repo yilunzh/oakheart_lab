@@ -90,7 +90,7 @@ export const pillars = [
   },
   {
     key: "Supported",
-    title: "Answer customers instantly, hand off when it matters.",
+    title: "Answer customers’ questions instantly, and bring in your team when it matters.",
     points: [
       "Self-service answers grounded in your real policies",
       "AI support that knows when to bring in your team",

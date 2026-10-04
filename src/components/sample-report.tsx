@@ -13,7 +13,7 @@ export function SampleReport() {
           Illustrative · fictional business
         </p>
       </div>
-      <div className="grid gap-8 p-5 sm:p-6 md:grid-cols-[1fr_1.2fr]">
+      <div className="grid grid-cols-1 gap-8 p-5 sm:p-6 md:grid-cols-[1fr_1.2fr]">
         <div>
           <p className="text-sm text-muted">Brackenfold Kayaks · Marrowfield Lake (invented)</p>
           <p className="mt-2 text-lg font-medium">&ldquo;Can a 6-year-old do the sunset kayak tour?&rdquo;</p>
@@ -21,7 +21,7 @@ export function SampleReport() {
             {runs.map((r) => (
               <div key={r.engine} className="flex items-center justify-between gap-4 border-b border-line pb-2">
                 <dt>{r.engine}</dt>
-                <dd className="whitespace-nowrap font-mono text-sm sm:text-[15px]">
+                <dd className="font-mono text-sm sm:whitespace-nowrap sm:text-[15px]">
                   mentioned in {r.mentioned} of {r.total} runs
                 </dd>
               </div>

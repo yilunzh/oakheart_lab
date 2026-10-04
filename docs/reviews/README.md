@@ -13,4 +13,5 @@ Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`.
 | 4 | `f4d913c` | https://oakheart-lab.vercel.app (production at f4d913c) | 8.75 (all gates pass) | Notification logging + test tagging, desktop gap fix, sample report, URL base, copy |
 | 5 | `9677fa9` | https://oakheart-lab.vercel.app (production at 9677fa9) | 8.85 (all gates pass) | Invented example names, hero softened, faster notification retry, closing CTA, polish |
 | 6 | `e984681` | https://oakheart-lab.vercel.app (production at e984681) | 8.73 (all gates pass) | Mobile confirmation visible, claim-based retries after response, 3-hourly retry workflow, cutover checklist |
-| 7 | `8ec0e75` | https://oakheart-lab.vercel.app (production at 8ec0e75) | pending | Truthful method copy (manual checks), Service/Offer schema, no-double-send window, failing cron on missed sends, copy polish |
+| 7 | `8ec0e75` | https://oakheart-lab.vercel.app (production at 8ec0e75) | 8.90 (all gates pass) | Truthful method copy (manual checks), Service/Offer schema, no-double-send window, failing cron on missed sends, copy polish |
+| 8 | `pending` | pending | pending | Copy pass, crash-safe retry lease, 320px fixes |

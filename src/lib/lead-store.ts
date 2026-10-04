@@ -19,11 +19,14 @@ export interface LeadStore {
   insert(lead: StoredLead): Promise<string | null>;
   markNotified(id: string): Promise<void>;
   /**
-   * Atomically claims up to 20 new leads (older than 2 minutes, newer than 7 days) whose owner notification has not
+   * Atomically claims (10-minute lease via claimed_at) up to 20 new leads (older than 2 minutes, newer than 7 days) whose owner notification has not
    * been sent (sets notified_at), so overlapping retries can't email the same lead twice.
    */
   claimUnnotified(): Promise<(StoredLead & { id: string })[]>;
-  /** Releases a claim when the notification failed, so a later retry picks the lead up again. */
+  /**
+   * Releases a claim when the notification failed, so a later retry picks the lead up again.
+   * A claim that is never released (e.g. the function crashed mid-send) expires after 10 minutes.
+   */
   releaseClaim(id: string): Promise<void>;
 }
 
@@ -63,10 +66,11 @@ export function neonStore(databaseUrl: string): LeadStore {
     },
     async claimUnnotified() {
       const rows = await sql`
-        update oakheart.check_requests set notified_at = now()
+        update oakheart.check_requests set claimed_at = now()
         where id in (
           select id from oakheart.check_requests
           where status = 'new' and notified_at is null
+            and (claimed_at is null or claimed_at < now() - interval '10 minutes')
             and created_at > now() - interval '7 days'
             -- leave fresh leads to their own first send, so a retry can't double-send
             and created_at < now() - interval '2 minutes'
@@ -92,7 +96,7 @@ export function neonStore(databaseUrl: string): LeadStore {
       }));
     },
     async releaseClaim(id) {
-      await sql`update oakheart.check_requests set notified_at = null where id = ${id}`;
+      await sql`update oakheart.check_requests set claimed_at = null where id = ${id}`;
     },
   };
 }

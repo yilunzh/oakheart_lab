@@ -52,7 +52,7 @@ export default function CheckPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <section className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:grid-cols-[1fr_1fr] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-0">
+      <section className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-0">
         <div className="lg:col-start-1 lg:row-start-1">
           <p className="font-mono text-xs uppercase tracking-widest text-accent">Free AI Visibility Check</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
@@ -82,7 +82,7 @@ export default function CheckPage() {
           <p className="mt-6 text-sm text-muted">
             Free, as many as you like, no obligation. No newsletter unless you ask for it.
           </p>
-          <div className="mt-10 flex items-start gap-4 rounded-2xl border border-line bg-surface p-5">
+          <div className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-line bg-surface p-5 min-[400px]:flex-row">
             <Image
               src="/images/yilun-zhang.jpg"
               alt=""
@@ -93,15 +93,16 @@ export default function CheckPage() {
             />
             <div className="text-[15px] leading-relaxed">
               <p>
-                <span className="font-semibold">Yilun Zhang runs every check himself</span>,
-                Oakheart Lab’s founder. No sales call unless you ask.
+                Oakheart Lab’s founder,{" "}
+                <span className="font-semibold">Yilun Zhang, runs every check himself.</span> No
+                sales call unless you ask.
               </p>
               <p className="mt-2 text-sm">
                 <Link href="/#founder" className="underline underline-offset-2 hover:text-accent">
                   About Yilun
                 </Link>
                 <span className="mx-2 text-muted">·</span>
-                <a href={talkFirst.href} className="underline underline-offset-2 hover:text-accent">
+                <a href={talkFirst.href} className="whitespace-nowrap underline underline-offset-2 hover:text-accent">
                   {talkFirst.label}
                 </a>
               </p>
@@ -123,7 +124,7 @@ export default function CheckPage() {
         <SampleReport />
       </Section>
 
-      <Section eyebrow="How we run it" title="An honest method, because AI answers move around."
+      <Section eyebrow="Method" title="How we run the check."
         intro={
           <>
             We write questions the way your customers would ask them, for your type of business and
