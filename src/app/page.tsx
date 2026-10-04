@@ -79,7 +79,7 @@ export default function Home() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             Customers now ask ChatGPT, Gemini and Google for recommendations before they ever visit
-            your website. We fix what keeps AI from mentioning you or getting your details wrong. And
+            your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And
             when customers click through, we make booking with you quick and easy, using the booking
             system you already have.
           </p>
