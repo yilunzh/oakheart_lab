@@ -65,7 +65,7 @@ export const failureModes = [
   },
   {
     title: "The booking path loses them",
-    body: "They arrive ready to book and hit a clunky widget, a dead end on mobile, or a question nobody answers. They book someone else.",
+    body: "They click through and hit a clunky widget, a dead end on mobile, or a question nobody answers. They book someone else.",
   },
 ];
 
