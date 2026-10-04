@@ -65,3 +65,12 @@ The owner chose **Oak green** (`#1f5c3a` accent, `#f5f4ee` paper, `#13241b` nigh
 ## 2026-10-04: Size-neutral positioning
 
 The owner isn't yet sure which customer size fits best and believes he can help large businesses too. The site stays **size-neutral**: no "owner-run", "small" or "large companies" framing. The customer is defined by situation (consumer-facing, booking-based, operationally detailed, decided through AI answers), not size. Revisit after the first 20–30 free checks. Under consideration but not done: an optional "How many locations?" form field to learn who shows up.
+
+## 2026-10-04: Three-step offer
+
+The owner simplified "How it works" to three steps:
+1. **Free AI check:** the gap audit, in under 24 hours.
+2. **A tailored plan** to close the gaps and drive growth, with one price agreed up front, then the work.
+3. **Optional ongoing support** to keep up as assistants and competitors change.
+
+The free tailored preview is **dropped** as a separate step and offer, and removed from the site copy, the FAQ and the brief.

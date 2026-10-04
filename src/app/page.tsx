@@ -6,7 +6,6 @@ import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
 import {
   checkCta,
-  previewRequest,
   talkFirst,
   customerQuestions,
   failureModes,
@@ -229,7 +228,7 @@ export default function Home() {
         title="Start with a free check. Decide once you've seen what we'd change."
         tone="surface"
       >
-        <ol className="grid gap-6 md:grid-cols-4">
+        <ol className="grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <li key={s.title} className="border-t-2 border-ink pt-5">
               <p className="font-mono text-xs uppercase tracking-wider text-muted md:min-h-8">
@@ -237,11 +236,6 @@ export default function Home() {
               </p>
               <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.body}</p>
-              {i === 1 && (
-                <a href={previewRequest.href} className="mt-3 inline-block text-sm underline underline-offset-4 hover:text-accent">
-                  {previewRequest.label}
-                </a>
-              )}
             </li>
           ))}
         </ol>

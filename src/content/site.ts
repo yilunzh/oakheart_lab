@@ -103,22 +103,17 @@ export const steps = [
   {
     title: "Free AI check",
     time: "Under 24 hours",
-    body: "We ask the leading AI assistants what your customers ask and show you what they say about you, what they get wrong, and what to fix first.",
+    body: "We ask the leading AI assistants what your customers ask, then show you where you’re left out, what they get wrong and what to fix first.",
   },
   {
-    title: "Free tailored preview",
-    time: "If your check shows room to improve",
-    body: "If your check shows clear fixes we can help with, we mock up your homepage and one key booking journey so you can see the difference before deciding anything.",
+    title: "A plan to close the gaps",
+    time: "One price, agreed up front",
+    body: "We map out how to fix what the check found and turn it into more bookings, then do the work with the systems you already use. You see the plan and the price before anything starts.",
   },
   {
-    title: "One price, agreed up front",
-    time: "You decide",
-    body: "We deliver Discover, Book and Support as one project, connected to your existing systems. You know the price before we start.",
-  },
-  {
-    title: "Ongoing, if you want it",
+    title: "Ongoing support",
     time: "Optional",
-    body: "We keep checking what AI says about you, keep your facts current and keep improving the booking path.",
+    body: "AI assistants and your competitors keep changing. We keep checking what assistants say about you, keep your facts current and keep improving how customers book.",
   },
 ];
 
@@ -141,7 +136,7 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "Every project gets one price, agreed before we start, based on what your business needs. The AI check and the tailored preview are free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "Every project gets one price, agreed before we start, based on what your business needs. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "What do you need from me?",
@@ -187,11 +182,6 @@ export const checkCovers = [
     body: "The three changes most likely to improve what AI says about you, in plain language.",
   },
 ];
-
-export const previewRequest = {
-  label: "Ask about a tailored preview",
-  href: "mailto:yilun@oakheartlab.com?subject=Tailored%20preview%20request&body=Business%20name%3A%0AWebsite%3A%0AWhat%20you%27d%20like%20to%20improve%3A",
-};
 
 export const talkFirst = {
   label: "Prefer to talk first? Email Yilun",

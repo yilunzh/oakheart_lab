@@ -3,7 +3,7 @@
 This brief goes to writers and reviewers. It contains approved facts and constraints only. Owner decisions are in `docs/decisions.md`.
 
 ## Purpose
-The website is Oakheart Lab's acquisition site. Its job is to turn visitors into **free AI Visibility Check requests**, then into calls or tailored previews, and finally into paid engagements.
+The website is Oakheart Lab's acquisition site. Its job is to turn visitors into **free AI Visibility Check requests**, then into calls, and finally into paid engagements.
 
 ## Audience
 Owners and operators of **consumer-facing businesses with high operational intensity**. These are companies that move atoms, not bits: a customer chooses and books or buys online, and fulfillment then depends on coordinating people, physical assets, locations and time.
@@ -18,14 +18,15 @@ More customers now ask AI assistants (ChatGPT, Gemini, Perplexity, Google AI Ove
 Businesses with complex offers are hurt most, because their availability, eligibility, inclusions and policies are exactly what AI gets wrong and what generic booking widgets sell badly.
 
 ## Offer
-1. **Free AI Visibility Check.** We ask leading AI assistants the questions your customers ask, then report where you appear, what they say, what they get wrong, and the top fixes. Unlimited, and delivered in under 24 hours.
-2. **Free tailored preview** for qualified businesses. A tailored homepage and one booking-journey preview, with no obligation.
-3. **Core engagement: Discover → Book → Support.** A complete website and booking experience integrated with existing systems, with one price agreed before work starts.
+Three steps (owner decision, 2026-10-04):
+1. **Free AI Visibility Check: the gap audit.** We ask leading AI assistants the questions your customers ask, then report where you appear, what they say, what they get wrong, and the top fixes. Unlimited, delivered in under 24 hours.
+2. **A tailored plan to close the gaps and drive growth**, with one price agreed up front, then the work: **Discover → Book → Support**, connected to existing systems.
    - **Discover:** AI search and SEO (content, structured data, entity consistency, crawlability)
    - **Book:** personalized booking and upsell
    - **Support:** customer self-service and AI support with handoff to staff
-4. **Ongoing:** visibility monitoring, content, booking improvements and support.
-5. **Optional:** companion mobile app; staff tools and automation.
+3. **Ongoing support (optional):** keep up as assistants and competitors change, with visibility monitoring, current facts and booking improvements.
+
+**Also available:** companion mobile app; staff tools and automation.
 
 **Risk reversal (blanket, owner-approved):** "If you're not happy with our service, we'll give your money back, no questions asked." It applies to all paid work, with no time window or conditions.
 
@@ -67,4 +68,4 @@ Do not use anything that appears only in the private resume, or in private Linke
 - AI-usage statistics only with a named source and date.
 - Labeled concepts stay labeled.
 - Tone: practitioner-led, specific, calm. Avoid scope-heavy or page-count sales copy.
-- Primary CTA: the free AI Visibility Check. Secondary: a call or the tailored preview.
+- Primary CTA: the free AI Visibility Check. Secondary: a call (email for now).
