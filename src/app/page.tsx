@@ -186,7 +186,7 @@ export default function Home() {
       </Section>
 
       {/* Founder */}
-      <Section id="founder" eyebrow="Who you'll work with" title="Enterprise-scale demand generation, built for businesses like yours.">
+      <Section id="founder" eyebrow="Who you'll work with" title="A decade of demand generation at enterprise scale, now working for you.">
         <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
           <Image
             src="/images/yilun-zhang.jpg"
@@ -200,14 +200,14 @@ export default function Home() {
             <blockquote className="text-2xl font-medium leading-snug tracking-tight">
               &ldquo;In the last nine months I&rsquo;ve watched customers change how they decide.
               They ask an AI assistant, and the answer shapes the booking before a website ever
-              loads. Large companies have teams adapting to that. Most owner-run businesses
-              don&rsquo;t, and that&rsquo;s who I built Oakheart Lab for.&rdquo;
+              loads. Most businesses haven&rsquo;t caught up yet, and that&rsquo;s why I built
+              Oakheart Lab.&rdquo;
             </blockquote>
             <p className="mt-5 leading-relaxed text-muted">
               Yilun Zhang has spent over a decade leading demand generation and digital
               transformation at enterprise scale. He leads digital products at Hertz, and before
               that built digital commerce at Clutch, Rivian and Carvana. Oakheart Lab brings that
-              playbook to owner-run businesses, and you work with him directly.
+              playbook to your business, and you work with him directly.
             </p>
             <p className="mt-4 text-sm">
               <a href={site.linkedin} className="underline underline-offset-2 hover:text-accent" rel="noopener">

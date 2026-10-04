@@ -61,3 +61,7 @@ The owner chose **Oak green** (`#1f5c3a` accent, `#f5f4ee` paper, `#13241b` nigh
 
 - **Pillars renamed** from Found / Booked / Supported to **Discover / Book / Support** (owner asked for "Discover"; the other two became verbs to match).
 - **Founder section reframed** around demand generation and digital transformation for consumer businesses at enterprise scale, and the change the owner has observed over the last nine months. The new quote expresses the owner's stated observation in his voice and **needs his approval of the exact wording**. Roles stay as public facts; no employer metrics.
+
+## 2026-10-04: Size-neutral positioning
+
+The owner isn't yet sure which customer size fits best and believes he can help large businesses too. The site stays **size-neutral**: no "owner-run", "small" or "large companies" framing. The customer is defined by situation (consumer-facing, booking-based, operationally detailed, decided through AI answers), not size. Revisit after the first 20–30 free checks. Under consideration but not done: an optional "How many locations?" form field to learn who shows up.
