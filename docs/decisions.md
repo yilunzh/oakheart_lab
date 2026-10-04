@@ -44,3 +44,7 @@ The owner connected the existing Neon database (`neon-cinnabar-castle`, also use
 `NEXT_PUBLIC_SITE_URL=https://oakheart-lab.vercel.app` is set in Vercel, so canonicals, Open Graph images and JSON-LD links resolve before the domain moves. **At cutover:**
 1. Set it to `https://www.oakheartlab.com`.
 2. Move the Substack to a subdomain (e.g. `writing.oakheartlab.com`). The site already links to the Substack profile at `substack.com/@oakheartlab`, which doesn't depend on the custom domain.
+
+## 2026-10-04: Availability
+
+The owner decided **not** to publicly address availability or capacity alongside the current Hertz role. Reviewers have raised it as a buyer question; it is a deliberate choice, not an open defect. The site keeps "You work with him directly" and does not add capacity or side-practice statements.
