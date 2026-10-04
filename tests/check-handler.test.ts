@@ -174,3 +174,12 @@ describe("notifyPending", () => {
     expect(marked).toEqual(["a"]);
   });
 });
+
+describe("test submissions", () => {
+  it("stores our own QA addresses as status test", async () => {
+    const { store, rows } = memoryStore();
+    await handleCheckRequest(req({ ...valid, email: "e2e-browser@oakheartlab.com" }), deps(store));
+    await handleCheckRequest(req({ ...valid, email: "owner2@example.com" }), deps(store));
+    expect(rows.map((r) => r.status)).toEqual(["test", "new"]);
+  });
+});

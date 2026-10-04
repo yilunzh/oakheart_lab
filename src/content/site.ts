@@ -3,7 +3,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.oakheartlab.com",
   email: "yilun@oakheartlab.com",
   linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
-  substack: "https://yilunzh.substack.com/",
+  substack: "https://substack.com/@oakheartlab",
   description:
     "Oakheart Lab helps businesses that move atoms, not bits get found by AI assistants, described correctly, and booked without friction.",
 };

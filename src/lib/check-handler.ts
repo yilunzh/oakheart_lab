@@ -7,6 +7,9 @@ const MAX_PER_IP_PER_HOUR = 5;
 const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
 
+/** Our own QA submissions: stored as status "test" so they never look like real leads. */
+export const isTestSubmission = (email: string) => /^(e2e|qa|notify)-[^@]*@oakheartlab\.com$/.test(email);
+
 export type HandlerDeps = {
   store: LeadStore | null;
   notify: Notifier;
@@ -76,6 +79,7 @@ export async function handleCheckRequest(request: Request, deps: HandlerDeps): P
       referrer,
       utm: utm && Object.keys(utm).length ? utm : undefined,
       ipHash,
+      status: isTestSubmission(lead.email) ? "test" : "new",
     });
     if (!id) return json({ status: "duplicate" }, 202);
     if (await deps.notify({ ...lead, requestKey, websiteHost, referrer })) {

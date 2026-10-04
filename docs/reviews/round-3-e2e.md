@@ -5,7 +5,7 @@
 
 ## Browser-driven submissions
 
-**Method:** the real check form ran in Chromium at 390×844 and 1440×900 against the production build (same commit). The form's `/api/checks` request was forwarded unchanged to the **deployed** endpoint `https://oakheart-lab.vercel.app/api/checks`. The sandbox browser can't open external HTTPS pages directly, so the page itself was loaded from the local build.
+**Method:** the real check form ran in Chromium at 390×844 and 1440×900 against the production build (same commit). The form's `/api/checks` request body was forwarded unchanged (with the production `Origin` header) to the **deployed** endpoint `https://oakheart-lab.vercel.app/api/checks`. The sandbox browser can't open external HTTPS pages directly, so the page itself was loaded from the local build.
 
 | Viewport | API response from deployed endpoint | What the visitor saw |
 |---|---|---|

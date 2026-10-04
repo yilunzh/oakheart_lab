@@ -7,6 +7,7 @@ export type StoredLead = CheckRequest & {
   referrer?: string;
   utm?: Record<string, string>;
   ipHash?: string;
+  status?: "new" | "test";
 };
 
 export interface LeadStore {
@@ -42,12 +43,12 @@ export function neonStore(databaseUrl: string): LeadStore {
       const rows = await sql`
         insert into oakheart.check_requests
           (request_key, business_name, website, website_host, location, business_type,
-           email, question, heard_from, referrer, utm, ip_hash)
+           email, question, heard_from, referrer, utm, ip_hash, status)
         values
           (${lead.requestKey}, ${lead.businessName}, ${lead.website}, ${lead.websiteHost},
            ${lead.location}, ${lead.businessType}, ${lead.email}, ${lead.question ?? null},
            ${lead.heardFrom ?? null}, ${lead.referrer ?? null},
-           ${lead.utm ? JSON.stringify(lead.utm) : null}, ${lead.ipHash ?? null})
+           ${lead.utm ? JSON.stringify(lead.utm) : null}, ${lead.ipHash ?? null}, ${lead.status ?? "new"})
         on conflict (request_key) do nothing
         returning id`;
       return rows[0]?.id ?? null;

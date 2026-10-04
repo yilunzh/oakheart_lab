@@ -38,3 +38,9 @@ The owner directed that the existing site (branch `codex/import-oakheart-site-v1
 ## 2026-10-04: Database
 
 The owner connected the existing Neon database (`neon-cinnabar-castle`, also used by the ptc-concept project) to the oakheart-lab Vercel project. This site's data lives in its own `oakheart` schema (migration `db/migrations/0001_check_requests.sql`) and never touches the other project's tables. It can move to a dedicated database later without code changes beyond the connection string.
+
+## 2026-10-04: Pre-launch URL base
+
+`NEXT_PUBLIC_SITE_URL=https://oakheart-lab.vercel.app` is set in Vercel, so canonicals, Open Graph images and JSON-LD links resolve before the domain moves. **At cutover:**
+1. Set it to `https://www.oakheartlab.com`.
+2. Move the Substack to a subdomain (e.g. `writing.oakheartlab.com`). The site already links to the Substack profile at `substack.com/@oakheartlab`, which doesn't depend on the custom domain.

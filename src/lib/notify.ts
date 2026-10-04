@@ -31,8 +31,10 @@ export function resendNotifier(apiKey: string | undefined, to: string, from: str
           text: lines.join("\n"),
         }),
       });
+      if (!res.ok) console.error(`[notify] Resend responded ${res.status} for lead ${lead.requestKey}`);
       return res.ok;
-    } catch {
+    } catch (err) {
+      console.error(`[notify] Resend request failed for lead ${lead.requestKey}`, err);
       return false;
     }
   };

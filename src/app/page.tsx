@@ -75,8 +75,8 @@ export default function Home() {
             <span className="text-accent">Does it get you right?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            ChatGPT, Gemini and Google now answer &ldquo;who should I book?&rdquo; before anyone
-            visits your site. We make sure they find you, describe you correctly, and send people
+            ChatGPT, Gemini and Google now answer &ldquo;who should I book?&rdquo;, often before a
+            customer ever visits your site. We make sure they find you, describe you correctly, and send people
             into a booking flow that works, without replacing the booking system you already use.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -150,7 +150,7 @@ export default function Home() {
         id="system"
         eyebrow="What we do"
         title="Found, booked, supported. One team, start to finish."
-        intro="Visibility tools stop at visibility. Web agencies stop at the website. We handle the whole path from the AI answer to a confirmed booking and the questions that come after."
+        intro="We handle the whole path: from what AI says about you, to a confirmed booking, to the questions customers ask afterwards. One team, so nothing gets lost between handoffs."
         tone="surface"
       >
         <ol className="grid gap-6 md:grid-cols-3">

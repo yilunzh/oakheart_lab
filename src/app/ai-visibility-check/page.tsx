@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CheckForm } from "@/components/check-form";
 import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
+import { SampleReport } from "@/components/sample-report";
 import { checkCovers, checkFaq, talkFirst } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -36,7 +37,7 @@ export default function CheckPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <section className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:grid-cols-[1fr_1fr] lg:gap-x-16 lg:gap-y-0">
+      <section className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:grid-cols-[1fr_1fr] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-0">
         <div className="lg:col-start-1 lg:row-start-1">
           <p className="font-mono text-xs uppercase tracking-widest text-accent">Free AI Visibility Check</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
@@ -104,6 +105,7 @@ export default function CheckPage() {
             </div>
           ))}
         </div>
+        <SampleReport />
       </Section>
 
       <Section eyebrow="How we run it" title="An honest method, because AI answers move around."
