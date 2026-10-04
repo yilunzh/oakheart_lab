@@ -22,11 +22,11 @@ export default async function Image() {
       >
         <div style={{ fontSize: 30, fontWeight: 600, display: "flex" }}>Oakheart Lab</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>
-            More of your customers are asking AI where to book.
+          <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -1.5 }}>
+            Customers now ask AI which local business to book.
           </div>
-          <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2, color: "#1f5c3a" }}>
-            Does it get you right?
+          <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -1.5, color: "#1f5c3a" }}>
+            Does it recommend you, and get your details right?
           </div>
         </div>
         <div style={{ fontSize: 28, color: "#555b55", display: "flex" }}>

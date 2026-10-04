@@ -2,6 +2,18 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-04: Homepage headline
+
+The owner found "More of your customers are asking AI where to book. Does it get you right?" unclear: book what? The second line also read as awkward. Of four options, the owner chose:
+
+> **Customers now ask AI which local business to book. Does it recommend you, and get your details right?**
+
+The owner's reasons:
+- The first line works for any local business, whatever it sells.
+- The question names both things that matter: being recommended, and being described correctly.
+
+The headline and the share image (`opengraph-image`) now match; the share image's font is smaller so the longer text fits. It asks a question and makes no promise of recommendations.
+
 ## 2026-10-04: "Why it matters" categories
 
 The owner asked for automotive to be its own category, not grouped with home services, and for one existing card to make way for it.

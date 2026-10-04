@@ -74,8 +74,8 @@ export default function Home() {
             For businesses that move atoms, not bits
           </p>
           <h1 className="mt-4 text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
-            More of your customers are asking AI where to book.{" "}
-            <span className="text-accent">Does it get you right?</span>
+            Customers now ask AI which local business to book.{" "}
+            <span className="text-accent">Does it recommend you, and get your details right?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             ChatGPT, Gemini and Google now answer &ldquo;who should I book?&rdquo;, often before a
