@@ -1,6 +1,7 @@
 import { handleCheckRequest } from "@/lib/check-handler";
 import { neonStore } from "@/lib/lead-store";
 import { resendNotifier } from "@/lib/notify";
+import { notifyPending } from "@/lib/notify-pending";
 import { site } from "@/content/site";
 
 const store = process.env.DATABASE_URL ? neonStore(process.env.DATABASE_URL) : null;
@@ -22,5 +23,11 @@ function allowedOrigins(request: Request) {
 }
 
 export async function POST(request: Request) {
-  return handleCheckRequest(request, { store, notify, hashIp, allowedOrigins: allowedOrigins(request) });
+  return handleCheckRequest(request, {
+    store,
+    notify,
+    hashIp,
+    allowedOrigins: allowedOrigins(request),
+    retryPending: store ? () => notifyPending(store, notify) : undefined,
+  });
 }

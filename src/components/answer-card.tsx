@@ -6,12 +6,12 @@ type Row = {
 
 const rows: Row[] = [
   {
-    name: "Emerald Paddle Co.",
+    name: "Wrenmoor Paddle Co.",
     text: "Guided family tours at sunset. Kids 5 and up with an adult.",
     tag: { tone: "good", label: "Correct" },
   },
   {
-    name: "North Shore Kayak",
+    name: "Quillbay Kayak Tours",
     text: "Great reviews, but tours are for ages 12 and up.",
     tag: { tone: "bad", label: "Wrong. Their site says 6+ with an adult" },
   },
@@ -26,7 +26,7 @@ export function AnswerCard() {
           <span className="font-mono">AI assistant</span>
         </div>
         <p className="mt-4 rounded-xl bg-paper px-4 py-3 text-[15px]">
-          Best kayak tour near Lake Tahoe for a family with a 6-year-old?
+          Best kayak tour near Pine Hollow Lake for a family with a 6-year-old?
         </p>
         <div className="mt-4 space-y-3 text-[15px] leading-relaxed">
           <p className="text-muted">Here are a couple of good options:</p>
@@ -53,7 +53,7 @@ export function AnswerCard() {
         </div>
       </div>
       <figcaption className="mt-3 text-xs text-muted">
-        Illustrative example with fictional businesses. Your free check shows what assistants actually say about you.
+        Illustrative example: the businesses and lake are invented. Your free check shows what assistants actually say about you.
       </figcaption>
     </figure>
   );

@@ -183,3 +183,15 @@ describe("test submissions", () => {
     expect(rows.map((r) => r.status)).toEqual(["test", "new"]);
   });
 });
+
+describe("retry of earlier failed notifications", () => {
+  it("runs after a successful notification, not after a failed one", async () => {
+    let retries = 0;
+    const retryPending = async () => void retries++;
+    const ok = memoryStore();
+    await handleCheckRequest(req(valid), { ...deps(ok.store), retryPending });
+    const bad = memoryStore();
+    await handleCheckRequest(req(valid), { ...deps(bad.store), notify: async () => false, retryPending });
+    expect(retries).toBe(1);
+  });
+});

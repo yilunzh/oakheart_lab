@@ -15,6 +15,7 @@ export type HandlerDeps = {
   notify: Notifier;
   hashIp: (ip: string) => Promise<string>;
   allowedOrigins: string[] | null;
+  retryPending?: () => Promise<unknown>;
 };
 
 const json = (body: unknown, status: number) => Response.json(body, { status });
@@ -84,6 +85,8 @@ export async function handleCheckRequest(request: Request, deps: HandlerDeps): P
     if (!id) return json({ status: "duplicate" }, 202);
     if (await deps.notify({ ...lead, requestKey, websiteHost, referrer })) {
       await deps.store.markNotified(id).catch(() => {});
+      // Email is working right now: also send any earlier leads whose notification failed.
+      if (deps.retryPending) await deps.retryPending().catch(() => {});
     }
     return json({ status: "received" }, 201);
   } catch {

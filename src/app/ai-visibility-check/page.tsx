@@ -48,7 +48,7 @@ export default function CheckPage() {
             your customers ask, then send you a plain-language report within 24 hours.
           </p>
         </div>
-        <div className="rounded-2xl border border-line bg-surface p-5 shadow-[0_20px_60px_-35px_rgba(22,19,15,0.35)] sm:p-7 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
+        <div id="check-form" className="scroll-mt-24 rounded-2xl border border-line bg-surface p-5 shadow-[0_20px_60px_-35px_rgba(22,19,15,0.35)] sm:p-7 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
           <CheckForm />
         </div>
         <div className="lg:col-start-1 lg:row-start-2">
@@ -122,6 +122,17 @@ export default function CheckPage() {
         }
       >
         <Faq items={checkFaq} />
+        <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl bg-night p-6 text-paper sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <p className="max-w-xl text-xl font-semibold leading-snug">
+            Ready to see what AI tells your customers? Your report arrives within 24 hours.
+          </p>
+          <a
+            href="#check-form"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-paper px-6 text-[15px] font-semibold text-ink hover:bg-white"
+          >
+            Get my free AI check
+          </a>
+        </div>
       </Section>
     </>
   );

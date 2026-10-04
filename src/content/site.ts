@@ -156,6 +156,7 @@ export const businessTypes = [
   "Health, wellness & beauty appointments",
   "Fitness, classes & studios",
   "Stays & hospitality",
+  "Moving & storage",
   "Other booking-based business",
 ];
 

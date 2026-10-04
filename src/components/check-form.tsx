@@ -23,7 +23,7 @@ function mailtoFor(data: Record<string, FormDataEntryValue>) {
 }
 
 const fieldClass =
-  "mt-1.5 block w-full rounded-xl border border-ink/25 bg-surface px-3.5 py-3 text-base text-ink placeholder:text-muted/70 focus:border-ink aria-[invalid=true]:border-bad";
+  "mt-1.5 block w-full scroll-mt-28 rounded-xl border border-ink/25 bg-surface px-3.5 py-3 text-base text-ink placeholder:text-muted/70 focus:border-ink aria-[invalid=true]:border-bad";
 
 function Field({
   id,
@@ -119,7 +119,7 @@ export function CheckForm() {
 
   if (status === "sent" || status === "duplicate") {
     return (
-      <div ref={statusRef} tabIndex={-1} role="status" className="rounded-2xl border border-good/30 bg-good-soft p-6">
+      <div ref={statusRef} tabIndex={-1} role="status" className="scroll-mt-24 rounded-2xl border border-good/30 bg-good-soft p-6">
         <h2 className="text-xl font-semibold">
           {status === "sent" ? "Request received." : "We already have this one."}
         </h2>
@@ -147,7 +147,7 @@ export function CheckForm() {
         id="form-status"
         tabIndex={-1}
         role={status === "error" ? "alert" : undefined}
-        className={message ? "rounded-xl border border-bad/30 bg-bad-soft p-4 text-sm text-bad" : "sr-only"}
+        className={message ? "scroll-mt-24 rounded-xl border border-bad/30 bg-bad-soft p-4 text-sm text-bad" : "sr-only"}
       >
         {message}
         {fallbackHref && (
@@ -170,7 +170,7 @@ export function CheckForm() {
       </Field>
       <div className="grid gap-5">
         <Field id="location" label="City or area you serve" error={errors.location}>
-          <input id="location" name="location" autoComplete="address-level2" placeholder="e.g. Lake Tahoe, CA" required
+          <input id="location" name="location" autoComplete="address-level2" placeholder="e.g. Asheville, NC" required
             aria-invalid={!!errors.location} aria-describedby={describe("location")} className={fieldClass} />
         </Field>
         <Field id="businessType" label="Type of business" error={errors.businessType}>

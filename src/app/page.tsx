@@ -33,8 +33,8 @@ const jsonLd = {
       email: site.email,
       description: site.description,
       founder: { "@id": `${site.url}/#founder` },
-      areaServed: "US",
       logo: `${site.url}/icon`,
+      sameAs: [site.substack],
     },
     {
       "@type": "Person",
@@ -76,8 +76,8 @@ export default function Home() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             ChatGPT, Gemini and Google now answer &ldquo;who should I book?&rdquo;, often before a
-            customer ever visits your site. We make sure they find you, describe you correctly, and send people
-            into a booking flow that works, without replacing the booking system you already use.
+            customer ever visits your site. We fix what keeps them from finding you and describing you correctly,
+            and make sure the people they send land in a booking flow that works, without replacing the booking system you already use.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <CtaLink href={checkCta.href}>{checkCta.label}</CtaLink>
