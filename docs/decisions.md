@@ -2,6 +2,41 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-04: Custom icons (style B, geometric)
+
+The owner chose **style B: geometric, no outlines** from five rendered options: A outlined, B geometric, C monoline, D linocut, E badge tile. The choice was made on fit with the site's restrained type and hairline borders, and on legibility at 40–64 px.
+
+Two prompt changes were made before generating the full set:
+- outer shapes are always oak or deep green, so pale fills never fade into the paper background
+- at most one amber detail per icon
+
+**What was built**
+- **Icons:** 12 icons in `public/icons/<key>.webp`. Each is 128 × 128 (2× retina at the 40–64 px display sizes) and about 4 KB.
+- **Placement:**
+  - What we do pillars: 64 px
+  - The six question cards: 40 px
+  - How it works steps: 56 px
+- **Markup:** `next/image` with fixed sizes and `alt=""`, since each icon sits next to a text label.
+- **Checks:** no layout shift (CLS 0) and no horizontal scroll at 390 px.
+- **Generation:**
+  - Script: `scripts/generate-icons.mjs` (`ICON_STYLE` defaults to `geometric`).
+  - Raw 1024 px files and token logs are kept outside the repo.
+  - Discover, Book and Support were generated from the prompt alone. The other nine passed the approved Discover icon as a style reference through `/v1/images/edits`.
+
+**Model:** `gpt-image-2.5-sunburst` (snapshot 2026-09-08), quality `high`, 1024 × 1024, transparent background, PNG.
+
+**Cost:** about **$1.55** for 27 images, including the first round in style A and the four alternative styles.
+- Tokens: 47.4k image output tokens at $30/M, 8k text input tokens at $5/M and 9.2k image input tokens at $8/M.
+- That works out to about $0.05 per icon.
+
+**Final style prompt** (shared by every icon, followed by `Subject: <per-icon line>` from the script):
+
+> A single modern geometric icon for a calm, premium consultancy website. Built only from solid flat shapes with no outlines or strokes at all; forms are simplified to circles, rounded rectangles and clean arcs with generous corner radii. Depth comes only from overlapping shapes in different tones of the palette; one flat shade tone per shape at most, light from the top left. The silhouette must read strongly against a pale off-white page: the outer shapes are oak green or deep green, and soft green and paper tones appear only on top of darker shapes, never as the outer edge of the subject. Amber is used sparingly: at most one small amber detail in the whole icon, never more than one amber element. No gradients, no 3D, no gloss, no texture, no drop shadow. Strict palette, no other hues: oak green #1f5c3a (primary), deep green #13241b (darkest tone), soft green #e2eee5 (light fills), paper #f5f4ee (lightest), and at most one small amber #f6c343 accent. Fully transparent background, nothing behind the subject: no ground, no circle badge, no backdrop. One centered subject on a square canvas, occupying about 70% of the frame with generous even padding. No text, no letters, no numbers, no logos. Bold simple silhouettes with few details so it reads clearly at 48 to 64 pixels.
+
+With a reference image, this line is added before the subject: "Match the attached reference icon's style exactly: the same outline weight, the same shading method, the same palette, padding and level of detail. Draw only the new subject, not the reference subject."
+
+**Subjects:** as listed in `docs/icon-brief.md`, except that `rentals` uses the rental key on a tag rather than the pontoon boat.
+
 ## 2026-10-04: Owner follow-up answers
 
 | # | Decision | Supersedes / notes |

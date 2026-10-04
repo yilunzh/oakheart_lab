@@ -76,12 +76,12 @@ export const movers = [
 ];
 
 export const customerQuestions = [
-  { kind: "Tours & experiences", q: "Can my 6-year-old do the sunset kayak tour?" },
-  { kind: "Rentals", q: "Does the pontoon rental include fuel and life jackets?" },
-  { kind: "Home & auto services", q: "Who has a same-day AC repair slot near me?" },
-  { kind: "Classes & wellness", q: "Is there a beginner class on Saturday morning?" },
-  { kind: "Stays & hospitality", q: "Which cabins near Asheville allow two dogs?" },
-  { kind: "Moving & storage", q: "Who can move a one-bedroom this Saturday, and what will it cost?" },
+  { kind: "Tours & experiences", icon: "tours", q: "Can my 6-year-old do the sunset kayak tour?" },
+  { kind: "Rentals", icon: "rentals", q: "Does the pontoon rental include fuel and life jackets?" },
+  { kind: "Home & auto services", icon: "services", q: "Who has a same-day AC repair slot near me?" },
+  { kind: "Classes & wellness", icon: "classes", q: "Is there a beginner class on Saturday morning?" },
+  { kind: "Stays & hospitality", icon: "stays", q: "Which cabins near Asheville allow two dogs?" },
+  { kind: "Moving & storage", icon: "moving", q: "Who can move a one-bedroom this Saturday, and what will it cost?" },
 ];
 
 export const failureModes = [
@@ -102,6 +102,7 @@ export const failureModes = [
 export const pillars = [
   {
     key: "Discover",
+    icon: "discover",
     title: "Be the business AI can find, understand and cite.",
     points: [
       "Clear, crawlable pages for every offer, with the details customers ask about",
@@ -111,6 +112,7 @@ export const pillars = [
   },
   {
     key: "Book",
+    icon: "book",
     title: "Turn that visit into a confirmed booking.",
     points: [
       "A booking path built around how your customers choose",
@@ -120,6 +122,7 @@ export const pillars = [
   },
   {
     key: "Support",
+    icon: "support",
     title: "Answer customers’ questions instantly, and bring in your team when it matters.",
     points: [
       "Self-service answers grounded in your real policies",
@@ -132,16 +135,19 @@ export const pillars = [
 export const steps = [
   {
     title: "Free AI check",
+    icon: "step-check",
     time: "Under 24 hours",
     body: "We ask the leading AI assistants what your customers ask. Within 24 hours you’ll see where you’re left out, what they get wrong and what to fix first.",
   },
   {
     title: "A plan to close the gaps",
+    icon: "step-plan",
     time: "One price, agreed up front",
     body: "We map out how to fix what the check found and turn it into more bookings, then do the work with the systems you already use. You see the plan and the price before anything starts.",
   },
   {
     title: "Ongoing support, if you want it",
+    icon: "step-ongoing",
     time: "Optional",
     body: "AI assistants and your competitors keep changing. We keep checking what assistants say about you, keep your facts current and keep improving how customers book.",
   },

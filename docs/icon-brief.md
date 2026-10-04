@@ -52,6 +52,7 @@ Optional, only if the set above is approved:
    - writes optimized assets to `public/icons/<key>.webp` (or PNG). Target each icon at about 20 KB or less, sized for 2× retina at 64 px display (128×128) plus a 256×256 variant where needed.
 3. **Generate `discover`, `book` and `support` first.** Show them to the owner as one image and get approval of the style before generating the rest.
 4. **Iterate the prompt, not individual icons,** until the set is consistent. Record the final style prompt in this file.
+   - **Final (2026-10-04):** style B, geometric with no outlines. The full prompt, model and cost are in `docs/decisions.md` ("Custom icons"), and the prompt is also the `geometric` entry in `scripts/generate-icons.mjs`.
 5. **Integrate:**
    - `next/image` with fixed width and height
    - `alt=""` where the icon is decorative next to a text label

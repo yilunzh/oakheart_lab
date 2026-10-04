@@ -160,7 +160,10 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2">
           {customerQuestions.map((c) => (
             <div key={c.q} className="rounded-2xl border border-line bg-surface p-5">
-              <p className="font-mono text-xs uppercase tracking-wider text-muted">{c.kind}</p>
+              <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-wider text-muted">
+                <Image src={`/icons/${c.icon}.webp`} alt="" width={40} height={40} className="size-10 shrink-0" />
+                {c.kind}
+              </p>
               <p className="mt-2 text-lg font-medium">&ldquo;{c.q}&rdquo;</p>
             </div>
           ))}
@@ -187,6 +190,7 @@ export default function Home() {
         <ol className="grid gap-6 md:grid-cols-3">
           {pillars.map((p, i) => (
             <li key={p.key} className="flex flex-col rounded-2xl border border-line bg-paper p-6">
+              <Image src={`/icons/${p.icon}.webp`} alt="" width={64} height={64} className="mb-5 size-16" />
               <p className="flex items-center gap-3 font-mono text-sm">
                 <span className="grid size-7 place-items-center rounded-full bg-ink text-paper">
                   {i + 1}
@@ -254,6 +258,7 @@ export default function Home() {
         <ol className="grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <li key={s.title} className="border-t-2 border-ink pt-5">
+              <Image src={`/icons/${s.icon}.webp`} alt="" width={56} height={56} className="mb-4 size-14" />
               <p className="font-mono text-xs uppercase tracking-wider text-muted">Step {i + 1}</p>
               <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.body}</p>

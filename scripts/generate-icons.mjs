@@ -32,9 +32,9 @@ const COMPOSITION = [
 ].join(" ");
 const NO_BACKDROP = "Fully transparent background, nothing behind the subject: no ground, no circle badge, no backdrop.";
 
-// Alternative looks explored with the owner; pick one with ICON_STYLE=<name>.
+// Alternative looks explored with the owner; pick one with ICON_STYLE=<name> (default: the approved style).
 export const STYLES = {
-  // A: outlined spot illustration (first round)
+  // A: outlined spot illustration (first round, not chosen)
   outlined: [
     "A single refined editorial spot-illustration icon for a calm, practitioner-led consultancy website.",
     "Flat shapes with a confident, slightly rounded deep green (#13241b) outline of even weight.",
@@ -42,11 +42,13 @@ export const STYLES = {
     "No gradients, no 3D, no gloss, no highlights, no texture, no drop shadow, no clip-art look.",
     PALETTE, NO_BACKDROP,
   ],
-  // B: no outlines, chunky geometric shapes
+  // B: no outlines, chunky geometric shapes (owner-approved 2026-10-04)
   geometric: [
     "A single modern geometric icon for a calm, premium consultancy website.",
     "Built only from solid flat shapes with no outlines or strokes at all; forms are simplified to circles, rounded rectangles and clean arcs with generous corner radii.",
     "Depth comes only from overlapping shapes in different tones of the palette; one flat shade tone per shape at most, light from the top left.",
+    "The silhouette must read strongly against a pale off-white page: the outer shapes are oak green or deep green, and soft green and paper tones appear only on top of darker shapes, never as the outer edge of the subject.",
+    "Amber is used sparingly: at most one small amber detail in the whole icon, never more than one amber element.",
     "No gradients, no 3D, no gloss, no texture, no drop shadow.",
     PALETTE, NO_BACKDROP,
   ],
@@ -74,7 +76,7 @@ export const STYLES = {
     "Transparent background outside the badge tile.",
   ],
 };
-const STYLE_NAME = process.env.ICON_STYLE ?? "outlined";
+const STYLE_NAME = process.env.ICON_STYLE ?? "geometric";
 if (!STYLES[STYLE_NAME]) throw new Error(`Unknown ICON_STYLE: ${STYLE_NAME}`);
 export const STYLE_PROMPT = [...STYLES[STYLE_NAME], COMPOSITION].join(" ");
 
@@ -96,7 +98,8 @@ export const ICONS = {
   "step-ongoing": "A circular arrow around a small upward chart line: ongoing support.",
 };
 
-const SIZES = [128, 256];
+// 128 px covers 2x retina at the 40–64 px display sizes used on the site.
+const SIZES = [128];
 
 function promptFor(key, withRef) {
   return `${STYLE_PROMPT}${withRef ? ` ${REF_NOTE}` : ""} Subject: ${ICONS[key]}`;
