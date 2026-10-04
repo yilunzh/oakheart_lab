@@ -103,7 +103,7 @@ export const steps = [
   {
     title: "Free AI check",
     time: "Under 24 hours",
-    body: "We ask the leading AI assistants what your customers ask, then show you where you’re left out, what they get wrong and what to fix first.",
+    body: "We ask the leading AI assistants what your customers ask. Within 24 hours you’ll see where you’re left out, what they get wrong and what to fix first.",
   },
   {
     title: "A plan to close the gaps",
@@ -111,7 +111,7 @@ export const steps = [
     body: "We map out how to fix what the check found and turn it into more bookings, then do the work with the systems you already use. You see the plan and the price before anything starts.",
   },
   {
-    title: "Ongoing support",
+    title: "Ongoing support, if you want it",
     time: "Optional",
     body: "AI assistants and your competitors keep changing. We keep checking what assistants say about you, keep your facts current and keep improving how customers book.",
   },

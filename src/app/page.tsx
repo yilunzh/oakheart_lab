@@ -231,10 +231,7 @@ export default function Home() {
         <ol className="grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <li key={s.title} className="border-t-2 border-ink pt-5">
-              <p className="font-mono text-xs uppercase tracking-wider text-muted md:min-h-8">
-                Step {i + 1} · {s.time}
-              </p>
-              <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
+              <h3 className="text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.body}</p>
             </li>
           ))}
