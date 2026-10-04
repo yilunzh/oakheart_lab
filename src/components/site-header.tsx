@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Logo } from "./logo";
 import { CtaLink } from "./cta-link";
+import { MobileNav } from "./mobile-nav";
 import { checkCta, nav } from "@/content/site";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-paper">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:rounded focus:bg-surface focus:px-3 focus:py-2"
@@ -23,10 +24,13 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <CtaLink href={checkCta.href} className="min-h-10 px-4 text-sm sm:px-5">
-          <span className="sm:hidden">Free AI check</span>
-          <span className="hidden sm:inline">{checkCta.label}</span>
-        </CtaLink>
+        <div className="flex items-center gap-2">
+          <CtaLink href={checkCta.href} className="min-h-10 px-4 text-sm sm:px-5">
+            <span className="sm:hidden">Free AI check</span>
+            <span className="hidden sm:inline">{checkCta.label}</span>
+          </CtaLink>
+          <MobileNav />
+        </div>
       </div>
     </header>
   );

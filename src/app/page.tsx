@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { AnswerCard } from "@/components/answer-card";
 import { CtaLink } from "@/components/cta-link";
@@ -5,6 +6,7 @@ import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
 import {
   checkCta,
+  talkFirst,
   customerQuestions,
   failureModes,
   homeFaq,
@@ -14,6 +16,11 @@ import {
   site,
   steps,
 } from "@/content/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -61,7 +68,7 @@ export default function Home() {
           <p className="font-mono text-xs uppercase tracking-widest text-accent">
             For businesses that move atoms, not bits
           </p>
-          <h1 className="mt-4 text-[2.6rem] font-semibold leading-[1.05] tracking-tight text-balance sm:text-6xl">
+          <h1 className="mt-4 text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
             Your customers are asking AI where to book.{" "}
             <span className="text-accent">Does it get you right?</span>
           </h1>
@@ -92,7 +99,7 @@ export default function Home() {
       <Section
         eyebrow="What changed"
         title="The answer is becoming the storefront."
-        intro="Customers used to compare ten links. Now an assistant names two or three businesses, and more and more often it books them too."
+        intro="Customers used to compare ten links. Now an assistant often names two or three businesses, and some assistants are starting to book them too."
         tone="surface"
       >
         <div className="grid gap-6 md:grid-cols-3">
@@ -232,9 +239,12 @@ export default function Home() {
         </ol>
         <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-accent-soft p-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-lg font-medium">{moneyBack}</p>
-          <CtaLink href={checkCta.href} className="shrink-0">
-            {checkCta.label}
-          </CtaLink>
+          <div className="flex shrink-0 flex-col items-start gap-2 sm:items-end">
+            <CtaLink href={checkCta.href}>{checkCta.label}</CtaLink>
+            <a href={talkFirst.href} className="text-sm underline underline-offset-4 hover:text-accent">
+              {talkFirst.label}
+            </a>
+          </div>
         </div>
       </Section>
 
@@ -254,9 +264,14 @@ export default function Home() {
             report: where you show up, what&rsquo;s wrong, and what to fix first. Free, with no
             obligation.
           </p>
-          <CtaLink href={checkCta.href} variant="inverse" className="mt-8">
-            {checkCta.label}
-          </CtaLink>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+            <CtaLink href={checkCta.href} variant="inverse">
+              {checkCta.label}
+            </CtaLink>
+            <a href={talkFirst.href} className="text-paper/85 underline underline-offset-4 hover:text-paper">
+              {talkFirst.label}
+            </a>
+          </div>
         </div>
       </section>
     </>

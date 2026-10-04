@@ -3,7 +3,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.oakheartlab.com",
   email: "yilun@oakheartlab.com",
   linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
-  substack: "https://www.oakheartlab.com/about",
+  substack: "https://yilunzh.substack.com/",
   description:
     "Oakheart Lab helps businesses that move atoms, not bits get found by AI assistants, described correctly, and booked without friction.",
 };
@@ -27,7 +27,7 @@ export const nav = [
 export const shiftStats = [
   {
     figure: "8% vs 15%",
-    text: "How often people clicked through to a website when Google showed an AI summary, compared with when it didn’t.",
+    text: "How often people clicked a regular search result when Google showed an AI summary, compared with searches that had no summary.",
     source: "Pew Research Center, March 2025 browsing data, published Jul 2025",
     href: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
   },
@@ -50,6 +50,8 @@ export const customerQuestions = [
   { kind: "Rentals", q: "Does the pontoon rental include fuel and life jackets?" },
   { kind: "Home & auto services", q: "Who has a same-day AC repair slot near me?" },
   { kind: "Classes & wellness", q: "Is there a beginner class on Saturday morning?" },
+  { kind: "Stays & hospitality", q: "Which cabins near Asheville allow two dogs?" },
+  { kind: "Moving & storage", q: "Who can move a one-bedroom this Saturday, and what will it cost?" },
 ];
 
 export const failureModes = [
@@ -105,8 +107,8 @@ export const steps = [
   },
   {
     title: "Free tailored preview",
-    time: "If it’s a fit",
-    body: "For qualified businesses, we mock up your homepage and one key booking journey so you can see the difference before deciding anything.",
+    time: "If your check shows room to improve",
+    body: "If your check shows clear fixes we can help with, we mock up your homepage and one key booking journey so you can see the difference before deciding anything.",
   },
   {
     title: "One price, agreed up front",
@@ -123,11 +125,15 @@ export const steps = [
 export const homeFaq = [
   {
     q: "Do I have to switch booking systems?",
-    a: "No. We work with the system you already run, such as FareHarbor, Peek, Checkfront, Mindbody, Vagaro, Square or Housecall Pro, and improve everything around it.",
+    a: "No. We design around the booking system you already use, whether that’s FareHarbor, Peek, Mindbody, Square or something else, and connect to it wherever it allows. Replacing it is never the starting point.",
   },
   {
     q: "Isn’t this just SEO?",
     a: "Mostly, it’s good SEO done properly. Google says showing up in its AI features rests on the same foundations as search. What we add is the part generic SEO skips for businesses like yours: making sure the operational facts AI repeats are correct, and making sure the booking path converts the people it sends.",
+  },
+  {
+    q: "Don’t Google Maps and reviews still matter more?",
+    a: "For most local bookings today, yes, and we treat them that way. AI assistants draw on the same sources: your website, Google Business Profile, reviews and listings. So the Found work strengthens Maps and search too. AI answers are the fastest-growing place where those facts get repeated, and where mistakes cost you quietly.",
   },
   {
     q: "Can you guarantee ChatGPT will recommend us?",
@@ -139,7 +145,7 @@ export const homeFaq = [
   },
   {
     q: "What do you need from me?",
-    a: "For the free check, just your business name, website and location. For a project, a short call about how you take bookings today and access to the tools you already use.",
+    a: "For the free check: your business name, website, location, type of business and an email for the report. For a project: a short conversation about how you take bookings today, and access to the tools you already use.",
   },
 ];
 
@@ -181,6 +187,11 @@ export const checkCovers = [
   },
 ];
 
+export const talkFirst = {
+  label: "Prefer to talk first? Email Yilun",
+  href: "mailto:yilun@oakheartlab.com?subject=Question%20about%20Oakheart%20Lab",
+};
+
 export const checkFaq = [
   {
     q: "Which assistants do you check?",
@@ -192,7 +203,11 @@ export const checkFaq = [
   },
   {
     q: "Is it really free? What’s the catch?",
-    a: "It’s free and you can request as many as you like. If the report shows problems you want help with, we’ll offer to talk. If not, keep the report and use it however you like.",
+    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk. If not, keep the report and use it however you like.",
+  },
+  {
+    q: "Who runs the check?",
+    a: "Yilun Zhang, Oakheart Lab’s founder, reviews every report before it’s sent. Software runs the questions so they can be repeated across assistants, but a person writes the findings and fixes.",
   },
   {
     q: "What happens to my information?",

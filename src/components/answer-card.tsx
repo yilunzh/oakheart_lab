@@ -33,7 +33,7 @@ export function AnswerCard() {
           {rows.map((row) => (
             <div key={row.name} className="rounded-xl border border-line p-3">
               <p>
-                <span className="font-semibold">{row.name}.</span> {row.text}
+                <span className="font-semibold">{row.name}:</span> {row.text}
               </p>
               {row.tag && (
                 <p

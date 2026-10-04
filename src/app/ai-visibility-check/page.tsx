@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { CheckForm } from "@/components/check-form";
 import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
-import { checkCovers, checkFaq } from "@/content/site";
+import { checkCovers, checkFaq, talkFirst } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Free AI Visibility Check",
+  alternates: { canonical: "/ai-visibility-check" },
+  openGraph: {
+    title: "Free AI Visibility Check | Oakheart Lab",
+    description:
+      "See what ChatGPT, Gemini, Perplexity, Claude and Google's AI answers tell customers about your business. Free report in under 24 hours.",
+    url: "/ai-visibility-check",
+  },
   description:
     "Find out what ChatGPT, Gemini, Perplexity, Claude and Google's AI answers tell customers about your business: whether you're mentioned, what they get wrong, and what to fix first. Free, in under 24 hours.",
 };
@@ -49,6 +58,31 @@ export default function CheckPage() {
           <p className="mt-6 text-sm text-muted">
             Free, as many as you like, no obligation. No newsletter unless you ask for it.
           </p>
+          <div className="mt-10 flex items-start gap-4 rounded-2xl border border-line bg-surface p-5">
+            <Image
+              src="/images/yilun-zhang.jpg"
+              alt=""
+              width={56}
+              height={56}
+              loading="eager"
+              className="size-14 shrink-0 rounded-full"
+            />
+            <div className="text-[15px] leading-relaxed">
+              <p>
+                <span className="font-semibold">Every report is reviewed by Yilun Zhang</span>,
+                Oakheart Lab’s founder, before it’s sent. No sales call unless you ask.
+              </p>
+              <p className="mt-2 text-sm">
+                <Link href="/#founder" className="underline underline-offset-2 hover:text-accent">
+                  About Yilun
+                </Link>
+                <span className="mx-2 text-muted">·</span>
+                <a href={talkFirst.href} className="underline underline-offset-2 hover:text-accent">
+                  {talkFirst.label}
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
         <div className="rounded-2xl border border-line bg-surface p-5 shadow-[0_20px_60px_-35px_rgba(22,19,15,0.35)] sm:p-7">
           <CheckForm />

@@ -1,10 +1,26 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { businessTypes, heardFrom, site } from "@/content/site";
 import type { FieldErrors } from "@/lib/check-request";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "sent" | "duplicate" | "error";
+
+const newId = () =>
+  typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : undefined;
+
+function mailtoFor(data: Record<string, FormDataEntryValue>) {
+  const body = [
+    "Please run a free AI check for:",
+    `Business: ${data.businessName ?? ""}`,
+    `Website: ${data.website ?? ""}`,
+    `Location: ${data.location ?? ""}`,
+    `Type: ${data.businessType ?? ""}`,
+    data.question ? `Question: ${data.question}` : "",
+  ].filter(Boolean).join("\n");
+  return `mailto:${site.email}?subject=${encodeURIComponent("Free AI check request")}&body=${encodeURIComponent(body)}`;
+}
 
 const fieldClass =
   "mt-1.5 block w-full rounded-xl border border-ink/25 bg-surface px-3.5 py-3 text-base text-ink placeholder:text-muted/70 focus:border-ink aria-[invalid=true]:border-bad";
@@ -46,24 +62,41 @@ export function CheckForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
   const [message, setMessage] = useState("");
+  const [fallbackHref, setFallbackHref] = useState<string | null>(null);
+  const [sentTo, setSentTo] = useState("");
+  const [requestId] = useState(newId);
   const statusRef = useRef<HTMLDivElement>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (status === "sending") return;
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    const params = new URLSearchParams(window.location.search);
+    const utm = Object.fromEntries(
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"]
+        .map((k) => [k, params.get(k)])
+        .filter(([, v]) => v),
+    );
     setStatus("sending");
     setErrors({});
     setMessage("");
+    setFallbackHref(null);
     try {
       const res = await fetch("/api/checks", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, requestId, utm, referrer: document.referrer || undefined }),
       });
       const json = await res.json().catch(() => ({}));
-      if (res.status === 202 || res.status === 201) {
-        setStatus("sent");
+      if (res.status === 201 || res.status === 202) {
+        setSentTo(String(data.email ?? ""));
+        setStatus(json.status === "duplicate" ? "duplicate" : "sent");
+        requestAnimationFrame(() => statusRef.current?.focus());
+        return;
+      } else if (res.status === 429) {
+        setStatus("error");
+        setMessage("That’s a lot of requests from one connection in an hour. Please try again later, or email us and we’ll run it.");
+        setFallbackHref(mailtoFor(data));
       } else if (res.status === 422 && json.fields) {
         setErrors(json.fields);
         setStatus("error");
@@ -73,26 +106,31 @@ export function CheckForm() {
         return;
       } else {
         setStatus("error");
-        setMessage(
-          `We couldn’t submit your request right now, and nothing was saved. Email ${site.email} with your business name and website and we’ll run your check.`,
-        );
+        setMessage("We couldn’t submit your request right now, and nothing was saved. You can send the same details by email instead.");
+        setFallbackHref(mailtoFor(data));
       }
     } catch {
       setStatus("error");
-      setMessage(
-        `We couldn’t reach our server, and nothing was saved. Check your connection and try again, or email ${site.email}.`,
-      );
+      setMessage("We couldn’t reach our server, and nothing was saved. Check your connection and try again, or send the details by email.");
+      setFallbackHref(mailtoFor(data));
     }
     requestAnimationFrame(() => statusRef.current?.focus());
   }
 
-  if (status === "sent") {
+  if (status === "sent" || status === "duplicate") {
     return (
       <div ref={statusRef} tabIndex={-1} role="status" className="rounded-2xl border border-good/30 bg-good-soft p-6">
-        <h2 className="text-xl font-semibold">Request received.</h2>
+        <h2 className="text-xl font-semibold">
+          {status === "sent" ? "Request received." : "We already have this one."}
+        </h2>
         <p className="mt-2 leading-relaxed">
-          Your report will arrive by email within 24 hours. If anything is unclear, we&rsquo;ll
-          reply to that address first.
+          {status === "sent"
+            ? `Your report will arrive within 24 hours from ${site.email}, sent to ${sentTo}.`
+            : `You asked about this website in the last 24 hours, so your report is already on its way to ${sentTo} from ${site.email}.`}{" "}
+          If it isn&rsquo;t in your inbox, check your spam or promotions folder.
+        </p>
+        <p className="mt-3 leading-relaxed">
+          While you wait, see <Link href="/#system" className="underline underline-offset-2">how we fix what the check finds</Link>, or reply to the report with any questions. There&rsquo;s no sales call unless you ask for one.
         </p>
       </div>
     );
@@ -112,6 +150,14 @@ export function CheckForm() {
         className={message ? "rounded-xl border border-bad/30 bg-bad-soft p-4 text-sm text-bad" : "sr-only"}
       >
         {message}
+        {fallbackHref && (
+          <>
+            {" "}
+            <a href={fallbackHref} className="font-semibold underline underline-offset-2">
+              Email your details to {site.email}
+            </a>
+          </>
+        )}
       </div>
 
       <Field id="businessName" label="Business name" error={errors.businessName}>
