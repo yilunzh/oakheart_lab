@@ -6,6 +6,10 @@ export type Notifier = (lead: StoredLead) => Promise<boolean>;
 export function resendNotifier(apiKey: string | undefined, to: string, from: string): Notifier {
   return async (lead) => {
     if (!apiKey) return false;
+    const submitted = lead.submittedAt ? new Date(lead.submittedAt) : new Date();
+    const due = new Date(submitted.getTime() + 24 * 3600_000);
+    const late = Date.now() - submitted.getTime() > 3600_000;
+    const fmt = (d: Date) => d.toUTCString().replace("GMT", "UTC");
     const lines = [
       `Business: ${lead.businessName}`,
       `Website: ${lead.website}`,
@@ -17,7 +21,8 @@ export function resendNotifier(apiKey: string | undefined, to: string, from: str
       `Referrer: ${lead.referrer ?? "(none)"}`,
       `UTM: ${lead.utm ? JSON.stringify(lead.utm) : "(none)"}`,
       "",
-      "Report promised within 24 hours of this email.",
+      `Submitted: ${fmt(submitted)}`,
+      `Report due by: ${fmt(due)}`,
     ];
     try {
       const res = await fetch("https://api.resend.com/emails", {
@@ -27,7 +32,7 @@ export function resendNotifier(apiKey: string | undefined, to: string, from: str
           from,
           to,
           reply_to: lead.email,
-          subject: `New AI check request: ${lead.businessName}`,
+          subject: `${late ? "[Delayed notification] " : ""}New AI check request: ${lead.businessName}`,
           text: lines.join("\n"),
         }),
       });

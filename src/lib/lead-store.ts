@@ -8,6 +8,8 @@ export type StoredLead = CheckRequest & {
   utm?: Record<string, string>;
   ipHash?: string;
   status?: "new" | "test";
+  /** When the visitor submitted (ISO). Set for retried notifications. */
+  submittedAt?: string;
 };
 
 export interface LeadStore {
@@ -20,7 +22,7 @@ export interface LeadStore {
   markNotified(id: string): Promise<void>;
   /**
    * Atomically claims (10-minute lease via claimed_at) up to 20 new leads (older than 2 minutes, newer than 7 days) whose owner notification has not
-   * been sent (sets notified_at), so overlapping retries can't email the same lead twice.
+   * been sent (sets claimed_at), so overlapping retries can't email the same lead twice.
    */
   claimUnnotified(): Promise<(StoredLead & { id: string })[]>;
   /**
@@ -78,10 +80,11 @@ export function neonStore(databaseUrl: string): LeadStore {
           limit 20
           for update skip locked
         )
-        returning id, request_key, business_name, website, website_host, location, business_type,
+        returning id, created_at, request_key, business_name, website, website_host, location, business_type,
                   email, question, heard_from, referrer, utm`;
       return rows.map((r) => ({
         id: r.id,
+        submittedAt: new Date(r.created_at).toISOString(),
         requestKey: r.request_key,
         businessName: r.business_name,
         website: r.website,

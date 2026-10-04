@@ -14,6 +14,6 @@
 
 | Check | Result |
 |---|---|
-| Mobile confirmation visibility (`tests/browser/success-heading.cjs`) | **PASS**: heading top 121 px, header bottom 65 px, status focused |
+| Mobile confirmation visibility (`tests/browser/success-heading.cjs`) | **Correction (found by the round 8 review):** the single-run check passed, but the live mobile capture (`e2e-mobile-success.png`) showed an intermittent race. In about 1 of 20 runs the confirmation heading ended under the header and lost focus. Fixed after round 8 (reveal moved into `useEffect`). The check now runs 20 times with random latency: **PASS 20/20** |
 | Horizontal overflow at 320 px (both pages, every element) | document width 320 on both pages; the sample report has no clipped content (`sample-320.png`) |
 | Crash-safe retries | Leads are claimed with a 10-minute `claimed_at` lease, and `notified_at` is set only after a successful send. Unit test: "re-offers a lead whose claim was never released (crash mid-send) after the lease expires". 18 tests pass. Migration `0002_claimed_at.sql` is applied to the database. |

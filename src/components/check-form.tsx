@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { businessTypes, heardFrom, site } from "@/content/site";
 import type { FieldErrors } from "@/lib/check-request";
@@ -74,6 +74,12 @@ export function CheckForm() {
   const [sentTo, setSentTo] = useState("");
   const [requestId] = useState(newId);
   const statusRef = useRef<HTMLDivElement>(null);
+  // Reveal after React has committed the new status box (a frame callback could run first and
+  // scroll to the old form, leaving the confirmation under the sticky header).
+  const [revealTick, setRevealTick] = useState(0);
+  useEffect(() => {
+    if (revealTick) revealStatus(statusRef.current);
+  }, [revealTick]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -99,7 +105,7 @@ export function CheckForm() {
       if (res.status === 201 || res.status === 202) {
         setSentTo(String(data.email ?? ""));
         setStatus(json.status === "duplicate" ? "duplicate" : "sent");
-        requestAnimationFrame(() => revealStatus(statusRef.current));
+        setRevealTick((t) => t + 1);
         return;
       } else if (res.status === 429) {
         setStatus("error");
@@ -122,7 +128,7 @@ export function CheckForm() {
       setMessage("We couldn’t reach our server, and nothing was saved. Check your connection and try again, or send the details by email.");
       setFallbackHref(mailtoFor(data));
     }
-    requestAnimationFrame(() => revealStatus(statusRef.current));
+    setRevealTick((t) => t + 1);
   }
 
   if (status === "sent" || status === "duplicate") {
