@@ -6,6 +6,7 @@
 //   OPENAI_API_KEY=... node scripts/generate-icons.mjs discover book support
 //   OPENAI_API_KEY=... node scripts/generate-icons.mjs --ref <raw.png> tours rentals
 //   node scripts/generate-icons.mjs --optimize-only [keys...]
+//   ICON_STYLE=geometric RAW_DIR=... node scripts/generate-icons.mjs --no-optimize discover
 //
 // Raw 1024px PNGs and token usage go to RAW_DIR (default ../oakheart-icons-raw),
 // outside the repo. The API key is read from the environment and never logged.
@@ -22,17 +23,60 @@ const OUT_DIR = path.join(ROOT, "public", "icons");
 const MODEL = process.env.ICON_MODEL ?? "gpt-image-2.5-sunburst";
 const QUALITY = process.env.ICON_QUALITY ?? "high";
 
-export const STYLE_PROMPT = [
-  "A single refined editorial spot-illustration icon for a calm, practitioner-led consultancy website.",
-  "Flat shapes with a confident, slightly rounded deep green (#13241b) outline of even weight.",
-  "Subtle two-tone flat shading only: each shape has a base tone and one darker shade tone on its lower right; light comes from the top left.",
-  "No gradients, no 3D, no gloss, no highlights, no texture, no drop shadow, no clip-art look.",
-  "Strict palette, no other hues: oak green #1f5c3a (primary fills), deep green #13241b (outline and shade), soft green #e2eee5 (light fills), paper #f5f4ee (lightest fills), and at most one small amber #f6c343 accent.",
+const PALETTE =
+  "Strict palette, no other hues: oak green #1f5c3a (primary), deep green #13241b (darkest tone), soft green #e2eee5 (light fills), paper #f5f4ee (lightest), and at most one small amber #f6c343 accent.";
+const COMPOSITION = [
   "One centered subject on a square canvas, occupying about 70% of the frame with generous even padding.",
-  "Fully transparent background, nothing behind the subject: no ground, no circle badge, no backdrop.",
   "No text, no letters, no numbers, no logos.",
   "Bold simple silhouettes with few details so it reads clearly at 48 to 64 pixels.",
 ].join(" ");
+const NO_BACKDROP = "Fully transparent background, nothing behind the subject: no ground, no circle badge, no backdrop.";
+
+// Alternative looks explored with the owner; pick one with ICON_STYLE=<name>.
+export const STYLES = {
+  // A: outlined spot illustration (first round)
+  outlined: [
+    "A single refined editorial spot-illustration icon for a calm, practitioner-led consultancy website.",
+    "Flat shapes with a confident, slightly rounded deep green (#13241b) outline of even weight.",
+    "Subtle two-tone flat shading only: each shape has a base tone and one darker shade tone on its lower right; light comes from the top left.",
+    "No gradients, no 3D, no gloss, no highlights, no texture, no drop shadow, no clip-art look.",
+    PALETTE, NO_BACKDROP,
+  ],
+  // B: no outlines, chunky geometric shapes
+  geometric: [
+    "A single modern geometric icon for a calm, premium consultancy website.",
+    "Built only from solid flat shapes with no outlines or strokes at all; forms are simplified to circles, rounded rectangles and clean arcs with generous corner radii.",
+    "Depth comes only from overlapping shapes in different tones of the palette; one flat shade tone per shape at most, light from the top left.",
+    "No gradients, no 3D, no gloss, no texture, no drop shadow.",
+    PALETTE, NO_BACKDROP,
+  ],
+  // C: fine monoline drawing with offset color blocks
+  monoline: [
+    "A single elegant editorial icon in a fine monoline style, like a premium magazine or architecture-studio pictogram.",
+    "Thin, uniform deep green (#13241b) line drawing with rounded ends, open and airy.",
+    "Behind the line drawing, one or two loose flat color blocks in soft green and oak green, slightly offset from the lines like a misregistered print.",
+    "No shading, no gradients, no 3D, no texture, no drop shadow.",
+    PALETTE, NO_BACKDROP,
+  ],
+  // D: hand-printed linocut / woodcut
+  linocut: [
+    "A single icon in the style of a hand-carved linocut or woodcut print, crafted and warm, suiting a brand called Oakheart.",
+    "Bold carved deep green (#13241b) shapes with slightly irregular hand-cut edges and a few carved line details; flat ink colors with a faint print grain.",
+    "Two or three flat ink colors only, no gradients, no 3D, no gloss.",
+    PALETTE, NO_BACKDROP,
+  ],
+  // E: outlined subject on a soft-green rounded badge
+  badge: [
+    "A single refined editorial icon placed on a soft green (#e2eee5) rounded-square badge tile, with the subject slightly breaking out of the tile's top edge.",
+    "The subject uses flat shapes with a confident, slightly rounded deep green (#13241b) outline and subtle two-tone flat shading, light from the top left.",
+    "No gradients, no 3D, no gloss, no texture, no drop shadow.",
+    PALETTE,
+    "Transparent background outside the badge tile.",
+  ],
+};
+const STYLE_NAME = process.env.ICON_STYLE ?? "outlined";
+if (!STYLES[STYLE_NAME]) throw new Error(`Unknown ICON_STYLE: ${STYLE_NAME}`);
+export const STYLE_PROMPT = [...STYLES[STYLE_NAME], COMPOSITION].join(" ");
 
 const REF_NOTE =
   "Match the attached reference icon's style exactly: the same outline weight, the same shading method, the same palette, padding and level of detail. Draw only the new subject, not the reference subject.";
@@ -108,6 +152,7 @@ async function optimize(key) {
 async function main() {
   const args = process.argv.slice(2);
   const optimizeOnly = args.includes("--optimize-only");
+  const skipOptimize = args.includes("--no-optimize");
   const refIdx = args.indexOf("--ref");
   const refPath = refIdx >= 0 ? path.resolve(args[refIdx + 1]) : null;
   const keys = args.filter((a, i) => !a.startsWith("--") && !(refIdx >= 0 && i === refIdx + 1));
@@ -122,7 +167,7 @@ async function main() {
         await writeFile(path.join(RAW_DIR, `${key}.png`), Buffer.from(json.data[0].b64_json, "base64"));
         await appendFile(
           path.join(RAW_DIR, "usage.jsonl"),
-          JSON.stringify({ key, model: MODEL, quality: QUALITY, ref: refPath ? path.basename(refPath) : null, usage: json.usage, at: new Date().toISOString() }) + "\n",
+          JSON.stringify({ key, style: STYLE_NAME, model: MODEL, quality: QUALITY, ref: refPath ? path.basename(refPath) : null, usage: json.usage, at: new Date().toISOString() }) + "\n",
         );
         console.log(`generated ${key}`);
       } else if (!existsSync(path.join(RAW_DIR, `${key}.png`))) {
@@ -130,6 +175,7 @@ async function main() {
       }
     }),
   );
+  if (skipOptimize) return;
   for (const key of selected) {
     console.log(`optimize ${key}`);
     await optimize(key);
