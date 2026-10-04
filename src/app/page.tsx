@@ -149,8 +149,8 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="Discover, book, support: one project, start to finish."
-        intro="We handle the whole path: what AI says about you, the booking itself, and the questions customers ask afterwards. Because we handle all three together, the facts AI repeats, your booking pages and your support answers stay consistent."
+        title="Discover, book and support, handled end to end."
+        intro="What AI says about you, how customers book and the answers they get afterwards all depend on the same facts. We keep them consistent, so customers hear the same story everywhere."
         tone="surface"
       >
         <ol className="grid gap-6 md:grid-cols-3">
@@ -174,14 +174,6 @@ export default function Home() {
             </li>
           ))}
         </ol>
-        <p className="mt-8 text-sm text-muted">
-          Also available when you need them: a companion mobile app, and staff tools that cut
-          re-entered information and missed handoffs.{" "}
-          <a href={`mailto:${site.email}`} className="underline underline-offset-2 hover:text-ink">
-            Ask us
-          </a>
-          .
-        </p>
       </Section>
 
       {/* Founder */}
@@ -231,7 +223,8 @@ export default function Home() {
         <ol className="grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <li key={s.title} className="border-t-2 border-ink pt-5">
-              <h3 className="text-lg font-semibold">{s.title}</h3>
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">Step {i + 1}</p>
+              <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.body}</p>
             </li>
           ))}
