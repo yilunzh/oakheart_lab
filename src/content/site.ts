@@ -142,7 +142,7 @@ export const steps = [
   {
     title: "Fix the gaps",
     icon: "step-plan",
-    time: "One price, agreed up front",
+    time: "Included in your monthly fee",
     body: "We walk through your booking path and the questions your staff answer most, then fix what matters most on the systems you already use.",
   },
   {
@@ -207,11 +207,11 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "The first round of fixes has one price, agreed before we start. Ongoing work is a monthly fee, also agreed up front. We don’t publish prices because the work depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "One flat monthly fee covers everything: the first round of fixes and the upkeep after it. There’s no separate project fee. We agree it with you before any work starts. We don’t publish it because it depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "Is there a long contract?",
-    a: "No. The monthly work is month to month, and you can stop anytime.",
+    a: "No. It’s one flat monthly fee, month to month, and you can stop anytime.",
   },
   {
     q: "What do you need from me?",
@@ -282,7 +282,7 @@ export const checkFaq = [
   },
   {
     q: "Is it really free? What’s the catch?",
-    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk: one price for the fixes, then a monthly fee for upkeep, month to month. If not, keep the report and use it however you like.",
+    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk. One flat monthly fee covers the fixes and the upkeep, month to month. If not, keep the report and use it however you like.",
   },
   {
     q: "Who runs the check?",
@@ -290,6 +290,6 @@ export const checkFaq = [
   },
   {
     q: "What happens to my information?",
-    a: "We use it to run your check and to send you the report. We don’t sell it or add you to a newsletter without asking.",
+    a: "We use it to run your check and to send you the report. We don’t sell it or add you to a newsletter without asking. Our privacy page has the details.",
   },
 ];

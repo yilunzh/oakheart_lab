@@ -133,8 +133,8 @@ export default function Home() {
           <div className="rounded-2xl border border-line bg-paper p-6">
             <p className="text-2xl font-semibold tracking-tight">Who&rsquo;s already moving</p>
             <ol className="mt-5 space-y-5">
-              {movers.map((m) => (
-                <li key={m.when} className="border-l-2 border-accent pl-4">
+              {movers.map((m, i) => (
+                <li key={m.when} className={`border-l-2 border-accent pl-4 ${i >= 2 ? "hidden sm:block" : ""}`}>
                   <p className="font-mono text-xs uppercase tracking-wider text-muted">{m.when}</p>
                   <p className="mt-1 leading-snug">
                     {m.text}{" "}
@@ -277,10 +277,14 @@ export default function Home() {
       <Section
         id="how-it-works"
         eyebrow="How it works"
-        title="A free check, a round of fixes, then monthly upkeep."
+        title="A free check, then one flat monthly fee for the fixes and the upkeep."
         tone="surface"
       >
-        <ol className="grid gap-4 md:grid-cols-3">
+        <div className="relative">
+        {/* Mobile loop: a dashed bracket from step 3 back up to step 1. */}
+        <div aria-hidden="true" className="absolute bottom-16 left-0 top-12 w-4 rounded-l-xl border-y-2 border-l-2 border-dashed border-accent/60 md:hidden" />
+        <span aria-hidden="true" className="absolute left-3 top-[38px] text-[10px] text-accent md:hidden">▶</span>
+        <ol className="grid gap-4 pl-6 md:grid-cols-3 md:pl-0">
           {steps.map((s, i) => (
             <li
               key={s.title}
@@ -299,6 +303,7 @@ export default function Home() {
             </li>
           ))}
         </ol>
+        </div>
         {/* The loop: step 3 feeds back into step 1 every month. */}
         <div className="relative mt-1 hidden h-14 md:block">
           <div aria-hidden="true" className="absolute inset-x-[16.67%] top-0 h-7 rounded-b-3xl border-x-2 border-b-2 border-dashed border-accent/60" />
@@ -310,7 +315,7 @@ export default function Home() {
         </div>
         <p className="mt-3 flex items-center gap-3 rounded-2xl border border-dashed border-accent/60 px-5 py-3 text-[15px] font-medium md:hidden">
           <span aria-hidden="true" className="text-xl text-accent">↻</span>
-          {loopNote} Back to step 1.
+          {loopNote}
         </p>
         <SamplePlan />
         <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-accent-soft p-6 sm:flex-row sm:items-center sm:justify-between">

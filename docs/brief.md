@@ -20,7 +20,7 @@ Businesses with complex offers are hurt most, because their availability, eligib
 ## Offer
 Three steps (owner decision, 2026-10-04):
 1. **Free AI Visibility Check: the gap audit.** We ask leading AI assistants the questions your customers ask, then report where you appear, what they say, what they get wrong, and the top fixes. Unlimited, delivered in under 24 hours.
-2. **A tailored plan to close the gaps and drive growth**, with one price agreed up front, then the work: **Discover → Book → Support**, connected to existing systems.
+2. **A tailored plan to close the gaps and drive growth**, then the work, all covered by **one flat monthly fee** (no separate project fee; owner decision 2026-10-10): **Discover → Book → Support**, connected to existing systems.
    - **Discover:** AI search and SEO (content, structured data, entity consistency, crawlability)
    - **Book:** personalized booking and upsell
    - **Support:** customer self-service and AI support with handoff to staff

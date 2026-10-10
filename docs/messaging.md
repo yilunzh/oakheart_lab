@@ -40,13 +40,13 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
    - **Booked:** turn that visit into a confirmed booking, with the right add-ons.
    - **Supported:** answer customers' questions instantly, and hand off to your team when it matters.
 5. **Founder:** "I've spent over a decade building commerce where the click turns into a car, a key, a delivery. Now I help businesses like yours do the same with AI." Roles: Hertz, Rivian, Carvana, Clutch.
-6. **How it works:** free check (<24h) → a plan of specific fixes across Discover, Book and Support, with one price agreed before we start (shown as a labeled sample plan) → monthly ongoing work: re-run the check, keep facts current, improve booking. Shown as a loop, not an add-on.
+6. **How it works:** free check (<24h) → a plan of specific fixes across Discover, Book and Support, (shown as a labeled sample plan) → monthly ongoing work, all under one flat monthly fee: re-run the check, keep facts current, improve booking. Shown as a loop, not an add-on.
 7. **Risk reversal (exact):** "If you're not happy with our service, we'll give your money back, no questions asked."
 8. **FAQ:**
    - Do I have to switch booking systems? (No)
    - Isn't this just SEO? (Mostly good SEO, plus the facts and booking path AI depends on)
    - Can you guarantee ChatGPT recommends us? (No; here's what we can do)
-   - What does it cost? (One price agreed up front, plus the money-back promise)
+   - What does it cost? (One flat monthly fee covering fixes and upkeep, month to month, plus the money-back promise)
    - How does the check work?
    - What do you need from me?
 

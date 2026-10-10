@@ -41,8 +41,9 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl border-t border-line px-4 py-6 text-xs text-muted sm:px-6">
-        © {new Date().getFullYear()} Oakheart Lab
+      <div className="mx-auto flex max-w-6xl gap-4 border-t border-line px-4 py-6 text-xs text-muted sm:px-6">
+        <span>© {new Date().getFullYear()} Oakheart Lab</span>
+        <Link href="/privacy" className="underline underline-offset-2 hover:text-ink">Privacy</Link>
       </div>
     </footer>
   );

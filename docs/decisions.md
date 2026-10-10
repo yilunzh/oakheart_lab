@@ -2,6 +2,13 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-10: One flat monthly fee; privacy page; subhead and urgency line are final
+
+- **Pricing model:** one flat monthly fee covers the first round of fixes and the upkeep after it. No separate project fee. Month to month, stop anytime. Still no prices on the site (D3a). Step 2 label "Included in your monthly fee"; How it works H2 "A free check, then one flat monthly fee for the fixes and the upkeep."; pricing, contract and check-page FAQs updated. **Supersedes** "one price, agreed up front" for the fixes.
+- **Privacy page** at `/privacy`, linked under the form and in the footer, stating only what the code does (form fields, referrer, UTM, hashed IP; Vercel, Neon, Resend; no advertising or tracking cookies; deletion on request by email).
+- **Hero subhead and "Smart companies are already sprinting…" are final owner choices.** Reviewers are told not to deduct for them.
+- **Mobile:** the monthly loop is drawn as a dashed bracket from step 3 back to step 1; "Who's already moving" shows two items on phones, four from `sm` up.
+
 ## 2026-10-10: Month to month; hero names the assistants we check
 
 - **Commitment:** ongoing work is month to month, stop anytime. New FAQ "Is there a long contract?"; step 3 label "Every month, stop anytime".
