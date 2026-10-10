@@ -26,3 +26,6 @@ Closed since round 10: the founder H2, bio and schema now use approved facts, an
 | 5 | Subhead repeats "Customers now ask" | **Owner kept it.** |
 | 6 | A duplicate request drops a new "AI should get right" answer | **Fixed:** stored as a `detail` row (counts toward the IP limit, never retried) and forwarded to the owner as "Added detail for an existing AI check". The confirmation says it was passed on. Two new tests. |
 | 7 | Plan intro has no period; plan columns are 3/3/2 | **Fixed:** period added; a third Support fix (review request the day after). |
+
+## Post-review live check (`bbc4d21`)
+A new request then a duplicate with an added answer, on the live site at 390 px: `201 received`, then `202 {"status":"duplicate","forwarded":true}` with "We've passed your new details on". Owner inbox: "New AI check request: E2E Round11 duplicate (ignore)" at 21:01:07Z and "Added detail for an existing AI check: E2E Round11 duplicate (ignore)" at 21:01:11Z.
