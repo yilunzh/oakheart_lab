@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div>
           <Logo className="text-lg" />
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
-            AI visibility, booking and customer support for businesses that move atoms, not bits.
+            AI visibility, booking and customer support for tours, rentals, auto, home services and stays.
           </p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">{moneyBack}</p>
         </div>

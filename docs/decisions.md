@@ -2,6 +2,13 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-10: Recurring offer, plainer headings, lighter pages
+
+- **Ongoing support is part of the offer, not optional.** The owner wants a recurring business that pays back acquisition cost. Step 3 is now "Stay ahead" (label "Every month"): re-run the check, keep facts current, improve booking. A loop note ties each month's check to the next round of fixes; the sample plan ends with a monthly line; the pricing FAQ says ongoing work is a monthly fee agreed up front. **Supersedes** "Ongoing support (optional)" in the brief and the 2026-10-04 three-step decision.
+- **"Move atoms, not bits" is a quote, not a heading.** The hero eyebrow is now "For tours, rentals, auto, home services and stays"; the founder H2 is "Over a decade building how people buy and rent cars online." The phrase stays out of headings; the footer and site description name the business types instead.
+- **Book pillar:** "Age, waiver and group-size rules shown before checkout" was confusing and minor. Replaced with "Live times and prices on the page they land on" and "Fewer steps to a confirmed booking on a phone". The sample plan's "ask for ages" fix became "Cut the steps from tour page to confirmed booking on a phone".
+- **Less text, more visuals:** the three failure-mode paragraphs became a "Where bookings slip away" flow; the pillars hang off a "Your facts" bar; "How it works" shows the monthly loop; the founder roles are chips; the check page's method paragraph became a questions × assistants × runs = report diagram. Shorter copy throughout.
+
 ## 2026-10-10: Founder framing, quote, subhead and urgency line (owner answers)
 
 After review rounds 9 and 10 the owner decided:

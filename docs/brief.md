@@ -24,7 +24,7 @@ Three steps (owner decision, 2026-10-04):
    - **Discover:** AI search and SEO (content, structured data, entity consistency, crawlability)
    - **Book:** personalized booking and upsell
    - **Support:** customer self-service and AI support with handoff to staff
-3. **Ongoing support (optional):** keep up as assistants and competitors change, with visibility monitoring, current facts and booking improvements.
+3. **Ongoing support (monthly, part of the core offer, not optional; owner decision 2026-10-10):** each month we re-run the check, keep facts current and improve booking and support. The goal is a recurring relationship that pays back acquisition cost.
 
 **Also available:** companion mobile app; staff tools and automation.
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { AdoptionChart } from "@/components/adoption-chart";
 import { AnswerCard } from "@/components/answer-card";
+import { BookingLeaks } from "@/components/booking-leaks";
 import { CtaLink } from "@/components/cta-link";
 import { Faq } from "@/components/faq";
 import { SamplePlan } from "@/components/sample-plan";
@@ -12,11 +13,14 @@ import {
   movers,
   talkFirst,
   customerQuestions,
-  failureModes,
   homeFaq,
   moneyBack,
   alsoAvailable,
+  audienceLine,
+  factsLine,
+  loopNote,
   pillars,
+  roles,
   shiftStats,
   site,
   steps,
@@ -78,7 +82,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-24">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-accent">
-            For businesses that move atoms, not bits
+            {audienceLine}
           </p>
           <h1 className="mt-4 text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
             Customers now ask AI which local business to book.{" "}
@@ -112,7 +116,7 @@ export default function Home() {
       <Section
         eyebrow="What changed"
         title="AI answers now shape who gets the booking."
-        intro="Customers used to compare ten links. Now they ask an assistant, which often names just two or three businesses, and the number of people asking is climbing fast. Smart companies are already sprinting to get ahead of it."
+        intro="Customers used to compare ten links. Now an assistant often names two or three businesses, and more people ask every month. Smart companies are already sprinting to get ahead of it."
         tone="surface"
       >
         <div className="grid gap-6 lg:grid-cols-3">
@@ -165,9 +169,14 @@ export default function Home() {
         title="You can’t win a customer you never knew was looking."
         intro="They ask an assistant questions like these and book whoever it suggests. If that isn’t you, you never find out they were looking."
       >
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div
+          className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0"
+          role="list"
+          aria-label="Questions customers ask AI"
+          tabIndex={0}
+        >
           {customerQuestions.map((c) => (
-            <div key={c.q} className="rounded-2xl border border-line bg-surface p-5">
+            <div key={c.q} role="listitem" className="w-[80%] shrink-0 snap-start rounded-2xl border border-line bg-surface p-5 sm:w-auto">
               <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-wider text-muted">
                 <Image src={`/icons/${c.icon}.webp`} alt="" width={40} height={40} className="size-10 shrink-0" />
                 {c.kind}
@@ -176,29 +185,30 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {failureModes.map((f, i) => (
-            <div key={f.title}>
-              <p className="font-mono text-sm text-accent">0{i + 1}</p>
-              <h3 className="mt-2 text-xl font-semibold">{f.title}</h3>
-              <p className="mt-2 leading-relaxed text-muted">{f.body}</p>
-            </div>
-          ))}
-        </div>
+        <BookingLeaks />
       </Section>
 
       {/* System */}
       <Section
         id="system"
         eyebrow="What we do"
-        title="Discover, book and support, handled end to end."
-        intro="What AI says about you, how customers book and the answers they get afterwards all depend on the same facts. We keep them consistent, so customers hear the same story everywhere."
+        title="One set of facts, three places customers meet you."
+        intro="AI answers, your booking page and your support all draw on the same facts. We keep them right everywhere."
         tone="surface"
       >
-        <ol className="grid gap-6 md:grid-cols-3">
+        <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-paper px-5 py-4">
+          <p className="mr-2 font-mono text-xs uppercase tracking-widest text-muted">Your facts</p>
+          {factsLine.map((f) => (
+            <span key={f} className="rounded-full bg-accent-soft px-3 py-1 text-sm font-medium text-accent">{f}</span>
+          ))}
+        </div>
+        <div aria-hidden="true" className="hidden h-6 grid-cols-3 md:grid">
+          {pillars.map((p) => <span key={p.key} className="mx-auto w-px bg-ink/25" />)}
+        </div>
+        <ol className="mt-4 grid gap-6 md:mt-0 md:grid-cols-3">
           {pillars.map((p, i) => (
             <li key={p.key} className="flex flex-col rounded-2xl border border-line bg-paper p-6">
-              <Image src={`/icons/${p.icon}.webp`} alt="" width={64} height={64} className="mb-5 size-16" />
+              <Image src={`/icons/${p.icon}.webp`} alt="" width={48} height={48} className="mb-4 size-12" />
               <p className="flex items-center gap-3 font-mono text-sm">
                 <span className="grid size-7 place-items-center rounded-full bg-ink text-paper">
                   {i + 1}
@@ -221,7 +231,7 @@ export default function Home() {
       </Section>
 
       {/* Founder */}
-      <Section id="founder" eyebrow="Who you’ll work with" title="Over a decade building digital commerce for businesses that move atoms, not bits.">
+      <Section id="founder" eyebrow="Who you’ll work with" title="Over a decade building how people buy and rent cars online.">
         <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
           <Image
             src="/images/yilun-zhang.jpg"
@@ -239,14 +249,18 @@ export default function Home() {
               Oakheart Lab.&rdquo;
             </blockquote>
             <p className="mt-5 leading-relaxed text-muted">
-              Yilun Zhang has spent the last decade building digital commerce products in
-              automotive, an industry where you&rsquo;re ultimately moving atoms, not bits. Behind
-              every car bought or rented online sit real vehicles, locations, staff, eligibility
-              rules and handover times, and the online experience only works when they all line
-              up. That is the same operational complexity your business runs on. He leads digital
-              products at Hertz, and before that built digital commerce at Clutch, Rivian and
-              Carvana.
+              Yilun Zhang has spent the last decade building digital commerce in automotive, where
+              cars, locations, staff and handover times all have to line up behind every online
+              sale. Your business runs on the same kind of complexity.
             </p>
+            <ul className="mt-5 flex flex-wrap gap-2 text-sm">
+              {roles.map((r) => (
+                <li key={r.company} className="rounded-full border border-line px-3 py-1.5">
+                  <span className="font-semibold">{r.company}</span>
+                  <span className="text-muted"> · {r.title}</span>
+                </li>
+              ))}
+            </ul>
             <p className="mt-4 text-sm">
               <a href={site.linkedin} className="underline underline-offset-2 hover:text-accent" rel="noopener">
                 LinkedIn
@@ -267,17 +281,29 @@ export default function Home() {
         title="Start with a free check. Decide once you’ve seen what we’d change."
         tone="surface"
       >
-        <ol className="grid gap-6 md:grid-cols-3">
+        <ol className="grid gap-4 md:grid-cols-3">
           {steps.map((s, i) => (
-            <li key={s.title} className="border-t-2 border-ink pt-5">
-              <Image src={`/icons/${s.icon}.webp`} alt="" width={56} height={56} className="mb-4 size-14" />
+            <li
+              key={s.title}
+              className={`relative rounded-2xl border p-5 ${i === 2 ? "border-accent bg-accent-soft" : "border-line bg-paper"}`}
+            >
+              <Image src={`/icons/${s.icon}.webp`} alt="" width={48} height={48} className="mb-3 size-12" />
               <p className="font-mono text-xs uppercase tracking-wider text-muted">Step {i + 1}</p>
-              <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
+              <h3 className="mt-1 text-lg font-semibold">{s.title}</h3>
               <p className="mt-1 text-sm font-medium text-accent">{s.time}</p>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.body}</p>
+              {i < 2 && (
+                <span aria-hidden="true" className="absolute -right-3.5 top-1/2 z-10 hidden size-7 -translate-y-1/2 place-items-center rounded-full border border-line bg-surface text-muted md:grid">
+                  →
+                </span>
+              )}
             </li>
           ))}
         </ol>
+        <p className="mt-4 flex items-center gap-3 rounded-2xl border border-dashed border-accent/60 px-5 py-3 text-[15px]">
+          <span aria-hidden="true" className="text-xl text-accent">↻</span>
+          {loopNote}
+        </p>
         <SamplePlan />
         <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-accent-soft p-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-lg font-medium">{moneyBack}</p>
@@ -302,8 +328,7 @@ export default function Home() {
             Find out what AI tells your customers about you.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-paper/75">
-            Tell us your business and website. Within 24 hours you&rsquo;ll get a plain-language
-            report: where you show up, what&rsquo;s wrong, and what to fix first. Free, with no
+            Within 24 hours: where you show up, what&rsquo;s wrong and what to fix first. Free, no
             obligation.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">

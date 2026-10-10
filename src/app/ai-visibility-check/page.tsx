@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckForm } from "@/components/check-form";
 import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
 import { SampleReport } from "@/components/sample-report";
-import { checkCovers, checkFaq, site, talkFirst } from "@/content/site";
+import { checkCovers, checkFaq, methodSteps, site, talkFirst } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Free AI Visibility Check",
@@ -125,18 +126,23 @@ export default function CheckPage() {
       </Section>
 
       <Section eyebrow="Method" title="How we run the check."
-        intro={
-          <>
-            We write questions the way your customers would ask them, for your type of business and
-            location. We run each question several times on each assistant, because answers change
-            from one run to the next. The report shows how often you were mentioned and described
-            correctly, with the sources each assistant cited. Answers also vary with location and
-            account, so what one customer sees on their own phone can differ. It is a sample, not a
-            ranking. Any
-            tool that gives you a single &ldquo;AI rank&rdquo; is overstating what can be measured.
-          </>
-        }
+        intro="Answers vary by run, location and account, so we sample them. It is a sample, not a ranking. Any tool that gives you a single “AI rank” is overstating what can be measured."
       >
+        <ol className="mb-12 grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1.2fr]">
+          {methodSteps.map((m, i) => (
+            <Fragment key={m.label}>
+              {i > 0 && (
+                <li aria-hidden="true" className="grid place-items-center text-2xl text-muted">
+                  {i < methodSteps.length - 1 ? "×" : "="}
+                </li>
+              )}
+              <li className={`rounded-2xl p-5 ${i === methodSteps.length - 1 ? "bg-night text-paper" : "border border-line bg-surface"}`}>
+                <p className="text-lg font-semibold">{m.label}</p>
+                <p className={`mt-1 text-sm leading-snug ${i === methodSteps.length - 1 ? "text-paper/75" : "text-muted"}`}>{m.detail}</p>
+              </li>
+            </Fragment>
+          ))}
+        </ol>
         <Faq items={checkFaq} />
         <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl bg-night p-6 text-paper sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <p className="max-w-xl text-xl font-semibold leading-snug">

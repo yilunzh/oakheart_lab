@@ -15,7 +15,7 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
 7. **Facts, not content volume.** We don't sell a monthly article quota. For booking businesses, a handful of operational facts decide what AI says. See `docs/research/competitor-firstindex.md`.
 
 ## Hero
-- **Eyebrow:** For businesses that move atoms, not bits
+- **Eyebrow:** For tours, rentals, auto, home services and stays
 - **H1:** Customers now ask AI which local business to book. *Does it recommend you, and get your details right?*
 - **Sub:** Customers now ask Claude, Gemini, ChatGPT, Grok and Muse for recommendations before they ever visit your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And when customers click through, we make booking with you quick and easy, using the booking system you already have.
 - **Primary CTA:** Get your free AI check
@@ -40,7 +40,7 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
    - **Booked:** turn that visit into a confirmed booking, with the right add-ons.
    - **Supported:** answer customers' questions instantly, and hand off to your team when it matters.
 5. **Founder:** "I've spent over a decade building commerce where the click turns into a car, a key, a delivery. Now I help businesses like yours do the same with AI." Roles: Hertz, Rivian, Carvana, Clutch.
-6. **How it works:** free check (<24h) → a plan of specific fixes across Discover, Book and Support, with one price agreed before we start (shown as a labeled sample plan) → ongoing if you want it.
+6. **How it works:** free check (<24h) → a plan of specific fixes across Discover, Book and Support, with one price agreed before we start (shown as a labeled sample plan) → monthly ongoing work: re-run the check, keep facts current, improve booking. Shown as a loop, not an add-on.
 7. **Risk reversal (exact):** "If you're not happy with our service, we'll give your money back, no questions asked."
 8. **FAQ:**
    - Do I have to switch booking systems? (No)

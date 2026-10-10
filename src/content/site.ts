@@ -5,8 +5,10 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps businesses that move atoms, not bits get found by AI assistants, described correctly, booked without friction and supported after the booking.",
+    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction and supported after the booking.",
 };
+
+export const audienceLine = "For tours, rentals, auto, home services and stays";
 
 export const checkCta = {
   label: "Get your free AI check",
@@ -26,14 +28,14 @@ export const nav = [
 
 export const shiftStats = [
   {
-    figure: "8% vs 15%",
-    text: "How often people clicked a regular search result when Google showed an AI summary, compared with searches that had no summary.",
+    figure: "8%",
+    text: "of Google searches showing an AI summary led to a click on a result, against 15% without one.",
     source: "Pew Research Center, March 2025 browsing data, published Jul 2025",
     href: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
   },
   {
     figure: "45%",
-    text: "of US consumers say they’ve used AI tools like ChatGPT or Gemini to get local business recommendations.",
+    text: "of US consumers have used AI tools like ChatGPT or Gemini for local business recommendations.",
     source: "BrightLocal Local Consumer Review Survey, Feb 2026",
     href: "https://www.brightlocal.com/research/local-consumer-review-survey/",
   },
@@ -84,76 +86,80 @@ export const customerQuestions = [
   { kind: "Moving & storage", icon: "moving", q: "Who can move a one-bedroom this Saturday, and what will it cost?" },
 ];
 
-export const failureModes = [
-  {
-    title: "AI doesn’t mention you",
-    body: "The assistant names two or three businesses. If it can’t find clear, current facts about yours, you aren’t one of them.",
-  },
-  {
-    title: "AI gets your details wrong",
-    body: "Wrong age limit, old prices, a cancellation policy you changed last year. The customer rules you out before they ever see your site.",
-  },
-  {
-    title: "The booking path loses them",
-    body: "They click through and hit a clunky widget, a dead end on mobile, or a question nobody answers. They book someone else.",
-  },
+/** Where a booking is lost between the question and the confirmation. */
+export const leaks = [
+  { stage: "Customer asks AI", leak: "You’re not mentioned", why: "It can’t find clear, current facts about you." },
+  { stage: "AI names you", leak: "Your details are wrong", why: "An old price or age limit rules you out." },
+  { stage: "They click through", leak: "Booking is a struggle", why: "A clunky widget or dead end on mobile." },
 ];
+
+export const factsLine = ["Offers", "Prices", "Availability", "Policies"];
 
 export const pillars = [
   {
     key: "Discover",
     icon: "discover",
-    title: "Be the business AI can find, understand and cite.",
+    title: "Be found and described correctly.",
     points: [
-      "Clear, crawlable pages for every offer, with the details customers ask about",
-      "Consistent facts across your site, Google Business Profile, Yelp and booking platforms",
-      "Search and AI crawler access set up correctly",
+      "Clear pages with the details customers ask about",
+      "The same facts on your site, Google, Yelp and booking platforms",
+      "Readable by search and AI crawlers",
     ],
   },
   {
     key: "Book",
     icon: "book",
-    title: "Turn that visit into a confirmed booking.",
+    title: "Turn the visit into a booking.",
     points: [
-      "A booking path built around how your customers choose",
-      "Age, waiver and group-size rules shown before checkout, not after",
-      "Connected to the booking system you already use",
+      "Live times and prices on the page they land on",
+      "Fewer steps to a confirmed booking on a phone",
+      "Works with the booking system you already use",
     ],
   },
   {
     key: "Support",
     icon: "support",
-    title: "Answer customers’ questions instantly, and bring in your team when it matters.",
+    title: "Answer questions, day or night.",
     points: [
-      "Self-service answers grounded in your real policies",
-      "Pre-visit details, like what to bring and where to park, sent without staff typing them",
-      "“Can we bring the dog?” answered from your policy at 10 pm, with a handoff when it’s a judgment call",
+      "“Can we bring the dog?” answered from your policy at 10 pm",
+      "A handoff to your team for judgment calls",
+      "Fewer repeat calls for your staff",
     ],
   },
 ];
 
-export const alsoAvailable = "Also available: a companion mobile app for your customers, and staff tools and automation.";
+export const alsoAvailable = "Also available: a companion mobile app, and staff tools and automation.";
+
+/** Public roles only (docs/brief.md). */
+export const roles = [
+  { company: "Hertz", title: "VP of Product" },
+  { company: "Clutch", title: "Head of Product" },
+  { company: "Rivian", title: "Group PM, Digital Commerce" },
+  { company: "Carvana", title: "Product Track Lead" },
+];
 
 export const steps = [
   {
     title: "Free AI check",
     icon: "step-check",
     time: "Under 24 hours",
-    body: "We ask the leading AI assistants what your customers ask. Within 24 hours you’ll see where you’re left out, what they get wrong and what to fix first.",
+    body: "We ask the leading assistants what your customers ask, then show where you’re missing, what’s wrong and what to fix first.",
   },
   {
-    title: "A plan to close the gaps",
+    title: "Fix the gaps",
     icon: "step-plan",
     time: "One price, agreed up front",
-    body: "We take what the check found, walk through your booking path and the questions your staff answer most, and turn it into a short list of specific fixes across Discover, Book and Support. Then we do the work with the systems you already use. You see the plan and the price before anything starts.",
+    body: "We walk through your booking path and the questions your staff answer most, then fix it all on the systems you already use.",
   },
   {
-    title: "Ongoing support, if you want it",
+    title: "Stay ahead",
     icon: "step-ongoing",
-    time: "Optional",
-    body: "AI assistants and your competitors keep changing. We keep checking what assistants say about you, keep your facts current and keep improving how customers book.",
+    time: "Every month",
+    body: "Assistants, competitors and your offers keep changing. Each month we re-run the check, keep your facts current and improve how customers book.",
   },
 ];
+
+export const loopNote = "Each month’s check shows what changed and sets the next round of fixes.";
 
 /** Illustrative plan for the same invented business as the sample report. No timelines or prices. */
 export const samplePlan = {
@@ -162,28 +168,29 @@ export const samplePlan = {
     {
       key: "Discover",
       fixes: [
-        "Correct the age policy on the old review-site listing and the Google Business Profile, so every source says 6+ with an adult.",
-        "Add an “Age & requirements” section to each tour page, and answer the policy questions customers ask: weather, cancellation, what to bring.",
-        "Publish tour times, prices and what’s included as page text and structured data that match the booking system.",
+        "Fix the age rule on an old review listing and the Google Business Profile",
+        "Add an “Age & requirements” section to every tour page",
+        "Publish times, prices and inclusions as text and structured data",
       ],
     },
     {
       key: "Book",
       fixes: [
-        "Show sunset-tour availability on the tour page itself, from the existing booking system, instead of sending people to a separate widget.",
-        "Ask for the group’s ages before checkout, so families only see tours they can take.",
-        "Offer the dry-bag rental at checkout on sunset tours, where it actually fits.",
+        "Show live sunset-tour times on the tour page",
+        "Cut the steps from tour page to confirmed booking on a phone",
+        "Offer the dry-bag rental at checkout on sunset tours",
       ],
     },
     {
       key: "Support",
       fixes: [
-        "Answer “Does the tour run if it rains?” and similar questions instantly from the real weather policy, and pass anything about a specific booking to staff.",
-        "Send each booking the meeting point, what to bring and the age rule automatically, so staff stop answering it by phone.",
-        "Ask for a review the day after the tour, when the experience is fresh, through the platforms assistants already read.",
+        "Answer “Does it run if it rains?” from the real weather policy",
+        "Send the meeting point and what to bring after every booking",
+        "Ask for a review the day after the tour",
       ],
     },
   ],
+  monthly: "Every month: re-run the check, keep listings current, report what changed.",
 };
 
 export const homeFaq = [
@@ -206,7 +213,7 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "Every project gets one price, agreed before we start. We don’t publish prices because the work depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "The first round of fixes has one price, agreed before we start. Ongoing work is a monthly fee, also agreed up front. We don’t publish prices because the work depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "What do you need from me?",
@@ -238,20 +245,27 @@ export const heardFrom = [
 export const checkCovers = [
   {
     title: "Are you mentioned?",
-    body: "How often each assistant names your business across repeated runs of the same questions.",
+    body: "How often each assistant names you across repeated runs.",
   },
   {
     title: "Are your details right?",
-    body: "Whether the assistant gets your prices, availability, age limits, what’s included and policies right, checked against your own site. If you tell us what it should get right, we check that first.",
+    body: "Prices, availability, age limits, inclusions and policies, checked against your site. Anything you tell us it should get right comes first.",
   },
   {
     title: "Where it gets its information",
-    body: "The websites, listings and review sites each assistant cites, so you know which sources shape what it says.",
+    body: "The sites, listings and reviews each assistant cites.",
   },
   {
     title: "What to fix first",
-    body: "The three changes most likely to improve what AI says about you, in plain language.",
+    body: "The three changes most likely to improve what AI says about you.",
   },
+];
+
+export const methodSteps = [
+  { label: "Your customers’ questions", detail: "Written for your type of business and location" },
+  { label: "6 assistants", detail: "ChatGPT, AI Overviews, AI Mode, Gemini, Perplexity, Claude" },
+  { label: "Several runs each", detail: "Because answers change from run to run" },
+  { label: "Your report", detail: "How often you’re mentioned and described correctly, with the sources cited" },
 ];
 
 export const talkFirst = {

@@ -11,13 +11,13 @@ export function SamplePlan() {
       </div>
       <div className="p-5 sm:p-6">
         <p className="text-sm text-muted">
-          {samplePlan.business} (invented), after a check found ChatGPT giving the wrong minimum age, a walk through its booking page and the questions its staff answer most.
+          {samplePlan.business} (invented). The check found ChatGPT giving the wrong minimum age.
         </p>
         <div className="mt-5 grid gap-6 md:grid-cols-3">
           {samplePlan.groups.map((g) => (
             <div key={g.key}>
               <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">{g.key}</p>
-              <ul className="mt-3 space-y-3 text-[15px] leading-relaxed">
+              <ul className="mt-3 space-y-2.5 text-[15px] leading-snug">
                 {g.fixes.map((f) => (
                   <li key={f} className="flex gap-2">
                     <span aria-hidden="true" className="text-accent">—</span>
@@ -28,10 +28,13 @@ export function SamplePlan() {
             </div>
           ))}
         </div>
+        <p className="mt-6 flex items-start gap-2 rounded-xl bg-accent-soft px-4 py-3 text-[15px] font-medium">
+          <span aria-hidden="true" className="text-accent">↻</span>
+          {samplePlan.monthly}
+        </p>
       </div>
       <figcaption className="border-t border-line px-5 py-3 text-xs text-muted">
-        Shows the format only. Your plan lists the fixes your check and walk-through point to, what each one
-        involves, with one price for all of it, before any work starts.
+        Shows the format only. Your plan comes from your check, with one price before any work starts.
       </figcaption>
     </figure>
   );
