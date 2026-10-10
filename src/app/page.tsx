@@ -89,8 +89,8 @@ export default function Home() {
             <span className="text-accent">Does it recommend you, and get your details right?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Customers now ask Claude, Gemini, ChatGPT, Grok and Muse for recommendations before they
-            ever visit your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And
+            Customers now ask ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude for
+            recommendations before they ever visit your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And
             when customers click through, we make booking with you quick and easy, using the booking
             system you already have.
           </p>

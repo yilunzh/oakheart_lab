@@ -2,6 +2,11 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-10: Month to month; hero names the assistants we check
+
+- **Commitment:** ongoing work is month to month, stop anytime. New FAQ "Is there a long contract?"; step 3 label "Every month, stop anytime".
+- **Hero assistant list matches the check:** "ChatGPT, Google's AI, Gemini, Perplexity and Claude". **Supersedes** the earlier "Claude, Gemini, ChatGPT, Grok and Muse" wording (reviewers flagged the coverage mismatch three rounds running).
+
 ## 2026-10-10: Recurring offer, plainer headings, lighter pages
 
 - **Ongoing support is part of the offer, not optional.** The owner wants a recurring business that pays back acquisition cost. Step 3 is now "Stay ahead" (label "Every month"): re-run the check, keep facts current, improve booking. A loop note ties each month's check to the next round of fixes; the sample plan ends with a monthly line; the pricing FAQ says ongoing work is a monthly fee agreed up front. **Supersedes** "Ongoing support (optional)" in the brief and the 2026-10-04 three-step decision.

@@ -148,7 +148,7 @@ export const steps = [
   {
     title: "Stay ahead",
     icon: "step-ongoing",
-    time: "Every month",
+    time: "Every month, stop anytime",
     body: "Assistants, competitors and your offers keep changing. Each month we re-run the check, keep your facts current and improve how customers book.",
   },
 ];
@@ -208,6 +208,10 @@ export const homeFaq = [
   {
     q: "What does it cost?",
     a: "The first round of fixes has one price, agreed before we start. Ongoing work is a monthly fee, also agreed up front. We don’t publish prices because the work depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+  },
+  {
+    q: "Is there a long contract?",
+    a: "No. The monthly work is month to month, and you can stop anytime.",
   },
   {
     q: "What do you need from me?",

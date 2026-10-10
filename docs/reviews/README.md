@@ -18,6 +18,7 @@ Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`.
 | 9 | `e03629f` | https://oakheart-lab.vercel.app | 8.10 (all gates pass) | Positioning vs content-led competitors: sample plan, outcome-first form field, pricing/SEO FAQs; one-line header at 320px |
 | 10 | `89f8483` | https://oakheart-lab.vercel.app | 8.20 (all gates pass) | Round-9 fixes. Remaining gaps are owner decisions (founder framing, hero subhead, urgency line) and ops (Resend domain, `CRON_SECRET`, privacy page) |
 | 11 | `1d41c58` | https://oakheart-lab.vercel.app | 8.35 (all gates pass) | Owner decisions: founder section on approved facts, quote approved, subhead names Claude, Gemini, ChatGPT, Grok and Muse |
+| 12 | `a164083` | https://oakheart-lab.vercel.app | 7.85 (all gates pass) | Recurring offer, plainer headings, visuals; recurring frame only half-carried |
 
 ## Outcome (8 rounds complete)
 
