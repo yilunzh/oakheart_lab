@@ -13,9 +13,9 @@ export function SiteHeader() {
       >
         Skip to content
       </a>
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-4 min-[360px]:gap-4 sm:px-6">
         <Link href="/" aria-label="Oakheart Lab home">
-          <Logo className="text-[17px]" />
+          <Logo className="whitespace-nowrap text-[17px] max-[359px]:text-[15px]" />
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-7 text-sm text-muted md:flex">
           {nav.map((item) => (
@@ -25,8 +25,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <CtaLink href={checkCta.href} className="min-h-10 px-4 text-sm sm:px-5">
-            <span className="sm:hidden">Free AI check</span>
+          <CtaLink href={checkCta.href} className="min-h-10 whitespace-nowrap max-sm:px-4 max-sm:text-sm sm:px-5 sm:text-sm">
+            <span className="min-[360px]:hidden">Free check</span>
+            <span className="hidden min-[360px]:inline sm:hidden">Free AI check</span>
             <span className="hidden sm:inline">{checkCta.label}</span>
           </CtaLink>
           <MobileNav />

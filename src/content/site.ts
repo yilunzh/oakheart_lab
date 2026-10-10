@@ -116,7 +116,7 @@ export const pillars = [
     title: "Turn that visit into a confirmed booking.",
     points: [
       "A booking path built around how your customers choose",
-      "The right add-ons at the right moment, never pushy",
+      "Age, waiver and group-size rules shown before checkout, not after",
       "Connected to the booking system you already use",
     ],
   },
@@ -127,7 +127,7 @@ export const pillars = [
     points: [
       "Self-service answers grounded in your real policies",
       "AI support that knows when to bring in your team",
-      "Fewer repeat questions for your staff",
+      "“Can we bring the dog?” answered from your policy at 10 pm, with a handoff when it’s a judgment call",
     ],
   },
 ];
@@ -155,7 +155,7 @@ export const steps = [
 
 /** Illustrative plan for the same invented business as the sample report. No timelines or prices. */
 export const samplePlan = {
-  business: "Brackenfold Kayaks",
+  business: "Quillbay Kayak Tours",
   groups: [
     {
       key: "Discover",
