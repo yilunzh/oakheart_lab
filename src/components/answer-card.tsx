@@ -11,7 +11,7 @@ const rows: Row[] = [
     tag: { tone: "good", label: "Correct" },
   },
   {
-    name: "Quillbay Kayak Tours",
+    name: "Fernhollow Kayaks",
     text: "Great reviews, but tours are for ages 12 and up.",
     tag: { tone: "bad", label: "Wrong. Their site says 6+ with an adult" },
   },

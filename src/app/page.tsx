@@ -15,6 +15,7 @@ import {
   failureModes,
   homeFaq,
   moneyBack,
+  alsoAvailable,
   pillars,
   shiftStats,
   site,
@@ -38,6 +39,7 @@ const jsonLd = {
       founder: { "@id": `${site.url}/#founder` },
       logo: `${site.url}/icon`,
       sameAs: [site.substack],
+      address: { "@type": "PostalAddress", addressLocality: "Atlanta", addressRegion: "GA", addressCountry: "US" },
       knowsAbout: ["AI search visibility", "Answer engine optimization", "Online booking conversion", "Customer support automation"],
     },
     {
@@ -45,6 +47,10 @@ const jsonLd = {
       "@id": `${site.url}/#founder`,
       name: "Yilun Zhang",
       jobTitle: "Founder",
+      description:
+        "Founder of Oakheart Lab. Has spent the last decade building digital commerce products in automotive, at Hertz, Clutch, Rivian and Carvana.",
+      alumniOf: { "@type": "CollegeOrUniversity", name: "University of Toronto" },
+      knowsAbout: ["Digital commerce", "Online booking", "AI search visibility"],
       image: `${site.url}/images/yilun-zhang.jpg`,
       worksFor: { "@id": `${site.url}/#org` },
       sameAs: [site.linkedin, site.substack],
@@ -211,10 +217,11 @@ export default function Home() {
             </li>
           ))}
         </ol>
+        <p className="mt-8 text-[15px] text-muted">{alsoAvailable}</p>
       </Section>
 
       {/* Founder */}
-      <Section id="founder" eyebrow="Who you'll work with" title="A decade of demand generation at enterprise scale, now working for you.">
+      <Section id="founder" eyebrow="Who you’ll work with" title="A decade of demand generation at enterprise scale, now working for you.">
         <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
           <Image
             src="/images/yilun-zhang.jpg"
@@ -254,7 +261,7 @@ export default function Home() {
       <Section
         id="how-it-works"
         eyebrow="How it works"
-        title="Start with a free check. Decide once you've seen what we'd change."
+        title="Start with a free check. Decide once you’ve seen what we’d change."
         tone="surface"
       >
         <ol className="grid gap-6 md:grid-cols-3">
@@ -263,6 +270,7 @@ export default function Home() {
               <Image src={`/icons/${s.icon}.webp`} alt="" width={56} height={56} className="mb-4 size-14" />
               <p className="font-mono text-xs uppercase tracking-wider text-muted">Step {i + 1}</p>
               <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
+              <p className="mt-1 text-sm font-medium text-accent">{s.time}</p>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.body}</p>
             </li>
           ))}

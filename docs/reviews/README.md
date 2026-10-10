@@ -15,6 +15,7 @@ Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`.
 | 6 | `e984681` | https://oakheart-lab.vercel.app (production at e984681) | 8.73 (all gates pass) | Mobile confirmation visible, claim-based retries after response, 3-hourly retry workflow, cutover checklist |
 | 7 | `8ec0e75` | https://oakheart-lab.vercel.app (production at 8ec0e75) | 8.90 (all gates pass) | Truthful method copy (manual checks), Service/Offer schema, no-double-send window, failing cron on missed sends, copy polish |
 | 8 | `860a3ae` | https://oakheart-lab.vercel.app (production at 860a3ae) | 8.50 (all gates pass) | Copy pass, crash-safe retry lease, 320px fixes |
+| 9 | `e03629f` | https://oakheart-lab.vercel.app | 8.10 (all gates pass) | Positioning vs content-led competitors: sample plan, outcome-first form field, pricing/SEO FAQs; one-line header at 320px |
 
 ## Outcome (8 rounds complete)
 

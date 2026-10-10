@@ -1,4 +1,6 @@
-export function Faq({ items }: { items: { q: string; a: string }[] }) {
+export type FaqItem = { q: string; a: string; source?: { label: string; href: string } };
+
+export function Faq({ items }: { items: FaqItem[] }) {
   return (
     <div className="divide-y divide-line border-y border-line">
       {items.map((item) => (
@@ -13,6 +15,14 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
             </span>
           </summary>
           <p className="mt-3 max-w-3xl leading-relaxed text-muted">{item.a}</p>
+          {item.source && (
+            <p className="mt-2 text-xs text-muted">
+              Source:{" "}
+              <a href={item.source.href} className="underline underline-offset-2 hover:text-ink" rel="noopener">
+                {item.source.label}
+              </a>
+            </p>
+          )}
         </details>
       ))}
     </div>

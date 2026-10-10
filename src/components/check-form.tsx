@@ -144,7 +144,7 @@ export function CheckForm() {
           If it isn&rsquo;t in your inbox, check your spam or promotions folder.
         </p>
         <p className="mt-3 leading-relaxed">
-          While you wait, see <Link href="/#system" className="underline underline-offset-2">how we fix what the check finds</Link>, or reply to the report with any questions. There&rsquo;s no sales call unless you ask for one.
+          While you wait, see <Link href="/#sample-plan" className="underline underline-offset-2">how a check becomes a plan</Link>, or reply to the report with any questions.
         </p>
       </div>
     );

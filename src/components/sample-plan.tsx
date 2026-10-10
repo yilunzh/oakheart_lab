@@ -11,7 +11,7 @@ export function SamplePlan() {
       </div>
       <div className="p-5 sm:p-6">
         <p className="text-sm text-muted">
-          {samplePlan.business} (invented), after a check found ChatGPT giving the wrong minimum age
+          {samplePlan.business} (invented), after a check found ChatGPT giving the wrong minimum age, and a walk through its booking page
         </p>
         <div className="mt-5 grid gap-6 md:grid-cols-3">
           {samplePlan.groups.map((g) => (
@@ -30,7 +30,7 @@ export function SamplePlan() {
         </div>
       </div>
       <figcaption className="border-t border-line px-5 py-3 text-xs text-muted">
-        Shows the format only. Your plan lists the fixes your check points to and what each one
+        Shows the format only. Your plan lists the fixes your check and walk-through point to, what each one
         involves, with one price for all of it, before any work starts.
       </figcaption>
     </figure>

@@ -5,7 +5,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps businesses that move atoms, not bits get found by AI assistants, described correctly, and booked without friction.",
+    "Oakheart Lab helps businesses that move atoms, not bits get found by AI assistants, described correctly, booked without friction and supported after the booking.",
 };
 
 export const checkCta = {
@@ -126,11 +126,13 @@ export const pillars = [
     title: "Answer customers’ questions instantly, and bring in your team when it matters.",
     points: [
       "Self-service answers grounded in your real policies",
-      "AI support that knows when to bring in your team",
+      "Pre-visit details, like what to bring and where to park, sent without staff typing them",
       "“Can we bring the dog?” answered from your policy at 10 pm, with a handoff when it’s a judgment call",
     ],
   },
 ];
+
+export const alsoAvailable = "Also available: a companion mobile app for your customers, and staff tools and automation.";
 
 export const steps = [
   {
@@ -143,7 +145,7 @@ export const steps = [
     title: "A plan to close the gaps",
     icon: "step-plan",
     time: "One price, agreed up front",
-    body: "We turn what the check found into a short list of specific fixes across Discover, Book and Support, then do the work with the systems you already use. You see the plan and the price before anything starts.",
+    body: "We take what the check found, walk through your booking path and the questions your staff answer most, and turn it into a short list of specific fixes across Discover, Book and Support. Then we do the work with the systems you already use. You see the plan and the price before anything starts.",
   },
   {
     title: "Ongoing support, if you want it",
@@ -170,12 +172,14 @@ export const samplePlan = {
       fixes: [
         "Show sunset-tour availability on the tour page itself, from the existing booking system, instead of sending people to a separate widget.",
         "Ask for the group’s ages before checkout, so families only see tours they can take.",
+        "Offer the dry-bag rental at checkout on sunset tours, where it actually fits.",
       ],
     },
     {
       key: "Support",
       fixes: [
         "Answer “Does the tour run if it rains?” and similar questions instantly from the real weather policy, and pass anything about a specific booking to staff.",
+        "Send each booking the meeting point, what to bring and the age rule automatically, so staff stop answering it by phone.",
       ],
     },
   ],
@@ -188,7 +192,8 @@ export const homeFaq = [
   },
   {
     q: "Isn’t this just SEO?",
-    a: "Mostly, it’s good SEO done properly. Google says showing up in its AI features rests on the same foundations as search. But we don’t sell a monthly quota of articles. For a business that takes bookings, a handful of facts decide what AI tells customers: what you offer, who it suits, what it costs, when it’s available and what your policies are. We make those correct and consistent everywhere assistants read them, and make sure the booking path converts the people they send.",
+    a: "Mostly, it’s good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode, with no special optimizations required. But we don’t sell a monthly quota of articles. For a business that takes bookings, a handful of facts decide what AI tells customers: what you offer, who it suits, what it costs, when it’s available and what your policies are. We make those correct and consistent everywhere assistants read them, and make sure the booking path converts the people they send.",
+    source: { label: "Google Search Central: AI features and your website", href: "https://developers.google.com/search/docs/appearance/ai-features" },
   },
   {
     q: "Don’t Google Maps and reviews still matter more?",
@@ -211,7 +216,8 @@ export const homeFaq = [
 export const businessTypes = [
   "Tours, activities & experiences",
   "Vehicle, boat or equipment rentals",
-  "Home or auto services",
+  "Car buying or auto service",
+  "Home services",
   "Health, wellness & beauty appointments",
   "Fitness, classes & studios",
   "Stays & hospitality",
