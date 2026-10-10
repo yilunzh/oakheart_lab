@@ -2,6 +2,14 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-10: Founder framing, quote, subhead and urgency line (owner answers)
+
+After review rounds 9 and 10 the owner decided:
+- **Founder section: approved facts, with automotive's relevance spelled out.** H2: "Over a decade building digital commerce for businesses that move atoms, not bits." The bio uses the approved line ("building digital commerce products in automotive … moving atoms, not bits") and explains why it transfers: vehicles, locations, staff, eligibility rules and handover times have to line up behind every online purchase or rental. **Supersedes** the 2026-10-04 "demand generation and digital transformation at enterprise scale" framing.
+- **Founder quote: approved as written.** Closes the open item from 2026-10-04.
+- **Hero subhead: kept, with the assistant list changed** to "Claude, Gemini, ChatGPT, Grok and Muse" (Muse is Meta's personal AI agent, launched Sep 2026), for keyword coverage. The rest of the subhead is unchanged.
+- **"Smart companies are already sprinting to get ahead of it." stays.** Reviewers flagged it as unsupported; the owner keeps it as a deliberate urgency line beside the dated "Who's already moving" list.
+
 ## 2026-10-10: Positioning against content-led AI visibility services
 
 The owner asked to act on the FirstIndex review (`docs/research/competitor-firstindex.md`). Changes: a labeled sample plan under "How it works", the form's optional field reframed as "What should AI get right about you?", a pricing FAQ that explains why there are no published prices, and an SEO FAQ that says we don't sell an article quota. Competitors stay unnamed on the site. No change to D3a (no prices) or the money-back sentence.

@@ -85,8 +85,8 @@ export default function Home() {
             <span className="text-accent">Does it recommend you, and get your details right?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Customers now ask ChatGPT, Gemini and Google for recommendations before they ever visit
-            your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And
+            Customers now ask Claude, Gemini, ChatGPT, Grok and Muse for recommendations before they
+            ever visit your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And
             when customers click through, we make booking with you quick and easy, using the booking
             system you already have.
           </p>
@@ -221,7 +221,7 @@ export default function Home() {
       </Section>
 
       {/* Founder */}
-      <Section id="founder" eyebrow="Who you’ll work with" title="A decade of demand generation at enterprise scale, now working for you.">
+      <Section id="founder" eyebrow="Who you’ll work with" title="Over a decade building digital commerce for businesses that move atoms, not bits.">
         <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
           <Image
             src="/images/yilun-zhang.jpg"
@@ -239,10 +239,13 @@ export default function Home() {
               Oakheart Lab.&rdquo;
             </blockquote>
             <p className="mt-5 leading-relaxed text-muted">
-              Yilun Zhang has spent over a decade leading demand generation and digital
-              transformation at enterprise scale. He leads digital products at Hertz, and before
-              that built digital commerce at Clutch, Rivian and Carvana. Oakheart Lab brings that
-              playbook to your business.
+              Yilun Zhang has spent the last decade building digital commerce products in
+              automotive, an industry where you&rsquo;re ultimately moving atoms, not bits. Behind
+              every car bought or rented online sit real vehicles, locations, staff, eligibility
+              rules and handover times, and the online experience only works when they all line
+              up. That is the same operational complexity your business runs on. He leads digital
+              products at Hertz, and before that built digital commerce at Clutch, Rivian and
+              Carvana.
             </p>
             <p className="mt-4 text-sm">
               <a href={site.linkedin} className="underline underline-offset-2 hover:text-accent" rel="noopener">

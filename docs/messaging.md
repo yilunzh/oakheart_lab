@@ -17,7 +17,7 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
 ## Hero
 - **Eyebrow:** For businesses that move atoms, not bits
 - **H1:** Customers now ask AI which local business to book. *Does it recommend you, and get your details right?*
-- **Sub:** Customers now ask ChatGPT, Gemini and Google for recommendations before they ever visit your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And when customers click through, we make booking with you quick and easy, using the booking system you already have.
+- **Sub:** Customers now ask Claude, Gemini, ChatGPT, Grok and Muse for recommendations before they ever visit your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And when customers click through, we make booking with you quick and easy, using the booking system you already have.
 - **Primary CTA:** Get your free AI check
 - **Microcopy:** Report in under 24 hours · Free, as many as you like · No obligation
 - **Secondary:** See what the check covers
