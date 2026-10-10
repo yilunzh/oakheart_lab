@@ -167,7 +167,6 @@ export default function Home() {
       <Section
         eyebrow="Why it matters"
         title="Questions your customers ask AI before they book."
-        intro="They book whoever the assistant suggests."
       >
         <div
           className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0"
@@ -192,7 +191,7 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="We fix what AI says, how you take bookings and how you answer questions."
+        title="We fix what AI reads about you, how you take bookings and how you answer questions."
         intro="All three run on the same facts. We get them right, then keep them right every month."
         tone="surface"
       >

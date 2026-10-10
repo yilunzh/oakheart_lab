@@ -215,7 +215,7 @@ export const homeFaq = [
   },
   {
     q: "What do you need from me?",
-    a: "For the free check: your business name, website, location, type of business and an email for the report. For a project: a short conversation about how you take bookings today, and access to the tools you already use.",
+    a: "For the free check: your business name, website, location, type of business and an email for the report. To work together: a short conversation about how you take bookings today, and access to the tools you already use.",
   },
 ];
 
@@ -282,7 +282,7 @@ export const checkFaq = [
   },
   {
     q: "Is it really free? What’s the catch?",
-    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk. If not, keep the report and use it however you like.",
+    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk: one price for the fixes, then a monthly fee for upkeep, month to month. If not, keep the report and use it however you like.",
   },
   {
     q: "Who runs the check?",
