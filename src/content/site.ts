@@ -5,7 +5,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction and supported after the booking.",
+    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction and supported after the booking, then keeps it that way every month.",
 };
 
 export const audienceLine = "For tours, rentals, auto, home services and stays";
@@ -27,12 +27,6 @@ export const nav = [
 ];
 
 export const shiftStats = [
-  {
-    figure: "8%",
-    text: "of Google searches showing an AI summary led to a click on a result, against 15% without one.",
-    source: "Pew Research Center, March 2025 browsing data, published Jul 2025",
-    href: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
-  },
   {
     figure: "45%",
     text: "of US consumers have used AI tools like ChatGPT or Gemini for local business recommendations.",
@@ -149,7 +143,7 @@ export const steps = [
     title: "Fix the gaps",
     icon: "step-plan",
     time: "One price, agreed up front",
-    body: "We walk through your booking path and the questions your staff answer most, then fix it all on the systems you already use.",
+    body: "We walk through your booking path and the questions your staff answer most, then fix what matters most on the systems you already use.",
   },
   {
     title: "Stay ahead",
@@ -159,7 +153,7 @@ export const steps = [
   },
 ];
 
-export const loopNote = "Each month’s check shows what changed and sets the next round of fixes.";
+export const loopNote = "Each month’s check sets the next round of fixes.";
 
 /** Illustrative plan for the same invented business as the sample report. No timelines or prices. */
 export const samplePlan = {

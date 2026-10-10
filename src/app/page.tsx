@@ -147,12 +147,12 @@ export default function Home() {
             </ol>
           </div>
         </div>
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-6">
           {shiftStats.map((s) => (
-            <figure key={s.figure} className="flex flex-col rounded-2xl border border-line bg-paper p-6">
-              <p className="text-4xl font-semibold tracking-tight">{s.figure}</p>
-              <p className="mt-3 flex-1 leading-relaxed">{s.text}</p>
-              <figcaption className="mt-4 text-xs text-muted">
+            <figure key={s.figure} className="grid gap-x-6 gap-y-2 rounded-2xl border border-line bg-paper p-6 sm:grid-cols-[auto_1fr] sm:items-center">
+              <p className="text-4xl font-semibold tracking-tight sm:row-span-2">{s.figure}</p>
+              <p className="leading-relaxed">{s.text}</p>
+              <figcaption className="text-xs text-muted">
                 Source:{" "}
                 <a href={s.href} className="underline underline-offset-2 hover:text-ink" rel="noopener">
                   {s.source}
@@ -166,8 +166,8 @@ export default function Home() {
       {/* Why it matters */}
       <Section
         eyebrow="Why it matters"
-        title="You can’t win a customer you never knew was looking."
-        intro="They ask an assistant questions like these and book whoever it suggests. If that isn’t you, you never find out they were looking."
+        title="Questions your customers ask AI before they book."
+        intro="They book whoever the assistant suggests."
       >
         <div
           className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0"
@@ -192,8 +192,8 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="One set of facts, three places customers meet you."
-        intro="AI answers, your booking page and your support all draw on the same facts. We keep them right everywhere."
+        title="We fix what AI says, how you take bookings and how you answer questions."
+        intro="All three run on the same facts. We get them right, then keep them right every month."
         tone="surface"
       >
         <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-paper px-5 py-4">
@@ -278,7 +278,7 @@ export default function Home() {
       <Section
         id="how-it-works"
         eyebrow="How it works"
-        title="Start with a free check. Decide once you’ve seen what we’d change."
+        title="A free check, a round of fixes, then monthly upkeep."
         tone="surface"
       >
         <ol className="grid gap-4 md:grid-cols-3">
@@ -300,9 +300,18 @@ export default function Home() {
             </li>
           ))}
         </ol>
-        <p className="mt-4 flex items-center gap-3 rounded-2xl border border-dashed border-accent/60 px-5 py-3 text-[15px]">
+        {/* The loop: step 3 feeds back into step 1 every month. */}
+        <div className="relative mt-1 hidden h-14 md:block">
+          <div aria-hidden="true" className="absolute inset-x-[16.67%] top-0 h-7 rounded-b-3xl border-x-2 border-b-2 border-dashed border-accent/60" />
+          <span aria-hidden="true" className="absolute left-[16.67%] -top-2.5 -translate-x-1/2 text-sm leading-none text-accent">▲</span>
+          <p className="absolute left-1/2 top-7 flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 whitespace-nowrap bg-surface px-3 text-[15px] font-medium">
+            <span aria-hidden="true" className="text-accent">↻</span>
+            {loopNote}
+          </p>
+        </div>
+        <p className="mt-3 flex items-center gap-3 rounded-2xl border border-dashed border-accent/60 px-5 py-3 text-[15px] font-medium md:hidden">
           <span aria-hidden="true" className="text-xl text-accent">↻</span>
-          {loopNote}
+          {loopNote} Back to step 1.
         </p>
         <SamplePlan />
         <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-accent-soft p-6 sm:flex-row sm:items-center sm:justify-between">
