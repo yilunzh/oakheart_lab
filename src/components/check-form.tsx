@@ -140,7 +140,7 @@ export function CheckForm() {
         <p className="mt-2 leading-relaxed">
           {status === "sent"
             ? `Your report will arrive within 24 hours from ${site.email}, sent to ${sentTo}.`
-            : `You asked about this website in the last 24 hours, so your report is already on its way to ${sentTo} from ${site.email}.`}{" "}
+            : `You asked about this website in the last 24 hours, so your report is already on its way to ${sentTo} from ${site.email}. If you added new details, email them to ${site.email} and we’ll include them.`}{" "}
           If it isn&rsquo;t in your inbox, check your spam or promotions folder.
         </p>
         <p className="mt-3 leading-relaxed">

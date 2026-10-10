@@ -23,8 +23,8 @@ export function SampleReport() {
             {runs.map((r) => (
               <div key={r.engine} className="flex items-center justify-between gap-4 border-b border-line pb-2">
                 <dt>{r.engine}</dt>
-                <dd className="font-mono text-sm sm:whitespace-nowrap sm:text-[15px]">
-                  mentioned in {r.mentioned} of {r.total} runs
+                <dd className="whitespace-nowrap font-mono text-sm sm:text-[15px]">
+                  named in {r.mentioned} of {r.total} runs
                 </dd>
               </div>
             ))}
@@ -49,7 +49,7 @@ export function SampleReport() {
         </div>
       </div>
       <figcaption className="border-t border-line px-5 py-3 text-xs text-muted">
-        Shows the format only. Your report uses your business, your location and real answers
+        Shows the format only, with 3 of the 6 assistants we check. Your report uses your business, your location and real answers
         from each assistant.{" "}
         <Link href="/#sample-plan" className="underline underline-offset-2 hover:text-ink">
           See how a check becomes a plan

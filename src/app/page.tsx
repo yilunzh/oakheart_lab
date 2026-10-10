@@ -163,7 +163,7 @@ export default function Home() {
       <Section
         eyebrow="Why it matters"
         title="You can’t win a customer you never knew was looking."
-        intro="They ask an assistant questions like these, book whoever it suggests and never call you. When the answer is you, they call ready to book."
+        intro="They ask an assistant questions like these and book whoever it suggests. If that isn’t you, you never find out they were looking."
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {customerQuestions.map((c) => (
