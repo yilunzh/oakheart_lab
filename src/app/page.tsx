@@ -4,6 +4,7 @@ import { AdoptionChart } from "@/components/adoption-chart";
 import { AnswerCard } from "@/components/answer-card";
 import { CtaLink } from "@/components/cta-link";
 import { Faq } from "@/components/faq";
+import { SamplePlan } from "@/components/sample-plan";
 import { Section } from "@/components/section";
 import {
   chatgptWeeklyUsers,
@@ -266,6 +267,7 @@ export default function Home() {
             </li>
           ))}
         </ol>
+        <SamplePlan />
         <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-accent-soft p-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-lg font-medium">{moneyBack}</p>
           <div className="flex shrink-0 flex-col items-start gap-2 sm:items-end">

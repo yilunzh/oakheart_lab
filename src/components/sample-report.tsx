@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const runs = [
   { engine: "ChatGPT", mentioned: 2, total: 5 },
   { engine: "Google AI Overviews", mentioned: 3, total: 5 },
@@ -48,7 +50,10 @@ export function SampleReport() {
       </div>
       <figcaption className="border-t border-line px-5 py-3 text-xs text-muted">
         Shows the format only. Your report uses your business, your location and real answers
-        from each assistant.
+        from each assistant.{" "}
+        <Link href="/#sample-plan" className="underline underline-offset-2 hover:text-ink">
+          See how a check becomes a plan
+        </Link>
       </figcaption>
     </figure>
   );

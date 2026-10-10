@@ -143,7 +143,7 @@ export const steps = [
     title: "A plan to close the gaps",
     icon: "step-plan",
     time: "One price, agreed up front",
-    body: "We map out how to fix what the check found and turn it into more bookings, then do the work with the systems you already use. You see the plan and the price before anything starts.",
+    body: "We turn what the check found into a short list of specific fixes across Discover, Book and Support, then do the work with the systems you already use. You see the plan and the price before anything starts.",
   },
   {
     title: "Ongoing support, if you want it",
@@ -153,6 +153,34 @@ export const steps = [
   },
 ];
 
+/** Illustrative plan for the same invented business as the sample report. No timelines or prices. */
+export const samplePlan = {
+  business: "Brackenfold Kayaks",
+  groups: [
+    {
+      key: "Discover",
+      fixes: [
+        "Correct the age policy on the old review-site listing and the Google Business Profile, so every source says 6+ with an adult.",
+        "Add an “Age & requirements” section to each tour page, and answer the policy questions customers ask: weather, cancellation, what to bring.",
+        "Publish tour times, prices and what’s included as page text and structured data that match the booking system.",
+      ],
+    },
+    {
+      key: "Book",
+      fixes: [
+        "Show sunset-tour availability on the tour page itself, from the existing booking system, instead of sending people to a separate widget.",
+        "Ask for the group’s ages before checkout, so families only see tours they can take.",
+      ],
+    },
+    {
+      key: "Support",
+      fixes: [
+        "Answer “Does the tour run if it rains?” and similar questions instantly from the real weather policy, and pass anything about a specific booking to staff.",
+      ],
+    },
+  ],
+};
+
 export const homeFaq = [
   {
     q: "Do I have to switch booking systems?",
@@ -160,7 +188,7 @@ export const homeFaq = [
   },
   {
     q: "Isn’t this just SEO?",
-    a: "Mostly, it’s good SEO done properly. Google says showing up in its AI features rests on the same foundations as search. What we add is the part generic SEO skips for businesses like yours: making sure the operational facts AI repeats are correct, and making sure the booking path converts the people it sends.",
+    a: "Mostly, it’s good SEO done properly. Google says showing up in its AI features rests on the same foundations as search. But we don’t sell a monthly quota of articles. For a business that takes bookings, a handful of facts decide what AI tells customers: what you offer, who it suits, what it costs, when it’s available and what your policies are. We make those correct and consistent everywhere assistants read them, and make sure the booking path converts the people they send.",
   },
   {
     q: "Don’t Google Maps and reviews still matter more?",
@@ -172,7 +200,7 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "Every project gets one price, agreed before we start, based on what your business needs. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "Every project gets one price, agreed before we start. We don’t publish prices because the work depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "What do you need from me?",
@@ -207,7 +235,7 @@ export const checkCovers = [
   },
   {
     title: "Are your details right?",
-    body: "Whether the assistant gets your prices, availability, age limits, what’s included and policies right, checked against your own site.",
+    body: "Whether the assistant gets your prices, availability, age limits, what’s included and policies right, checked against your own site. If you tell us what it should get right, we check that first.",
   },
   {
     title: "Where it gets its information",

@@ -17,7 +17,7 @@ function mailtoFor(data: Record<string, FormDataEntryValue>) {
     `Website: ${data.website ?? ""}`,
     `Location: ${data.location ?? ""}`,
     `Type: ${data.businessType ?? ""}`,
-    data.question ? `Question: ${data.question}` : "",
+    data.question ? `AI should get right: ${data.question}` : "",
   ].filter(Boolean).join("\n");
   return `mailto:${site.email}?subject=${encodeURIComponent("Free AI check request")}&body=${encodeURIComponent(body)}`;
 }
@@ -199,8 +199,8 @@ export function CheckForm() {
         <input id="email" name="email" type="email" autoComplete="email" required
           aria-invalid={!!errors.email} aria-describedby={describe("email")} className={fieldClass} />
       </Field>
-      <Field id="question" label="A question you wish AI answered correctly about you (optional)"
-        hint="For example: “Do you allow dogs on the boat?”" error={errors.question}>
+      <Field id="question" label="What should AI get right about you? (optional)"
+        hint="For example: “When someone asks if dogs are allowed on the boat, it should say yes, up to 40 lb.” We check this first." error={errors.question}>
         <textarea id="question" name="question" rows={2} maxLength={600}
           aria-invalid={!!errors.question} aria-describedby={describe("question", true)} className={fieldClass} />
       </Field>

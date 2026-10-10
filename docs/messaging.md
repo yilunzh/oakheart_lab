@@ -12,6 +12,7 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
 4. **Built for operations-heavy businesses:** capacity, time slots, assets, staff.
 5. **An operator's product leader.** A decade building commerce where "you're ultimately moving atoms, not bits." Roles only, no employer metrics.
 6. **Honest measurement:** mention rate and factual errors across repeated runs. No fake "AI rank."
+7. **Facts, not content volume.** We don't sell a monthly article quota. For booking businesses, a handful of operational facts decide what AI says. See `docs/research/competitor-firstindex.md`.
 
 ## Hero
 - **Eyebrow:** For businesses that move atoms, not bits
@@ -39,7 +40,7 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
    - **Booked:** turn that visit into a confirmed booking, with the right add-ons.
    - **Supported:** answer customers' questions instantly, and hand off to your team when it matters.
 5. **Founder:** "I've spent over a decade building commerce where the click turns into a car, a key, a delivery. Now I help businesses like yours do the same with AI." Roles: Hertz, Rivian, Carvana, Clutch.
-6. **How it works:** free check (<24h) → free tailored preview → one price agreed before we start → ongoing if you want it.
+6. **How it works:** free check (<24h) → a plan of specific fixes across Discover, Book and Support, with one price agreed before we start (shown as a labeled sample plan) → ongoing if you want it.
 7. **Risk reversal (exact):** "If you're not happy with our service, we'll give your money back, no questions asked."
 8. **FAQ:**
    - Do I have to switch booking systems? (No)

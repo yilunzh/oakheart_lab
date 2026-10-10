@@ -16,7 +16,7 @@ export function resendNotifier(apiKey: string | undefined, to: string, from: str
       `Location: ${lead.location}`,
       `Type: ${lead.businessType}`,
       `Email: ${lead.email}`,
-      `Question: ${lead.question ?? "(none)"}`,
+      `AI should get right: ${lead.question ?? "(none)"}`,
       `Heard from: ${lead.heardFrom ?? "(not given)"}`,
       `Referrer: ${lead.referrer ?? "(none)"}`,
       `UTM: ${lead.utm ? JSON.stringify(lead.utm) : "(none)"}`,

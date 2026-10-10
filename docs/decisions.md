@@ -2,6 +2,10 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-10: Positioning against content-led AI visibility services
+
+The owner asked to act on the FirstIndex review (`docs/research/competitor-firstindex.md`). Changes: a labeled sample plan under "How it works", the form's optional field reframed as "What should AI get right about you?", a pricing FAQ that explains why there are no published prices, and an SEO FAQ that says we don't sell an article quota. Competitors stay unnamed on the site. No change to D3a (no prices) or the money-back sentence.
+
 ## 2026-10-04: Homepage headline
 
 The owner found "More of your customers are asking AI where to book. Does it get you right?" unclear: book what? The second line also read as awkward. Of four options, the owner chose:
