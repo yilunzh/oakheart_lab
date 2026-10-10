@@ -11,6 +11,7 @@ export function resendNotifier(apiKey: string | undefined, to: string, from: str
     const late = Date.now() - submitted.getTime() > 3600_000;
     const fmt = (d: Date) => d.toUTCString().replace("GMT", "UTC");
     const lines = [
+      ...(lead.addedDetail ? ["They already requested a check in the last 24 hours and added this detail.", ""] : []),
       `Business: ${lead.businessName}`,
       `Website: ${lead.website}`,
       `Location: ${lead.location}`,
@@ -32,7 +33,9 @@ export function resendNotifier(apiKey: string | undefined, to: string, from: str
           from,
           to,
           reply_to: lead.email,
-          subject: `${late ? "[Delayed notification] " : ""}New AI check request: ${lead.businessName}`,
+          subject: lead.addedDetail
+            ? `Added detail for an existing AI check: ${lead.businessName}`
+            : `${late ? "[Delayed notification] " : ""}New AI check request: ${lead.businessName}`,
           text: lines.join("\n"),
         }),
       });

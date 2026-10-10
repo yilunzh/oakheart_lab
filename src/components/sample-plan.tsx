@@ -11,7 +11,7 @@ export function SamplePlan() {
       </div>
       <div className="p-5 sm:p-6">
         <p className="text-sm text-muted">
-          {samplePlan.business} (invented), after a check found ChatGPT giving the wrong minimum age, a walk through its booking page and the questions its staff answer most
+          {samplePlan.business} (invented), after a check found ChatGPT giving the wrong minimum age, a walk through its booking page and the questions its staff answer most.
         </p>
         <div className="mt-5 grid gap-6 md:grid-cols-3">
           {samplePlan.groups.map((g) => (

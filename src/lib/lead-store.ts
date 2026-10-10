@@ -7,9 +7,12 @@ export type StoredLead = CheckRequest & {
   referrer?: string;
   utm?: Record<string, string>;
   ipHash?: string;
-  status?: "new" | "test";
+  /** "detail": a repeat request that only adds an "AI should get right" answer (never retried). */
+  status?: "new" | "test" | "detail";
   /** When the visitor submitted (ISO). Set for retried notifications. */
   submittedAt?: string;
+  /** A repeat request within 24 hours that adds a new "AI should get right" answer. */
+  addedDetail?: boolean;
 };
 
 export interface LeadStore {

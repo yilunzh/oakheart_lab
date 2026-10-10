@@ -180,6 +180,7 @@ export const samplePlan = {
       fixes: [
         "Answer “Does the tour run if it rains?” and similar questions instantly from the real weather policy, and pass anything about a specific booking to staff.",
         "Send each booking the meeting point, what to bring and the age rule automatically, so staff stop answering it by phone.",
+        "Ask for a review the day after the tour, when the experience is fresh, through the platforms assistants already read.",
       ],
     },
   ],

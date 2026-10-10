@@ -27,7 +27,7 @@ Checked 2026-10-10. Read from the public homepage only. Figures are as FirstInde
 ## What we changed (2026-10-10)
 | Recommendation | Change |
 |---|---|
-| Make step 2 concrete without timelines | Homepage "How it works" now shows a labeled **sample plan** for the same invented business as the hero card and sample report (Quillbay Kayak Tours; the hero card's wrong-age competitor is now "Fernhollow Kayaks" so Quillbay plays one role): eight fixes across Discover, Book and Support. No prices or timelines. The sample report links to it. Step 2 copy now says "a short list of specific fixes across Discover, Book and Support." |
+| Make step 2 concrete without timelines | Homepage "How it works" now shows a labeled **sample plan** for the same invented business as the hero card and sample report (Quillbay Kayak Tours; the hero card's wrong-age competitor is now "Fernhollow Kayaks" so Quillbay plays one role): nine fixes across Discover, Book and Support. No prices or timelines. The sample report links to it. Step 2 copy now says "a short list of specific fixes across Discover, Book and Support." |
 | Borrow the one-sentence opener | The optional form field now asks "What should AI get right about you?", with an example answer, and says we check it first. The report's "Are your details right?" card says the same. Owner email and mailto fallback label it "AI should get right". No schema change. |
 | Explain why there are no prices | "What does it cost?" FAQ now explains that the price depends on what the check finds. The money-back sentence is unchanged. |
 | Don't copy the content-volume pitch | "Isn't this just SEO?" now says we don't sell a monthly article quota, and names the facts that decide what AI says. |

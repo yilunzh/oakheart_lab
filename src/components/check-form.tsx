@@ -72,6 +72,7 @@ export function CheckForm() {
   const [message, setMessage] = useState("");
   const [fallbackHref, setFallbackHref] = useState<string | null>(null);
   const [sentTo, setSentTo] = useState("");
+  const [forwarded, setForwarded] = useState(false);
   const [requestId] = useState(newId);
   const statusRef = useRef<HTMLDivElement>(null);
   // Reveal after React has committed the new status box (a frame callback could run first and
@@ -104,6 +105,7 @@ export function CheckForm() {
       const json = await res.json().catch(() => ({}));
       if (res.status === 201 || res.status === 202) {
         setSentTo(String(data.email ?? ""));
+        setForwarded(json.forwarded === true);
         setStatus(json.status === "duplicate" ? "duplicate" : "sent");
         setRevealTick((t) => t + 1);
         return;
@@ -140,7 +142,7 @@ export function CheckForm() {
         <p className="mt-2 leading-relaxed">
           {status === "sent"
             ? `Your report will arrive within 24 hours from ${site.email}, sent to ${sentTo}.`
-            : `You asked about this website in the last 24 hours, so your report is already on its way to ${sentTo} from ${site.email}. If you added new details, email them to ${site.email} and we’ll include them.`}{" "}
+            : `You asked about this website in the last 24 hours, so your report is already on its way to ${sentTo} from ${site.email}. ${forwarded ? "We’ve passed your new details on, and they’ll be in the report." : `If you added new details, email them to ${site.email} and we’ll include them.`}`}{" "}
           If it isn&rsquo;t in your inbox, check your spam or promotions folder.
         </p>
         <p className="mt-3 leading-relaxed">

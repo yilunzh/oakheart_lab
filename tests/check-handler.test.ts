@@ -136,6 +136,28 @@ describe("POST /api/checks", () => {
     expect(rows).toHaveLength(1);
   });
 
+  it("stores and forwards a new answer on a duplicate, as a detail row", async () => {
+    const { store, rows } = memoryStore();
+    const notified = { n: 0 };
+    const d = deps(store, notified);
+    await handleCheckRequest(req(valid), d);
+    const res = await handleCheckRequest(req({ ...valid, question: "Kids 6+ with an adult." }), d);
+    expect(res.status).toBe(202);
+    expect(await res.json()).toEqual({ status: "duplicate", forwarded: true });
+    expect(notified.n).toBe(2);
+    expect(rows.map((r) => r.status)).toEqual(["new", "detail"]);
+  });
+
+  it("does not notify for a duplicate without a new answer", async () => {
+    const { store, rows } = memoryStore();
+    const notified = { n: 0 };
+    const d = deps(store, notified);
+    await handleCheckRequest(req(valid), d);
+    expect(await (await handleCheckRequest(req(valid), d)).json()).toEqual({ status: "duplicate" });
+    expect(notified.n).toBe(1);
+    expect(rows).toHaveLength(1);
+  });
+
   it("rate limits after 5 requests per IP per hour", async () => {
     const { store } = memoryStore();
     const d = deps(store);

@@ -71,7 +71,18 @@ export async function handleCheckRequest(request: Request, deps: HandlerDeps): P
       return json({ error: "rate_limited" }, 429);
     }
     if (await deps.store.hasRecentDuplicate(lead.email, websiteHost)) {
-      return json({ status: "duplicate" }, 202);
+      // Don't lose a new "AI should get right" answer: store it (so it counts toward the IP
+      // limit) and forward it to the owner.
+      if (!lead.question) return json({ status: "duplicate" }, 202);
+      const detail = { ...lead, requestKey, websiteHost, referrer, addedDetail: true };
+      const detailId = await deps.store.insert({
+        ...detail,
+        ipHash,
+        status: isTestSubmission(lead.email) ? "test" : "detail",
+      });
+      const forwarded = !!detailId && (await deps.notify(detail));
+      if (forwarded) await deps.store.markNotified(detailId).catch(() => {});
+      return json({ status: "duplicate", forwarded }, 202);
     }
     const id = await deps.store.insert({
       ...lead,
