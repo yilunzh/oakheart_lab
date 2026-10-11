@@ -2,9 +2,13 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
-## 2026-10-11: Oakheart plugin installed per project
+## 2026-10-11: Oakheart skills copied into the repo (correction)
 
-The `oakheart` plugin (copy-reviewer, sales-pitch-reviewer, business-strategy-copilot, software-delivery-agency, learning-loop) lives in `yilunzh/oakheart-skills` but was never available in cloud sessions: it was set up on a local machine, and no organization sync is visible here. `.claude/settings.json` now declares that marketplace and enables `oakheart@oakheart-skills`, so every Claude Code session on this repo, cloud or local, installs it at startup. If organization sync is turned on later, remove this to avoid loading two copies. The `seo` plugin from the same marketplace is not enabled (it adds a hook on every edit and Python dependencies).
+The `oakheart` plugin (copy-reviewer, sales-pitch-reviewer, business-strategy-copilot, software-delivery-agency, learning-loop, plus the artifact-reviewer agent) lives in `yilunzh/oakheart-skills`. The owner has a personal account, so organization sync isn't available.
+
+- **First attempt failed:** `.claude/settings.json` declared the marketplace and enabled `oakheart@oakheart-skills`. In a new cloud session nothing was installed: `claude plugin list` reported "No plugins installed" and only the built-in marketplace was configured. Claude Code treats marketplaces declared in project settings as something to offer and approve, not to install, and a cloud session has no prompt. Removed.
+- **Fix:** the Claude Code build (`dist/oakheart`) is copied into `.claude/skills/` and `.claude/agents/`. Project skills load in every session without approval. Names are unprefixed (`copy-reviewer`, not `oakheart:copy-reviewer`). `.claude/oakheart-skills.lock` records the version and commit; `scripts/sync-oakheart-skills.sh [ref]` re-copies from GitHub. Fix skills in `oakheart-skills` first, then re-sync; don't edit the copies here.
+- `seo` from the same marketplace is not copied (it adds an edit hook and Python dependencies).
 
 ## 2026-10-11: Shorter hooks; copy-review skill
 

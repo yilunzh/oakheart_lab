@@ -1,0 +1,5 @@
+source: https://github.com/yilunzh/oakheart-skills (dist/oakheart)
+version: 0.3.1
+commit: 7729608
+skills: business-strategy-copilot copy-reviewer learning-loop sales-pitch-reviewer software-delivery-agency 
+agents: artifact-reviewer.md 
