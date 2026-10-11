@@ -2,6 +2,19 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-11: Copy reviewed with `oakheart:copy-reviewer` only; Opendoor-style offer explanation
+
+- **Repo `copy-review` skill removed** (owner). Copy reviews use the shared `oakheart:copy-reviewer` protocol only; no fixed word budgets. `docs/review-rubric.md` dimension 5 now asks for a plain explanation of the offer (what the visitor does, what we do, how much effort) instead of budgets. **Supersedes** the word budgets from "Shorter hooks" below and the line in the entry below saying `copy-review` stays.
+- **Reference:** the owner likes how opendoor.com explains a complex offer: steps named from the customer's side, the effort stated, who does what, a short three-beat close. Used for structure only; no wording or design copied.
+- **Hero subhead** (owner: say we make sure you're discoverable by AI, without promising recommendations): "ChatGPT, Google's AI, Gemini, Perplexity and Claude answer your customers before your website loads. We make sure they can find you and the right facts about you, and that booking with you is easy." **Supersedes** "…We fix what they get wrong…", which read as controlling what AI says.
+- **Effort and handoff:** hero chip "Five fields, no call" (five required form fields; report emailed). Steps renamed "Get your free check / Get your plan and fixes / Stay ahead", with bodies that say what you do and what we do ("You approve a plan; we do the fixes in the tools you already use"; "…and tell you what changed").
+- **What we do:** H2 "Discover, book, support: one set of facts." ("Three fixes" clashed with the nine fixes in the sample plan); intro "You run the business. We keep your facts right, your booking simple and your answers ready."
+- **Close:** "Tell us your business. Get a free report in under 24 hours: where you show up, what's wrong, what to fix first. Want our help after that? One flat monthly fee, stop anytime." Keeps the 10-10 fee mention; fixes "in 24 hours" to "under".
+- **Sample-plan caption** drops "One flat monthly fee covers all of it." (the H2 right above says it). **Supersedes** the round-12 caption wording.
+- **FAQs:** the money-back sentence in the cost answer is exact again (a stray "And" had crept in); the fee is "agreed before any work starts" (per the 10-10 "agreed up front"); the SEO answer scopes "mostly SEO" to Discover and says Book and Support go further; "everywhere it reads them" → "on your site and the listings it reads".
+- **Review:** two independent reviewer rounds; final verdict "ship with minor fixes", minor fixes applied. Record: `docs/reviews/copy-2026-10-11.md`.
+- **Open for the owner:** when the monthly fee starts (the brief doesn't say); whether the app and staff tools are inside the flat fee; whether to name the "AI Visibility Check" once on the homepage; whether the founder bio should bring back "moving atoms, not bits"; whether to keep the named booking platforms in the booking-systems FAQ.
+
 ## 2026-10-11: Oakheart skills come from one source, installed per session
 
 The `oakheart` plugin (copy-reviewer, sales-pitch-reviewer, business-strategy-copilot, software-delivery-agency, learning-loop, artifact-reviewer agent) lives only in `yilunzh/oakheart-skills`. Personal account, so organization sync isn't available. The owner wants no copies in project repos and every session synced with that repo.

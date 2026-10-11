@@ -11,7 +11,7 @@ export const site = {
 export const checkCta = {
   label: "Get your free AI check",
   href: "/ai-visibility-check",
-  micro: ["Report in under 24 hours", "Free, as many as you like", "No obligation"],
+  micro: ["Five fields, no call", "Report in under 24 hours", "Free, as many as you like", "No obligation"],
 };
 
 export const moneyBack =
@@ -132,22 +132,22 @@ export const roles = [
 
 export const steps = [
   {
-    title: "Free AI check",
+    title: "Get your free check",
     icon: "step-check",
     time: "Under 24 hours",
-    body: "We ask assistants your customers’ questions and show what to fix first.",
+    body: "Five fields, no call. We ask AI assistants your customers’ questions and email you what to fix first.",
   },
   {
-    title: "Fix the gaps",
+    title: "Get your plan and fixes",
     icon: "step-plan",
     time: "Included in your monthly fee",
-    body: "We walk through your booking path, agree a plan, then fix what matters first.",
+    body: "One short call about how you take bookings. You approve a plan; we do the fixes in the tools you already use.",
   },
   {
     title: "Stay ahead",
     icon: "step-ongoing",
     time: "Every month, stop anytime",
-    body: "Each month we re-run the check, keep your facts current and improve booking.",
+    body: "We re-run the check, keep your facts current, improve booking and support, and tell you what changed.",
   },
 ];
 
@@ -192,7 +192,7 @@ export const homeFaq = [
   },
   {
     q: "Isn’t this just SEO?",
-    a: "Mostly, it’s good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make the facts AI repeats about you correct everywhere it reads them: what you offer, prices, availability and policies.",
+    a: "The Discover part mostly is: good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make the facts AI repeats about you correct on your site and the listings it reads: what you offer, prices, availability and policies. Book and Support go further: easier booking on a phone, and questions answered from your policies.",
     source: { label: "Google Search Central: AI features and your website", href: "https://developers.google.com/search/docs/appearance/ai-features" },
   },
   {
@@ -205,7 +205,7 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "One flat monthly fee covers your plan: the first fixes and the upkeep. There’s no project fee. It’s set for your business after the check and stays the same each month. Three listing fixes shouldn’t cost the same as a booking rebuild, so there’s no published price. The check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "One flat monthly fee covers your plan: the first fixes and the upkeep. There’s no project fee. It’s set for your business after the check, agreed before any work starts, and stays the same each month. Three listing fixes shouldn’t cost the same as a booking rebuild, so there’s no published price. The check is free. If you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "Is there a long contract?",

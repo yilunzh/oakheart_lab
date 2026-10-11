@@ -34,7 +34,7 @@ export function SamplePlan() {
         </p>
       </div>
       <figcaption className="border-t border-line px-5 py-3 text-xs text-muted">
-        Shows the format only. Your plan comes from your check. One flat monthly fee covers all of it.
+        Shows the format only. Your plan comes from your check.
       </figcaption>
     </figure>
   );
