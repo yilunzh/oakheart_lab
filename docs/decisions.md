@@ -2,13 +2,22 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
-## 2026-10-11: Oakheart skills copied into the repo (correction)
+## 2026-10-11: Oakheart skills come from one source, installed per session
 
-The `oakheart` plugin (copy-reviewer, sales-pitch-reviewer, business-strategy-copilot, software-delivery-agency, learning-loop, plus the artifact-reviewer agent) lives in `yilunzh/oakheart-skills`. The owner has a personal account, so organization sync isn't available.
+The `oakheart` plugin (copy-reviewer, sales-pitch-reviewer, business-strategy-copilot, software-delivery-agency, learning-loop, artifact-reviewer agent) lives only in `yilunzh/oakheart-skills`. Personal account, so organization sync isn't available. The owner wants no copies in project repos and every session synced with that repo.
 
-- **First attempt failed:** `.claude/settings.json` declared the marketplace and enabled `oakheart@oakheart-skills`. In a new cloud session nothing was installed: `claude plugin list` reported "No plugins installed" and only the built-in marketplace was configured. Claude Code treats marketplaces declared in project settings as something to offer and approve, not to install, and a cloud session has no prompt. Removed.
-- **Fix:** the Claude Code build (`dist/oakheart`) is copied into `.claude/skills/` and `.claude/agents/`. Project skills load in every session without approval. Names are unprefixed (`copy-reviewer`, not `oakheart:copy-reviewer`). `.claude/oakheart-skills.lock` records the version and commit; `scripts/sync-oakheart-skills.sh [ref]` re-copies from GitHub. Fix skills in `oakheart-skills` first, then re-sync; don't edit the copies here.
-- `seo` from the same marketplace is not copied (it adds an edit hook and Python dependencies).
+- **Tried and dropped:** (1) `.claude/settings.json` declaring the marketplace: cloud sessions never install it (needs interactive approval). (2) Copying the skills into `.claude/skills/`: worked, but duplicated the source and drifted. Both removed.
+- **Chosen:** the cloud environment's setup script installs the plugin at user scope before each session starts, from the latest `main`:
+
+  ```bash
+  if command -v claude >/dev/null 2>&1; then
+    claude plugin marketplace add yilunzh/oakheart-skills || claude plugin marketplace update oakheart-skills || true
+    claude plugin install oakheart@oakheart-skills || true
+  fi
+  ```
+
+  Verified: after a user-scope install, a fresh session on a repo with no copies lists `oakheart:business-strategy-copilot`, `oakheart:copy-reviewer`, `oakheart:learning-loop`, `oakheart:sales-pitch-reviewer` and `oakheart:software-delivery-agency`. The owner pastes the script once (environment settings → Setup script); it applies to every repo in that environment.
+- `copy-review` (this repo's word budgets) stays in `.claude/skills/`; it builds on `oakheart:copy-reviewer`.
 
 ## 2026-10-11: Shorter hooks; copy-review skill
 
