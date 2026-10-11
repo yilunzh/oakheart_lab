@@ -23,7 +23,7 @@ export default async function Image() {
         <div style={{ fontSize: 30, fontWeight: 600, display: "flex" }}>Oakheart Lab</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -1.5 }}>
-            Customers now ask AI which local business to book.
+            Customers now ask AI who to do business with.
           </div>
           <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -1.5, color: "#1f5c3a" }}>
             Does it recommend you, and get your details right?

@@ -8,8 +8,6 @@ export const site = {
     "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction and supported after the booking, then keeps it that way every month.",
 };
 
-export const audienceLine = "For tours, rentals, auto, home services and stays";
-
 export const checkCta = {
   label: "Get your free AI check",
   href: "/ai-visibility-check",

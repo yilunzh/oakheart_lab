@@ -16,7 +16,6 @@ import {
   homeFaq,
   moneyBack,
   alsoAvailable,
-  audienceLine,
   factsLine,
   loopNote,
   pillars,
@@ -81,11 +80,8 @@ export default function Home() {
       {/* Hero */}
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-24">
         <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-accent">
-            {audienceLine}
-          </p>
-          <h1 className="mt-4 text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
-            Customers now ask AI which local business to book.{" "}
+          <h1 className="text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
+            Customers now ask AI who to do business with.{" "}
             <span className="text-accent">Does it recommend you, and get your details right?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">

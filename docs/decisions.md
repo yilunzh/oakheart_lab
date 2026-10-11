@@ -2,6 +2,11 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-11: Hero without the audience eyebrow; broader H1
+
+- **Removed** the hero eyebrow "For tours, rentals, auto, home services and stays".
+- **H1:** "Customers now ask AI who to do business with. Does it recommend you, and get your details right?" Less emphasis on "local business". The share image matches. **Supersedes** the 2026-10-04 H1 first line.
+
 ## 2026-10-10: One flat monthly fee; privacy page; subhead and urgency line are final
 
 - **Pricing model:** one flat monthly fee covers the first round of fixes and the upkeep after it. No separate project fee. Month to month, stop anytime. Still no prices on the site (D3a). Step 2 label "Included in your monthly fee"; How it works H2 "A free check, then one flat monthly fee for the fixes and the upkeep."; pricing, contract and check-page FAQs updated. **Supersedes** "one price, agreed up front" for the fixes.
