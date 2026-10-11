@@ -43,7 +43,7 @@ const jsonLd = {
       logo: `${site.url}/icon`,
       sameAs: [site.substack],
       address: { "@type": "PostalAddress", addressLocality: "Atlanta", addressRegion: "GA", addressCountry: "US" },
-      knowsAbout: ["AI search visibility", "Answer engine optimization", "Online booking conversion", "Customer support automation"],
+      knowsAbout: ["AI search visibility", "Answer engine optimization", "Online booking conversion", "Competitive monitoring for AI search"],
     },
     {
       "@type": "Person",
@@ -85,8 +85,9 @@ export default function Home() {
             <span className="text-accent">Does it recommend you?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude now answer before your website
-            loads. We fix what they get wrong, and make booking with you easy.
+            ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude answer your customers before
+            your website loads. We make sure they can find you and the right facts about you, and that
+            booking with you is easy.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <CtaLink href={checkCta.href}>{checkCta.label}</CtaLink>
@@ -186,8 +187,8 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="Three fixes, one set of facts."
-        intro="AI answers, booking and support run on the same facts. We keep them right."
+        title="Get found, get booked, stay ahead."
+        intro="You run the business. We keep your facts right, your booking simple and you ahead of competitors as AI changes."
         tone="surface"
       >
         <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-paper px-5 py-4">
@@ -336,8 +337,8 @@ export default function Home() {
             See what AI tells customers about you.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-paper/75">
-            Free report in 24 hours: where you show up, what&rsquo;s wrong, what to fix first. Then one
-            flat monthly fee if you want our help.
+            Tell us your business. Get a free report in under 24 hours: where you show up, what&rsquo;s
+            wrong, what to fix first. Want our help after that? One flat monthly fee, stop anytime.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <CtaLink href={checkCta.href} variant="inverse">

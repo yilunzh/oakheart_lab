@@ -5,13 +5,13 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction and supported after the booking, then keeps it that way every month.",
+    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
 };
 
 export const checkCta = {
   label: "Get your free AI check",
   href: "/ai-visibility-check",
-  micro: ["Report in under 24 hours", "Free, as many as you like", "No obligation"],
+  micro: ["Five fields, no call", "Report in under 24 hours", "Free, as many as you like", "No obligation"],
 };
 
 export const moneyBack =
@@ -109,13 +109,13 @@ export const pillars = [
     ],
   },
   {
-    key: "Support",
-    icon: "support",
-    title: "Answer questions, day or night.",
+    key: "Stay ahead",
+    icon: "step-ongoing",
+    title: "Keep improving as competitors and AI change.",
     points: [
-      "“Can we bring the dog?” answered from your policy",
-      "A handoff to your team for judgment calls",
-      "Fewer repeat calls for your staff",
+      "A monthly check against the competitors AI names instead of you",
+      "Updates when assistants add features, like booking inside ChatGPT",
+      "Prices, seasons and policies kept current on your site and listings",
     ],
   },
 ];
@@ -132,22 +132,22 @@ export const roles = [
 
 export const steps = [
   {
-    title: "Free AI check",
+    title: "Get your free check",
     icon: "step-check",
     time: "Under 24 hours",
-    body: "We ask assistants your customers’ questions and show what to fix first.",
+    body: "Five fields, no call. We ask AI assistants your customers’ questions and email you what to fix first.",
   },
   {
-    title: "Fix the gaps",
+    title: "Get your plan and fixes",
     icon: "step-plan",
     time: "Included in your monthly fee",
-    body: "We walk through your booking path, agree a plan, then fix what matters first.",
+    body: "One short call about how you take bookings. You approve a plan; we do the fixes in the tools you already use.",
   },
   {
     title: "Stay ahead",
     icon: "step-ongoing",
     time: "Every month, stop anytime",
-    body: "Each month we re-run the check, keep your facts current and improve booking.",
+    body: "We re-check you against competitors, keep your facts current, adapt to new AI features, keep improving booking and tell you what changed.",
   },
 ];
 
@@ -174,15 +174,14 @@ export const samplePlan = {
       ],
     },
     {
-      key: "Support",
+      key: "Stay ahead, every month",
       fixes: [
-        "Answer “Does it run if it rains?” from its policy",
-        "Send meeting point and what to bring after booking",
-        "Ask for a review the day after the tour",
+        "Re-run the check against the two outfitters AI names most",
+        "List tours where AI assistants start taking bookings",
+        "Update times and prices before the summer season",
       ],
     },
   ],
-  monthly: "Every month: re-run the check, keep listings current, report what changed.",
 };
 
 export const homeFaq = [
@@ -192,7 +191,7 @@ export const homeFaq = [
   },
   {
     q: "Isn’t this just SEO?",
-    a: "Mostly, it’s good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make the facts AI repeats about you correct everywhere it reads them: what you offer, prices, availability and policies.",
+    a: "The Discover part mostly is: good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make sure your site and the listings AI reads have the right facts: what you offer, prices, availability and policies. We also go further: easier booking on a phone, and monthly updates as competitors and AI assistants change.",
     source: { label: "Google Search Central: AI features and your website", href: "https://developers.google.com/search/docs/appearance/ai-features" },
   },
   {
@@ -205,7 +204,7 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "One flat monthly fee covers your plan: the first fixes and the upkeep. There’s no project fee. It’s set for your business after the check and stays the same each month. Three listing fixes shouldn’t cost the same as a booking rebuild, so there’s no published price. The check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "One flat monthly fee covers your plan: the first fixes and the upkeep. There’s no project fee. It’s set for your business after the check, agreed before any work starts, and stays the same each month. Three listing fixes shouldn’t cost the same as a booking rebuild, so there’s no published price. The check is free. If you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "Is there a long contract?",
