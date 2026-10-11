@@ -149,7 +149,7 @@ export default function Home() {
         </div>
         <div className="mt-6">
           {shiftStats.map((s) => (
-            <figure key={s.figure} className="grid gap-x-6 gap-y-2 rounded-2xl border border-line bg-paper p-6 sm:grid-cols-[auto_1fr] sm:items-center">
+            <figure key={s.figure} className="hidden gap-x-6 sm:grid gap-y-2 rounded-2xl border border-line bg-paper p-6 sm:grid-cols-[auto_1fr] sm:items-center">
               <p className="text-4xl font-semibold tracking-tight sm:row-span-2">{s.figure}</p>
               <p className="leading-relaxed">{s.text}</p>
               <figcaption className="text-xs text-muted">
@@ -191,7 +191,7 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="We fix what AI reads about you, how you take bookings and how you answer questions."
+        title="We fix what AI reads, how you take bookings and how you answer questions."
         intro="All three run on the same facts. We get them right, then keep them right every month."
         tone="surface"
       >
@@ -250,7 +250,7 @@ export default function Home() {
             <p className="mt-5 leading-relaxed text-muted">
               Yilun Zhang has spent the last decade building digital commerce in automotive, where
               cars, locations, staff and handover times all have to line up behind every online
-              sale. Your business runs on the same kind of complexity.
+              sale. Your business runs on the same kind of complexity. He&rsquo;s based in Atlanta, GA.
             </p>
             <ul className="mt-5 flex flex-wrap gap-2 text-sm">
               {roles.map((r) => (
@@ -313,8 +313,8 @@ export default function Home() {
             {loopNote}
           </p>
         </div>
-        <p className="mt-3 flex items-center gap-3 rounded-2xl border border-dashed border-accent/60 px-5 py-3 text-[15px] font-medium md:hidden">
-          <span aria-hidden="true" className="text-xl text-accent">↻</span>
+        <p className="mt-3 flex items-center gap-2 pl-6 text-[15px] font-medium md:hidden">
+          <span aria-hidden="true" className="text-accent">↻</span>
           {loopNote}
         </p>
         <SamplePlan />
@@ -342,7 +342,8 @@ export default function Home() {
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-paper/75">
             Within 24 hours: where you show up, what&rsquo;s wrong and what to fix first. Free, no
-            obligation.
+            obligation. If you want our help after that, it&rsquo;s one flat monthly fee, and you can
+            stop anytime.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <CtaLink href={checkCta.href} variant="inverse">

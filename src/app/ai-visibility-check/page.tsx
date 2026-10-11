@@ -126,7 +126,7 @@ export default function CheckPage() {
       </Section>
 
       <Section eyebrow="Method" title="How we run the check."
-        intro="Answers vary by run, location and account, so we sample them. It is a sample, not a ranking. Any tool that gives you a single “AI rank” is overstating what can be measured."
+        intro="Answers vary by run, location and account, so we sample them. It is a sample, not a ranking."
       >
         <ol className="mb-12 grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1.2fr]">
           {methodSteps.map((m, i) => (

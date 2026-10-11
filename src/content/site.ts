@@ -122,7 +122,7 @@ export const pillars = [
   },
 ];
 
-export const alsoAvailable = "Also available: a companion mobile app, and staff tools and automation.";
+export const alsoAvailable = "Also available, priced separately: a companion mobile app, and staff tools and automation.";
 
 /** Public roles only (docs/brief.md). */
 export const roles = [
@@ -194,7 +194,7 @@ export const homeFaq = [
   },
   {
     q: "Isn’t this just SEO?",
-    a: "Mostly, it’s good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode, with no special optimizations required. But we don’t sell a monthly quota of articles. For a business that takes bookings, a handful of facts decide what AI tells customers: what you offer, who it suits, what it costs, when it’s available and what your policies are. We make those correct and consistent everywhere assistants read them, and make sure the booking path converts the people they send.",
+    a: "Mostly, it’s good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make the facts AI repeats about you correct everywhere it reads them: what you offer, prices, availability and policies.",
     source: { label: "Google Search Central: AI features and your website", href: "https://developers.google.com/search/docs/appearance/ai-features" },
   },
   {
@@ -207,7 +207,7 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "One flat monthly fee covers everything: the first round of fixes and the upkeep after it. There’s no separate project fee. We agree it with you before any work starts. We don’t publish it because it depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "One flat monthly fee covers the work in your plan: the first round of fixes and the upkeep after it. There’s no separate project fee. We agree it with you before any work starts. We don’t publish it because it depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "Is there a long contract?",
@@ -282,7 +282,7 @@ export const checkFaq = [
   },
   {
     q: "Is it really free? What’s the catch?",
-    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk. One flat monthly fee covers the fixes and the upkeep, month to month. If not, keep the report and use it however you like.",
+    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk: fixes and upkeep are one flat monthly fee, month to month. If you’d rather not, keep the report and use it however you like.",
   },
   {
     q: "Who runs the check?",

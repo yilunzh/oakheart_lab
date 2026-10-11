@@ -20,6 +20,7 @@ Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`.
 | 11 | `1d41c58` | https://oakheart-lab.vercel.app | 8.35 (all gates pass) | Owner decisions: founder section on approved facts, quote approved, subhead names Claude, Gemini, ChatGPT, Grok and Muse |
 | 12 | `a164083` | https://oakheart-lab.vercel.app | 7.85 (all gates pass) | Recurring offer, plainer headings, visuals; recurring frame only half-carried |
 | 13 | `44aa7a9` | https://oakheart-lab.vercel.app | 8.23 (all gates pass) | Recurring frame throughout, month-to-month FAQ, hero matches the check, plainer headings |
+| 14 | `7810964` | https://oakheart-lab.vercel.app | 8.18 (all gates pass) | Flat monthly fee, privacy page, mobile loop; owner-final subhead and urgency line not deducted |
 
 ## Outcome (8 rounds complete)
 

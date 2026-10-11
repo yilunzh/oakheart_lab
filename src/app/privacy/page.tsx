@@ -25,8 +25,12 @@ const sections = [
   {
     h: "Who processes it",
     body: [
-      "Vercel hosts the site. Neon stores check requests. Resend sends email notifications. Each processes data only to provide that service.",
+      "Vercel hosts the site. Neon stores check requests. Resend sends the notification email to Oakheart Lab, and Google Workspace hosts Oakheart Lab’s email, where your report is written and sent. Each processes data only to provide that service.",
     ],
+  },
+  {
+    h: "How long we keep it",
+    body: ["Until you ask us to delete it."],
   },
   {
     h: "Cookies",
@@ -35,8 +39,9 @@ const sections = [
   {
     h: "Your choices",
     body: [
-      `To see, correct or delete what we hold about you, email ${site.email}. We’ll do it and confirm by email.`,
+      "To see, correct or delete what we hold about you, email us. We’ll do it and confirm by email.",
     ],
+    email: true,
   },
 ];
 
@@ -53,6 +58,11 @@ export default function PrivacyPage() {
             {s.body.map((p) => (
               <p key={p} className="mt-2 leading-relaxed text-muted">{p}</p>
             ))}
+            {"email" in s && (
+              <p className="mt-2">
+                <a href={`mailto:${site.email}`} className="underline underline-offset-2 hover:text-accent">{site.email}</a>
+              </p>
+            )}
           </div>
         ))}
       </div>

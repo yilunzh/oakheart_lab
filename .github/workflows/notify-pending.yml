@@ -16,7 +16,7 @@ jobs:
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
           if [ -z "$CRON_SECRET" ]; then
-            echo "CRON_SECRET repository secret not set; skipping."
-            exit 0
+            echo "::error::CRON_SECRET repository secret is not set, so failed lead notifications are not being retried. Add it under Settings > Secrets and variables > Actions (same value as in Vercel)."
+            exit 1
           fi
           curl -fsS -H "Authorization: Bearer $CRON_SECRET" https://oakheart-lab.vercel.app/api/cron/notify-pending
