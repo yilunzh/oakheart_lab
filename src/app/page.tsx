@@ -134,7 +134,7 @@ export default function Home() {
             <p className="text-2xl font-semibold tracking-tight">Who&rsquo;s already moving</p>
             <ol className="mt-5 space-y-5">
               {movers.map((m, i) => (
-                <li key={m.when} className={`border-l-2 border-accent pl-4 ${i >= 2 ? "hidden sm:block" : ""}`}>
+                <li key={m.when} className={`border-l-2 border-accent pl-4 ${i === 0 ? "hidden sm:block" : ""}`}>
                   <p className="font-mono text-xs uppercase tracking-wider text-muted">{m.when}</p>
                   <p className="mt-1 leading-snug">
                     {m.text}{" "}
@@ -149,7 +149,7 @@ export default function Home() {
         </div>
         <div className="mt-6">
           {shiftStats.map((s) => (
-            <figure key={s.figure} className="hidden gap-x-6 sm:grid gap-y-2 rounded-2xl border border-line bg-paper p-6 sm:grid-cols-[auto_1fr] sm:items-center">
+            <figure key={s.figure} className="grid gap-x-6 gap-y-2 rounded-2xl border border-line bg-paper p-6 sm:grid-cols-[auto_1fr] sm:items-center">
               <p className="text-4xl font-semibold tracking-tight sm:row-span-2">{s.figure}</p>
               <p className="leading-relaxed">{s.text}</p>
               <figcaption className="text-xs text-muted">

@@ -37,15 +37,15 @@ export const shiftStats = [
 
 /** ChatGPT weekly active users as announced by OpenAI (sources: docs/research/adoption-facts.md). */
 export const chatgptWeeklyUsers = [
-  { date: "2023-11-06", label: "Nov 2023", users: 100, note: "Sam Altman, OpenAI DevDay" },
-  { date: "2024-08-29", label: "Aug 2024", users: 200, note: "OpenAI, to Axios" },
-  { date: "2024-12-04", label: "Dec 2024", users: 300, note: "Sam Altman, DealBook" },
-  { date: "2025-02-20", label: "Feb 2025", users: 400, note: "OpenAI COO, to CNBC" },
-  { date: "2025-03-31", label: "Mar 2025", users: 500, note: "OpenAI" },
-  { date: "2025-10-06", label: "Oct 2025", users: 800, note: "Sam Altman, OpenAI DevDay" },
-  { date: "2026-02-27", label: "Feb 2026", users: 900, note: "OpenAI, via TechCrunch" },
-  { date: "2026-08-06", label: "Aug 2026", users: 1000, note: "OpenAI, via TechCrunch" },
-  { date: "2026-09-29", label: "Sep 2026", users: 1200, note: "Sam Altman, OpenAI DevDay" },
+  { date: "2023-11-06", label: "Nov 2023", users: 100, note: "Sam Altman, OpenAI DevDay", href: "https://techcrunch.com/2023/11/06/openais-chatgpt-now-has-100-million-weekly-active-users/" },
+  { date: "2024-08-29", label: "Aug 2024", users: 200, note: "OpenAI, to Axios", href: "https://www.axios.com/2024/08/29/openai-chatgpt-200-million-weekly-active-users" },
+  { date: "2024-12-04", label: "Dec 2024", users: 300, note: "Sam Altman, DealBook", href: "https://www.cnbc.com/2024/12/04/openais-active-user-count-soars-to-300-million-people-per-week.html" },
+  { date: "2025-02-20", label: "Feb 2025", users: 400, note: "OpenAI COO, to CNBC", href: "https://techcrunch.com/2025/02/20/openai-now-serves-400-million-users-every-week/" },
+  { date: "2025-03-31", label: "Mar 2025", users: 500, note: "OpenAI", href: "https://techcrunch.com/2025/03/31/openai-raises-40b-at-300b-post-money-valuation/" },
+  { date: "2025-10-06", label: "Oct 2025", users: 800, note: "Sam Altman, OpenAI DevDay", href: "https://techcrunch.com/2025/10/06/sam-altman-says-chatgpt-has-hit-800m-weekly-active-users/" },
+  { date: "2026-02-27", label: "Feb 2026", users: 900, note: "OpenAI, via TechCrunch", href: "https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users/" },
+  { date: "2026-08-06", label: "Aug 2026", users: 1000, note: "OpenAI, via TechCrunch", href: "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/" },
+  { date: "2026-09-29", label: "Sep 2026", users: 1200, note: "Sam Altman, OpenAI DevDay", href: "https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/" },
 ];
 
 export const movers = [
@@ -143,7 +143,7 @@ export const steps = [
     title: "Fix the gaps",
     icon: "step-plan",
     time: "Included in your monthly fee",
-    body: "We walk through your booking path and the questions your staff answer most, then fix what matters most on the systems you already use.",
+    body: "We walk through your booking path and the questions your staff answer most, agree a plan, then fix what matters first on the systems you already use.",
   },
   {
     title: "Stay ahead",
@@ -261,7 +261,7 @@ export const checkCovers = [
 
 export const methodSteps = [
   { label: "Your customers’ questions", detail: "Written for your type of business and location" },
-  { label: "6 assistants", detail: "ChatGPT, AI Overviews, AI Mode, Gemini, Perplexity, Claude" },
+  { label: "5 assistants", detail: "ChatGPT, Google’s AI (Overviews and AI Mode), Gemini, Perplexity, Claude" },
   { label: "Several runs each", detail: "Because answers change from run to run" },
   { label: "Your report", detail: "How often you’re mentioned and described correctly, with the sources cited" },
 ];

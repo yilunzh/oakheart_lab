@@ -223,7 +223,7 @@ export function CheckForm() {
         {status === "sending" ? "Sending…" : "Get my free AI check"}
       </button>
       <p className="text-center text-xs text-muted">
-        Report in under 24 hours. We use your details only to run your check and send the report.{" "}
+        Report in under 24 hours. We use your details to run your check and send the report.{" "}
         <Link href="/privacy" className="underline underline-offset-2 hover:text-ink">Privacy</Link>
       </p>
     </form>

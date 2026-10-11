@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Privacy",
   description: "What Oakheart Lab collects when you request a free AI check, why, who processes it, and how to have it deleted.",
   alternates: { canonical: "/privacy" },
+  openGraph: {
+    type: "website",
+    siteName: "Oakheart Lab",
+    title: "Privacy | Oakheart Lab",
+    description: "What Oakheart Lab collects when you request a free AI check, why, who processes it, and how to have it deleted.",
+    url: "/privacy",
+  },
 };
 
 const sections = [
@@ -19,7 +26,7 @@ const sections = [
   {
     h: "Why",
     body: [
-      "To run your check, send you the report and reply if you write back. We don’t sell your information or add you to a newsletter without asking.",
+      "To run your check, send you the report and reply if you write back. The referrer, campaign tags and “How did you hear about us?” answer show us how people find us. The IP hash limits repeated requests. We don’t sell your information or add you to a newsletter without asking.",
     ],
   },
   {

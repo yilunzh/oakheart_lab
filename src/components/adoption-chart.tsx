@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type Point = { date: string; label: string; users: number; note: string };
+type Point = { date: string; label: string; users: number; note: string; href?: string };
 
 const PAD = { top: 28, right: 56, bottom: 36, left: 48 };
 const Y_MAX = 1200;
@@ -133,7 +133,13 @@ export function AdoptionChart({ data }: { data: Point[] }) {
               <tr key={d.date} className="border-t border-line">
                 <td className="py-1">{d.label}</td>
                 <td className="py-1">{fmt(d.users)}</td>
-                <td className="py-1 text-muted">{d.note}</td>
+                <td className="py-1 text-muted">
+                  {d.href ? (
+                    <a href={d.href} className="underline underline-offset-2 hover:text-ink" rel="noopener">{d.note}</a>
+                  ) : (
+                    d.note
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
