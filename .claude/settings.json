@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "oakheart-skills": {
+      "source": {
+        "source": "github",
+        "repo": "yilunzh/oakheart-skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "oakheart@oakheart-skills": true
+  }
+}

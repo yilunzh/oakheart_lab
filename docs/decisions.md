@@ -2,6 +2,10 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-11: Oakheart plugin installed per project
+
+The `oakheart` plugin (copy-reviewer, sales-pitch-reviewer, business-strategy-copilot, software-delivery-agency, learning-loop) lives in `yilunzh/oakheart-skills` but was never available in cloud sessions: it was set up on a local machine, and no organization sync is visible here. `.claude/settings.json` now declares that marketplace and enables `oakheart@oakheart-skills`, so every Claude Code session on this repo, cloud or local, installs it at startup. If organization sync is turned on later, remove this to avoid loading two copies. The `seo` plugin from the same marketplace is not enabled (it adds a hook on every edit and Python dependencies).
+
 ## 2026-10-11: Shorter hooks; copy-review skill
 
 - **H1:** "Customers now ask AI who to do business with. Does it recommend you?" ("…and get your details right?" dropped). Share image matches. 13 words, one over the H1 budget: owner-chosen.

@@ -9,6 +9,8 @@ Busy, non-technical owners skim. A hook has one job: make them read the next lin
 
 Facts and claims still come from `docs/brief.md`; owner decisions in `docs/decisions.md` win over this skill.
 
+This skill adds Oakheart Lab's word budgets on top of the shared `oakheart:copy-reviewer` skill (installed for this repo through `.claude/settings.json`). Run that skill's review protocol, then apply the budgets and cut list below.
+
 ## 1. Word budgets (hard limits)
 
 | Element | Max | Shape |
