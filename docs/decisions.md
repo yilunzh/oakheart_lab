@@ -2,6 +2,13 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-11: The third pillar is "Stay ahead", not a support bot
+
+- **Owner:** the support service is primarily to keep updating and optimizing against competitors and new AI developments, not building a customer-support AI bot.
+- **Site:** pillar 3 "Support" → **"Stay ahead"** ("Keep improving as competitors and AI change": monthly check against the competitors AI names instead of you; updates when assistants add features, like booking inside ChatGPT; prices, seasons and policies kept current on your site and listings). It reuses the `step-ongoing` icon; `support` is unused. "What we do" H2 "Get found, get booked, stay ahead."; intro "…and you ahead of competitors as AI changes." Step 3, the sample plan (third column "Stay ahead, every month", replacing the separate monthly line), the SEO FAQ, footer, site description and JSON-LD `knowsAbout` follow. All support-bot copy (answering questions, staff handoff, fewer repeat calls) is gone. **Supersedes** the Support pillar in the brief and the "Discover, book, support" / "your answers ready" lines in the entry below.
+- **Brief and messaging** updated to match. Independent review: "ship with minor fixes", fixes applied (record: `docs/reviews/copy-2026-10-11.md`).
+- **Open for the owner:** does each monthly round need the owner's sign-off, or nothing from them unless something changes? Step 3 says only what we do until this is answered.
+
 ## 2026-10-11: Copy reviewed with `oakheart:copy-reviewer` only; Opendoor-style offer explanation
 
 - **Repo `copy-review` skill removed** (owner). Copy reviews use the shared `oakheart:copy-reviewer` protocol only; no fixed word budgets. `docs/review-rubric.md` dimension 5 now asks for a plain explanation of the offer (what the visitor does, what we do, how much effort) instead of budgets. **Supersedes** the word budgets from "Shorter hooks" below and the line in the entry below saying `copy-review` stays.

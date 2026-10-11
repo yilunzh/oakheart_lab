@@ -5,7 +5,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction and supported after the booking, then keeps it that way every month.",
+    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
 };
 
 export const checkCta = {
@@ -109,13 +109,13 @@ export const pillars = [
     ],
   },
   {
-    key: "Support",
-    icon: "support",
-    title: "Answer questions, day or night.",
+    key: "Stay ahead",
+    icon: "step-ongoing",
+    title: "Keep improving as competitors and AI change.",
     points: [
-      "“Can we bring the dog?” answered from your policy",
-      "A handoff to your team for judgment calls",
-      "Fewer repeat calls for your staff",
+      "A monthly check against the competitors AI names instead of you",
+      "Updates when assistants add features, like booking inside ChatGPT",
+      "Prices, seasons and policies kept current on your site and listings",
     ],
   },
 ];
@@ -147,7 +147,7 @@ export const steps = [
     title: "Stay ahead",
     icon: "step-ongoing",
     time: "Every month, stop anytime",
-    body: "We re-run the check, keep your facts current, improve booking and support, and tell you what changed.",
+    body: "We re-check you against competitors, keep your facts current, adapt to new AI features, keep improving booking and tell you what changed.",
   },
 ];
 
@@ -174,15 +174,14 @@ export const samplePlan = {
       ],
     },
     {
-      key: "Support",
+      key: "Stay ahead, every month",
       fixes: [
-        "Answer “Does it run if it rains?” from its policy",
-        "Send meeting point and what to bring after booking",
-        "Ask for a review the day after the tour",
+        "Re-run the check against the two outfitters AI names most",
+        "List tours where AI assistants start taking bookings",
+        "Update times and prices before the summer season",
       ],
     },
   ],
-  monthly: "Every month: re-run the check, keep listings current, report what changed.",
 };
 
 export const homeFaq = [
@@ -192,7 +191,7 @@ export const homeFaq = [
   },
   {
     q: "Isn’t this just SEO?",
-    a: "The Discover part mostly is: good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make the facts AI repeats about you correct on your site and the listings it reads: what you offer, prices, availability and policies. Book and Support go further: easier booking on a phone, and questions answered from your policies.",
+    a: "The Discover part mostly is: good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make sure your site and the listings AI reads have the right facts: what you offer, prices, availability and policies. We also go further: easier booking on a phone, and monthly updates as competitors and AI assistants change.",
     source: { label: "Google Search Central: AI features and your website", href: "https://developers.google.com/search/docs/appearance/ai-features" },
   },
   {

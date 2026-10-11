@@ -27,7 +27,7 @@
 |---|---|---|
 | `discover` | What we do → Discover | A magnifying glass over a small map pin, with a tiny chat bubble. Being found and cited by AI. |
 | `book` | What we do → Book | A calendar card with one date checked, and a small ticket stub. A confirmed booking. |
-| `support` | What we do → Support | Two overlapping chat bubbles, one with a small headset. Instant answers with a human handoff. |
+| `support` | *Unused since 2026-10-11* (the third pillar became Stay ahead and uses `step-ongoing`) | Two overlapping chat bubbles, one with a small headset. Instant answers with a human handoff. |
 | `tours` | Question card: Tours & experiences | A kayak with a paddle on a small wave |
 | `rentals` | Question card: Rentals | A pontoon boat, or a rental key on a tag |
 | `services` | Question card: Home services | A wrench crossed with a small house |

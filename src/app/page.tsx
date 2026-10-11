@@ -43,7 +43,7 @@ const jsonLd = {
       logo: `${site.url}/icon`,
       sameAs: [site.substack],
       address: { "@type": "PostalAddress", addressLocality: "Atlanta", addressRegion: "GA", addressCountry: "US" },
-      knowsAbout: ["AI search visibility", "Answer engine optimization", "Online booking conversion", "Customer support automation"],
+      knowsAbout: ["AI search visibility", "Answer engine optimization", "Online booking conversion", "Competitive monitoring for AI search"],
     },
     {
       "@type": "Person",
@@ -187,8 +187,8 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="Discover, book, support: one set of facts."
-        intro="You run the business. We keep your facts right, your booking simple and your answers ready."
+        title="Get found, get booked, stay ahead."
+        intro="You run the business. We keep your facts right, your booking simple and you ahead of competitors as AI changes."
         tone="surface"
       >
         <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-paper px-5 py-4">

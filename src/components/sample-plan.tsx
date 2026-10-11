@@ -28,10 +28,6 @@ export function SamplePlan() {
             </div>
           ))}
         </div>
-        <p className="mt-6 flex items-start gap-2 rounded-xl bg-accent-soft px-4 py-3 text-[15px] font-medium">
-          <span aria-hidden="true" className="text-accent">↻</span>
-          {samplePlan.monthly}
-        </p>
       </div>
       <figcaption className="border-t border-line px-5 py-3 text-xs text-muted">
         Shows the format only. Your plan comes from your check.

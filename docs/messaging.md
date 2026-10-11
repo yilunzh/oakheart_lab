@@ -7,7 +7,7 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
 
 ## Why we win (research §4c)
 1. **Accuracy, not just presence.** Competitor audits only check whether you're mentioned. We check what AI gets *wrong*: availability, age limits, what's included, deposits, cancellation. Those are the facts that break bookings.
-2. **One team from found to booked to supported.** Visibility tools stop at visibility. Booking agencies stop at the website.
+2. **One team from found to booked, kept ahead every month.** Visibility tools stop at visibility. Booking agencies stop at the website.
 3. **Keep your booking system.** We work with FareHarbor, Peek, Checkfront, Mindbody, Vagaro, Square, Housecall Pro and similar.
 4. **Built for operations-heavy businesses:** capacity, time slots, assets, staff.
 5. **An operator's product leader.** A decade building commerce where "you're ultimately moving atoms, not bits." Roles only, no employer metrics.
@@ -37,9 +37,9 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
 4. **The system:**
    - **Found:** be the business AI can find, understand and cite.
    - **Booked:** turn that visit into a confirmed booking, with the right add-ons.
-   - **Supported:** answer customers' questions instantly, and hand off to your team when it matters.
+   - **Stay ahead:** every month, re-check against competitors, adapt to new AI features, keep facts current. (Not a support bot; owner 2026-10-11.)
 5. **Founder:** "I've spent over a decade building commerce where the click turns into a car, a key, a delivery. Now I help businesses like yours do the same with AI." Roles: Hertz, Rivian, Carvana, Clutch.
-6. **How it works:** free check (<24h) → a plan of specific fixes across Discover, Book and Support, (shown as a labeled sample plan) → monthly ongoing work, all under one flat monthly fee: re-run the check, keep facts current, improve booking. Shown as a loop, not an add-on.
+6. **How it works:** free check (<24h) → a plan of specific fixes across Discover and Book, (shown as a labeled sample plan) → monthly ongoing work, all under one flat monthly fee: re-run the check against competitors, keep facts current, adapt to new AI features. Shown as a loop, not an add-on.
 7. **Risk reversal (exact):** "If you're not happy with our service, we'll give your money back, no questions asked."
 8. **FAQ:**
    - Do I have to switch booking systems? (No)
