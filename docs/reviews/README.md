@@ -22,6 +22,7 @@ Each round is scored by a fresh, blind reviewer against `docs/review-rubric.md`.
 | 13 | `44aa7a9` | https://oakheart-lab.vercel.app | 8.23 (all gates pass) | Recurring frame throughout, month-to-month FAQ, hero matches the check, plainer headings |
 | 14 | `7810964` | https://oakheart-lab.vercel.app | 8.18 (all gates pass) | Flat monthly fee, privacy page, mobile loop; owner-final subhead and urgency line not deducted |
 | 15 | `8e21c89` | https://oakheart-lab.vercel.app | 8.75 (all gates pass) | Round-14 fixes, privacy details, IP salt set, visible retry failure |
+| 16 | `736a70a` | https://oakheart-lab.vercel.app | 8.65 (all gates pass) | Round-15 fixes; assistant count still inconsistent in one caption |
 
 ## Outcome (8 rounds complete)
 

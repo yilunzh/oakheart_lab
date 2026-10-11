@@ -122,7 +122,7 @@ export const pillars = [
   },
 ];
 
-export const alsoAvailable = "Also available, priced separately: a companion mobile app, and staff tools and automation.";
+export const alsoAvailable = "Also available: a companion mobile app, and staff tools and automation.";
 
 /** Public roles only (docs/brief.md). */
 export const roles = [
@@ -207,7 +207,7 @@ export const homeFaq = [
   },
   {
     q: "What does it cost?",
-    a: "One flat monthly fee covers the work in your plan: the first round of fixes and the upkeep after it. There’s no separate project fee. We agree it with you before any work starts. We don’t publish it because it depends on what your check finds: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "One flat monthly fee covers the work in your plan: the first round of fixes and the upkeep after it. There’s no separate project fee. The fee is set for your business after the check and agreed before any work starts, then stays the same each month. We don’t publish one price because businesses differ: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "Is there a long contract?",
@@ -290,6 +290,6 @@ export const checkFaq = [
   },
   {
     q: "What happens to my information?",
-    a: "We use it to run your check and to send you the report. We don’t sell it or add you to a newsletter without asking. Our privacy page has the details.",
+    a: "We use it to run your check, send you the report and see how you found us. We don’t sell it or add you to a newsletter without asking. Our privacy page has the details.",
   },
 ];

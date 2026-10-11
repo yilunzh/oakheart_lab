@@ -116,7 +116,7 @@ export default function Home() {
       <Section
         eyebrow="What changed"
         title="AI answers now shape who gets the booking."
-        intro="Customers used to compare ten links. Now an assistant often names two or three businesses, and more people ask every month. Smart companies are already sprinting to get ahead of it."
+        intro="Customers used to compare ten links. Now an assistant may name only a few businesses, and more people ask every month. Smart companies are already sprinting to get ahead of it."
         tone="surface"
       >
         <div className="grid gap-6 lg:grid-cols-3">

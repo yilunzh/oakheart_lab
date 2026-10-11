@@ -32,7 +32,7 @@ const sections = [
   {
     h: "Who processes it",
     body: [
-      "Vercel hosts the site. Neon stores check requests. Resend sends the notification email to Oakheart Lab, and Google Workspace hosts Oakheart Lab’s email, where your report is written and sent. Each processes data only to provide that service.",
+      "Vercel hosts the site. Neon stores check requests. Resend sends the notification email to Oakheart Lab, and Google Workspace hosts Oakheart Lab’s email, where your report is written and sent. Each processes data only to provide that service. To run your check we ask AI assistants questions about your business, using its name, website, location and type, never your email.",
     ],
   },
   {
