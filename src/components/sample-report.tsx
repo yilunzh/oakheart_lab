@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const runs = [
   { engine: "ChatGPT", mentioned: 2, total: 5 },
-  { engine: "Google AI Overviews", mentioned: 3, total: 5 },
+  { engine: "Google AI", mentioned: 3, total: 5 },
   { engine: "Perplexity", mentioned: 0, total: 5 },
 ];
 

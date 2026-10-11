@@ -107,7 +107,7 @@ export const pillars = [
     points: [
       "Live times and prices on the page they land on",
       "Fewer steps to a confirmed booking on a phone",
-      "Works with the booking system you already use",
+      "The right add-on at checkout, like gear or an upgrade",
     ],
   },
   {
@@ -290,6 +290,7 @@ export const checkFaq = [
   },
   {
     q: "What happens to my information?",
-    a: "We use it to run your check, send you the report and see how you found us. We don’t sell it or add you to a newsletter without asking. Our privacy page has the details.",
+    a: "We use it to run your check, send you the report and see how you found us. We don’t sell it or add you to a newsletter without asking.",
+    link: { label: "Read the privacy page", href: "/privacy" },
   },
 ];

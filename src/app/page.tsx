@@ -184,6 +184,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p aria-hidden="true" className="mt-2 text-sm text-muted sm:hidden">Swipe for more →</p>
         <BookingLeaks />
       </Section>
 

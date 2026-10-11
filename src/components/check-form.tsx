@@ -157,7 +157,7 @@ export function CheckForm() {
     undefined;
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-5" aria-describedby="form-status">
+    <form onSubmit={onSubmit} noValidate className="space-y-5 lg:space-y-4" aria-describedby="form-status">
       <div
         ref={statusRef}
         id="form-status"
@@ -184,7 +184,7 @@ export function CheckForm() {
         <input id="website" name="website" inputMode="url" autoComplete="url" placeholder="yourbusiness.com" required
           aria-invalid={!!errors.website} aria-describedby={describe("website", true)} className={fieldClass} />
       </Field>
-      <div className="grid gap-5">
+      <div className="grid gap-5 lg:grid-cols-2 lg:gap-4">
         <Field id="location" label="City or area you serve" error={errors.location}>
           <input id="location" name="location" autoComplete="address-level2" placeholder="e.g. Asheville, NC" required
             aria-invalid={!!errors.location} aria-describedby={describe("location")} className={fieldClass} />
@@ -202,8 +202,8 @@ export function CheckForm() {
           aria-invalid={!!errors.email} aria-describedby={describe("email")} className={fieldClass} />
       </Field>
       <Field id="question" label="What should AI get right about you? (optional)"
-        hint="For example: “When someone asks if dogs are allowed on the boat, it should say yes, up to 40 lb.” We check this first." error={errors.question}>
-        <textarea id="question" name="question" rows={2} maxLength={600}
+        hint="For example: “Dogs are allowed on the boat, up to 40 lb.” We check this first." error={errors.question}>
+        <textarea id="question" name="question" rows={1} maxLength={600}
           aria-invalid={!!errors.question} aria-describedby={describe("question", true)} className={fieldClass} />
       </Field>
       <Field id="heardFrom" label="How did you hear about us? (optional)" error={errors.heardFrom}>
