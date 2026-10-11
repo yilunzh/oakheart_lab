@@ -2,6 +2,13 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-11: Shorter hooks; copy-review skill
+
+- **H1:** "Customers now ask AI who to do business with. Does it recommend you?" ("…and get your details right?" dropped). Share image matches. 13 words, one over the H1 budget: owner-chosen.
+- **Hero subhead shortened** from 54 to 24 words, since the owner asked for less verbose hooks: "ChatGPT, Google's AI, Gemini, Perplexity and Claude now answer before your website loads. We fix what they get wrong, and make booking with you easy." It no longer repeats the H1's opening. **Supersedes** the 2026-10-04 subhead; revert if the owner prefers the old one.
+- **Other hooks cut to budget:** section H2s ≤ 8 words, intros ≤ 15, cards ≤ 15, bullets ≤ 10, FAQ answers ≤ 50 (money-back sentence unchanged). "Smart companies are already sprinting…" stays (owner).
+- **New `.claude/skills/copy-review/SKILL.md`** sets the word budgets, a cut list and a hook test. `docs/review-rubric.md` dimension 5 now scores against those budgets.
+
 ## 2026-10-11: Hero without the audience eyebrow; broader H1
 
 - **Removed** the hero eyebrow "For tours, rentals, auto, home services and stays".

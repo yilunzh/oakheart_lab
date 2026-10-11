@@ -94,7 +94,7 @@ export const pillars = [
     title: "Be found and described correctly.",
     points: [
       "Clear pages with the details customers ask about",
-      "The same facts on your site, Google, Yelp and booking platforms",
+      "Same facts everywhere: your site, Google, Yelp, booking platforms",
       "Readable by search and AI crawlers",
     ],
   },
@@ -113,7 +113,7 @@ export const pillars = [
     icon: "support",
     title: "Answer questions, day or night.",
     points: [
-      "“Can we bring the dog?” answered from your policy at 10 pm",
+      "“Can we bring the dog?” answered from your policy",
       "A handoff to your team for judgment calls",
       "Fewer repeat calls for your staff",
     ],
@@ -135,19 +135,19 @@ export const steps = [
     title: "Free AI check",
     icon: "step-check",
     time: "Under 24 hours",
-    body: "We ask the leading assistants what your customers ask, then show where you’re missing, what’s wrong and what to fix first.",
+    body: "We ask assistants your customers’ questions and show what to fix first.",
   },
   {
     title: "Fix the gaps",
     icon: "step-plan",
     time: "Included in your monthly fee",
-    body: "We walk through your booking path and the questions your staff answer most, agree a plan, then fix what matters first on the systems you already use.",
+    body: "We walk through your booking path, agree a plan, then fix what matters first.",
   },
   {
     title: "Stay ahead",
     icon: "step-ongoing",
     time: "Every month, stop anytime",
-    body: "Assistants, competitors and your offers keep changing. Each month we re-run the check, keep your facts current and improve how customers book.",
+    body: "Each month we re-run the check, keep your facts current and improve booking.",
   },
 ];
 
@@ -160,7 +160,7 @@ export const samplePlan = {
     {
       key: "Discover",
       fixes: [
-        "Fix the age rule on an old review listing and the Google Business Profile",
+        "Correct the age rule on old listings and Google",
         "Add an “Age & requirements” section to every tour page",
         "Publish times, prices and inclusions as text and structured data",
       ],
@@ -169,15 +169,15 @@ export const samplePlan = {
       key: "Book",
       fixes: [
         "Show live sunset-tour times on the tour page",
-        "Cut the steps from tour page to confirmed booking on a phone",
+        "Fewer taps from tour page to booking on a phone",
         "Offer the dry-bag rental at checkout on sunset tours",
       ],
     },
     {
       key: "Support",
       fixes: [
-        "Answer “Does it run if it rains?” from the real weather policy",
-        "Send the meeting point and what to bring after every booking",
+        "Answer “Does it run if it rains?” from its policy",
+        "Send meeting point and what to bring after booking",
         "Ask for a review the day after the tour",
       ],
     },
@@ -188,7 +188,7 @@ export const samplePlan = {
 export const homeFaq = [
   {
     q: "Do I have to switch booking systems?",
-    a: "No. We design around the booking system you already use, whether that’s FareHarbor, Peek, Mindbody, Square or something else, and connect to it wherever it allows. Replacing it is never the starting point.",
+    a: "No. We work with the one you have, like FareHarbor, Peek, Mindbody or Square, and connect to it wherever it allows.",
   },
   {
     q: "Isn’t this just SEO?",
@@ -197,15 +197,15 @@ export const homeFaq = [
   },
   {
     q: "Don’t Google Maps and reviews still matter more?",
-    a: "For most local bookings today, yes, and we treat them that way. AI assistants draw on the same sources: your website, Google Business Profile, reviews and listings. So the Discover work strengthens Maps and search too. AI answers are a fast-growing place where those facts get repeated, and where mistakes cost you quietly.",
+    a: "For most local bookings today, yes, and we treat them that way. AI assistants read the same sources: your site, Google Business Profile, reviews and listings. So the Discover work strengthens Maps and search too.",
   },
   {
     q: "Can you guarantee ChatGPT will recommend us?",
-    a: "No one honestly can. AI answers vary from one run to the next. What we can do is fix what keeps assistants from finding and trusting you, measure how often you’re mentioned and described correctly across repeated checks, and show you the trend.",
+    a: "No one honestly can. AI answers vary from run to run. We fix what keeps assistants from finding and trusting you, then measure how often you’re mentioned and described correctly, month by month.",
   },
   {
     q: "What does it cost?",
-    a: "One flat monthly fee covers the work in your plan: the first round of fixes and the upkeep after it. There’s no separate project fee. The fee is set for your business after the check and agreed before any work starts, then stays the same each month. We don’t publish one price because businesses differ: a business that needs three listings corrected shouldn’t pay for a booking rebuild. The AI check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "One flat monthly fee covers your plan: the first fixes and the upkeep. There’s no project fee. It’s set for your business after the check and stays the same each month. Three listing fixes shouldn’t cost the same as a booking rebuild, so there’s no published price. The check is free. And if you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "Is there a long contract?",
@@ -241,11 +241,11 @@ export const heardFrom = [
 export const checkCovers = [
   {
     title: "Are you mentioned?",
-    body: "How often each assistant names you across repeated runs.",
+    body: "How often each assistant names you, across repeated runs.",
   },
   {
     title: "Are your details right?",
-    body: "Prices, availability, age limits, inclusions and policies, checked against your site. Anything you tell us it should get right comes first.",
+    body: "Prices, availability and policies, checked against your site. Your top concern first.",
   },
   {
     title: "Where it gets its information",
@@ -276,15 +276,15 @@ export const checkFaq = [
   },
   {
     q: "Why do you ask each question more than once?",
-    a: "AI answers change from run to run. One answer is an anecdote; repeated runs show a pattern. We report how often you’re mentioned and described correctly, not a made-up “AI ranking.”",
+    a: "AI answers change from run to run. Repeated runs show a pattern, so we report how often you’re mentioned and described correctly, not a made-up “AI ranking.”",
   },
   {
     q: "Is it really free? What’s the catch?",
-    a: "It’s free and you can request as many as you like. There’s no sales call unless you ask for one. If the report shows problems you want help with, reply to it and we’ll talk: fixes and upkeep are one flat monthly fee, month to month. If you’d rather not, keep the report and use it however you like.",
+    a: "It’s free, as many as you like, with no sales call unless you ask. If you want help with what it finds, reply and we’ll talk: one flat monthly fee, month to month. If not, keep the report.",
   },
   {
     q: "Who runs the check?",
-    a: "Yilun Zhang, Oakheart Lab’s founder. He runs the questions on each assistant, checks the answers against your site, and writes the findings and fixes himself.",
+    a: "Yilun Zhang, Oakheart Lab’s founder. He runs the questions, checks the answers against your site and writes the fixes himself.",
   },
   {
     q: "What happens to my information?",

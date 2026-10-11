@@ -26,7 +26,7 @@ export default async function Image() {
             Customers now ask AI who to do business with.
           </div>
           <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -1.5, color: "#1f5c3a" }}>
-            Does it recommend you, and get your details right?
+            Does it recommend you?
           </div>
         </div>
         <div style={{ fontSize: 28, color: "#555b55", display: "flex" }}>

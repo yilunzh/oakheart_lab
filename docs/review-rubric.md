@@ -1,6 +1,6 @@
 # Website review rubric
 
-This rubric is given to independent reviewers. It is adapted from the Oakheart skills: the `business-strategy-copilot` review rubric, the `copy-reviewer` review protocol, `software-delivery-agency` research-design and engineering-release acceptance, and the `seo` plugin audits. Keep it fixed across review rounds.
+This rubric is given to independent reviewers. It is adapted from the Oakheart skills: the `business-strategy-copilot` review rubric, the `copy-reviewer` review protocol, `software-delivery-agency` research-design and engineering-release acceptance, and the `seo` plugin audits. Keep it fixed across review rounds. (Owner change 2026-10-11: dimension 5 now includes word budgets for hooks, so scores before and after aren't strictly comparable on that dimension.)
 
 ## What the reviewer receives
 
@@ -31,7 +31,7 @@ Any divergence from the brief is a finding under dimension 1.
 | 2 | **Offer and buyer relevance** | 15% | Speaks in the buyer's language about their actual decision. The offer ladder, first step, commitment and risk (e.g. refund terms) are clear even without published prices. Pillars read as one system. |
 | 3 | **Credibility and evidence integrity** | 15% | Claims trace to evidence. Statistics are sourced and dated. Samples and prototypes are labeled. Founder experience is relevant and not inflated. No implied endorsements. |
 | 4 | **Conversion path and friction** | 15% | One primary action that is visible at every decision point. The form asks only what it needs. Errors and confirmation states are clear. Next steps after submit are explicit. Objections are answered near the decision. |
-| 5 | **Copy quality and voice** | 10% | Direct, specific and concrete. No generic agency prose, filler slogans or artificial contrasts. Qualifications sit beside claims. |
+| 5 | **Copy quality and voice** | 10% | Direct, specific and concrete. No generic agency prose, filler slogans or artificial contrasts. Qualifications sit beside claims. **Concise:** hooks stay within the word budgets in `.claude/skills/copy-review/SKILL.md` (H1 ≤ 12, hero subhead ≤ 25, H2 ≤ 8, section intro ≤ 15, card ≤ 15, bullet ≤ 10, CTA ≤ 5, FAQ answer ≤ 50); adjacent elements don't repeat each other. Each over-budget hook is a finding. |
 | 6 | **Visual design and UX craft** | 10% | Clear hierarchy, purposeful visuals that carry meaning, consistent system, and polished mobile layout with no wrapping or truncation defects. |
 | 7 | **Search and AI discoverability** | 10% | Facts are crawlable as HTML. Schema matches visible content. Entity description is consistent. Answer-first, citable passages. Sensible crawler access, sitemap and canonicals. |
 | 8 | **Technical quality and accessibility** | 10% | Mobile Lighthouse performance ≥ 90 (3-run median), CWV within targets, accessibility ≥ 95, no axe serious or critical issues, no broken links, form works end to end. |

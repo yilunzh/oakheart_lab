@@ -60,8 +60,8 @@ export default function CheckPage() {
             See what AI tells your customers about you.
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-muted">
-            We ask ChatGPT, Gemini, Perplexity, Claude and Google&rsquo;s AI answers the questions
-            your customers ask, then send you a plain-language report within 24 hours.
+            We ask ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude what your customers ask.
+            Report within 24 hours.
           </p>
         </div>
         <div id="check-form" className="scroll-mt-24 rounded-2xl border border-line bg-surface p-5 shadow-[0_20px_60px_-35px_rgba(22,19,15,0.35)] sm:p-7 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
@@ -112,7 +112,7 @@ export default function CheckPage() {
         </div>
       </section>
 
-      <Section id="what-you-get" eyebrow="What your report covers" title="Whether you show up, and whether AI gets you right." tone="surface">
+      <Section id="what-you-get" eyebrow="What your report covers" title="Are you mentioned, and is it right?" tone="surface">
         <div className="grid gap-6 sm:grid-cols-2">
           {checkCovers.map((c, i) => (
             <div key={c.title} className="rounded-2xl border border-line bg-paper p-6">
@@ -126,7 +126,7 @@ export default function CheckPage() {
       </Section>
 
       <Section eyebrow="Method" title="How we run the check."
-        intro="Answers vary by run, location and account, so we sample them. It is a sample, not a ranking."
+        intro="Answers vary by run, so we sample them. It’s a sample, not a ranking."
       >
         <ol className="mb-12 grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1.2fr]">
           {methodSteps.map((m, i) => (

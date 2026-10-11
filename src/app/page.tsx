@@ -82,13 +82,11 @@ export default function Home() {
         <div>
           <h1 className="text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
             Customers now ask AI who to do business with.{" "}
-            <span className="text-accent">Does it recommend you, and get your details right?</span>
+            <span className="text-accent">Does it recommend you?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Customers now ask ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude for
-            recommendations before they ever visit your website. We fix what keeps AI from mentioning you, or causes it to get your details wrong. And
-            when customers click through, we make booking with you quick and easy, using the booking
-            system you already have.
+            ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude now answer before your website
+            loads. We fix what they get wrong, and make booking with you easy.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <CtaLink href={checkCta.href}>{checkCta.label}</CtaLink>
@@ -112,7 +110,7 @@ export default function Home() {
       <Section
         eyebrow="What changed"
         title="AI answers now shape who gets the booking."
-        intro="Customers used to compare ten links. Now an assistant may name only a few businesses, and more people ask every month. Smart companies are already sprinting to get ahead of it."
+        intro="Instead of ten links, customers get one short answer. Smart companies are already sprinting to get ahead of it."
         tone="surface"
       >
         <div className="grid gap-6 lg:grid-cols-3">
@@ -188,8 +186,8 @@ export default function Home() {
       <Section
         id="system"
         eyebrow="What we do"
-        title="We fix what AI reads, how you take bookings and how you answer questions."
-        intro="All three run on the same facts. We get them right, then keep them right every month."
+        title="Three fixes, one set of facts."
+        intro="AI answers, booking and support run on the same facts. We keep them right."
         tone="surface"
       >
         <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-paper px-5 py-4">
@@ -227,7 +225,7 @@ export default function Home() {
       </Section>
 
       {/* Founder */}
-      <Section id="founder" eyebrow="Who you’ll work with" title="Over a decade building how people buy and rent cars online.">
+      <Section id="founder" eyebrow="Who you’ll work with" title="A decade building online car buying and rental.">
         <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
           <Image
             src="/images/yilun-zhang.jpg"
@@ -274,7 +272,7 @@ export default function Home() {
       <Section
         id="how-it-works"
         eyebrow="How it works"
-        title="A free check, then one flat monthly fee for the fixes and the upkeep."
+        title="Free check. Then one flat monthly fee."
         tone="surface"
       >
         <div className="relative">
@@ -335,12 +333,11 @@ export default function Home() {
       <section className="bg-night text-paper">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
-            Find out what AI tells your customers about you.
+            See what AI tells customers about you.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-paper/75">
-            Within 24 hours: where you show up, what&rsquo;s wrong and what to fix first. Free, no
-            obligation. If you want our help after that, it&rsquo;s one flat monthly fee, and you can
-            stop anytime.
+            Free report in 24 hours: where you show up, what&rsquo;s wrong, what to fix first. Then one
+            flat monthly fee if you want our help.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <CtaLink href={checkCta.href} variant="inverse">
