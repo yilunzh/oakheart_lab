@@ -4,7 +4,7 @@ These items are deliberately deferred until oakheartlab.com moves from Substack 
 
 | # | Item | Where | Owner |
 |---|---|---|---|
-| 1 | Move the Substack custom domain to a subdomain (e.g. `writing.oakheartlab.com`) before pointing `www` at Vercel | Substack settings | Yilun |
+| 1 | Move the Substack custom domain to a subdomain (e.g. `blog.oakheartlab.com`) before pointing `www` at Vercel | Substack settings | Yilun |
 | 2 | Point `www.oakheartlab.com` at the Vercel project; leave email DNS (MX, SPF, DKIM) untouched | DNS + Vercel → Domains | Yilun |
 | 3 | Set `NEXT_PUBLIC_SITE_URL=https://www.oakheartlab.com` | Vercel env vars | Claude |
 | 4 | Set `NEXT_PUBLIC_SITE_INDEXABLE=true` (removes noindex, opens robots.txt, keeps `/api/` disallowed) | Vercel env vars | Claude, after owner OK |
@@ -13,4 +13,4 @@ These items are deliberately deferred until oakheartlab.com moves from Substack 
 | 7 | Scheduling URL for calls, to replace the "Email Yilun" fallback | `src/content/site.ts` (`talkFirst`) | Yilun supplies, Claude wires |
 | 8 | DataForSEO credentials for the check runner. Until it runs, the site says (truthfully) that Yilun runs every check himself. Once it is live, update "How we run it" and the "Who runs the check?" FAQ to describe the software step and name DataForSEO | Vercel env, `ops/check-runner/` | Yilun supplies, Claude builds |
 | 9 | Submit the sitemap in Google Search Console and Bing Webmaster Tools | Search consoles | Yilun |
-| 10 | Redirects for indexed Substack URLs (`/p/*`, `/about`, `/archive`, `/feed`, `/subscribe`, `/s/*`, `/t/*`, `/podcast`, `/notes`) to `writing.oakheartlab.com`. Done in `next.config.ts`; change the subdomain there if Substack moves elsewhere | `next.config.ts` redirects | Claude |
+| 10 | Redirects for indexed Substack URLs (`/p/*`, `/about`, `/archive`, `/feed`, `/subscribe`, `/s/*`, `/t/*`, `/podcast`, `/notes`) to `blog.oakheartlab.com`. Done in `next.config.ts`; change the subdomain there if Substack moves elsewhere | `next.config.ts` redirects | Claude |
