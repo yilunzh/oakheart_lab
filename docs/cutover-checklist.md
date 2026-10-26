@@ -13,4 +13,4 @@ These items are deliberately deferred until oakheartlab.com moves from Substack 
 | 7 | Scheduling URL for calls, to replace the "Email Yilun" fallback | `src/content/site.ts` (`talkFirst`) | Yilun supplies, Claude wires |
 | 8 | DataForSEO credentials for the check runner. Until it runs, the site says (truthfully) that Yilun runs every check himself. Once it is live, update "How we run it" and the "Who runs the check?" FAQ to describe the software step and name DataForSEO | Vercel env, `ops/check-runner/` | Yilun supplies, Claude builds |
 | 9 | Submit the sitemap in Google Search Console and Bing Webmaster Tools | Search consoles | Yilun |
-| 10 | Redirects for any indexed Substack URLs that move | `next.config.ts` redirects | Claude |
+| 10 | Redirects for indexed Substack URLs (`/p/*`, `/about`, `/archive`, `/feed`, `/subscribe`, `/s/*`, `/t/*`, `/podcast`, `/notes`) to `writing.oakheartlab.com`. Done in `next.config.ts`; change the subdomain there if Substack moves elsewhere | `next.config.ts` redirects | Claude |
