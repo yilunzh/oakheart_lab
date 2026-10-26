@@ -4,10 +4,10 @@ These items are deliberately deferred until oakheartlab.com moves from Substack 
 
 | # | Item | Where | Owner |
 |---|---|---|---|
-| 1 | Move the Substack custom domain to a subdomain (e.g. `blog.oakheartlab.com`) before pointing `www` at Vercel | Substack settings | Yilun |
-| 2 | Point `www.oakheartlab.com` at the Vercel project; leave email DNS (MX, SPF, DKIM) untouched | DNS + Vercel → Domains | Yilun |
-| 3 | Set `NEXT_PUBLIC_SITE_URL=https://www.oakheartlab.com` | Vercel env vars | Claude |
-| 4 | Set `NEXT_PUBLIC_SITE_INDEXABLE=true` (removes noindex, opens robots.txt, keeps `/api/` disallowed) | Vercel env vars | Claude, after owner OK |
+| 1 | **Done 2026-10-26.** Substack custom domain moved to `blog.oakheartlab.com` (root-domain redirect disabled) | Substack settings | Yilun |
+| 2 | **Done 2026-10-26.** `www` CNAME → Vercel, apex and `*` A → `216.198.79.1` (apex redirects to `www`); email DNS untouched | DNS (Network Solutions) + Vercel → Domains | Yilun |
+| 3 | **Done 2026-10-26.** `NEXT_PUBLIC_SITE_URL=https://www.oakheartlab.com` | Vercel env vars | Claude |
+| 4 | **Done 2026-10-26** (owner OK). `NEXT_PUBLIC_SITE_INDEXABLE=true` for production only; previews stay noindex | Vercel env vars | Claude |
 | 5 | Verify oakheartlab.com in Resend; set `NOTIFY_FROM="Oakheart Lab <checks@oakheartlab.com>"` | Resend → Domains, Vercel env | Yilun |
 | 6 | Add the `CRON_SECRET` repository secret (same value as in Vercel) so the 3-hourly notification retry runs | GitHub → Settings → Secrets → Actions | Yilun |
 | 7 | Scheduling URL for calls, to replace the "Email Yilun" fallback | `src/content/site.ts` (`talkFirst`) | Yilun supplies, Claude wires |

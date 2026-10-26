@@ -2,6 +2,13 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-26: Domain cutover and indexing
+
+- **Owner:** launch on `www.oakheartlab.com`; Substack moves to **`blog.oakheartlab.com`** (not `writing`). Indexing approved at launch.
+- **DNS** (Network Solutions): `www` CNAME → Vercel; apex and `*` A → `216.198.79.1`; `blog` CNAME → Substack. Email records (Google MX, SendGrid, SPF, DMARC) untouched. In Vercel, `oakheartlab.com` 308-redirects to `www`.
+- **Env:** `NEXT_PUBLIC_SITE_URL=https://www.oakheartlab.com` (supersedes the 2026-10-04 pre-launch URL base); `NEXT_PUBLIC_SITE_INDEXABLE=true` on production only.
+- **Redirects:** Substack paths (`/p/*`, `/about`, `/archive`, `/feed`, …) on `www` 308 to `blog.oakheartlab.com` (`next.config.ts`).
+
 ## 2026-10-11: The third pillar is "Stay ahead", not a support bot
 
 - **Owner:** the support service is primarily to keep updating and optimizing against competitors and new AI developments, not building a customer-support AI bot.
