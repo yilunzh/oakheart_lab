@@ -19,7 +19,6 @@ import {
   factsLine,
   loopNote,
   pillars,
-  roles,
   shiftStats,
   site,
   steps,
@@ -56,7 +55,7 @@ const jsonLd = {
       knowsAbout: ["Digital commerce", "Online booking", "AI search visibility"],
       image: `${site.url}/images/yilun-zhang.jpg`,
       worksFor: { "@id": `${site.url}/#org` },
-      sameAs: [site.linkedin, site.substack],
+      sameAs: [site.substack],
     },
     {
       "@type": "FAQPage",
@@ -223,50 +222,6 @@ export default function Home() {
           ))}
         </ol>
         <p className="mt-8 text-[15px] text-muted">{alsoAvailable}</p>
-      </Section>
-
-      {/* Founder */}
-      <Section id="founder" eyebrow="Who you’ll work with" title="A decade building online car buying and rental.">
-        <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
-          <Image
-            src="/images/yilun-zhang.jpg"
-            alt="Yilun Zhang, founder of Oakheart Lab"
-            loading="eager"
-            width={220}
-            height={220}
-            className="rounded-2xl"
-          />
-          <div className="max-w-2xl">
-            <blockquote className="text-2xl font-medium leading-snug tracking-tight">
-              &ldquo;In the last nine months I&rsquo;ve watched customers change how they decide.
-              They ask an AI assistant, and the answer shapes the booking before a website ever
-              loads. Most businesses haven&rsquo;t caught up yet, and that&rsquo;s why I built
-              Oakheart Lab.&rdquo;
-            </blockquote>
-            <p className="mt-5 leading-relaxed text-muted">
-              Yilun Zhang has spent the last decade building digital commerce in automotive, where
-              cars, locations, staff and handover times all have to line up behind every online
-              sale. Your business runs on the same kind of complexity. He&rsquo;s based in Atlanta, GA.
-            </p>
-            <ul className="mt-5 flex flex-wrap gap-2 text-sm">
-              {roles.map((r) => (
-                <li key={r.company} className="rounded-full border border-line px-3 py-1.5">
-                  <span className="font-semibold">{r.company}</span>
-                  <span className="text-muted"> · {r.title}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4 text-sm">
-              <a href={site.linkedin} className="underline underline-offset-2 hover:text-accent" rel="noopener">
-                LinkedIn
-              </a>
-              <span className="mx-2 text-muted">·</span>
-              <a href={site.substack} className="underline underline-offset-2 hover:text-accent" rel="noopener">
-                Writing on building with AI
-              </a>
-            </p>
-          </div>
-        </div>
       </Section>
 
       {/* How it works */}

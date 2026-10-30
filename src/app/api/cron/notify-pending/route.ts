@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   if (!process.env.DATABASE_URL) return Response.json({ error: "not_connected" }, { status: 503 });
   const result = await notifyPending(
     neonStore(process.env.DATABASE_URL),
-    resendNotifier(process.env.RESEND_API_KEY, site.email, process.env.NOTIFY_FROM ?? "Oakheart Lab <checks@oakheartlab.com>"),
+    resendNotifier(process.env.RESEND_API_KEY, site.notifyEmail, process.env.NOTIFY_FROM ?? "Oakheart Lab <checks@oakheartlab.com>"),
   );
   // A non-2xx status makes the scheduled caller (GitHub Actions) fail and email the owner.
   return Response.json(result, { status: result.sent < result.pending ? 500 : 200 });

@@ -33,9 +33,6 @@ export function SiteFooter() {
               <a href={`mailto:${site.email}`} className="hover:text-accent">{site.email}</a>
             </li>
             <li>
-              <a href={site.linkedin} className="hover:text-accent" rel="noopener">LinkedIn</a>
-            </li>
-            <li>
               <a href={site.substack} className="hover:text-accent" rel="noopener">Writing on Substack</a>
             </li>
           </ul>

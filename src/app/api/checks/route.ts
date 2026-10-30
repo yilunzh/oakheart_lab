@@ -8,7 +8,7 @@ import { site } from "@/content/site";
 const store = process.env.DATABASE_URL ? neonStore(process.env.DATABASE_URL) : null;
 const notify = resendNotifier(
   process.env.RESEND_API_KEY,
-  site.email,
+  site.notifyEmail,
   process.env.NOTIFY_FROM ?? "Oakheart Lab <checks@oakheartlab.com>",
 );
 

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { CheckForm } from "@/components/check-form";
 import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
@@ -99,10 +98,6 @@ export default function CheckPage() {
                 sales call unless you ask.
               </p>
               <p className="mt-2 text-sm">
-                <Link href="/#founder" className="underline underline-offset-2 hover:text-accent">
-                  About Yilun
-                </Link>
-                <span className="mx-2 text-muted">·</span>
                 <a href={talkFirst.href} className="whitespace-nowrap underline underline-offset-2 hover:text-accent">
                   {talkFirst.label}
                 </a>

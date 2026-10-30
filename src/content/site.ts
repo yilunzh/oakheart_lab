@@ -1,8 +1,9 @@
 export const site = {
   name: "Oakheart Lab",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.oakheartlab.com",
-  email: "yilun@oakheartlab.com",
-  linkedin: "https://www.linkedin.com/in/yilun-zhang-7b804510/",
+  email: "info@oakheartlab.com",
+  /** Internal lead notifications (D8); not shown on the site. */
+  notifyEmail: "yilun@oakheartlab.com",
   substack: "https://substack.com/@oakheartlab",
   description:
     "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
@@ -20,7 +21,6 @@ export const moneyBack =
 export const nav = [
   { label: "How it works", href: "/#how-it-works" },
   { label: "What we do", href: "/#system" },
-  { label: "About", href: "/#founder" },
   { label: "FAQ", href: "/#faq" },
 ];
 
@@ -121,14 +121,6 @@ export const pillars = [
 ];
 
 export const alsoAvailable = "Also available: a companion mobile app, and staff tools and automation.";
-
-/** Public roles only (docs/brief.md). */
-export const roles = [
-  { company: "Hertz", title: "VP of Product" },
-  { company: "Clutch", title: "Head of Product" },
-  { company: "Rivian", title: "Group PM, Digital Commerce" },
-  { company: "Carvana", title: "Product Track Lead" },
-];
 
 export const steps = [
   {
@@ -264,8 +256,8 @@ export const methodSteps = [
 ];
 
 export const talkFirst = {
-  label: "Prefer to talk first? Email Yilun",
-  href: "mailto:yilun@oakheartlab.com?subject=Question%20about%20Oakheart%20Lab",
+  label: "Prefer to talk first? Email us",
+  href: "mailto:info@oakheartlab.com?subject=Question%20about%20Oakheart%20Lab",
 };
 
 export const checkFaq = [

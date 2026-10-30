@@ -49,8 +49,7 @@ Approved public facts, from the About page plus the public LinkedIn profile (own
 
 Also approved:
 - Headshot: `public/images/yilun-zhang.jpg` (owner-supplied for the site)
-- LinkedIn link: https://www.linkedin.com/in/yilun-zhang-7b804510/
-- Contact: yilun@oakheartlab.com
+- Public contact: info@oakheartlab.com (2026-10-30). No founder email or LinkedIn link on the site.
 
 **Not approved (not on public sources):**
 - "15+ years" (say "over a decade")

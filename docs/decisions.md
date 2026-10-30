@@ -2,6 +2,12 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-30: No founder section or personal contact on the site
+
+- **Owner:** remove the homepage "Who you'll work with" section and the founder's personal contact. The public contact email is **info@oakheartlab.com**.
+- **Site:** founder section (headshot, quote, role chips, LinkedIn) removed; "About" nav item and the check page's "About Yilun" link removed; footer LinkedIn link removed; `site.email` and the "Prefer to talk first? Email us" link use info@. `Person` JSON-LD keeps only the Substack `sameAs`.
+- **Unchanged:** lead notifications still go to yilun@oakheartlab.com (D8) via `site.notifyEmail`, which is never rendered.
+
 ## 2026-10-26: Domain cutover and indexing
 
 - **Owner:** launch on `www.oakheartlab.com`; Substack moves to **`blog.oakheartlab.com`** (not `writing`). Indexing approved at launch.
