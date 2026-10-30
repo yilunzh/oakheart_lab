@@ -2,6 +2,11 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-10-30: The founder is not mentioned anywhere on the site
+
+- **Owner:** remove the founder's name and photo from the AI Visibility Check page; the founder shouldn't be mentioned anywhere on the site.
+- **Site:** the check page's founder card is now "A person runs every check and writes every fix. No sales call unless you ask." plus the "Email us" link; the "Who runs the check?" FAQ answers "We do, by hand…"; the `Person` JSON-LD node and the organization's `founder` reference are removed; `public/images/yilun-zhang.jpg` is deleted. **Supersedes** D10 and the founder facts' use on the site (the brief keeps them as background only).
+
 ## 2026-10-30: No founder section or personal contact on the site
 
 - **Owner:** remove the homepage "Who you'll work with" section and the founder's personal contact. The public contact email is **info@oakheartlab.com**.

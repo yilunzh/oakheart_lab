@@ -48,8 +48,9 @@ Approved public facts, from the About page plus the public LinkedIn profile (own
 - Hands-on AI builder who writes publicly about building with AI in operationally complex businesses (Oakheart Lab on Substack, e.g. "Stop Tuning the AI").
 
 Also approved:
-- Headshot: `public/images/yilun-zhang.jpg` (owner-supplied for the site)
-- Public contact: info@oakheartlab.com (2026-10-30). No founder email or LinkedIn link on the site.
+- Headshot: removed from the site (2026-10-30)
+- Public contact: info@oakheartlab.com (2026-10-30).
+- **Owner, 2026-10-30: the founder is not named or pictured anywhere on the site.** The facts above are background only; do not put them on pages, metadata or structured data.
 
 **Not approved (not on public sources):**
 - "15+ years" (say "over a decade")

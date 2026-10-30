@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Fragment } from "react";
-import Image from "next/image";
 import { CheckForm } from "@/components/check-form";
 import { Faq } from "@/components/faq";
 import { Section } from "@/components/section";
@@ -82,27 +81,16 @@ export default function CheckPage() {
           <p className="mt-6 text-sm text-muted">
             Free, as many as you like, no obligation. No newsletter unless you ask for it.
           </p>
-          <div className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-line bg-surface p-5 min-[400px]:flex-row">
-            <Image
-              src="/images/yilun-zhang.jpg"
-              alt=""
-              width={56}
-              height={56}
-              loading="eager"
-              className="size-14 shrink-0 rounded-full"
-            />
-            <div className="text-[15px] leading-relaxed">
-              <p>
-                Oakheart Lab’s founder,{" "}
-                <span className="font-semibold">Yilun Zhang, runs every check himself.</span> No
-                sales call unless you ask.
-              </p>
-              <p className="mt-2 text-sm">
-                <a href={talkFirst.href} className="whitespace-nowrap underline underline-offset-2 hover:text-accent">
-                  {talkFirst.label}
-                </a>
-              </p>
-            </div>
+          <div className="mt-10 rounded-2xl border border-line bg-surface p-5 text-[15px] leading-relaxed">
+            <p>
+              <span className="font-semibold">A person runs every check and writes every fix.</span> No
+              sales call unless you ask.
+            </p>
+            <p className="mt-2 text-sm">
+              <a href={talkFirst.href} className="whitespace-nowrap underline underline-offset-2 hover:text-accent">
+                {talkFirst.label}
+              </a>
+            </p>
           </div>
         </div>
       </section>
