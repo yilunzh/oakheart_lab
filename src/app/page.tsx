@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { AdoptionChart } from "@/components/adoption-chart";
 import { AnswerCard } from "@/components/answer-card";
 import { BookingLeaks } from "@/components/booking-leaks";
@@ -63,31 +64,25 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-24">
+      <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-16 pt-10 sm:px-6 sm:pt-20 lg:grid-cols-[1.15fr_0.85fr] lg:pb-24">
         <div>
           <h1 className="text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
             Customers now ask AI who to do business with.{" "}
             <span className="text-accent">Does it recommend you?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude answer your customers before
-            your website loads. We make sure they can find you and the right facts about you, and that
-            booking with you is easy.
+            We make sure AI assistants can find you and get your facts right, and that booking with
+            you is easy.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <CtaLink href={checkCta.href}>{checkCta.label}</CtaLink>
-            <CtaLink href="/ai-visibility-check#what-you-get" variant="secondary">
-              See what the check covers
-            </CtaLink>
+            <Link
+              href="/ai-visibility-check#what-you-get"
+              className="text-[15px] font-semibold text-ink underline decoration-ink/30 underline-offset-4 hover:decoration-ink"
+            >
+              See what the check covers <span aria-hidden="true">→</span>
+            </Link>
           </div>
-          <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted">
-            {checkCta.micro.map((m) => (
-              <li key={m} className="flex items-center gap-2">
-                <span aria-hidden="true" className="text-good">✓</span>
-                {m}
-              </li>
-            ))}
-          </ul>
         </div>
         <AnswerCard />
       </section>
@@ -96,13 +91,13 @@ export default function Home() {
       <Section
         eyebrow="What changed"
         title="AI answers now shape who gets the booking."
-        intro="Instead of ten links, customers get one short answer. Smart companies are already sprinting to get ahead of it."
+        intro="Instead of a page of search results, customers get one short answer. Smart companies are already sprinting to get ahead of it."
         tone="surface"
       >
         <div className="grid gap-6 lg:grid-cols-3">
           <figure className="rounded-2xl border border-line bg-paper p-6 lg:col-span-2">
-            <p className="text-2xl font-semibold tracking-tight">12× in under three years</p>
-            <p className="mt-1 text-muted">ChatGPT weekly active users, as announced by OpenAI</p>
+            <p className="text-2xl font-semibold tracking-tight">ChatGPT use grew 12× in under three years</p>
+            <p className="mt-1 text-muted">Weekly active users, as announced by OpenAI</p>
             <div className="mt-6">
               <AdoptionChart data={chatgptWeeklyUsers} />
             </div>
@@ -177,7 +172,7 @@ export default function Home() {
         tone="surface"
       >
         <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-paper px-5 py-4">
-          <p className="mr-2 font-mono text-xs uppercase tracking-widest text-muted">Your facts</p>
+          <p className="mr-2 font-mono text-xs uppercase tracking-widest text-muted">The facts we keep right everywhere</p>
           {factsLine.map((f) => (
             <span key={f} className="rounded-full bg-accent-soft px-3 py-1 text-sm font-medium text-accent">{f}</span>
           ))}
@@ -278,7 +273,7 @@ export default function Home() {
             See what AI tells customers about you.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-paper/75">
-            Tell us your business. Get a free report in under 24 hours: where you show up, what&rsquo;s
+            Tell us about your business. Get a free report in under 24 hours: where you show up, what&rsquo;s
             wrong, what to fix first. Want our help after that? One flat monthly fee, stop anytime.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">

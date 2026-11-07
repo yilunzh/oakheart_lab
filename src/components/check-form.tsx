@@ -17,7 +17,7 @@ function mailtoFor(data: Record<string, FormDataEntryValue>) {
     `Website: ${data.website ?? ""}`,
     `Location: ${data.location ?? ""}`,
     `Type: ${data.businessType ?? ""}`,
-    data.question ? `AI should get right: ${data.question}` : "",
+    data.question ? `What AI should get right: ${data.question}` : "",
   ].filter(Boolean).join("\n");
   return `mailto:${site.email}?subject=${encodeURIComponent("Free AI check request")}&body=${encodeURIComponent(body)}`;
 }
@@ -127,7 +127,7 @@ export function CheckForm() {
       }
     } catch {
       setStatus("error");
-      setMessage("We couldn’t reach our server, and nothing was saved. Check your connection and try again, or send the details by email.");
+      setMessage("We couldn’t confirm your request went through. Check your connection and try again, or send the details by email.");
       setFallbackHref(mailtoFor(data));
     }
     setRevealTick((t) => t + 1);
@@ -137,16 +137,16 @@ export function CheckForm() {
     return (
       <div ref={statusRef} tabIndex={-1} role="status" className="scroll-mt-24 rounded-2xl border border-good/30 bg-good-soft p-6">
         <h2 className="text-xl font-semibold">
-          {status === "sent" ? "Request received." : "We already have this one."}
+          {status === "sent" ? "Request received." : "You’ve already requested a check for this website."}
         </h2>
         <p className="mt-2 leading-relaxed">
           {status === "sent"
-            ? `Your report will arrive within 24 hours from ${site.email}, sent to ${sentTo}.`
+            ? `Your report will arrive in under 24 hours from ${site.email}, sent to ${sentTo}.`
             : `You asked about this website in the last 24 hours, so your report is already on its way to ${sentTo} from ${site.email}. ${forwarded ? "We’ve passed your new details on, and they’ll be in the report." : `If you added new details, email them to ${site.email} and we’ll include them.`}`}{" "}
           If it isn&rsquo;t in your inbox, check your spam or promotions folder.
         </p>
         <p className="mt-3 leading-relaxed">
-          While you wait, see <Link href="/#sample-plan" className="underline underline-offset-2">how a check becomes a plan</Link>, or reply to the report with any questions.
+          While you wait, see <Link href="/#sample-plan" className="underline underline-offset-2">how a check becomes a plan</Link>. When the report arrives, just reply with any questions.
         </p>
       </div>
     );
@@ -202,7 +202,7 @@ export function CheckForm() {
           aria-invalid={!!errors.email} aria-describedby={describe("email")} className={fieldClass} />
       </Field>
       <Field id="question" label="What should AI get right about you? (optional)"
-        hint="For example: “Dogs are allowed on the boat, up to 40 lb.” We check this first." error={errors.question}>
+        hint="For example: “We install heat pumps, not just repairs.” We check this first." error={errors.question}>
         <textarea id="question" name="question" rows={1} maxLength={600}
           aria-invalid={!!errors.question} aria-describedby={describe("question", true)} className={fieldClass} />
       </Field>

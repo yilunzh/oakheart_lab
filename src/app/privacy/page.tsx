@@ -20,7 +20,7 @@ const sections = [
     h: "What we collect",
     body: [
       "When you request a free AI check: your business name, website, location, type of business, email, and anything you add in the optional fields.",
-      "With each request: the page that referred you, any campaign tags in the link (UTM), and a one-way hash of your IP address, used only to limit abuse. We don’t store the IP address itself.",
+      "With each request: the page that referred you, any campaign tags in the link, and a scrambled code made from your internet (IP) address that can’t be turned back into it, used only to limit abuse. We don’t store the IP address itself.",
     ],
   },
   {
@@ -32,7 +32,7 @@ const sections = [
   {
     h: "Who processes it",
     body: [
-      "Vercel hosts the site. Neon stores check requests. Resend sends the notification email to Oakheart Lab, and Google Workspace hosts Oakheart Lab’s email, where your report is written and sent. Each processes data only to provide that service. To run your check we ask AI assistants questions about your business, using its name, website, location and type, never your email.",
+      "Vercel hosts the site. Neon (our database) stores check requests. Resend (an email service) sends the notification email to Oakheart Lab, and Google Workspace hosts Oakheart Lab’s email, where your report is written and sent. Each processes data only to provide that service. To run your check we ask AI assistants questions about your business, using its name, website, location and type, never your email.",
     ],
   },
   {

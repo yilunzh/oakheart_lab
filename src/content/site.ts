@@ -6,13 +6,12 @@ export const site = {
   notifyEmail: "yilun@oakheartlab.com",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps tours, rentals, home-service, clinic and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
+    "Oakheart Lab helps tours, rentals, home services, clinics and stays get found by AI assistants, described correctly and booked easily, then keeps working every month to stay ahead of competitors.",
 };
 
 export const checkCta = {
   label: "Get your free AI check",
   href: "/ai-visibility-check",
-  micro: ["Five fields, no call", "Report in under 24 hours", "Free, as many as you like", "No obligation"],
 };
 
 export const moneyBack =
@@ -82,7 +81,7 @@ export const customerQuestions = [
 export const leaks = [
   { stage: "Customer asks AI", leak: "You’re not mentioned", why: "It can’t find clear, current facts about you." },
   { stage: "AI names you", leak: "Your details are wrong", why: "An old price or service list rules you out." },
-  { stage: "They click through", leak: "Booking is a struggle", why: "A clunky widget or dead end on mobile." },
+  { stage: "They click through", leak: "Booking is a struggle", why: "A clunky booking form or a dead end on a phone." },
 ];
 
 export const factsLine = ["Offers", "Prices", "Availability", "Policies"];
@@ -95,7 +94,7 @@ export const pillars = [
     points: [
       "Clear pages with the details customers ask about",
       "Same facts everywhere: your site, Google, Yelp, booking platforms",
-      "Readable by search and AI crawlers",
+      "Easy for Google and AI assistants to read",
     ],
   },
   {
@@ -127,7 +126,7 @@ export const steps = [
     title: "Get your free check",
     icon: "step-check",
     time: "Under 24 hours",
-    body: "Five fields, no call. We ask AI assistants your customers’ questions and email you what to fix first.",
+    body: "Fill in a short form. We ask AI assistants the questions your customers ask, then email you what to fix first.",
   },
   {
     title: "Get your plan and fixes",
@@ -152,15 +151,15 @@ export const samplePlan = {
     {
       key: "Discover",
       fixes: [
-        "Fix the services listed on old listings and Google",
+        "Correct the services shown on old directory listings and Google",
         "Add a heat pump installation page that answers what homeowners ask",
-        "Publish services, and starting prices where you can, as text and structured data",
+        "List services, and starting prices where you can, in a form Google and AI can read",
       ],
     },
     {
       key: "Book",
       fixes: [
-        "Book the in-home assessment online, with live times",
+        "Let customers book the in-home assessment online, with live times",
         "Fewer taps from service page to booking on a phone",
         "Offer the maintenance plan when they book",
       ],
@@ -183,20 +182,20 @@ export const homeFaq = [
   },
   {
     q: "Isn’t this just SEO?",
-    a: "The Discover part mostly is: good SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a quota of articles. We make sure your site and the listings AI reads have the right facts: what you offer, prices, availability and policies. We also go further: easier booking on a phone, and monthly updates as competitors and AI assistants change.",
+    a: "The “get found” part (Discover) mostly is: SEO done properly. Google says its SEO best practices still apply to AI Overviews and AI Mode. But we don’t sell a set number of blog posts a month. We make sure your site and the listings AI reads have the right facts: what you offer, prices, availability and policies. We also go further: easier booking on a phone, and monthly updates as competitors and AI assistants change.",
     source: { label: "Google Search Central: AI features and your website", href: "https://developers.google.com/search/docs/appearance/ai-features" },
   },
   {
     q: "Don’t Google Maps and reviews still matter more?",
-    a: "For most local bookings today, yes, and we treat them that way. AI assistants read the same sources: your site, Google Business Profile, reviews and listings. So the Discover work strengthens Maps and search too.",
+    a: "For most local bookings today, yes, and we treat them that way. AI assistants read the same sources: your site, Google Business Profile, reviews and listings. So the work to get you found strengthens Maps and search too.",
   },
   {
     q: "Can you guarantee ChatGPT will recommend us?",
-    a: "No one honestly can. AI answers vary from run to run. We fix what keeps assistants from finding and trusting you, then measure how often you’re mentioned and described correctly, month by month.",
+    a: "No one honestly can. AI answers change each time you ask. We fix what keeps assistants from finding and trusting you, then measure how often you’re mentioned and described correctly, month by month.",
   },
   {
     q: "What does it cost?",
-    a: "One flat monthly fee covers your plan: the first fixes and the upkeep. There’s no project fee. It’s set for your business after the check, agreed before any work starts, and stays the same each month. Three listing fixes shouldn’t cost the same as a booking rebuild, so there’s no published price. The check is free. If you’re not happy with our service, we’ll give your money back, no questions asked.",
+    a: "One flat monthly fee covers your plan: the first fixes and the upkeep. There’s no separate setup fee. It’s set for your business after the check, agreed before any work starts, and stays the same each month. Three listing fixes shouldn’t cost the same as rebuilding how you take bookings, so there’s no published price. The check is free. If you’re not happy with our service, we’ll give your money back, no questions asked.",
   },
   {
     q: "Is there a long contract?",
@@ -212,7 +211,7 @@ export const businessTypes = [
   "Tours, activities & experiences",
   "Vehicle, boat or equipment rentals",
   "Home services",
-  "Health, wellness & beauty appointments",
+  "Clinics, health, wellness & beauty appointments",
   "Fitness, classes & studios",
   "Stays & hospitality",
   "Moving & storage",
@@ -223,7 +222,7 @@ export const heardFrom = [
   "ChatGPT or another AI assistant",
   "Google search",
   "LinkedIn",
-  "Oakheart Lab newsletter",
+  "Oakheart Lab on Substack",
   "Referral",
   "Other",
 ];
@@ -231,11 +230,11 @@ export const heardFrom = [
 export const checkCovers = [
   {
     title: "Are you mentioned?",
-    body: "How often each assistant names you, across repeated runs.",
+    body: "How often each assistant names you when we ask several times.",
   },
   {
     title: "Are your details right?",
-    body: "Prices, availability and policies, checked against your site. Your top concern first.",
+    body: "Prices, availability and policies, checked against your site. If you tell us what AI must get right, we check that first.",
   },
   {
     title: "Where it gets its information",
@@ -250,12 +249,12 @@ export const checkCovers = [
 export const methodSteps = [
   { label: "Your customers’ questions", detail: "Written for your type of business and location" },
   { label: "5 assistants", detail: "ChatGPT, Google’s AI (Overviews and AI Mode), Gemini, Perplexity, Claude" },
-  { label: "Several runs each", detail: "Because answers change from run to run" },
+  { label: "Several tries each", detail: "Because AI gives a different answer each time you ask" },
   { label: "Your report", detail: "How often you’re mentioned and described correctly, with the sources cited" },
 ];
 
 export const talkFirst = {
-  label: "Prefer to talk first? Email us",
+  label: "Questions first? Email us",
   href: "mailto:info@oakheartlab.com?subject=Question%20about%20Oakheart%20Lab",
 };
 
@@ -266,11 +265,11 @@ export const checkFaq = [
   },
   {
     q: "Why do you ask each question more than once?",
-    a: "AI answers change from run to run. Repeated runs show a pattern, so we report how often you’re mentioned and described correctly, not a made-up “AI ranking.”",
+    a: "AI gives a different answer each time you ask. Asking several times shows a pattern, so we report how often you’re mentioned and described correctly, not a made-up “AI ranking.”",
   },
   {
     q: "Is it really free? What’s the catch?",
-    a: "It’s free, as many as you like, with no sales call unless you ask. If you want help with what it finds, reply and we’ll talk: one flat monthly fee, month to month. If not, keep the report.",
+    a: "It’s free, and you can request as many checks as you like, with no sales call unless you ask. If you want help with what it finds, reply and we’ll talk: one flat monthly fee, month to month. If not, keep the report.",
   },
   {
     q: "Who runs the check?",
