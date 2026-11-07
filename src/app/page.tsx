@@ -80,14 +80,6 @@ export default function Home() {
               See what the check covers
             </CtaLink>
           </div>
-          <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted">
-            {checkCta.micro.map((m) => (
-              <li key={m} className="flex items-center gap-2">
-                <span aria-hidden="true" className="text-good">✓</span>
-                {m}
-              </li>
-            ))}
-          </ul>
         </div>
         <AnswerCard />
       </section>

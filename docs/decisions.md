@@ -2,6 +2,11 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-11-07: No checkmark chips under the hero buttons
+
+- **Owner:** remove the "Five fields, no call / Report in under 24 hours / Free, as many as you like / No obligation" row under the hero CTAs: "This doesn't make much sense", and the fold is text heavy.
+- **Site:** the row and `checkCta.micro` are deleted. "Free", "under 24 hours" and "five fields, no call" still appear in How it works step 1, the closing section and the check page. **Supersedes** the hero chip in the 2026-10-11 entry.
+
 ## 2026-11-07: No car buying or car service on the site
 
 - **Owner:** remove mentions of car sales and service; replace where needed.

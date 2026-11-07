@@ -12,7 +12,6 @@ export const site = {
 export const checkCta = {
   label: "Get your free AI check",
   href: "/ai-visibility-check",
-  micro: ["Five fields, no call", "Report in under 24 hours", "Free, as many as you like", "No obligation"],
 };
 
 export const moneyBack =
