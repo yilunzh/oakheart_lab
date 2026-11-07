@@ -6,7 +6,7 @@ export const site = {
   notifyEmail: "yilun@oakheartlab.com",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps tours, rentals, home-service, wellness and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
+    "Oakheart Lab helps tours, rentals, home-service, clinic and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
 };
 
 export const checkCta = {
@@ -73,7 +73,7 @@ export const customerQuestions = [
   { kind: "Home services", icon: "services", q: "My furnace is 20 years old. Should I repair it or switch to a heat pump?" },
   { kind: "Tours & experiences", icon: "tours", q: "Can my 6-year-old do the sunset kayak tour?" },
   { kind: "Rentals", icon: "rentals", q: "Does the pontoon rental include fuel and life jackets?" },
-  { kind: "Fitness & wellness", icon: "classes", q: "Is there a beginner Pilates class near me that’s OK after a back injury?" },
+  { kind: "Dental & health clinics", icon: "clinics", q: "I cracked a tooth. Which dentist near me takes my insurance and can see me tomorrow?" },
   { kind: "Stays & hospitality", icon: "stays", q: "Which lakeside cabins near Asheville take two big dogs, and what’s the pet fee?" },
   { kind: "Moving & storage", icon: "moving", q: "Who can move a one-bedroom this Saturday, and what will it cost?" },
 ];

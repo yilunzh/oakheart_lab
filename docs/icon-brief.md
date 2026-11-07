@@ -31,7 +31,7 @@
 | `tours` | Question card: Tours & experiences | A kayak with a paddle on a small wave |
 | `rentals` | Question card: Rentals | A pontoon boat, or a rental key on a tag |
 | `services` | Question card: Home services | A wrench crossed with a small house |
-| `classes` | Question card: Fitness & wellness | A rolled yoga mat with a small clock (restored 2026-11-07, replacing `automotive`) |
+| `clinics` | Question card: Dental & health clinics | A tooth with a small calendar card showing one checked date (2026-11-07, replacing `automotive`) |
 | `stays` | Question card: Stays & hospitality | A small cabin with a pine tree |
 | `moving` | Question card: Moving & storage | A stack of moving boxes with a dolly |
 | `step-check` | How it works: Step 1 | A clipboard with a magnifier: the free check |

@@ -90,7 +90,7 @@ export const ICONS = {
   tours: "A kayak with a paddle on a small wave.",
   rentals: "A rental key on a tag.",
   services: "A wrench crossed with a small house.",
-  classes: "A rolled yoga mat with a small clock.",
+  clinics: "A single rounded tooth in oak green, with a small calendar card beside its lower right showing one checked date. Bold and simple.",
   stays: "A small cabin with a pine tree.",
   moving: "A stack of moving boxes with a hand truck dolly.",
   "step-check": "A clipboard with a magnifying glass: the free check.",
