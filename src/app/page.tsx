@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { AdoptionChart } from "@/components/adoption-chart";
 import { AnswerCard } from "@/components/answer-card";
 import { BookingLeaks } from "@/components/booking-leaks";
@@ -63,22 +64,24 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-24">
+      <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-16 pt-10 sm:px-6 sm:pt-20 lg:grid-cols-[1.15fr_0.85fr] lg:pb-24">
         <div>
           <h1 className="text-[2.3rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl">
             Customers now ask AI who to do business with.{" "}
             <span className="text-accent">Does it recommend you?</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude answer your customers before
-            your website loads. We make sure they can find you and the right facts about you, and that
-            booking with you is easy.
+            We make sure AI assistants can find you and get your facts right, and that booking with
+            you is easy.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <CtaLink href={checkCta.href}>{checkCta.label}</CtaLink>
-            <CtaLink href="/ai-visibility-check#what-you-get" variant="secondary">
-              See what the check covers
-            </CtaLink>
+            <Link
+              href="/ai-visibility-check#what-you-get"
+              className="text-[15px] font-semibold text-ink underline decoration-ink/30 underline-offset-4 hover:decoration-ink"
+            >
+              See what the check covers <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
         <AnswerCard />

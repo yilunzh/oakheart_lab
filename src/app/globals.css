@@ -63,6 +63,22 @@ body {
   outline-offset: 2px;
 }
 
+/* Hero answer card: plays once on load. */
+@keyframes answer-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes answer-pop {
+  0% { opacity: 0; transform: scale(0.6); }
+  70% { transform: scale(1.08); }
+  100% { opacity: 1; transform: none; }
+}
+.answer-in { opacity: 0; animation: answer-in 0.45s ease-out forwards; }
+.answer-pop { opacity: 0; animation: answer-pop 0.35s ease-out forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .answer-in, .answer-pop { animation: none; opacity: 1; }
+}
+
 .text-balance {
   text-wrap: balance;
 }

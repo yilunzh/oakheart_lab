@@ -16,10 +16,10 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
 
 ## Hero
 - **H1:** Customers now ask AI who to do business with. *Does it recommend you?*
-- **Sub:** ChatGPT, Google’s AI, Gemini, Perplexity and Claude answer your customers before your website loads. We make sure they can find you and the right facts about you, and that booking with you is easy.
+- **Sub:** We make sure AI assistants can find you and get your facts right, and that booking with you is easy. (2026-11-07; the assistant list moved out of the hero.)
 - **Primary CTA:** Get your free AI check
 - **Microcopy:** none under the hero buttons (removed 2026-11-07). "Free" and "under 24 hours" are stated in step 1 and the closing section.
-- **Secondary:** See what the check covers
+- **Secondary:** See what the check covers (a text link, not a second button)
 
 ## Section messages
 1. **The shift (evidence, at most 3 stats, each sourced and dated):**

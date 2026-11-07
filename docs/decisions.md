@@ -2,6 +2,15 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-11-07: Hero option A: animated phone card, one-sentence subhead
+
+- **Owner:** the homepage felt text heavy above the fold. Of three mocked-up heroes (A: animated phone card; B: illustration with floating result chips; C: centered illustration with the card moved below), the owner chose **A**.
+- **Site:**
+  - Subhead: "We make sure AI assistants can find you and get your facts right, and that booking with you is easy." The five-assistant list leaves the hero (it stays on the check page and in the method section). **Supersedes** the 2026-10-10 "subhead is final" note.
+  - "See what the check covers" is a text link, not a second button.
+  - The answer card is a compact chat in a phone frame: the question, one advice line ("It can be. An installer should check your ducts and panel first. Near you:"), Wrenmoor (Correct), Fernhollow ("Doesn't install heat pumps", Wrong), Your business (Not mentioned). It animates once on load with CSS only and is static under reduced motion. The caption is unchanged.
+- **Not adopted:** the storefront-in-a-chat-bubble illustration from B/C (kept outside the repo in case section illustrations come back).
+
 ## 2026-11-07: No checkmark chips under the hero buttons
 
 - **Owner:** remove the "Five fields, no call / Report in under 24 hours / Free, as many as you like / No obligation" row under the hero CTAs: "This doesn't make much sense", and the fold is text heavy.
