@@ -126,7 +126,7 @@ export const steps = [
     title: "Get your free check",
     icon: "step-check",
     time: "Under 24 hours",
-    body: "Five fields, no call. We ask AI assistants your customers’ questions and email you what to fix first.",
+    body: "Fill in a short form. We ask AI assistants the questions your customers ask, then email you what to fix first.",
   },
   {
     title: "Get your plan and fixes",
