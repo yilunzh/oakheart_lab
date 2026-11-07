@@ -5,10 +5,10 @@ Newest first. Each entry lists the decision, its source, and what it supersedes.
 ## 2026-11-07: The running example is a heat pump installer, not a kayak tour
 
 - **Owner:** the kayak example felt odd. Use a relatable local business where the customer's question needs expertise (so the AI answer is advice, not a lookup). No automotive examples. No invented location: customers ask "near me".
-- **Site:** the hero answer card, the check page's sample report and the homepage sample plan now follow one invented heat pump installer. Hero: "Is a heat pump a good idea for my 1970s house, and who near me installs them?" (Wrenmoor Heating & Air, correct; Fernhollow Comfort, wrongly described as repairs only). Report and plan: Quillbay Heating & Air, which ChatGPT says only does repairs. The invented "Marrowfield Lake" is gone. The "Home services" question card is now landscaping (a spring yard cleanup) so it doesn't repeat the hero; the leak line reads "An old price or service list rules you out." **Supersedes** the Quillbay Kayak Tours example (rounds 8–9).
+- **Site:** the hero answer card, the check page's sample report and the homepage sample plan now follow one invented heat pump installer. Hero: "Is a heat pump a good idea for my 1970s house, and who near me installs them?" (Wrenmoor Heating & Air, correct; Fernhollow Comfort, wrongly described as repairs only). Report and plan: Quillbay Heating & Air, which ChatGPT says only does repairs. The invented "Marrowfield Lake" is gone. The "Home services" question card moves first and asks a related question ("My furnace is 20 years old. Should I repair it or switch to a heat pump?") so the cards open on the hero's example; the leak line reads "An old price or service list rules you out." **Supersedes** the Quillbay Kayak Tours example (rounds 8–9).
 - **Names checked** by web search on 2026-11-07: no business called Wrenmoor Heating & Air, Fernhollow Comfort or Quillbay Heating & Air. "Ashgrove" was dropped because a real Ashgrove Air exists.
 - **Incentives** stay generic (no named tax credits or rebate amounts); federal heat pump incentives have changed and aren't in the brief.
-- **Unchanged:** the "Tours & experiences" question card still uses the kayak question and icon; open for the owner.
+- **Kept (owner):** the "Tours & experiences" card and its kayak question, now second.
 
 ## 2026-10-30: The founder is not mentioned anywhere on the site
 
