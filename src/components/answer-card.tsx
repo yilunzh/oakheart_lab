@@ -12,7 +12,7 @@ const rows: Row[] = [
   },
   {
     name: "Fernhollow Comfort",
-    text: "Well reviewed, but only repairs furnaces and AC.",
+    text: "Well reviewed for furnace and AC repair, but doesn’t install heat pumps.",
     tag: { tone: "bad", label: "Wrong. Their site lists heat pump installs" },
   },
 ];
@@ -29,7 +29,10 @@ export function AnswerCard() {
           Is a heat pump a good idea for my 1970s house, and who near me installs them?
         </p>
         <div className="mt-4 space-y-3 text-[15px] leading-relaxed">
-          <p className="text-muted">Here are a couple of good options:</p>
+          <p className="text-muted">
+            It can be. A good installer will check your insulation, ductwork and electrical panel
+            first. Installers near you:
+          </p>
           {rows.map((row) => (
             <div key={row.name} className="rounded-xl border border-line p-3">
               <p>

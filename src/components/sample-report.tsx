@@ -12,13 +12,13 @@ export function SampleReport() {
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line bg-paper px-5 py-3">
         <p className="font-mono text-xs uppercase tracking-widest text-muted">Sample report excerpt</p>
         <p className="rounded-full bg-accent-soft px-2.5 py-1 font-mono text-xs text-accent">
-          Illustrative · fictional business
+          Illustrative · invented business
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 p-5 sm:p-6 md:grid-cols-[1fr_1.2fr]">
         <div>
-          <p className="text-sm text-muted">Quillbay Heating &amp; Air (invented)</p>
-          <p className="mt-2 text-lg font-medium">&ldquo;Can a heat pump replace my oil furnace?&rdquo;</p>
+          <p className="text-sm text-muted">Quillbay Heating &amp; Air</p>
+          <p className="mt-2 text-lg font-medium">&ldquo;Who near me can swap my oil furnace for a heat pump?&rdquo;</p>
           <dl className="mt-4 space-y-2 text-[15px]">
             {runs.map((r) => (
               <div key={r.engine} className="flex items-center justify-between gap-4 border-b border-line pb-2">
@@ -41,8 +41,8 @@ export function SampleReport() {
           <div className="rounded-xl bg-good-soft p-4">
             <p className="font-mono text-xs uppercase tracking-wider text-good">Fix first</p>
             <p className="mt-1">
-              Update your services on that listing and your Google Business Profile categories, and
-              add an installation page that answers what homeowners ask, like ductwork, cold weather
+              Update your services on that listing and your Google Business Profile, and add a heat
+              pump installation page that answers what homeowners ask, like ductwork, cold weather
               and backup heat, so assistants have one consistent answer to repeat.
             </p>
           </div>

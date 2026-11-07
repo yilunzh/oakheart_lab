@@ -153,8 +153,8 @@ export const samplePlan = {
       key: "Discover",
       fixes: [
         "Fix the services listed on old listings and Google",
-        "Add a heat pump page that answers what homeowners ask",
-        "Publish services and starting prices as text and structured data",
+        "Add a heat pump installation page that answers what homeowners ask",
+        "Publish services, and starting prices where you can, as text and structured data",
       ],
     },
     {
