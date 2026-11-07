@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Oakheart Lab: Get found by AI. Get booked.";
+export const alt = "Oakheart Lab: Customers now ask AI who to do business with. Does it recommend you? Free AI Visibility Check, report in under 24 hours.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

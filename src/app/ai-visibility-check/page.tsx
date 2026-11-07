@@ -31,7 +31,7 @@ const jsonLd = {
       name: "Free AI Visibility Check",
       serviceType: "AI search visibility audit",
       description:
-        "We ask ChatGPT, Gemini, Perplexity, Claude and Google's AI answers the questions your customers ask, then send a plain-language report within 24 hours: whether you're mentioned, what they get wrong, and the three fixes that matter most.",
+        "We ask ChatGPT, Gemini, Perplexity, Claude and Google's AI answers the questions your customers ask, then send a plain-language report in under 24 hours: whether you're mentioned, what they get wrong, and the three fixes that matter most.",
       provider: { "@id": `${site.url}/#org` },
       url: `${site.url}/ai-visibility-check`,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -59,7 +59,7 @@ export default function CheckPage() {
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-muted">
             We ask ChatGPT, Google&rsquo;s AI, Gemini, Perplexity and Claude what your customers ask.
-            Report within 24 hours.
+            Report in under 24 hours.
           </p>
         </div>
         <div id="check-form" className="scroll-mt-24 rounded-2xl border border-line bg-surface p-5 shadow-[0_20px_60px_-35px_rgba(22,19,15,0.35)] sm:p-7 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
@@ -79,11 +79,11 @@ export default function CheckPage() {
             ))}
           </ul>
           <p className="mt-6 text-sm text-muted">
-            Free, as many as you like, no obligation. No newsletter unless you ask for it.
+            Free, and you can request as many checks as you like. No obligation. No newsletter unless you ask for it.
           </p>
           <div className="mt-10 rounded-2xl border border-line bg-surface p-5 text-[15px] leading-relaxed">
             <p>
-              <span className="font-semibold">A person runs every check and writes every fix.</span> No
+              <span className="font-semibold">A person runs every check and writes every recommendation.</span> No
               sales call unless you ask.
             </p>
             <p className="mt-2 text-sm">
@@ -109,7 +109,7 @@ export default function CheckPage() {
       </Section>
 
       <Section eyebrow="Method" title="How we run the check."
-        intro="Answers vary by run, so we sample them. It’s a sample, not a ranking."
+        intro="AI gives a different answer each time, so we ask each question several times and count how often you come up. There’s no official AI ranking."
       >
         <ol className="mb-12 grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1.2fr]">
           {methodSteps.map((m, i) => (
@@ -129,7 +129,7 @@ export default function CheckPage() {
         <Faq items={checkFaq} />
         <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl bg-night p-6 text-paper sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <p className="max-w-xl text-xl font-semibold leading-snug">
-            Ready to see what AI tells your customers? Your report arrives within 24 hours.
+            Ready to see what AI tells your customers? Your report arrives in under 24 hours.
           </p>
           <a
             href="#check-form"

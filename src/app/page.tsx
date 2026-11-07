@@ -91,13 +91,13 @@ export default function Home() {
       <Section
         eyebrow="What changed"
         title="AI answers now shape who gets the booking."
-        intro="Instead of ten links, customers get one short answer. Smart companies are already sprinting to get ahead of it."
+        intro="Instead of a page of search results, customers get one short answer. Smart companies are already sprinting to get ahead of it."
         tone="surface"
       >
         <div className="grid gap-6 lg:grid-cols-3">
           <figure className="rounded-2xl border border-line bg-paper p-6 lg:col-span-2">
-            <p className="text-2xl font-semibold tracking-tight">12× in under three years</p>
-            <p className="mt-1 text-muted">ChatGPT weekly active users, as announced by OpenAI</p>
+            <p className="text-2xl font-semibold tracking-tight">ChatGPT use grew 12× in under three years</p>
+            <p className="mt-1 text-muted">Weekly active users, as announced by OpenAI</p>
             <div className="mt-6">
               <AdoptionChart data={chatgptWeeklyUsers} />
             </div>
@@ -172,7 +172,7 @@ export default function Home() {
         tone="surface"
       >
         <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-paper px-5 py-4">
-          <p className="mr-2 font-mono text-xs uppercase tracking-widest text-muted">Your facts</p>
+          <p className="mr-2 font-mono text-xs uppercase tracking-widest text-muted">The facts we keep right everywhere</p>
           {factsLine.map((f) => (
             <span key={f} className="rounded-full bg-accent-soft px-3 py-1 text-sm font-medium text-accent">{f}</span>
           ))}
@@ -273,7 +273,7 @@ export default function Home() {
             See what AI tells customers about you.
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-paper/75">
-            Tell us your business. Get a free report in under 24 hours: where you show up, what&rsquo;s
+            Tell us about your business. Get a free report in under 24 hours: where you show up, what&rsquo;s
             wrong, what to fix first. Want our help after that? One flat monthly fee, stop anytime.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">

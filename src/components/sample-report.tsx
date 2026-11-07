@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const runs = [
   { engine: "ChatGPT", mentioned: 2, total: 5 },
-  { engine: "Google AI", mentioned: 3, total: 5 },
+  { engine: "Google’s AI", mentioned: 3, total: 5 },
   { engine: "Perplexity", mentioned: 0, total: 5 },
 ];
 
@@ -24,7 +24,7 @@ export function SampleReport() {
               <div key={r.engine} className="flex items-center justify-between gap-4 border-b border-line pb-2">
                 <dt>{r.engine}</dt>
                 <dd className="whitespace-nowrap font-mono text-sm sm:text-[15px]">
-                  named in {r.mentioned} of {r.total} runs
+                  named in {r.mentioned} of {r.total} tries
                 </dd>
               </div>
             ))}

@@ -14,7 +14,7 @@ Newest first. Each entry lists the decision, its source, and what it supersedes.
 ## 2026-11-07: No checkmark chips under the hero buttons
 
 - **Owner:** remove the "Five fields, no call / Report in under 24 hours / Free, as many as you like / No obligation" row under the hero CTAs: "This doesn't make much sense", and the fold is text heavy.
-- **Site:** the row and `checkCta.micro` are deleted. "Free", "under 24 hours" and "five fields, no call" still appear in How it works step 1, the closing section and the check page. **Supersedes** the hero chip in the 2026-10-11 entry.
+- **Site:** the row and `checkCta.micro` are deleted. "Free" and "under 24 hours" still appear in How it works, the closing section and the check page. Step 1's "Five fields, no call." became "Fill in a short form." the same day (owner: insider shorthand). **Supersedes** the hero chip in the 2026-10-11 entry.
 
 ## 2026-11-07: No car buying or car service on the site
 
