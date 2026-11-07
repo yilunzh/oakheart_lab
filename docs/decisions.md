@@ -2,6 +2,12 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-11-07: No car buying or car service on the site
+
+- **Owner:** remove mentions of car sales and service; replace where needed.
+- **Site:** the "Car buying & service" question card (RAV4 dealer) is replaced by **Fitness & wellness**: "Is there a beginner Pilates class near me that's OK after a back injury?" It asks for judgment and an eligibility answer AI can get wrong, unlike the old "beginner class on Saturday" lookup that got Classes dropped on 2026-10-04. The approved `classes` icon is restored from history; `automotive` is deleted. "Auto" is removed from the site description and footer, and "Car buying or auto service" from the check form's business types (such leads pick "Other"). **Supersedes** the 2026-10-04 "Why it matters" automotive card and the brief's car buying and service audience example.
+- **Unchanged:** "Vehicle, boat or equipment rentals" stays in the form (rentals, not car sales or service). The founder's automotive background stays in the brief as background only; it was already off the site (2026-10-30).
+
 ## 2026-11-07: The running example is a heat pump installer, not a kayak tour
 
 - **Owner:** the kayak example felt odd. Use a relatable local business where the customer's question needs expertise (so the AI answer is advice, not a lookup). No automotive examples. No invented location: customers ask "near me".
