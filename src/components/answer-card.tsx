@@ -6,14 +6,14 @@ type Row = {
 
 const rows: Row[] = [
   {
-    name: "Wrenmoor Paddle Co.",
-    text: "Guided family tours at sunset. Kids 5 and up with an adult.",
+    name: "Wrenmoor Heating & Air",
+    text: "Installs cold-climate heat pumps. Free in-home assessment.",
     tag: { tone: "good", label: "Correct" },
   },
   {
-    name: "Fernhollow Kayaks",
-    text: "Great reviews, but tours are for ages 12 and up.",
-    tag: { tone: "bad", label: "Wrong. Their site says 6+ with an adult" },
+    name: "Fernhollow Comfort",
+    text: "Well reviewed for furnace and AC repair, but doesn’t install heat pumps.",
+    tag: { tone: "bad", label: "Wrong. Their site lists heat pump installs" },
   },
 ];
 
@@ -26,10 +26,13 @@ export function AnswerCard() {
           <span className="font-mono">AI assistant</span>
         </div>
         <p className="mt-4 rounded-xl bg-paper px-4 py-3 text-[15px]">
-          Best kayak tour near Marrowfield Lake for a family with a 6-year-old?
+          Is a heat pump a good idea for my 1970s house, and who near me installs them?
         </p>
         <div className="mt-4 space-y-3 text-[15px] leading-relaxed">
-          <p className="text-muted">Here are a couple of good options:</p>
+          <p className="text-muted">
+            It can be. A good installer will check your insulation, ductwork and electrical panel
+            first. Installers near you:
+          </p>
           {rows.map((row) => (
             <div key={row.name} className="rounded-xl border border-line p-3">
               <p>
@@ -53,7 +56,7 @@ export function AnswerCard() {
         </div>
       </div>
       <figcaption className="mt-3 text-xs text-muted">
-        Illustrative example: the businesses and the lake are invented. Your free check shows what assistants actually say about you.
+        Illustrative example: the businesses are invented. Your free check shows what assistants actually say about you.
       </figcaption>
     </figure>
   );

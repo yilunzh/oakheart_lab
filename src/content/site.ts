@@ -6,7 +6,7 @@ export const site = {
   notifyEmail: "yilun@oakheartlab.com",
   substack: "https://substack.com/@oakheartlab",
   description:
-    "Oakheart Lab helps tours, rentals, auto, home-service and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
+    "Oakheart Lab helps tours, rentals, home-service, clinic and hospitality businesses get found by AI assistants, described correctly, booked without friction, then keeps them ahead of competitors and changes in AI every month.",
 };
 
 export const checkCta = {
@@ -70,10 +70,10 @@ export const movers = [
 ];
 
 export const customerQuestions = [
+  { kind: "Home services", icon: "services", q: "My furnace is 20 years old. Should I repair it or switch to a heat pump?" },
   { kind: "Tours & experiences", icon: "tours", q: "Can my 6-year-old do the sunset kayak tour?" },
   { kind: "Rentals", icon: "rentals", q: "Does the pontoon rental include fuel and life jackets?" },
-  { kind: "Car buying & service", icon: "automotive", q: "Which dealer near me has a certified used RAV4 under $25k I can test-drive Saturday?" },
-  { kind: "Home services", icon: "services", q: "Which plumber near me can replace a water heater tomorrow?" },
+  { kind: "Dental & health clinics", icon: "clinics", q: "I cracked a tooth. Which dentist near me takes my insurance and can see me tomorrow?" },
   { kind: "Stays & hospitality", icon: "stays", q: "Which lakeside cabins near Asheville take two big dogs, and what’s the pet fee?" },
   { kind: "Moving & storage", icon: "moving", q: "Who can move a one-bedroom this Saturday, and what will it cost?" },
 ];
@@ -81,7 +81,7 @@ export const customerQuestions = [
 /** Where a booking is lost between the question and the confirmation. */
 export const leaks = [
   { stage: "Customer asks AI", leak: "You’re not mentioned", why: "It can’t find clear, current facts about you." },
-  { stage: "AI names you", leak: "Your details are wrong", why: "An old price or age limit rules you out." },
+  { stage: "AI names you", leak: "Your details are wrong", why: "An old price or service list rules you out." },
   { stage: "They click through", leak: "Booking is a struggle", why: "A clunky widget or dead end on mobile." },
 ];
 
@@ -147,30 +147,30 @@ export const loopNote = "Each month’s check sets the next round of fixes.";
 
 /** Illustrative plan for the same invented business as the sample report. No timelines or prices. */
 export const samplePlan = {
-  business: "Quillbay Kayak Tours",
+  business: "Quillbay Heating & Air",
   groups: [
     {
       key: "Discover",
       fixes: [
-        "Correct the age rule on old listings and Google",
-        "Add an “Age & requirements” section to every tour page",
-        "Publish times, prices and inclusions as text and structured data",
+        "Fix the services listed on old listings and Google",
+        "Add a heat pump installation page that answers what homeowners ask",
+        "Publish services, and starting prices where you can, as text and structured data",
       ],
     },
     {
       key: "Book",
       fixes: [
-        "Show live sunset-tour times on the tour page",
-        "Fewer taps from tour page to booking on a phone",
-        "Offer the dry-bag rental at checkout on sunset tours",
+        "Book the in-home assessment online, with live times",
+        "Fewer taps from service page to booking on a phone",
+        "Offer the maintenance plan when they book",
       ],
     },
     {
       key: "Stay ahead, every month",
       fixes: [
-        "Re-run the check against the two outfitters AI names most",
-        "List tours where AI assistants start taking bookings",
-        "Update times and prices before the summer season",
+        "Re-run the check against the two installers AI names most",
+        "Get bookable where AI assistants start taking bookings",
+        "Update services, prices and incentive details before heating season",
       ],
     },
   ],
@@ -211,7 +211,6 @@ export const homeFaq = [
 export const businessTypes = [
   "Tours, activities & experiences",
   "Vehicle, boat or equipment rentals",
-  "Car buying or auto service",
   "Home services",
   "Health, wellness & beauty appointments",
   "Fitness, classes & studios",

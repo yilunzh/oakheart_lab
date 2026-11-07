@@ -2,6 +2,21 @@
 
 Newest first. Each entry lists the decision, its source, and what it supersedes. Earlier decisions are recorded in `AGENTS.md` (codex build) and `ops/client-record.json`.
 
+## 2026-11-07: No car buying or car service on the site
+
+- **Owner:** remove mentions of car sales and service; replace where needed.
+- **Site:** the "Car buying & service" question card (RAV4 dealer) is replaced by **Dental & health clinics**: "I cracked a tooth. Which dentist near me takes my insurance and can see me tomorrow?" It needs judgment (how urgent) plus facts AI often gets wrong (insurance accepted, same-day openings). A first try, Fitness & wellness with a Pilates question and the old yoga-mat icon, was rejected by the owner the same day ("I don't like yoga"). New `clinics` icon (style B, Discover as reference, one attempt); `automotive` is deleted. "Auto" is replaced by "clinic" in the site description and footer, and "Car buying or auto service" from the check form's business types (such leads pick "Other"). **Supersedes** the 2026-10-04 "Why it matters" automotive card and the brief's car buying and service audience example.
+- **Unchanged:** "Vehicle, boat or equipment rentals" stays in the form (rentals, not car sales or service). The founder's automotive background stays in the brief as background only; it was already off the site (2026-10-30).
+
+## 2026-11-07: The running example is a heat pump installer, not a kayak tour
+
+- **Owner:** the kayak example felt odd. Use a relatable local business where the customer's question needs expertise (so the AI answer is advice, not a lookup). No automotive examples. No invented location: customers ask "near me".
+- **Site:** the hero answer card, the check page's sample report and the homepage sample plan now follow one invented heat pump installer. Hero: "Is a heat pump a good idea for my 1970s house, and who near me installs them?" The answer gives one hedged line of advice (an installer checks insulation, ductwork and the electrical panel first), then names Wrenmoor Heating & Air (correct) and Fernhollow Comfort (wrongly described as not installing heat pumps). Report ("Who near me can swap my oil furnace for a heat pump?") and plan: Quillbay Heating & Air, which ChatGPT says only does repairs. Report and plan badges read "Illustrative · invented business"; the separate "(invented)" labels are gone. The invented "Marrowfield Lake" is gone. The "Home services" question card moves first and asks a related question ("My furnace is 20 years old. Should I repair it or switch to a heat pump?") so the cards open on the hero's example; the leak line reads "An old price or service list rules you out." **Supersedes** the Quillbay Kayak Tours example (rounds 8–9).
+- **Names checked** by web search on 2026-11-07: no business called Wrenmoor Heating & Air, Fernhollow Comfort or Quillbay Heating & Air. "Ashgrove" was dropped because a real Ashgrove Air exists.
+- **Incentives** stay generic (no named tax credits or rebate amounts); federal heat pump incentives have changed and aren't in the brief.
+- **Review:** one independent copy review, verdict "revise" with small fixes, all applied. Record: `docs/reviews/copy-2026-11-07.md`.
+- **Kept (owner):** the "Tours & experiences" card and its kayak question, now second.
+
 ## 2026-10-30: The founder is not mentioned anywhere on the site
 
 - **Owner:** remove the founder's name and photo from the AI Visibility Check page; the founder shouldn't be mentioned anywhere on the site.

@@ -28,11 +28,11 @@ Oakheart Lab makes sure AI assistants find your business, describe it correctly,
    - Google I/O 2026: Search will book local experiences and services for people.
    - Takeaway: the answer is becoming the storefront.
 2. **Recognize yourself (questions customers actually ask AI):**
+   - "My furnace is 20 years old. Should I repair it or switch to a heat pump?" (home services)
    - "Can my 6-year-old do the kayak tour?" (experiences)
    - "Does the boat rental include fuel?" (rentals)
-   - "Which dealer near me has a certified used RAV4 under $25k I can test-drive Saturday?" (car buying and service)
-   - "Which plumber near me can replace a water heater tomorrow?" (home services)
    - "Which lakeside cabins near Asheville take two big dogs, and what's the pet fee?" (stays)
+   - "I cracked a tooth. Which dentist near me takes my insurance and can see me tomorrow?" (clinics)
 3. **Three ways it costs you:** AI doesn't mention you; AI mentions you with wrong details; the customer clicks through and the booking flow loses them. Marketplaces then charge 20–30% commission for demand you could have taken directly (category ranges, sourced).
 4. **The system:**
    - **Found:** be the business AI can find, understand and cite.
